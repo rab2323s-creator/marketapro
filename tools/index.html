@@ -1,24 +1,153 @@
-<!doctype html>
+ <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>الأدوات المجانية — MarketAPro</title>
-  <meta name="description" content="جميع أدوات MarketAPro المجانية بالعربية: أدوات إنستغرام وتحليل التفاعل وأفضل وقت للنشر وأدوات صناعة المحتوى." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <link rel="canonical" href="https://marketapro.com/tools/">
+  <title>الأدوات المجانية — MarketAPro</title>
+  <meta name="description" content="استعرض جميع أدوات MarketAPro المجانية بالعربية: حاسبة معدل التفاعل على إنستغرام، أفضل وقت للنشر، وأدوات صناعة المحتوى — بدون تسجيل وبنتائج فورية." />
+  <meta name="keywords" content="أدوات تسويق مجانية, أدوات إنستغرام, حاسبة معدل التفاعل, Engagement Rate, أفضل وقت للنشر, تحليل حساب انستغرام, tools" />
+
+  <link rel="canonical" href="https://marketapro.com/tools/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="الأدوات المجانية — MarketAPro">
-  <meta property="og:description" content="استعرض أدوات تسويق مجانية بالعربية تساعدك على زيادة التفاعل وتحليل الأداء.">
-  <meta property="og:url" content="https://marketapro.com/tools/">
-  <meta property="og:type" content="website">
-  <!-- <meta property="og:image" content="https://marketapro.com/assets/og-default.jpg"> -->
+  <meta property="og:title" content="الأدوات المجانية — MarketAPro" />
+  <meta property="og:description" content="أدوات عربية مجانية تساعدك على تحليل الأداء وزيادة التفاعل واتخاذ قرارات مبنية على بيانات." />
+  <meta property="og:url" content="https://marketapro.com/tools/" />
+  <meta property="og:type" content="website" />
+  <!-- ضع صورة OG (1200x630) لاحقًا -->
+  <!-- <meta property="og:image" content="https://marketapro.com/assets/og-tools.jpg" /> -->
 
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- <meta name="twitter:image" content="https://marketapro.com/assets/og-default.jpg"> -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- <meta name="twitter:image" content="https://marketapro.com/assets/og-tools.jpg" /> -->
 
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- CollectionPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"الأدوات المجانية — MarketAPro",
+    "url":"https://marketapro.com/tools/",
+    "description":"قائمة أدوات تسويق مجانية بالعربية لتحليل إنستغرام وزيادة التفاعل وتحسين النتائج دون تسجيل.",
+    "publisher":{"@type":"Organization","name":"MarketAPro","url":"https://marketapro.com/"}
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://marketapro.com/"},
+      {"@type":"ListItem","position":2,"name":"الأدوات","item":"https://marketapro.com/tools/"}
+    ]
+  }
+  </script>
+
+  <style>
+    /* تحسينات فخمة خاصة بصفحة الأدوات (خفيفة وما تكسر style.css) */
+    .hero-block{
+      padding:18px;
+      border-radius:18px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+    }
+    .hero-title{margin:0 0 8px;font-size:28px;line-height:1.4}
+    .hero-desc{margin:0;color:var(--muted);line-height:1.9}
+    .crumbs{margin-top:10px}
+    .toolbar{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:10px;
+    }
+    @media(max-width:800px){.toolbar{grid-template-columns:1fr}}
+    .search{
+      display:flex;gap:10px;align-items:center;
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:10px 12px;
+      background:rgba(255,255,255,.02);
+    }
+    .search input{
+      width:100%;
+      background:transparent;border:none;outline:none;
+      color:var(--text);
+      font-size:14px;
+    }
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{
+      padding:8px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      font-size:13px;font-weight:800;
+      cursor:pointer; user-select:none;
+    }
+
+    .grid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.grid{grid-template-columns:1fr}}
+
+    .tool-card-fx{
+      border:1px solid var(--border);
+      border-radius:18px;
+      background:rgba(0,0,0,.18);
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      min-height: 240px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .tool-card-fx h2{margin:0 0 8px;font-size:18px;line-height:1.5}
+    .tool-card-fx p{margin:0;color:var(--muted);line-height:1.9}
+    .meta-row{
+      display:flex;gap:8px;flex-wrap:wrap;
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:10px;
+    }
+    .tag{
+      padding:5px 8px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      font-weight:800;
+    }
+    .tool-actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;padding-top:12px}
+    .badge2{
+      display:inline-flex;
+      align-items:center;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      font-weight:900;
+      font-size:13px;
+    }
+
+    .cta{
+      margin-top:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      border-radius:18px;
+      padding:14px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .cta strong{display:block;margin-bottom:4px}
+    .cta span{color:var(--muted);font-size:13px}
+  </style>
 </head>
 
 <body>
@@ -37,48 +166,126 @@
     <nav class="nav" aria-label="القائمة الرئيسية">
       <a href="/">الرئيسية</a>
       <a class="active" href="/tools/">الأدوات</a>
+      <a href="/news/">المقالات</a>
       <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
     </nav>
   </div>
 </header>
 
-<main id="content" class="container">
-  <section class="section">
-    <div class="card">
-      <h1 style="margin:0 0 8px;font-size:26px">الأدوات المجانية</h1>
-      <p style="margin:0;color:var(--muted)">
-        اختر الأداة المناسبة وابدأ فورًا. سنضيف أدوات جديدة أسبوعيًا مع صفحات SEO داعمة لكل أداة.
-      </p>
+<main id="content" class="container section">
 
-      <div class="tools-grid" style="margin-top:16px">
-        <!-- Instagram -->
-        
-       <a class="tool-card" id="instagram" href="/tools/instagram-engagement-calculator/">
-  <h3>حاسبة معدل التفاعل على إنستغرام</h3>
-  <p>احسب Engagement Rate + متوسط الإعجابات والتعليقات وإحصاءات إضافية خلال ثوانٍ.</p>
-  <span class="badge">جرب الأداة</span>
-</a>
+  <section class="hero-block">
+    <h1 class="hero-title">الأدوات المجانية</h1>
 
+    <nav aria-label="Breadcrumb" class="note crumbs">
+      <a href="/">الرئيسية</a> ←
+      <span>الأدوات</span>
+    </nav>
 
-        <a class="tool-card" href="/tools/best-time-to-post-instagram/">
-  <h3>أفضل وقت للنشر على إنستغرام</h3>
-  <p>اقتراحات قوية حسب البلد والهدف ونوع المحتوى + ملخص جاهز للنسخ.</p>
-  <span class="badge">جرب الأداة</span>
-</a>
+    <p class="hero-desc">
+      اختر الأداة المناسبة وابدأ فورًا. هذه أدوات عربية سريعة تساعدك على
+      <strong>تحليل إنستغرام</strong>، رفع <strong>معدل التفاعل</strong>،
+      وتحسين <strong>توقيت النشر</strong> — بدون تسجيل.
+    </p>
 
-
-        <div class="tool-card">
-          <h3>محلل Bio إنستغرام</h3>
-          <p>قيّم البايو الحالي واقترح تحسينات + CTA + كلمات مفتاحية.</p>
-          <span class="badge">قريبًا</span>
-        </div>
+    <div class="toolbar">
+      <div class="search" role="search" aria-label="بحث داخل الأدوات">
+        <span class="note" style="margin:0">بحث:</span>
+        <input id="q" type="search" placeholder="مثال: معدل التفاعل، أفضل وقت للنشر، Bio..." />
       </div>
 
-      <p class="note">
-        By <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
-      </p>
+      <div class="chips" aria-label="تصنيفات الأدوات">
+        <span class="chip" data-filter="all">الكل</span>
+        <span class="chip" data-filter="instagram">إنستغرام</span>
+        <span class="chip" data-filter="content">صناعة المحتوى</span>
+        <span class="chip" data-filter="seo">SEO</span>
+      </div>
     </div>
   </section>
+
+  <!-- Tools Grid -->
+  <section class="grid" aria-label="قائمة الأدوات" id="tools">
+
+    <!-- Tool 1 -->
+    <a class="tool-card-fx" href="/tools/instagram-engagement-calculator/" data-tags="instagram analytics" aria-label="حاسبة معدل التفاعل على إنستغرام">
+      <div class="meta-row">
+        <span class="tag">إنستغرام</span>
+        <span class="tag">تحليل</span>
+        <span class="tag">الأكثر طلبًا</span>
+      </div>
+      <h2>حاسبة معدل التفاعل على إنستغرام</h2>
+      <p>احسب Engagement Rate بدقة مع متوسط الإعجابات والتعليقات وإحصاءات إضافية خلال ثوانٍ.</p>
+
+      <div class="tool-actions">
+        <span class="badge2">جرّب الأداة</span>
+        <span class="badge2" style="opacity:.85">بدون تسجيل</span>
+      </div>
+    </a>
+
+    <!-- Tool 2 -->
+    <a class="tool-card-fx" href="/tools/best-time-to-post-instagram/" data-tags="instagram content" aria-label="أفضل وقت للنشر على إنستغرام">
+      <div class="meta-row">
+        <span class="tag">إنستغرام</span>
+        <span class="tag">محتوى</span>
+        <span class="tag">رفع الوصول</span>
+      </div>
+      <h2>أفضل وقت للنشر على إنستغرام</h2>
+      <p>اقتراحات قوية حسب البلد والهدف ونوع المحتوى + ملخص جاهز للنسخ كبداية عملية.</p>
+
+      <div class="tool-actions">
+        <span class="badge2">جرّب الأداة</span>
+        <span class="badge2" style="opacity:.85">قابل للاختبار</span>
+      </div>
+    </a>
+
+    <!-- Tool 3 (Coming soon) -->
+    <div class="tool-card-fx" data-tags="instagram content seo" role="article" aria-label="محلل Bio إنستغرام - قريبًا">
+      <div class="meta-row">
+        <span class="tag">إنستغرام</span>
+        <span class="tag">SEO</span>
+        <span class="tag">قريبًا</span>
+      </div>
+      <h2>محلل Bio إنستغرام</h2>
+      <p>قيّم البايو الحالي واقترح تحسينات + CTA + كلمات مفتاحية تساعد على زيادة التحويل والمتابعة.</p>
+
+      <div class="tool-actions">
+        <span class="badge2">قريبًا</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Internal links to boost SEO -->
+  <section class="cta" aria-label="روابط مفيدة">
+    <div>
+      <strong>ابدأ بالدليل ثم استخدم الأداة</strong>
+      <span>
+        اقرأ المقال الداعم لمعدل التفاعل ثم طبّق مباشرة عبر الحاسبة.
+      </span>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn" href="/news/instagram-engagement-rate-calculator/">اقرأ الدليل</a>
+      <a class="btn primary" href="/tools/instagram-engagement-calculator/">استخدم الحاسبة</a>
+    </div>
+  </section>
+
+  <!-- Service CTA -->
+  <section class="cta" aria-label="خدمة العملاء">
+    <div>
+      <strong>تريد توصيات مخصصة لحسابك؟</strong>
+      <span>أرسل رابط حسابك وسنقترح أول 3 تحسينات (مجانًا) خلال 24 ساعة.</span>
+    </div>
+    <a class="btn primary"
+       href="https://wa.me/491234567890?text=مرحبًا%20MarketAPro%2C%20أريد%20توصيات%20مخصصة%20لحسابي%20على%20إنستغرام"
+       target="_blank" rel="noopener">
+      واتساب
+    </a>
+  </section>
+
+  <p class="note" style="margin-top:14px">
+    By <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
+  </p>
+
 </main>
 
 <footer class="footer">
@@ -87,5 +294,42 @@
     <div style="margin-top:6px">By Viva Media Creative</div>
   </div>
 </footer>
+
+<script>
+  // بحث + فلترة (بدون مكتبات)
+  const q = document.getElementById('q');
+  const cards = [...document.querySelectorAll('#tools [data-tags]')];
+  const chips = [...document.querySelectorAll('.chip')];
+  let activeFilter = 'all';
+
+  function apply(){
+    const term = (q.value || '').trim().toLowerCase();
+    cards.forEach(card=>{
+      const text = card.innerText.toLowerCase();
+      const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+
+      const matchesTerm = !term || text.includes(term);
+      const matchesFilter = (activeFilter === 'all') || tags.includes(activeFilter);
+
+      card.style.display = (matchesTerm && matchesFilter) ? '' : 'none';
+    });
+  }
+
+  q.addEventListener('input', apply);
+
+  chips.forEach(c=>{
+    c.addEventListener('click', ()=>{
+      activeFilter = c.getAttribute('data-filter');
+      chips.forEach(x=>x.style.opacity = '0.8');
+      c.style.opacity = '1';
+      apply();
+    });
+  });
+
+  // Default visual
+  chips[0].style.opacity = '1';
+  chips.slice(1).forEach(x=>x.style.opacity='0.8');
+</script>
 </body>
 </html>
+
