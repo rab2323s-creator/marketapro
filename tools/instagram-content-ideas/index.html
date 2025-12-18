@@ -319,7 +319,7 @@
   function toneify(tone, text){
     const tweaks = {
       friendly: {prefix:"", suffix:""},
-      bold: {prefix:"🔥 ", suffix:" — جرّبها اليوم"},
+      bold: {prefix:"🔥 ", suffix:""},
       pro: {prefix:"", suffix:""},
       emotional: {prefix:"✨ ", suffix:""}
     };
@@ -327,68 +327,173 @@
     return (t.prefix + text + t.suffix).trim();
   }
 
-  function buildHook({goal, tone, niche}){
-    const hooks = {
-      engagement: [
-        "لو عندك 20 ثانية… هذا الشيء سيغيّر تفاعل حسابك",
-        "قبل ما تنشر اليوم، جرّب هذه الفكرة وسيكون الفرق واضح",
-        "سؤال سريع: هل جمهورك يتفاعل لأنه يفهم الفائدة فورًا؟"
+  // ---------- Smart packs (Hooks / CTAs) ----------
+  function buildHooksPack({goal, tone, niche, acct}){
+    const base = {
+      "بوست": [
+        "٣ أخطاء تمنعك من الوصول — رقم 2 يدمّر التفاعل",
+        "قبل ما تعمل سكرول… احفظ هذا لأنه سيفيدك لاحقًا",
+        "لو كنت مكانك، سأنشر هذا اليوم 👇",
+        "هذا الشيء وحده يرفع التفاعل لو طبقته صح"
       ],
-      followers: [
-        "إذا كنت تريد متابعين… هذا النوع من المحتوى يشتغل دائمًا",
-        "3 أسباب تخلي الناس تتابعك من أول زيارة",
-        "أوقف التمرير: هذا محتوى الناس تبحث عنه فعلًا"
+      "ريلز": [
+        "أوقف التمرير… هذا سيغيّر نتيجتك خلال أسبوع",
+        "الفرق بين حساب عادي وحساب قوي في 10 ثوان",
+        "جرّب هذا اليوم وشوف الفرق بنفسك",
+        "3 ثواني تكفي… خلك معي"
       ],
-      sales: [
-        "لو عندك منتج/خدمة… هذه الطريقة ترفع الطلب بدون إعلانات",
-        "الناس لا تشتري المنتج… تشتري النتيجة — خلّها واضحة",
-        "قبل ما تعرض السعر… قل هذا الشيء أولًا"
+      "ستوري": [
+        "تصويت سريع: أي خيار تختار؟",
+        "سؤال بدون إحراج: هذا يصير معك؟",
+        "خلّينا نقرر سوا بسرعة…",
+        "جاوبني بصراحة 👇"
       ]
     };
-    // تعزيز حسب المجال
-    const nicheHint = {
-      marketing: " (تسويق)",
-      creators: " (صناع محتوى)",
-      lifestyle: " (لايف ستايل)",
-      ecom: " (متجر)",
-      edu: " (تعليمي)",
-      fashion: " (فاشن/موديلز)"
-    };
-    return toneify(tone, pick(hooks[goal]||hooks.engagement) + (nicheHint[niche]||""));
-  }
 
-  function buildCTA({goal, tone, brand}){
-    const ctas = {
-      engagement: [
-        "اكتب (تم) لو تريد جزء 2 بنفس الفكرة",
-        "أي نقطة كانت الأهم؟ 1 أو 2 أو 3؟",
-        "احفظ المنشور وارجع له لاحقًا + ارسله لشخص يحتاجه"
-      ],
-      followers: [
-        "تابعني لأن القادم عبارة عن خطوات تطبيقية يومية",
-        "لو استفدت… تابعني وشاهد الجزء القادم",
-        "اكتب (متابع) وسأرسل لك نموذج مجاني"
-      ],
-      sales: [
-        "اكتب كلمة (عرض) لأرسل لك التفاصيل",
-        "احجز الآن/اطلب الآن — الرابط في البايو",
-        "راسلني على الخاص وسأقترح لك الأنسب"
-      ]
-    };
-    let base = pick(ctas[goal]||ctas.engagement);
-    if(brand && brand.trim()){
-      base = base.replace("تابعني", `تابع ${brand.trim()}`);
+    // تخصيص قوي للموديلز/فاشن
+    if(niche === "fashion" || acct === "model"){
+      base["ريلز"].unshift(
+        "٣ بوزات تخليك تبان أغلى فورًا (بدون خبرة)",
+        "لقطة واحدة ترفع بروفايلك كـ موديل — شوف كيف",
+        "إذا صورتك تطلع عادية… جرّب هذا التعديل البسيط"
+      );
+      base["بوست"].unshift(
+        "٥ بوزات للصور الثابتة… احفظها وطبقها فورًا",
+        "كيف تبني Portfolio يشد البراندات؟ (خطوة بخطوة)"
+      );
+      base["ستوري"].unshift(
+        "اختار: لوك 1 ولا لوك 2؟",
+        "مين يحب تصوير ستوديو أكثر؟"
+      );
     }
-    return toneify(tone, base);
+
+    // حسب الهدف
+    if(goal === "sales"){
+      base["بوست"].unshift("قبل ما تحط السعر… قل هذا أولًا");
+      base["ريلز"].unshift("هذه طريقة تخلي الناس تطلب بدون إعلانات");
+    }
+    if(goal === "followers"){
+      base["ريلز"].unshift("هذا النوع يجيب متابعين لأنه قابل للمشاركة");
+      base["بوست"].unshift("إذا تبغى متابعين… هذا المحتوى يشتغل دائمًا");
+    }
+    if(goal === "engagement"){
+      base["بوست"].unshift("هذا المنشور للحفظ… لا تضيع الفكرة");
+      base["ريلز"].unshift("اكتب (تم) لو تبغى جزء 2");
+    }
+
+    // tone applied later per item
+    return base;
   }
 
-  function plan7({goal}){
-    const plans = {
-      engagement: "يوم1: Carousel قيمة | يوم2: Reels ترندي | يوم3: Story سؤال | يوم4: Carousel أخطاء | يوم5: Reels قبل/بعد | يوم6: Story تصويت | يوم7: Live/Story تلخيص",
-      followers: "يوم1: Reels Hook قوي | يوم2: Carousel خطوات | يوم3: Story خلف الكواليس | يوم4: Reels “أخطاء شائعة” | يوم5: Carousel أدوات | يوم6: Collab | يوم7: Reels قصير + CTA متابعة",
-      sales: "يوم1: مشكلة/حل | يوم2: إثبات اجتماعي | يوم3: Story أسئلة | يوم4: شرح العرض | يوم5: Reels نتائج | يوم6: FAQ | يوم7: عرض محدود + CTA طلب"
+  function buildCTAPack({goal, acct, brand}){
+    const name = (brand && brand.trim()) ? brand.trim() : "حسابك";
+    const byType = {
+      "بوست": {
+        engagement: [
+          "احفظه وارجع له + اكتب رأيك",
+          "أي نقطة كانت الأهم؟ 1/2/3",
+          "ارسلها لصديق يحتاجها"
+        ],
+        followers:  [
+          "تابع "+name+" للمزيد من الأفكار اليومية",
+          "اكتب (فكرة) وسأرسل لك جزء 2",
+          "إذا استفدت… تابعني"
+        ],
+        sales:      [
+          "اكتب (تفاصيل) لأرسل لك العرض",
+          "راسلني الآن وسأقترح الأنسب",
+          "الرابط في البايو / DM الآن"
+        ]
+      },
+      "ريلز": {
+        engagement: [
+          "اكتب (تم) لو تبغى جزء 2",
+          "احفظ الفيديو وجرّبه اليوم",
+          "من 10 كم تعطيه؟"
+        ],
+        followers:  [
+          "تابع "+name+" لأن القادم أقوى",
+          "منشن شخص يحتاج هذا",
+          "اكتب (محتوى) وأعطيك 3 أفكار إضافية"
+        ],
+        sales:      [
+          "راسلني بكلمة (طلب)",
+          "احجز الآن — الرابط في البايو",
+          "اكتب (سعر) وأرسل لك الخيارات"
+        ]
+      },
+      "ستوري": {
+        engagement: [
+          "صوّت وخلّينا نقرر سوا",
+          "اكتب جوابك في صندوق السؤال",
+          "تبغى نموذج جاهز؟ قل نعم"
+        ],
+        followers:  [
+          "صوّت وراح أنزل الجزء القادم",
+          "ارسلها لصديق + تابع "+name,
+          "اكتب (نعم) لأرسل أفكار أكثر"
+        ],
+        sales:      [
+          "رد على الستوري بكلمة (طلب)",
+          "هل تريد الأسعار؟ اكتب (سعر)",
+          "احجز من الرابط"
+        ]
+      }
     };
-    return plans[goal] || plans.engagement;
+
+    const pack = {};
+    ["بوست","ريلز","ستوري"].forEach(t=>{
+      pack[t] = (byType[t][goal] || byType[t].engagement);
+    });
+
+    // لمسة للموديلز
+    if(acct === "model"){
+      pack["بوست"].unshift("لو تبغى مراجعة بروفايلك: اكتب (Portfolio)");
+      pack["ريلز"].unshift("لو تبغى تعاونات: اكتب (Collab)");
+    }
+
+    return pack;
+  }
+
+  // ---------- Scripts per idea (practical) ----------
+  function buildScript({typeLabel, niche, acct, goal, title}){
+    // صيغة عامة ممتازة (جاهزة تطبيق)
+    const common = [
+      "1) Hook قوي (1–2 ثانية/سطر) — 2) المشكلة بسرعة — 3) الحل بخطوات — 4) مثال/نتيجة — 5) CTA"
+    ];
+
+    if(typeLabel === "ريلز"){
+      if(niche==="fashion" || acct==="model"){
+        return "Shot-list: 1) لقطة وجه/لوك (Hook) — 2) بوز 1 + نص قصير — 3) بوز 2 — 4) بوز 3 — 5) لقطة قريبة (تفاصيل) — 6) CTA على الشاشة";
+      }
+      if(goal==="sales"){
+        return "Shot-list: 1) المشكلة (Hook) — 2) المنتج/الحل — 3) نتيجة/قبل-بعد — 4) إثبات (تقييم/رسالة) — 5) عرض سريع — 6) CTA (اطلب الآن)";
+      }
+      return "Shot-list: 1) Hook (1–2 ث) — 2) 3 نقاط سريعة — 3) مثال — 4) خطأ شائع — 5) الحل — 6) CTA";
+    }
+
+    if(typeLabel === "ستوري"){
+      if(niche==="ecom" || goal==="sales"){
+        return "Story sequence: 1) سؤال/مشكلة — 2) حل سريع — 3) إثبات (قبل/بعد أو رأي عميل) — 4) عرض/سعر — 5) CTA (رد/رابط)";
+      }
+      if(niche==="fashion" || acct==="model"){
+        return "Story sequence: 1) تصويت لوك/بوز — 2) كواليس تصوير — 3) نصيحة بوز/إضاءة — 4) سؤال صندوق — 5) CTA (Collab/Portfolio)";
+      }
+      return "Story sequence: 1) سؤال/تصويت — 2) إجابة قصيرة — 3) مثال — 4) CTA (رد/رسالة)";
+    }
+
+    // بوست
+    if(goal==="followers"){
+      return "Carousel: 1) عنوان جذاب — 2) المشكلة — 3) السبب — 4) الحل (3 خطوات) — 5) مثال — 6) CTA (تابع/احفظ)";
+    }
+    if(goal==="sales"){
+      return "Post: 1) مشكلة العميل — 2) الحل/الخدمة — 3) النتيجة — 4) إثبات (عميل/قبل-بعد) — 5) العرض — 6) CTA (راسلني)";
+    }
+    if(niche==="fashion" || acct==="model"){
+      return "Carousel: 1) عنوان (بوزات/لوك) — 2) بوز 1 — 3) بوز 2 — 4) بوز 3 — 5) نصيحة إضاءة — 6) CTA (احفظ/Collab)";
+    }
+
+    return common[0];
   }
 
   // ---------- Idea library ----------
@@ -407,12 +512,12 @@
         "Myth vs Truth: خرافات التسويق التي تؤذيك"
       ],
       reels: [
-        "Hook ثم 3 نقاط سريعة: (افعل/لا تفعل)",
-        "تعليق على مثال إعلان قوي + سبب قوته",
-        "قبل/بعد تصميم/كابشن في 10 ثوان",
-        "‘لو كنت أبدأ من الصفر’ 3 خطوات",
-        "رد سريع على سؤال شائع من المتابعين",
-        "ترند + تطبيقه على التسويق في 15 ثانية"
+        "3 أخطاء تسويقية — الحل في 10 ثوان",
+        "عنوان إعلان قوي vs ضعيف (فرق بسيط)",
+        "قبل/بعد كابشن يرفع التحويل",
+        "لو كنت أبدأ من الصفر: 3 خطوات",
+        "رد سريع على سؤال شائع",
+        "ترند + تطبيقه على التسويق"
       ],
       stories: [
         "تصويت: أي عنوان يجذبك أكثر؟ A/B",
@@ -428,22 +533,22 @@
       posts: [
         "قائمة: 20 فكرة محتوى (احفظها)",
         "أخطاء شائعة تمنع انتشار الريلز",
-        "كيف أكتب Hook في أول سطر؟ (قوالب)",
+        "قوالب Hook: 10 جُمل افتتاحية جاهزة",
         "خطة تصوير: 5 لقطات بفيديو واحد",
         "كيف تحول فكرة واحدة إلى 5 منشورات",
         "Q&A: أسئلة متكررة وإجابات قصيرة",
         "Behind the scenes: يوم من حياتك كصانع محتوى",
-        "مقارنة: قبل/بعد تحسين الإضاءة أو الصوت",
+        "قارن: قبل/بعد تحسين الإضاءة أو الصوت",
         "قائمة أدوات مجانية لصناعة المحتوى",
         "تحدي 7 أيام: نتائجك بعد أسبوع"
       ],
       reels: [
         "3 أخطاء ثم الحل بسرعة",
-        "قبل/بعد (مونتاج بسيط)",
+        "قبل/بعد مونتاج بسيط",
         "ترند + لمسة شخصية",
         "قصة قصيرة: مشكلة ثم نتيجة",
         "فكرة واحدة — 3 تطبيقات",
-        "‘لو كنت مكانك’ نصيحة مباشرة"
+        "لو كنت مكانك: نصيحة مباشرة"
       ],
       stories: [
         "اختيار الجمهور: تنشر ماذا اليوم؟",
@@ -535,7 +640,7 @@
         "3 نقاط في 15 ثانية",
         "تصحيح خطأ منتشر",
         "اختبار سريع للجمهور",
-        "قبل/بعد (معلومة خاطئة/صحيحة)",
+        "معلومة خاطئة/صحيحة",
         "سؤال ثم الإجابة"
       ],
       stories: [
@@ -557,12 +662,12 @@
         "How-to: تنسيق قطعة واحدة 3 طرق",
         "كواليس تصوير (معدات/إضاءة)",
         "Portfolio tips: كيف تبني بروفايل قوي",
-        "مقارنة: صور طبيعية vs احترافية (وأين الأفضل)",
+        "صور طبيعية vs احترافية: متى تستخدم كل نوع؟",
         "نصائح ثقة أمام الكاميرا",
-        "تعاونات: كيف تتواصل مع براند"
+        "كيف تتواصل مع براند بطريقة احترافية؟"
       ],
       reels: [
-        "3 انتقالات Outfit (سريع)",
+        "3 بوزات + طريقة تنفيذها بسرعة",
         "Pose-to-pose (3 بوزات)",
         "Behind the scenes تصوير",
         "قبل/بعد Edit",
@@ -580,69 +685,69 @@
     }
   };
 
-  // ---------- Smart compositor ----------
-  function renderIdea(typeLabel, title, hook, cta){
+  // ---------- UI render ----------
+  function renderIdea(typeLabel, title, hook, script, cta){
     const el = document.createElement('div');
     el.className = 'idea';
+    const fullText =
+`${typeLabel} — ${title}
+Hook: ${hook}
+سكريبت: ${script}
+CTA: ${cta}`;
     el.innerHTML = `
       <div class="meta">
         <span class="tag">${typeLabel}</span>
-        <span class="tag">Hook</span>
-        <span class="tag">CTA</span>
+        <span class="tag">جاهز للنشر</span>
       </div>
       <h3>${title}</h3>
       <p><strong style="color:var(--text)">Hook:</strong> <span style="color:var(--muted)">${hook}</span></p>
+      <p style="margin-top:8px"><strong style="color:var(--text)">سكريبت سريع:</strong> <span style="color:var(--muted)">${script}</span></p>
       <p style="margin-top:8px"><strong style="color:var(--text)">CTA:</strong> <span style="color:var(--muted)">${cta}</span></p>
       <div class="actions">
-        <button class="btn secondary" type="button" data-copytext="${encodeURIComponent(typeLabel + " — " + title + "\nHook: " + hook + "\nCTA: " + cta)}">نسخ</button>
+        <button class="btn secondary" type="button" data-copytext="${encodeURIComponent(fullText)}">نسخ</button>
       </div>
     `;
     return el;
   }
 
-  function generate({acct, niche, goal, tone, brand}){
+  function generateAll({acct, niche, goal, tone, brand}){
     const src = LIB[niche] || LIB.marketing;
 
-    const hook = buildHook({goal, tone, niche});
-    const cta  = buildCTA({goal, tone, brand});
-    const plan = plan7({goal});
+    const hooksPack = buildHooksPack({goal, tone, niche, acct});
+    const ctasPack  = buildCTAPack({goal, acct, brand});
 
-    // تخصيص خفيف حسب نوع الحساب (يضيف لمسة للسياق)
     const acctHints = {
       creator: "مناسب لصناع المحتوى",
       model: "مناسب للموديلز/الفاشن",
-      business: "مناسب للحسابات التجارية",
+      business: "مناسب للحسابات التجارية والمتاجر",
       personal: "مناسب للحسابات الشخصية"
     };
 
-    const posts = shuffle(src.posts).slice(0,10).map(t=>toneify(tone, t));
-    const reels = shuffle(src.reels).slice(0,6).map(t=>toneify(tone, t));
-    const stories = shuffle(src.stories).slice(0,6).map(t=>toneify(tone, t));
+    function mkItem(typeLabel, title){
+      const hook = toneify(tone, pick(hooksPack[typeLabel] || hooksPack["بوست"]));
+      const cta  = toneify(tone, pick(ctasPack[typeLabel]  || ctasPack["بوست"]));
+      const script = toneify(tone, buildScript({typeLabel, niche, acct, goal, title}));
+      return {typeLabel, title: toneify(tone, title), hook, script, cta};
+    }
 
-    return {hook, cta, plan, posts, reels, stories, acctHint: acctHints[acct] || ""};
-  }
+    const posts   = shuffle(src.posts).slice(0,10).map(t=>mkItem("بوست", t));
+    const reels   = shuffle(src.reels).slice(0,6).map(t=>mkItem("ريلز", t));
+    const stories = shuffle(src.stories).slice(0,6).map(t=>mkItem("ستوري", t));
 
-  // ---------- UI ----------
-  let lastPayload = null;
+    // ملخص عام (غير مكرر/غير مزعج)
+    const globalHook = toneify(tone, pick(hooksPack["ريلز"]));
+    const globalCTA  = toneify(tone, pick(ctasPack["بوست"]));
+    const plan = (goal==="sales")
+      ? "7 أيام: (مشكلة/حل) → (إثبات) → (FAQ) → (نتائج) → (عرض) → (اعتراضات) → (CTA قوي)"
+      : (goal==="followers")
+      ? "7 أيام: Reels Hook قوي يوميًا + Carousel قيمتين + Story تصويت/سؤال يوميًا"
+      : "7 أيام: Carousel قيمة + Reels ترندي + Story سؤال/تصويت + ردود سريعة على الجمهور";
 
-  function fill(payload){
-    $('out').style.display = 'block';
-    $('summary').innerHTML = `تم توليد أفكار <strong>مخصّصة</strong> — ${payload.acctHint}. يمكنك الضغط على “أفكار جديدة” لتبديل النتائج.`;
-
-    $('hookText').textContent = payload.hook;
-    $('ctaText').textContent  = payload.cta;
-    $('planText').textContent = payload.plan;
-
-    const postsEl = $('posts'); postsEl.innerHTML = '';
-    payload.posts.forEach((title)=>postsEl.appendChild(renderIdea("بوست", title, payload.hook, payload.cta)));
-
-    const reelsEl = $('reels'); reelsEl.innerHTML = '';
-    payload.reels.forEach((title)=>reelsEl.appendChild(renderIdea("ريلز", title, payload.hook, payload.cta)));
-
-    const storiesEl = $('stories'); storiesEl.innerHTML = '';
-    payload.stories.forEach((title)=>storiesEl.appendChild(renderIdea("ستوري", title, payload.hook, payload.cta)));
-
-    lastPayload = payload;
+    return {
+      acctHint: acctHints[acct] || "",
+      globalHook, globalCTA, plan,
+      posts, reels, stories
+    };
   }
 
   async function copyText(txt){
@@ -654,6 +759,35 @@
     }
   }
 
+  let lastPayload = null;
+
+  function fill(payload){
+    $('out').style.display = 'block';
+    $('summary').innerHTML = `تم توليد نتائج <strong>جاهزة للنشر</strong> — ${payload.acctHint}. (كل فكرة لها Hook و CTA وسكريبت مختلف).`;
+
+    $('hookText').textContent = payload.globalHook;
+    $('ctaText').textContent  = payload.globalCTA;
+    $('planText').textContent = payload.plan;
+
+    const postsEl = $('posts'); postsEl.innerHTML = '';
+    payload.posts.forEach(x=>{
+      postsEl.appendChild(renderIdea(x.typeLabel, x.title, x.hook, x.script, x.cta));
+    });
+
+    const reelsEl = $('reels'); reelsEl.innerHTML = '';
+    payload.reels.forEach(x=>{
+      reelsEl.appendChild(renderIdea(x.typeLabel, x.title, x.hook, x.script, x.cta));
+    });
+
+    const storiesEl = $('stories'); storiesEl.innerHTML = '';
+    payload.stories.forEach(x=>{
+      storiesEl.appendChild(renderIdea(x.typeLabel, x.title, x.hook, x.script, x.cta));
+    });
+
+    lastPayload = payload;
+  }
+
+  // ---------- Events ----------
   $('ideasForm').addEventListener('submit', (e)=>{
     e.preventDefault();
     const data = {
@@ -663,12 +797,11 @@
       tone: $('tone').value,
       brand: $('brand').value || ""
     };
-    fill(generate(data));
+    fill(generateAll(data));
     window.scrollTo({top: $('out').offsetTop - 80, behavior:'smooth'});
   });
 
   $('shuffleBtn').addEventListener('click', ()=>{
-    // لو لم يولّد سابقًا، ولّد بالإعدادات الحالية
     const data = {
       acct: $('acct').value,
       niche: $('niche').value,
@@ -676,35 +809,35 @@
       tone: $('tone').value,
       brand: $('brand').value || ""
     };
-    fill(generate(data));
+    fill(generateAll(data));
     toast('أفكار جديدة ✨');
   });
 
   $('copyAllBtn').addEventListener('click', ()=>{
-    if(!lastPayload){
-      toast('ولّد أفكار أولًا 🙂');
-      return;
-    }
+    if(!lastPayload){ toast('ولّد أفكار أولًا 🙂'); return; }
+
+    const fmt = (arr)=>arr.map(x=>`- ${x.title}\n  Hook: ${x.hook}\n  سكريبت: ${x.script}\n  CTA: ${x.cta}`).join("\n\n");
+
     const txt =
 `مولّد أفكار محتوى إنستغرام — MarketAPro
 
-HOOK:
-${lastPayload.hook}
+Hook عام:
+${lastPayload.globalHook}
 
-CTA:
-${lastPayload.cta}
+CTA عام:
+${lastPayload.globalCTA}
 
 خطة 7 أيام:
 ${lastPayload.plan}
 
 أفكار بوست:
-- ${lastPayload.posts.join("\n- ")}
+${fmt(lastPayload.posts)}
 
 أفكار ريلز:
-- ${lastPayload.reels.join("\n- ")}
+${fmt(lastPayload.reels)}
 
 أفكار ستوري:
-- ${lastPayload.stories.join("\n- ")}
+${fmt(lastPayload.stories)}
 `;
     copyText(txt);
   });
@@ -714,8 +847,8 @@ ${lastPayload.plan}
     btn.addEventListener('click', ()=>{
       const key = btn.getAttribute('data-copy');
       if(!lastPayload){ toast('ولّد أفكار أولًا 🙂'); return; }
-      if(key==='hook') return copyText(lastPayload.hook);
-      if(key==='cta') return copyText(lastPayload.cta);
+      if(key==='hook') return copyText(lastPayload.globalHook);
+      if(key==='cta') return copyText(lastPayload.globalCTA);
       if(key==='plan') return copyText(lastPayload.plan);
     });
   });
@@ -729,5 +862,6 @@ ${lastPayload.plan}
     }
   });
 </script>
+
 </body>
 </html>
