@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>مولّد أفكار محتوى إنستغرام — أفكار بوستات وريلز وستوري جاهزة | MarketAPro</title>
+  <meta name="description" content="مولّد أفكار محتوى إنستغرام بالعربية: احصل على أفكار بوستات وريلز وستوري جاهزة + Hook و CTA حسب نوع حسابك ومجالك وهدفك. أداة مجانية بدون تسجيل من MarketAPro." />
+  <meta name="keywords" content="أفكار محتوى إنستغرام, أفكار بوستات إنستغرام, أفكار ريلز, ماذا أنشر على إنستغرام, محتوى إنستغرام جاهز, مولد أفكار محتوى" />
+
+  <link rel="canonical" href="https://marketapro.com/tools/instagram-content-ideas/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="مولّد أفكار محتوى إنستغرام — أفكار جاهزة حسب مجالك">
+  <meta property="og:description" content="أفكار بوست + ريلز + ستوري + Hook و CTA حسب نوع الحساب والهدف. مجانًا وبدون تسجيل.">
+  <meta property="og:url" content="https://marketapro.com/tools/instagram-content-ideas/" />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="https://marketapro.com/assets/og-instagram-content-ideas.jpg" /> -->
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- <meta name="twitter:image" content="https://marketapro.com/assets/og-instagram-content-ideas.jpg" /> -->
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://marketapro.com/"},
+      {"@type":"ListItem","position":2,"name":"الأدوات","item":"https://marketapro.com/tools/"},
+      {"@type":"ListItem","position":3,"name":"مولّد أفكار محتوى إنستغرام","item":"https://marketapro.com/tools/instagram-content-ideas/"}
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"كيف أحصل على أفكار محتوى إنستغرام بسرعة؟",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"اختر نوع حسابك ومجالك وهدفك، ثم اضغط (ولّد الأفكار). ستحصل على أفكار بوست وريلز وستوري + Hook و CTA جاهزة للنسخ والتطبيق."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"هل هذه الأداة مجانية؟",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"نعم، الأداة مجانية بالكامل وبدون تسجيل، وتعمل مباشرة داخل المتصفح."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"ما أفضل نوع محتوى لزيادة التفاعل؟",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"غالبًا الريلز والكاروسيل (Carousel) يحققان تفاعلًا أعلى إذا كان لديك Hook قوي وقيمة واضحة، مع CTA مناسب وتوقيت نشر جيد."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* تحسينات بسيطة داخل الصفحة فقط */
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    @media(max-width:860px){.grid2{grid-template-columns:1fr}}
+    .mini{padding:12px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.02)}
+    .mini strong{display:block;margin-bottom:6px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.02);font-weight:900;font-size:12px;color:var(--muted)}
+    .ideas{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    @media(max-width:860px){.ideas{grid-template-columns:1fr}}
+    .idea{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      border-radius:18px;
+      padding:14px;
+    }
+    .idea h3{margin:0 0 8px;font-size:16px}
+    .idea p{margin:0;color:var(--muted);line-height:1.9}
+    .idea .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+    .idea .meta .tag{padding:5px 8px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.02);font-weight:900;font-size:12px;color:var(--muted)}
+    .idea .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .toast{
+      position:fixed;inset-inline-start:16px;bottom:16px;
+      background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.12);
+      padding:10px 12px;border-radius:14px;color:var(--text);
+      display:none;z-index:9999
+    }
+    .split3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    @media(max-width:980px){.split3{grid-template-columns:1fr}}
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#content">تخطي إلى المحتوى</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="العودة للرئيسية">
+      <div class="brand-badge" aria-hidden="true"></div>
+      <div>
+        <p class="brand-title">MarketAPro</p>
+        <p class="brand-sub">أدوات تسويق مجانية</p>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="/">الرئيسية</a>
+      <a href="/tools/" class="active">الأدوات</a>
+      <a href="/news/">المقالات</a>
+      <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="container section">
+
+  <div class="card">
+    <h1>مولّد أفكار محتوى إنستغرام</h1>
+
+    <nav aria-label="Breadcrumb" class="note" style="margin-top:10px">
+      <a href="/">الرئيسية</a> ←
+      <a href="/tools/">الأدوات</a> ←
+      <span>مولّد أفكار محتوى إنستغرام</span>
+    </nav>
+
+    <p class="note" style="margin-top:10px">
+      اختر نوع حسابك ومجالك وهدفك — وستحصل على <strong>أفكار بوست + ريلز + ستوري</strong> مع
+      <strong>Hook</strong> و <strong>CTA</strong> جاهزين للنسخ. (بدون تسجيل)
+    </p>
+
+    <form id="ideasForm" class="grid2" style="margin-top:12px">
+      <div class="mini">
+        <label for="acct">نوع الحساب</label>
+        <select id="acct" required>
+          <option value="creator">صانع محتوى / مؤثر</option>
+          <option value="model">موديلز / فاشن / تصوير</option>
+          <option value="business">تجاري / متجر</option>
+          <option value="personal">شخصي / لايف ستايل</option>
+        </select>
+        <p class="note" style="margin:8px 0 0">يؤثر على أسلوب الأفكار و CTA.</p>
+      </div>
+
+      <div class="mini">
+        <label for="niche">المجال</label>
+        <select id="niche" required>
+          <option value="marketing">تسويق رقمي</option>
+          <option value="creators">صناع محتوى / يوتيوب / تيك توك</option>
+          <option value="lifestyle">لايف ستايل & شخصية</option>
+          <option value="ecom">تجارة إلكترونية / متاجر</option>
+          <option value="edu">تعليمي / معلوماتي</option>
+          <option value="fashion">تصوير / موديلز / فاشن</option>
+        </select>
+        <p class="note" style="margin:8px 0 0">اختر المجال الأقرب لمحتواك.</p>
+      </div>
+
+      <div class="mini">
+        <label for="goal">الهدف</label>
+        <select id="goal" required>
+          <option value="engagement">زيادة التفاعل</option>
+          <option value="followers">زيادة المتابعين</option>
+          <option value="sales">مبيعات / حجوزات / تحويل</option>
+        </select>
+        <p class="note" style="margin:8px 0 0">سيتم تعديل الـ Hook والـ CTA.</p>
+      </div>
+
+      <div class="mini">
+        <label for="tone">أسلوب المحتوى</label>
+        <select id="tone" required>
+          <option value="friendly">ودّي وبسيط</option>
+          <option value="bold">جريء/ترندي</option>
+          <option value="pro">احترافي</option>
+          <option value="emotional">عاطفي/ملهم</option>
+        </select>
+        <p class="note" style="margin:8px 0 0">لتناسب جمهورك أكثر.</p>
+      </div>
+
+      <div class="mini" style="grid-column:1/-1">
+        <label for="brand">اسم الحساب/البراند (اختياري)</label>
+        <input id="brand" type="text" placeholder="مثال: marketapro أو اسم البراند" />
+        <div class="row">
+          <button class="btn primary" type="submit">ولّد الأفكار الآن</button>
+          <button class="btn secondary" id="shuffleBtn" type="button">أفكار جديدة</button>
+          <button class="btn secondary" id="copyAllBtn" type="button">نسخ كل النتائج</button>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <span class="pill">✅ بوست</span>
+          <span class="pill">🎥 ريلز</span>
+          <span class="pill">📌 ستوري</span>
+          <span class="pill">🧲 Hook + 📣 CTA</span>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="out" class="card" style="margin-top:12px;display:none">
+    <h2 style="margin:0 0 8px">النتائج</h2>
+    <p id="summary" class="note" style="margin-top:0"></p>
+
+    <div class="split3">
+      <div class="mini">
+        <strong>Hook جاهز</strong>
+        <p id="hookText" style="color:var(--muted);margin:0"></p>
+        <div class="row">
+          <button class="btn secondary" type="button" data-copy="hook">نسخ Hook</button>
+        </div>
+      </div>
+
+      <div class="mini">
+        <strong>CTA جاهز</strong>
+        <p id="ctaText" style="color:var(--muted);margin:0"></p>
+        <div class="row">
+          <button class="btn secondary" type="button" data-copy="cta">نسخ CTA</button>
+        </div>
+      </div>
+
+      <div class="mini">
+        <strong>خطة 7 أيام (اقتراح)</strong>
+        <p id="planText" style="color:var(--muted);margin:0"></p>
+        <div class="row">
+          <button class="btn secondary" type="button" data-copy="plan">نسخ الخطة</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 style="margin:0 0 8px;font-size:20px">أفكار بوستات (10)</h2>
+    <div id="posts" class="ideas" aria-label="أفكار بوستات"></div>
+
+    <div class="divider"></div>
+
+    <h2 style="margin:0 0 8px;font-size:20px">أفكار ريلز (6)</h2>
+    <div id="reels" class="ideas" aria-label="أفكار ريلز"></div>
+
+    <div class="divider"></div>
+
+    <h2 style="margin:0 0 8px;font-size:20px">أفكار ستوري (6)</h2>
+    <div id="stories" class="ideas" aria-label="أفكار ستوري"></div>
+
+    <div class="divider"></div>
+
+    <!-- روابط داخلية تساعد SEO وتزيد التحويل -->
+    <div class="cta" aria-label="روابط مفيدة">
+      <div>
+        <strong>بعد ما تنشر… قيّم نتائجك صح ✅</strong>
+        <span>استخدم أدواتنا لتحديد أفضل وقت للنشر وحساب معدل التفاعل.</span>
+      </div>
+      <div class="row" style="margin-top:0">
+        <a class="btn secondary" href="/tools/best-time-to-post-instagram/">أفضل وقت للنشر</a>
+        <a class="btn primary" href="/tools/instagram-engagement-calculator/">حاسبة التفاعل</a>
+      </div>
+    </div>
+
+    <div class="cta" aria-label="خدمة العملاء">
+      <div>
+        <strong>تريد خطة محتوى كاملة لحسابك؟</strong>
+        <span>أرسل المجال والجمهور وسنقترح 3 أفكار + 3 Hooks مجانًا كبداية.</span>
+      </div>
+      <a class="btn primary"
+         href="https://wa.me/491234567890?text=مرحبًا%20MarketAPro%2C%20أريد%20خطة%20محتوى%20مبدئية%20لحسابي%20على%20إنستغرام"
+         target="_blank" rel="noopener">واتساب</a>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h2 style="margin:0 0 8px;font-size:18px">أسئلة شائعة</h2>
+      <details>
+        <summary>هل هذه الأفكار مناسبة لكل الحسابات؟</summary>
+        <div style="margin-top:10px;color:var(--muted);line-height:1.9">
+          نعم كبداية قوية، والأفضل أنك تختبر أسبوعًا وتثبت الأنواع التي تعطي أفضل حفظ/تعليق/مشاركة.
+        </div>
+      </details>
+      <details>
+        <summary>كيف أختار فكرة “تجيب متابعين”؟</summary>
+        <div style="margin-top:10px;color:var(--muted);line-height:1.9">
+          ركز على أفكار (قبل/بعد)، (أخطاء شائعة)، (قائمة خطوات) + Hook قوي وCTA يدعو للحفظ والمشاركة.
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <p class="note" style="margin-top:14px">
+    By <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
+  </p>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © 2025 MarketAPro — By Viva Media Creative
+  </div>
+</footer>
+
+<div class="toast" id="toast">تم ✅</div>
+
+<script>
+  // ---------- Helpers ----------
+  const $ = (id)=>document.getElementById(id);
+  const toast = (msg)=>{
+    const t = $('toast');
+    t.textContent = msg;
+    t.style.display = 'block';
+    clearTimeout(window.__t);
+    window.__t = setTimeout(()=>t.style.display='none', 1400);
+  };
+  const pick = (arr)=>arr[Math.floor(Math.random()*arr.length)];
+  const shuffle = (arr)=>arr.map(v=>({v, r:Math.random()})).sort((a,b)=>a.r-b.r).map(x=>x.v);
+
+  function toneify(tone, text){
+    const tweaks = {
+      friendly: {prefix:"", suffix:""},
+      bold: {prefix:"🔥 ", suffix:" — جرّبها اليوم"},
+      pro: {prefix:"", suffix:""},
+      emotional: {prefix:"✨ ", suffix:""}
+    };
+    const t = tweaks[tone] || tweaks.friendly;
+    return (t.prefix + text + t.suffix).trim();
+  }
+
+  function buildHook({goal, tone, niche}){
+    const hooks = {
+      engagement: [
+        "لو عندك 20 ثانية… هذا الشيء سيغيّر تفاعل حسابك",
+        "قبل ما تنشر اليوم، جرّب هذه الفكرة وسيكون الفرق واضح",
+        "سؤال سريع: هل جمهورك يتفاعل لأنه يفهم الفائدة فورًا؟"
+      ],
+      followers: [
+        "إذا كنت تريد متابعين… هذا النوع من المحتوى يشتغل دائمًا",
+        "3 أسباب تخلي الناس تتابعك من أول زيارة",
+        "أوقف التمرير: هذا محتوى الناس تبحث عنه فعلًا"
+      ],
+      sales: [
+        "لو عندك منتج/خدمة… هذه الطريقة ترفع الطلب بدون إعلانات",
+        "الناس لا تشتري المنتج… تشتري النتيجة — خلّها واضحة",
+        "قبل ما تعرض السعر… قل هذا الشيء أولًا"
+      ]
+    };
+    // تعزيز حسب المجال
+    const nicheHint = {
+      marketing: " (تسويق)",
+      creators: " (صناع محتوى)",
+      lifestyle: " (لايف ستايل)",
+      ecom: " (متجر)",
+      edu: " (تعليمي)",
+      fashion: " (فاشن/موديلز)"
+    };
+    return toneify(tone, pick(hooks[goal]||hooks.engagement) + (nicheHint[niche]||""));
+  }
+
+  function buildCTA({goal, tone, brand}){
+    const ctas = {
+      engagement: [
+        "اكتب (تم) لو تريد جزء 2 بنفس الفكرة",
+        "أي نقطة كانت الأهم؟ 1 أو 2 أو 3؟",
+        "احفظ المنشور وارجع له لاحقًا + ارسله لشخص يحتاجه"
+      ],
+      followers: [
+        "تابعني لأن القادم عبارة عن خطوات تطبيقية يومية",
+        "لو استفدت… تابعني وشاهد الجزء القادم",
+        "اكتب (متابع) وسأرسل لك نموذج مجاني"
+      ],
+      sales: [
+        "اكتب كلمة (عرض) لأرسل لك التفاصيل",
+        "احجز الآن/اطلب الآن — الرابط في البايو",
+        "راسلني على الخاص وسأقترح لك الأنسب"
+      ]
+    };
+    let base = pick(ctas[goal]||ctas.engagement);
+    if(brand && brand.trim()){
+      base = base.replace("تابعني", `تابع ${brand.trim()}`);
+    }
+    return toneify(tone, base);
+  }
+
+  function plan7({goal}){
+    const plans = {
+      engagement: "يوم1: Carousel قيمة | يوم2: Reels ترندي | يوم3: Story سؤال | يوم4: Carousel أخطاء | يوم5: Reels قبل/بعد | يوم6: Story تصويت | يوم7: Live/Story تلخيص",
+      followers: "يوم1: Reels Hook قوي | يوم2: Carousel خطوات | يوم3: Story خلف الكواليس | يوم4: Reels “أخطاء شائعة” | يوم5: Carousel أدوات | يوم6: Collab | يوم7: Reels قصير + CTA متابعة",
+      sales: "يوم1: مشكلة/حل | يوم2: إثبات اجتماعي | يوم3: Story أسئلة | يوم4: شرح العرض | يوم5: Reels نتائج | يوم6: FAQ | يوم7: عرض محدود + CTA طلب"
+    };
+    return plans[goal] || plans.engagement;
+  }
+
+  // ---------- Idea library ----------
+  const LIB = {
+    marketing: {
+      posts: [
+        "قائمة: 7 أخطاء تسويقية تقلل مبيعاتك وكيف تتجنبها",
+        "قبل/بعد: تحسين إعلان/بوست وتحليل الفرق",
+        "قالب جاهز: نموذج CTA يرفع التحويل",
+        "تفكيك ترند: لماذا انتشر هذا المحتوى؟ (تحليل سريع)",
+        "خطة أسبوع: جدول نشر واقعي لصاحب مشروع صغير",
+        "Check-list: 10 نقاط قبل نشر أي إعلان",
+        "Case study: نتيجة حقيقية من تعديل واحد",
+        "قارن: محتوى يجذب متابعين vs محتوى يبيع",
+        "أسئلة جمهورك: 10 أسئلة وردود قصيرة",
+        "Myth vs Truth: خرافات التسويق التي تؤذيك"
+      ],
+      reels: [
+        "Hook ثم 3 نقاط سريعة: (افعل/لا تفعل)",
+        "تعليق على مثال إعلان قوي + سبب قوته",
+        "قبل/بعد تصميم/كابشن في 10 ثوان",
+        "‘لو كنت أبدأ من الصفر’ 3 خطوات",
+        "رد سريع على سؤال شائع من المتابعين",
+        "ترند + تطبيقه على التسويق في 15 ثانية"
+      ],
+      stories: [
+        "تصويت: أي عنوان يجذبك أكثر؟ A/B",
+        "سؤال صندوق: ما أكبر مشكلة تسويق عندك؟",
+        "Mini lesson: نقطة واحدة + مثال",
+        "Behind the scenes: كيف تعمل على حملة",
+        "Quiz: ما أفضل CTA؟",
+        "CTA: هل تريد قالب مجاني؟ اكتب (قالب)"
+      ]
+    },
+
+    creators: {
+      posts: [
+        "قائمة: 20 فكرة محتوى (احفظها)",
+        "أخطاء شائعة تمنع انتشار الريلز",
+        "كيف أكتب Hook في أول سطر؟ (قوالب)",
+        "خطة تصوير: 5 لقطات بفيديو واحد",
+        "كيف تحول فكرة واحدة إلى 5 منشورات",
+        "Q&A: أسئلة متكررة وإجابات قصيرة",
+        "Behind the scenes: يوم من حياتك كصانع محتوى",
+        "مقارنة: قبل/بعد تحسين الإضاءة أو الصوت",
+        "قائمة أدوات مجانية لصناعة المحتوى",
+        "تحدي 7 أيام: نتائجك بعد أسبوع"
+      ],
+      reels: [
+        "3 أخطاء ثم الحل بسرعة",
+        "قبل/بعد (مونتاج بسيط)",
+        "ترند + لمسة شخصية",
+        "قصة قصيرة: مشكلة ثم نتيجة",
+        "فكرة واحدة — 3 تطبيقات",
+        "‘لو كنت مكانك’ نصيحة مباشرة"
+      ],
+      stories: [
+        "اختيار الجمهور: تنشر ماذا اليوم؟",
+        "نصيحة واحدة + سؤال",
+        "كواليس التصوير",
+        "نتائج/إحصاءات اليوم",
+        "تصويت على ثيم/لون",
+        "CTA: أرسل كلمة (فكرة) لأعطيك اقتراح"
+      ]
+    },
+
+    lifestyle: {
+      posts: [
+        "روتين صباحي/مسائي واقعي (بدون مثالية)",
+        "قائمة أشياء تعلمتها مؤخرًا",
+        "قبل/بعد: ترتيب/تنظيم/ستايل",
+        "أفضل 5 أماكن/أشياء جربتها",
+        "قصة قصيرة + درس واحد",
+        "أسئلة شخصية خفيفة للجمهور",
+        "قائمة: منتجات/أدوات مفيدة",
+        "موضوع رأي: هل توافق؟",
+        "صور + كابشن “قيمة”",
+        "تحدي أسبوعي مع المتابعين"
+      ],
+      reels: [
+        "Day in my life (سريع)",
+        "انتقالات بسيطة + موسيقى",
+        "3 نصائح في 10 ثوان",
+        "Before/After ستايل/مكان",
+        "موقف يومي مضحك",
+        "ترند + سؤال للجمهور"
+      ],
+      stories: [
+        "تصويت على قرار بسيط",
+        "سؤال: كيف كان يومك؟",
+        "صورة + كابشن قصير",
+        "Behind the scenes",
+        "روابط/توصيات",
+        "CTA: شارك ستوريك واعمل منشن"
+      ]
+    },
+
+    ecom: {
+      posts: [
+        "أفضل استخدامات المنتج (5 طرق)",
+        "قبل/بعد نتيجة المنتج",
+        "FAQ: أسئلة شائعة + أجوبة",
+        "قارن: المنتج vs البديل (بصدق)",
+        "كواليس: التغليف/الشحن",
+        "دليل مقاسات/اختيار",
+        "مراجعات عملاء (Screenshots)",
+        "باندل: كيف تختار باقة",
+        "حالة استخدام حقيقية",
+        "عرض أسبوعي + شروط واضحة"
+      ],
+      reels: [
+        "Unboxing سريع",
+        "تجربة المنتج في 10 ثوان",
+        "3 فوائد + لقطة لكل فائدة",
+        "قبل/بعد",
+        "رد على اعتراض مشهور (السعر/الجودة)",
+        "ترند + عرض المنتج"
+      ],
+      stories: [
+        "استطلاع: أي لون/نوع تفضل؟",
+        "أسئلة وأجوبة",
+        "كواليس تجهيز الطلبات",
+        "عرض محدود (Timer)",
+        "مراجعة عميل",
+        "CTA: اطلب الآن — الرابط"
+      ]
+    },
+
+    edu: {
+      posts: [
+        "تبسيط مفهوم صعب في 5 نقاط",
+        "قائمة مصطلحات مهمة ومعانيها",
+        "خطأ شائع + التصحيح",
+        "خريطة طريق للتعلم",
+        "أفضل مصادر مجانية",
+        "تمرين بسيط + مثال محلول",
+        "سؤال + إجابة مفصلة",
+        "ملخص كتاب/فيديو",
+        "قواعد ذهبية (10 نقاط)",
+        "اختبار صغير + الإجابة"
+      ],
+      reels: [
+        "تعريف سريع + مثال",
+        "3 نقاط في 15 ثانية",
+        "تصحيح خطأ منتشر",
+        "اختبار سريع للجمهور",
+        "قبل/بعد (معلومة خاطئة/صحيحة)",
+        "سؤال ثم الإجابة"
+      ],
+      stories: [
+        "Quiz يومي",
+        "سؤال صندوق",
+        "نقطة واحدة + مثال",
+        "تلخيص درس",
+        "تصويت على الموضوع القادم",
+        "CTA: احفظ المنشور"
+      ]
+    },
+
+    fashion: {
+      posts: [
+        "جلسة تصوير: 5 بوزات أساسية للموديلز",
+        "Moodboard: ستايل الأسبوع",
+        "قبل/بعد: تعديل بسيط يغير الصورة",
+        "قائمة: أخطاء ستايل شائعة",
+        "How-to: تنسيق قطعة واحدة 3 طرق",
+        "كواليس تصوير (معدات/إضاءة)",
+        "Portfolio tips: كيف تبني بروفايل قوي",
+        "مقارنة: صور طبيعية vs احترافية (وأين الأفضل)",
+        "نصائح ثقة أمام الكاميرا",
+        "تعاونات: كيف تتواصل مع براند"
+      ],
+      reels: [
+        "3 انتقالات Outfit (سريع)",
+        "Pose-to-pose (3 بوزات)",
+        "Behind the scenes تصوير",
+        "قبل/بعد Edit",
+        "ترند صوت + لوك جديد",
+        "نصيحة سريعة للموديلز"
+      ],
+      stories: [
+        "تصويت: أي لوك أفضل؟",
+        "Q&A للموديلز",
+        "كواليس تصوير",
+        "قبل/بعد Edit",
+        "نصيحة يومية",
+        "CTA: اطلب Portfolio Review"
+      ]
+    }
+  };
+
+  // ---------- Smart compositor ----------
+  function renderIdea(typeLabel, title, hook, cta){
+    const el = document.createElement('div');
+    el.className = 'idea';
+    el.innerHTML = `
+      <div class="meta">
+        <span class="tag">${typeLabel}</span>
+        <span class="tag">Hook</span>
+        <span class="tag">CTA</span>
+      </div>
+      <h3>${title}</h3>
+      <p><strong style="color:var(--text)">Hook:</strong> <span style="color:var(--muted)">${hook}</span></p>
+      <p style="margin-top:8px"><strong style="color:var(--text)">CTA:</strong> <span style="color:var(--muted)">${cta}</span></p>
+      <div class="actions">
+        <button class="btn secondary" type="button" data-copytext="${encodeURIComponent(typeLabel + " — " + title + "\nHook: " + hook + "\nCTA: " + cta)}">نسخ</button>
+      </div>
+    `;
+    return el;
+  }
+
+  function generate({acct, niche, goal, tone, brand}){
+    const src = LIB[niche] || LIB.marketing;
+
+    const hook = buildHook({goal, tone, niche});
+    const cta  = buildCTA({goal, tone, brand});
+    const plan = plan7({goal});
+
+    // تخصيص خفيف حسب نوع الحساب (يضيف لمسة للسياق)
+    const acctHints = {
+      creator: "مناسب لصناع المحتوى",
+      model: "مناسب للموديلز/الفاشن",
+      business: "مناسب للحسابات التجارية",
+      personal: "مناسب للحسابات الشخصية"
+    };
+
+    const posts = shuffle(src.posts).slice(0,10).map(t=>toneify(tone, t));
+    const reels = shuffle(src.reels).slice(0,6).map(t=>toneify(tone, t));
+    const stories = shuffle(src.stories).slice(0,6).map(t=>toneify(tone, t));
+
+    return {hook, cta, plan, posts, reels, stories, acctHint: acctHints[acct] || ""};
+  }
+
+  // ---------- UI ----------
+  let lastPayload = null;
+
+  function fill(payload){
+    $('out').style.display = 'block';
+    $('summary').innerHTML = `تم توليد أفكار <strong>مخصّصة</strong> — ${payload.acctHint}. يمكنك الضغط على “أفكار جديدة” لتبديل النتائج.`;
+
+    $('hookText').textContent = payload.hook;
+    $('ctaText').textContent  = payload.cta;
+    $('planText').textContent = payload.plan;
+
+    const postsEl = $('posts'); postsEl.innerHTML = '';
+    payload.posts.forEach((title)=>postsEl.appendChild(renderIdea("بوست", title, payload.hook, payload.cta)));
+
+    const reelsEl = $('reels'); reelsEl.innerHTML = '';
+    payload.reels.forEach((title)=>reelsEl.appendChild(renderIdea("ريلز", title, payload.hook, payload.cta)));
+
+    const storiesEl = $('stories'); storiesEl.innerHTML = '';
+    payload.stories.forEach((title)=>storiesEl.appendChild(renderIdea("ستوري", title, payload.hook, payload.cta)));
+
+    lastPayload = payload;
+  }
+
+  async function copyText(txt){
+    try{
+      await navigator.clipboard.writeText(txt);
+      toast('تم النسخ ✅');
+    }catch(e){
+      alert('تعذر النسخ تلقائيًا. انسخ النص يدويًا:\n\n' + txt);
+    }
+  }
+
+  $('ideasForm').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const data = {
+      acct: $('acct').value,
+      niche: $('niche').value,
+      goal: $('goal').value,
+      tone: $('tone').value,
+      brand: $('brand').value || ""
+    };
+    fill(generate(data));
+    window.scrollTo({top: $('out').offsetTop - 80, behavior:'smooth'});
+  });
+
+  $('shuffleBtn').addEventListener('click', ()=>{
+    // لو لم يولّد سابقًا، ولّد بالإعدادات الحالية
+    const data = {
+      acct: $('acct').value,
+      niche: $('niche').value,
+      goal: $('goal').value,
+      tone: $('tone').value,
+      brand: $('brand').value || ""
+    };
+    fill(generate(data));
+    toast('أفكار جديدة ✨');
+  });
+
+  $('copyAllBtn').addEventListener('click', ()=>{
+    if(!lastPayload){
+      toast('ولّد أفكار أولًا 🙂');
+      return;
+    }
+    const txt =
+`مولّد أفكار محتوى إنستغرام — MarketAPro
+
+HOOK:
+${lastPayload.hook}
+
+CTA:
+${lastPayload.cta}
+
+خطة 7 أيام:
+${lastPayload.plan}
+
+أفكار بوست:
+- ${lastPayload.posts.join("\n- ")}
+
+أفكار ريلز:
+- ${lastPayload.reels.join("\n- ")}
+
+أفكار ستوري:
+- ${lastPayload.stories.join("\n- ")}
+`;
+    copyText(txt);
+  });
+
+  // نسخ hook/cta/plan
+  document.querySelectorAll('[data-copy]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const key = btn.getAttribute('data-copy');
+      if(!lastPayload){ toast('ولّد أفكار أولًا 🙂'); return; }
+      if(key==='hook') return copyText(lastPayload.hook);
+      if(key==='cta') return copyText(lastPayload.cta);
+      if(key==='plan') return copyText(lastPayload.plan);
+    });
+  });
+
+  // نسخ فكرة واحدة
+  document.addEventListener('click', (e)=>{
+    const t = e.target;
+    if(t && t.matches('button[data-copytext]')){
+      const txt = decodeURIComponent(t.getAttribute('data-copytext')||'');
+      copyText(txt);
+    }
+  });
+</script>
+</body>
+</html>
