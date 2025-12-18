@@ -289,6 +289,62 @@
       </p>
     </div>
   </section>
+ <div class="card" style="margin-top:12px">
+  <h2 style="margin:0 0 6px;font-size:18px">هل تريد نتائج أسرع؟</h2>
+  <p class="note" style="margin:0">
+    اطلب تحليلًا مجانيًا سريعًا لحسابك (ملاحظة: نرد خلال 24 ساعة).
+  </p>
+
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+    <!-- WhatsApp CTA -->
+    <a class="btn primary"
+       href="https://wa.me/491234567890?text=مرحبًا%20MarketAPro%2C%20أريد%20تحليلًا%20مجانيًا%20لحسابي%20على%20إنستغرام"
+       target="_blank" rel="noopener">
+      تواصل واتساب الآن
+    </a>
+
+    <!-- Email / Contact -->
+    <a class="btn"
+       href="https://vivamediacreative.com/contact.html"
+       target="_blank" rel="noopener">
+      تواصل عبر الموقع
+    </a>
+
+    <!-- Copy link -->
+    <button class="btn secondary" type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>alert('تم نسخ رابط الأداة'))">
+      نسخ رابط الأداة
+    </button>
+  </div>
+
+  <div class="divider"></div>
+
+  <h3 style="margin:0 0 6px;font-size:16px">اطلب تقرير PDF مجاني</h3>
+  <p class="note" style="margin:0 0 10px">
+    اترك بريدك ورابط حسابك وسنرسل لك ملخصًا + توصيات عملية.
+  </p>
+
+  <!-- بدون Backend: استخدم Formspree أو Tally -->
+  <form action="https://formspree.io/f/REPLACE_ID" method="POST">
+    <div class="row">
+      <div class="field">
+        <label>البريد الإلكتروني</label>
+        <input name="email" type="email" required placeholder="name@email.com">
+      </div>
+      <div class="field">
+        <label>رابط حساب إنستغرام</label>
+        <input name="instagram" type="url" required placeholder="https://instagram.com/username">
+      </div>
+    </div>
+    <div class="field">
+      <label>ماذا تريد تحسينه؟</label>
+      <input name="goal" type="text" placeholder="مثال: زيادة التفاعل / زيادة المبيعات / خطة محتوى">
+    </div>
+    <button class="btn primary" type="submit">أرسل الطلب</button>
+    <p class="note">لن نشارك بياناتك مع أي طرف.</p>
+  </form>
+</div>
+
+ 
 </main>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
