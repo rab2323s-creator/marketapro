@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>أفضل وقت للنشر على إنستغرام — أداة مجانية بالعربية | MarketAPro</title>
+  <meta name="description" content="اكتشف أفضل وقت للنشر على إنستغرام حسب بلدك ونوع الحساب والهدف (تفاعل/مبيعات/وصول). أداة عربية مجانية من MarketAPro مع توصيات عملية وجدول أوقات جاهز." />
+  <meta name="keywords" content="أفضل وقت للنشر على إنستغرام, افضل وقت للنشر انستغرام, best time to post instagram, وقت النشر على انستغرام, زيادة التفاعل, خوارزمية انستغرام" />
+  <link rel="canonical" href="https://marketapro.com/tools/best-time-to-post-instagram/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="أفضل وقت للنشر على إنستغرام — MarketAPro" />
+  <meta property="og:description" content="أداة عربية مجانية تقترح أفضل أوقات النشر حسب البلد ونوع الحساب والهدف + نص جاهز للنسخ." />
+  <meta property="og:url" content="https://marketapro.com/tools/best-time-to-post-instagram/" />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="https://marketapro.com/assets/og-best-time.jpg" /> -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- <meta name="twitter:image" content="https://marketapro.com/assets/og-best-time.jpg" /> -->
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- WebApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"أفضل وقت للنشر على إنستغرام",
+    "url":"https://marketapro.com/tools/best-time-to-post-instagram/",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Any",
+    "description":"أداة عربية مجانية تقترح أفضل أوقات النشر على إنستغرام حسب البلد ونوع الحساب والهدف مع توصيات عملية.",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "publisher":{"@type":"Organization","name":"MarketAPro","url":"https://marketapro.com/"}
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"هل يوجد وقت ثابت مناسب للجميع للنشر على إنستغرام؟",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"لا يوجد وقت واحد يناسب الجميع. أفضل وقت يعتمد على بلد الجمهور، ونوع المحتوى، ونشاط المتابعين في Insights. هذه الأداة تعطي اقتراحات عامة قوية لتبدأ منها ثم تختبر وتثبت الأفضل."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"هل يختلف أفضل وقت للنشر بين Reels وPosts؟",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"نعم. غالبًا Reels تعمل جيدًا مساءً وعطلة نهاية الأسبوع، بينما المنشورات (Posts/Carousels) قد تعمل أفضل وقت الظهيرة أو بعد العمل حسب جمهورك."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"كيف أعرف الوقت الأدق لحسابي؟",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"أفضل طريقة هي الرجوع إلى Instagram Insights لمعرفة نشاط المتابعين بالساعات والأيام، ثم اختبار 3 أوقات نشر لمدة أسبوعين ومقارنة النتائج."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;margin-top:18px}
+    @media (max-width: 900px){.wrap{grid-template-columns:1fr}}
+    .field{margin-top:10px}
+    label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
+    select, input{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      outline:none;
+    }
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width: 520px){.row{grid-template-columns:1fr}}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{cursor:pointer}
+    .btn.secondary{background:rgba(255,255,255,.02)}
+    .hint{font-size:13px;color:var(--muted);margin-top:8px}
+    .divider{height:1px;background:var(--border);margin:14px 0}
+    .list{margin:10px 0 0;padding-left:18px;color:var(--muted);line-height:1.9}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .chip{
+      padding:7px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      color:var(--text);font-size:13px;font-weight:800;
+    }
+    .toast{
+      position:fixed;left:16px;bottom:16px;
+      background:rgba(0,0,0,.65);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:10px 12px;
+      color:var(--text);
+      display:none;
+      max-width: 340px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#content">تخطي إلى المحتوى</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="العودة للرئيسية">
+      <div class="brand-badge" aria-hidden="true"></div>
+      <div>
+        <p class="brand-title">MarketAPro</p>
+        <p class="brand-sub">أفضل وقت للنشر</p>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="/">الرئيسية</a>
+      <a class="active" href="/tools/">الأدوات</a>
+      <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="container">
+  <section class="hero">
+    <div class="card">
+      <h1 style="margin:0 0 8px;font-size:28px;line-height:1.4">أفضل وقت للنشر على إنستغرام</h1>
+      <p style="margin:0;color:var(--muted)">
+        اختر بلد جمهورك ونوع الحساب والهدف، وسنقترح لك أفضل أوقات نشر عملية كبداية قوية — ثم اختبر وثبّت الأفضل حسب Insights.
+      </p>
+      <div class="chips" aria-label="ميزات الأداة">
+        <span class="chip">حسب البلد</span>
+        <span class="chip">حسب الهدف</span>
+        <span class="chip">حسب نوع الحساب</span>
+        <span class="chip">نص جاهز للنسخ</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <!-- Inputs -->
+    <div class="card" aria-label="اختيارات الأداة">
+      <form id="timeForm" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="country">بلد الجمهور الأساسي</label>
+            <select id="country">
+              <option value="gulf">الخليج (السعودية/الإمارات/الكويت/قطر/البحرين)</option>
+              <option value="egypt">مصر</option>
+              <option value="levant">بلاد الشام (الأردن/لبنان/سوريا/فلسطين)</option>
+              <option value="maghreb">المغرب العربي (المغرب/الجزائر/تونس/ليبيا)</option>
+              <option value="europe">أوروبا</option>
+              <option value="global">جمهور عالمي/مختلط</option>
+            </select>
+            <div class="hint">اختر الأقرب لتوقيت جمهورك.</div>
+          </div>
+
+          <div class="field">
+            <label for="goal">هدفك الأساسي</label>
+            <select id="goal">
+              <option value="engagement">زيادة التفاعل (Engagement)</option>
+              <option value="reach">زيادة الوصول (Reach)</option>
+              <option value="sales">مبيعات / Leads</option>
+              <option value="brand">وعي بالعلامة (Brand)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="type">نوع الحساب</label>
+            <select id="type">
+              <option value="creator">صانع محتوى / مؤثر</option>
+              <option value="smallbiz">مشروع صغير / متجر</option>
+              <option value="company">شركة / علامة تجارية</option>
+              <option value="personal">شخصي</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="format">نوع المحتوى</label>
+            <select id="format">
+              <option value="reels">Reels</option>
+              <option value="carousel">Carousel</option>
+              <option value="post">Post (صورة/نص)</option>
+              <option value="stories">Stories</option>
+              <option value="mixed">مختلط</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">اعرض أفضل الأوقات</button>
+          <button type="button" id="copyBtn" class="btn secondary">نسخ الملخص</button>
+          <button type="button" id="clearBtn" class="btn secondary">مسح</button>
+        </div>
+
+        <p class="hint" id="hint" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <!-- Output -->
+    <div class="card" id="output" style="display:none" aria-label="نتائج الأداة">
+      <h2 style="margin:0 0 8px;font-size:18px">النتيجة المقترحة</h2>
+      <p class="hint" id="meta"></p>
+
+      <div class="divider"></div>
+
+      <h3 style="margin:0 0 6px;font-size:16px">أفضل 3 أوقات للنشر</h3>
+      <ul class="list" id="topTimes"></ul>
+
+      <h3 style="margin:14px 0 6px;font-size:16px">أوقات إضافية للاختبار</h3>
+      <ul class="list" id="extraTimes"></ul>
+
+      <div class="divider"></div>
+
+      <h3 style="margin:0 0 6px;font-size:16px">خطة اختبار سريعة (14 يوم)</h3>
+      <ol class="list" style="margin-top:8px">
+        <li>اختر 3 أوقات من الأعلى، ووزّعها على أسبوعين.</li>
+        <li>ثبّت نوع المحتوى (مثل Reels فقط) أثناء الاختبار لنتائج عادلة.</li>
+        <li>قارن: التفاعل/الوصول/المتابعين الجدد، ثم ثبّت أفضل وقتين.</li>
+      </ol>
+
+      <div class="divider"></div>
+
+      <div class="card" style="background:rgba(255,255,255,.02);border:1px solid var(--border);box-shadow:none">
+        <h3 style="margin:0 0 6px;font-size:16px">أدوات أخرى قد تهمك</h3>
+        <ul class="list" style="margin-top:8px">
+          <li><a href="/tools/instagram-engagement-calculator/">حاسبة معدل التفاعل على إنستغرام</a></li>
+          <li><a href="/tools/">كل الأدوات المجانية</a></li>
+        </ul>
+      </div>
+
+      <div class="divider"></div>
+
+      <details>
+        <summary>ملاحظات مهمة</summary>
+        <div style="margin-top:10px;color:var(--muted);line-height:1.9">
+          <p><strong>هذه النتائج عامة:</strong> الأفضلية دائمًا لبيانات Insights.</p>
+          <p><strong>محتوى Reels:</strong> غالبًا يعمل أفضل مساءً وعطلة نهاية الأسبوع.</p>
+          <p><strong>محتوى المبيعات:</strong> جرّب أوقات الدوام (10–12) قبل الظهر.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<footer class="footer">
+  <div class="container">
+    <div>© 2025 MarketAPro — Free Marketing Tools</div>
+    <div style="margin-top:6px">By <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a></div>
+  </div>
+</footer>
+
+<script>
+  function showToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.style.display = 'block';
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(()=>{ t.style.display='none'; }, 2200);
+  }
+
+  const base = {
+    morning: ["09:00–11:00", "10:00–12:00"],
+    noon: ["12:00–14:00", "13:00–15:00"],
+    evening: ["18:00–21:00", "19:00–22:00"],
+    weekend: ["السبت 11:00–13:00", "الأحد 18:00–21:00"]
+  };
+
+  const byRegion = {
+    gulf:   { label:"الخليج", shift:"+0", prime:["الثلاثاء 18:00–21:00","الخميس 09:00–11:00","السبت 11:00–13:00"], extra:["الإثنين 19:00–21:00","الأربعاء 10:00–12:00","الجمعة 16:00–19:00"] },
+    egypt:  { label:"مصر",    shift:"+0", prime:["الأحد 19:00–22:00","الثلاثاء 18:00–21:00","الخميس 10:00–12:00"], extra:["السبت 11:00–13:00","الأربعاء 18:00–20:00","الجمعة 16:00–19:00"] },
+    levant: { label:"بلاد الشام", shift:"+0", prime:["الثلاثاء 18:00–21:00","الأربعاء 10:00–12:00","السبت 11:00–13:00"], extra:["الإثنين 18:00–20:00","الخميس 09:00–11:00","الجمعة 16:00–19:00"] },
+    maghreb:{ label:"المغرب العربي", shift:"+0", prime:["الأربعاء 19:00–21:00","الخميس 10:00–12:00","السبت 12:00–14:00"], extra:["الثلاثاء 18:00–20:00","الإثنين 10:00–12:00","الأحد 18:00–21:00"] },
+    europe: { label:"أوروبا", shift:"+0", prime:["الإثنين 18:00–20:00","الأربعاء 12:00–14:00","السبت 10:00–12:00"], extra:["الثلاثاء 18:00–21:00","الخميس 09:00–11:00","الأحد 19:00–21:00"] },
+    global: { label:"جمهور مختلط", shift:"+0", prime:["يوميًا 09:00–11:00","يوميًا 18:00–21:00","الثلاثاء/الخميس (تجربة أولًا)"], extra:["السبت 11:00–13:00","الأربعاء 10:00–12:00","الجمعة 16:00–19:00"] }
+  };
+
+  function goalTweaks(goal, format){
+    // تعطي تلميحات حسب الهدف ونوع المحتوى
+    const hints = [];
+    if(goal === "sales") hints.push("للمبيعات: جرّب أوقات الدوام (10:00–12:00) + مساءً 19:00–21:00.");
+    if(goal === "reach") hints.push("للوصول: ثبّت 3 أوقات، وكرر أفضل صيغة محتوى 3 مرات أسبوعيًا.");
+    if(goal === "brand") hints.push("للوعي: اعتمد Carousel/Posts وقت الظهيرة، وStories يوميًا.");
+    if(goal === "engagement") hints.push("للتفاعل: ركّز على مساء الثلاثاء/الخميس وعطلة نهاية الأسبوع.");
+
+    if(format === "reels") hints.push("Reels غالبًا تعمل أفضل مساءً + عطلة نهاية الأسبوع.");
+    if(format === "carousel") hints.push("Carousel غالبًا تعمل جيدًا وقت الظهيرة وبعد العمل.");
+    if(format === "stories") hints.push("Stories: وزّعها على اليوم (صباح/ظهر/مساء) بدل مرة واحدة.");
+
+    return hints;
+  }
+
+  const form = document.getElementById('timeForm');
+  const out = document.getElementById('output');
+
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const country = document.getElementById('country').value;
+    const goal = document.getElementById('goal').value;
+    const type = document.getElementById('type').value;
+    const format = document.getElementById('format').value;
+
+    const region = byRegion[country];
+    const tweaks = goalTweaks(goal, format);
+
+    const meta = document.getElementById('meta');
+    meta.textContent = `اقتراحات مبدئية لجمهور: ${region.label} — هدفك: ${labelGoal(goal)} — نوع المحتوى: ${labelFormat(format)}. ` + (tweaks[0] ? ("نصيحة: " + tweaks[0]) : "");
+
+    renderList('topTimes', adjustForType(region.prime, type, format));
+    renderList('extraTimes', adjustForType(region.extra, type, format));
+
+    out.style.display = 'block';
+    history.replaceState(null,'','#results');
+    showToast('تم إنشاء التوصيات ✅');
+  });
+
+  function labelGoal(g){
+    return ({
+      engagement:"زيادة التفاعل",
+      reach:"زيادة الوصول",
+      sales:"مبيعات/Leads",
+      brand:"وعي بالعلامة"
+    })[g] || g;
+  }
+
+  function labelFormat(f){
+    return ({
+      reels:"Reels",
+      carousel:"Carousel",
+      post:"Post",
+      stories:"Stories",
+      mixed:"مختلط"
+    })[f] || f;
+  }
+
+  function adjustForType(times, type, format){
+    // تعديل بسيط حسب نوع الحساب ونوع المحتوى لزيادة “شعور التخصيص”
+    const add = [];
+    if(type === "company") add.push("الأحد 10:00–12:00 — مناسب لحسابات الشركات");
+    if(type === "smallbiz") add.push("الخميس 19:00–21:00 — وقت مناسب للشراء/الطلب");
+    if(type === "creator") add.push("السبت 18:00–21:00 — جمهور نشط للمحتوى");
+    if(format === "reels") add.push("يوميًا 19:00–22:00 — مناسب لـ Reels");
+    return [...times, ...add].slice(0, 6);
+  }
+
+  function renderList(id, arr){
+    const el = document.getElementById(id);
+    el.innerHTML = '';
+    arr.forEach(t=>{
+      const li = document.createElement('li');
+      li.textContent = t;
+      el.appendChild(li);
+    });
+  }
+
+  document.getElementById('clearBtn').addEventListener('click', ()=>{
+    document.getElementById('country').value = 'gulf';
+    document.getElementById('goal').value = 'engagement';
+    document.getElementById('type').value = 'creator';
+    document.getElementById('format').value = 'reels';
+    document.getElementById('hint').textContent = '';
+    out.style.display = 'none';
+    history.replaceState(null,'',' ');
+    showToast('تم المسح');
+  });
+
+  document.getElementById('copyBtn').addEventListener('click', async ()=>{
+    if(out.style.display === 'none'){
+      showToast('احسب أولًا لنسخ الملخص');
+      return;
+    }
+    const country = document.getElementById('country').options[document.getElementById('country').selectedIndex].text;
+    const goal = labelGoal(document.getElementById('goal').value);
+    const type = document.getElementById('type').options[document.getElementById('type').selectedIndex].text;
+    const format = labelFormat(document.getElementById('format').value);
+
+    const top = [...document.querySelectorAll('#topTimes li')].map(li=>"- " + li.textContent).join("\n");
+    const extra = [...document.querySelectorAll('#extraTimes li')].map(li=>"- " + li.textContent).join("\n");
+
+    const txt =
+`MarketAPro — أفضل وقت للنشر على إنستغرام
+البلد/المنطقة: ${country}
+الهدف: ${goal}
+نوع الحساب: ${type}
+نوع المحتوى: ${format}
+
+أفضل 3 أوقات:
+${top}
+
+أوقات إضافية:
+${extra}
+
+الرابط: https://marketapro.com/tools/best-time-to-post-instagram/`;
+
+    try{
+      await navigator.clipboard.writeText(txt);
+      showToast('تم نسخ الملخص ✅');
+    }catch(e){
+      alert('تعذر النسخ تلقائيًا. انسخ النص يدويًا:\n\n' + txt);
+    }
+  });
+</script>
+</body>
+</html>
