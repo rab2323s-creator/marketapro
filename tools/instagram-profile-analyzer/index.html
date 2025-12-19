@@ -3,88 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>تحليل حساب إنستغرام مجانًا — Instagram Profile Analyzer | MarketAPro</title>
-  <meta name="description" content="حلّل حساب إنستغرام خلال ثوانٍ: تقييم قوة الحساب (Score 0–100)، معدل التفاعل، مقارنة بمعايير السوق حسب نوع الحساب (موديل/متجر/صانع محتوى)، وتوصيات عملية + روابط أدوات مجانية." />
-  <meta name="keywords" content="تحليل حساب انستغرام, فحص حساب انستغرام, instagram profile analyzer, معدل التفاعل انستغرام, تدقيق حساب انستغرام, تقييم حساب انستغرام" />
-
+  <title>تحليل حساب إنستغرام مجانًا — MarketAPro</title>
+  <meta name="description" content="حلّل حساب إنستغرام خلال ثوانٍ: Score (0–100)، معدل التفاعل، مقارنة معيارية حسب نوع الحساب، وتوصيات عملية + روابط أدوات مجانية." />
   <link rel="canonical" href="https://marketapro.com/tools/instagram-profile-analyzer/" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="تحليل حساب إنستغرام مجانًا — تقرير فوري" />
-  <meta property="og:description" content="Score + معدل التفاعل + مقارنة معيارية + توصيات عملية حسب نوع الحساب. أداة عربية مجانية من MarketAPro." />
-  <meta property="og:url" content="https://marketapro.com/tools/instagram-profile-analyzer/" />
-  <meta property="og:type" content="website" />
-  <!-- <meta property="og:image" content="https://marketapro.com/assets/og-instagram-profile-analyzer.jpg" /> -->
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <!-- <meta name="twitter:image" content="https://marketapro.com/assets/og-instagram-profile-analyzer.jpg" /> -->
-
   <link rel="stylesheet" href="/style.css" />
 
-  <!-- Breadcrumb Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://marketapro.com/"},
-      {"@type":"ListItem","position":2,"name":"الأدوات","item":"https://marketapro.com/tools/"},
-      {"@type":"ListItem","position":3,"name":"تحليل حساب إنستغرام","item":"https://marketapro.com/tools/instagram-profile-analyzer/"}
-    ]
-  }
-  </script>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"هل الأداة تسحب بيانات إنستغرام تلقائيًا؟",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"هذه أداة تدقيق (Audit) تقدّم تقريرًا سريعًا بناءً على معلومات تؤكدها أنت مثل عدد المتابعين ومتوسط التفاعل. هذا يجعلها سريعة وآمنة وتعمل بدون تسجيل."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"كيف يتم حساب معدل التفاعل؟",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"يُحسب غالبًا كالتالي: (متوسط الإعجابات + متوسط التعليقات) ÷ عدد المتابعين × 100. الأداة تنفّذ الحساب تلقائيًا وتقدم Score وتوصيات."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"ما هو معدل التفاعل الجيد؟",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"يختلف حسب نوع الحساب وحجم المتابعين، لكن غالبًا 1%–3% يعتبر جيدًا، و3%+ قوي للحسابات الصغيرة والمتوسطة. الأداة تقارن حسابك بمعايير تقريبية حسب الفئة."
-        }
-      }
-    ]
-  }
-  </script>
-
   <style>
-    /* تحسينات داخلية فقط لهذه الصفحة */
+    /* ✅ ستايل بسيط لضمان عمل الصفحة حتى لو style.css عندك مختلف */
     .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
     @media(max-width:900px){.grid2{grid-template-columns:1fr}}
-    .mini{padding:14px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.02)}
-    .mini label{display:block;color:var(--muted);font-weight:900;margin-bottom:6px;font-size:13px}
+    .mini{padding:14px;border-radius:16px;border:1px solid var(--border,rgba(255,255,255,.12));background:rgba(255,255,255,.02)}
+    .mini label{display:block;color:var(--muted,#a6b3cc);font-weight:900;margin-bottom:6px;font-size:13px}
     .mini input,.mini select{
-      width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--border);
-      background:rgba(255,255,255,.02);color:var(--text);outline:none
+      width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--border,rgba(255,255,255,.12));
+      background:rgba(255,255,255,.02);color:var(--text,#e8f0ff);outline:none
     }
-    .note2{color:var(--muted);font-size:13px;margin:8px 0 0;line-height:1.8}
+    .note2{color:var(--muted,#a6b3cc);font-size:13px;margin:8px 0 0;line-height:1.8}
     .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
-    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.02);font-weight:900;font-size:12px;color:var(--muted)}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid var(--border,rgba(255,255,255,.12));background:rgba(255,255,255,.02);font-weight:900;font-size:12px;color:var(--muted,#a6b3cc)}
     .loader{
       display:none;align-items:center;gap:10px;margin-top:12px;
-      padding:12px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.02)
+      padding:12px;border-radius:16px;border:1px solid var(--border,rgba(255,255,255,.12));background:rgba(255,255,255,.02)
     }
     .dot{width:8px;height:8px;border-radius:99px;background:rgba(56,189,248,.9);animation:b .9s infinite alternate}
     .dot:nth-child(2){animation-delay:.15s}
@@ -93,52 +32,44 @@
 
     .barWrap{margin-top:10px}
     input[type="range"]{width:100%}
-    .rangeMeta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:6px}
+    .rangeMeta{display:flex;justify-content:space-between;color:var(--muted,#a6b3cc);font-size:12px;margin-top:6px}
 
     .report{display:none;margin-top:12px}
-    .reportHeader{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
-    .scoreBox{
-      min-width:240px;flex:1;
-      padding:14px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.02)
-    }
+    .scoreBox{padding:14px;border-radius:16px;border:1px solid var(--border,rgba(255,255,255,.12));background:rgba(255,255,255,.02)}
     .scoreTop{display:flex;justify-content:space-between;align-items:center;gap:10px}
     .scoreNum{font-weight:1000;font-size:34px;line-height:1}
-    .scoreLabel{color:var(--muted);font-weight:900}
+    .scoreLabel{color:var(--muted,#a6b3cc);font-weight:900}
     .meter{height:10px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden;margin-top:10px;border:1px solid rgba(255,255,255,.08)}
     .meter > div{height:100%;width:0%}
     .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
     @media(max-width:980px){.kpis{grid-template-columns:1fr}}
-    .kpi{padding:14px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.02)}
+    .kpi{padding:14px;border-radius:16px;border:1px solid var(--border,rgba(255,255,255,.12));background:rgba(255,255,255,.02)}
     .kpi strong{display:block;font-size:18px}
-    .kpi span{color:var(--muted);font-size:13px}
-
+    .kpi span{color:var(--muted,#a6b3cc);font-size:13px}
     .cards2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
     @media(max-width:980px){.cards2{grid-template-columns:1fr}}
-    .list{margin:8px 0 0;padding-right:18px;color:var(--muted);line-height:1.9}
-    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .btn{cursor:pointer}
-
+    .list{margin:8px 0 0;padding-right:18px;color:var(--muted,#a6b3cc);line-height:1.9}
     .toast{
       position:fixed;inset-inline-start:16px;bottom:16px;
       background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.12);
-      padding:10px 12px;border-radius:14px;color:var(--text);
+      padding:10px 12px;border-radius:14px;color:#fff;
       display:none;z-index:9999
     }
-
-    .smalllink{color:var(--text);text-decoration:underline;text-underline-offset:3px}
+    /* أزرار احتياطية */
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 14px;border-radius:14px;font-weight:900;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:#fff;cursor:pointer}
+    .btn.primary{border:0;background:linear-gradient(135deg,#06b6d4,#38bdf8);color:#00131a}
+    .btn.secondary{background:transparent}
   </style>
 </head>
 
 <body>
-<a class="skip-link" href="#content">تخطي إلى المحتوى</a>
-
 <header class="header">
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="العودة للرئيسية">
       <div class="brand-badge" aria-hidden="true"></div>
       <div>
         <p class="brand-title">MarketAPro</p>
-        <p class="brand-sub">بوابة تحليل إنستغرام</p>
+        <p class="brand-sub">تحليل حساب إنستغرام</p>
       </div>
     </a>
 
@@ -146,31 +77,20 @@
       <a href="/">الرئيسية</a>
       <a class="active" href="/tools/">الأدوات</a>
       <a href="/news/">المقالات</a>
-      <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
     </nav>
   </div>
 </header>
 
-<main id="content" class="container section">
+<main class="container section">
   <div class="card">
     <h1 style="margin:0 0 8px;font-size:28px;line-height:1.4">تحليل حساب إنستغرام مجانًا</h1>
+    <p class="note">أدخل اليوزر واختر نوع الحساب. سنبني تقريرًا سريعًا + Score + توصيات.</p>
 
-    <nav aria-label="Breadcrumb" class="note" style="margin-top:10px">
-      <a href="/">الرئيسية</a> ←
-      <a href="/tools/">الأدوات</a> ←
-      <span>تحليل حساب إنستغرام</span>
-    </nav>
-
-    <p class="note" style="margin-top:10px">
-      أدخل اسم المستخدم واختر نوع الحساب. سنعرض <strong>تقريرًا سريعًا</strong> مع Score وتوصيات.
-      ثم تؤكد الأرقام بخطوة سهلة (سلايدر) بدون تعقيد.
-    </p>
-
-    <form id="form" class="grid2" style="margin-top:12px">
+    <form id="form" class="grid2">
       <div class="mini">
         <label for="username">اسم المستخدم</label>
-        <input id="username" type="text" inputmode="text" placeholder="@username" autocomplete="off" required />
-        <p class="note2">اكتب اليوزر فقط (بدون رابط). مثال: <strong>@marketapro</strong></p>
+        <input id="username" type="text" placeholder="@username" autocomplete="off" required />
+        <p class="note2">مثال: <strong>@marketapro</strong></p>
       </div>
 
       <div class="mini">
@@ -180,7 +100,7 @@
           <option value="creator">صانع محتوى / مؤثر</option>
           <option value="business">متجر / بزنس</option>
         </select>
-        <p class="note2">هذا يغيّر المقارنة المعيارية والتوصيات.</p>
+        <p class="note2">هذا يغيّر المقارنة والتوصيات.</p>
       </div>
 
       <div class="mini" style="grid-column:1/-1">
@@ -188,71 +108,61 @@
           <button class="btn primary" type="submit">🔍 تحليل الحساب</button>
           <button class="btn secondary" id="resetBtn" type="button">مسح</button>
           <span class="pill">بدون تسجيل</span>
-          <span class="pill">Score + توصيات</span>
-          <span class="pill">مقارنة معيارية</span>
+          <span class="pill">Hybrid</span>
+          <span class="pill">Score</span>
         </div>
 
         <div class="loader" id="loader" aria-live="polite">
           <div style="display:flex;gap:6px">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
           </div>
-          <div style="color:var(--muted);font-weight:900">جارٍ تحليل الحساب… تجهيز تقرير سريع</div>
+          <div style="color:var(--muted,#a6b3cc);font-weight:900">جارٍ تحليل الحساب…</div>
         </div>
       </div>
 
-      <!-- Confirmation section (Hybrid) -->
+      <!-- Confirm -->
       <div class="mini" id="confirmBox" style="grid-column:1/-1;display:none">
-        <strong style="display:block;margin-bottom:8px">✅ تأكيد سريع (لتحسين دقة التقرير)</strong>
-        <p class="note2" style="margin-top:0">
-          تم تجهيز التقرير. فقط أكد أرقامًا تقريبية — سهل وسريع.
-        </p>
+        <strong style="display:block;margin-bottom:8px">✅ تأكيد سريع للأرقام</strong>
+        <p class="note2" style="margin-top:0">أكد قيمًا تقريبية للحصول على تقرير أدق.</p>
 
         <div class="grid2">
           <div>
-            <label for="followers">عدد المتابعين (يرجى التأكيد)</label>
-            <input id="followers" type="number" min="1" placeholder="مثال: 12500" required />
-            <p class="note2">لا تحتاج رقمًا دقيقًا 100% — قريب يكفي.</p>
+            <label for="followers">عدد المتابعين</label>
+            <input id="followers" type="number" min="1" placeholder="مثال: 12500" />
           </div>
 
           <div>
-            <label for="goal">هدفك الأساسي</label>
-            <select id="goal" required>
+            <label for="goal">هدفك</label>
+            <select id="goal">
               <option value="engagement">زيادة التفاعل</option>
               <option value="followers">زيادة المتابعين</option>
-              <option value="sales">مبيعات / حجوزات / تعاونات</option>
+              <option value="sales">مبيعات / تعاونات</option>
             </select>
-            <p class="note2">نستخدمه لاختيار توصيات مناسبة.</p>
           </div>
 
           <div class="mini" style="grid-column:1/-1">
-            <label>متوسط الإعجابات (تقريبًا)</label>
+            <label>متوسط الإعجابات (٪ من المتابعين)</label>
             <div class="barWrap">
               <input id="likesPct" type="range" min="0.1" max="10" step="0.1" value="2.5" />
               <div class="rangeMeta">
-                <span>0.1%</span>
-                <span id="likesPctLabel">2.5%</span>
-                <span>10%</span>
+                <span>0.1%</span><span id="likesPctLabel">2.5%</span><span>10%</span>
               </div>
             </div>
-            <p class="note2">اسحب الشريط لتقريب متوسط لايكاتك كنسبة من المتابعين.</p>
           </div>
 
           <div class="mini" style="grid-column:1/-1">
-            <label>متوسط التعليقات (تقريبًا)</label>
+            <label>متوسط التعليقات (٪ من المتابعين)</label>
             <div class="barWrap">
               <input id="commentsPct" type="range" min="0.01" max="2" step="0.01" value="0.15" />
               <div class="rangeMeta">
-                <span>0.01%</span>
-                <span id="commentsPctLabel">0.15%</span>
-                <span>2%</span>
+                <span>0.01%</span><span id="commentsPctLabel">0.15%</span><span>2%</span>
               </div>
             </div>
-            <p class="note2">التعليقات عادة أقل بكثير من اللايكات — اختر نسبة قريبة.</p>
           </div>
 
           <div class="mini" style="grid-column:1/-1">
             <div class="row" style="margin-top:0">
-              <button class="btn primary" id="buildReportBtn" type="button">✅ اعرض التقرير النهائي</button>
+              <button class="btn primary" id="buildReportBtn" type="button">✅ اعرض التقرير</button>
               <button class="btn secondary" id="copyReportBtn" type="button">نسخ التقرير</button>
             </div>
           </div>
@@ -261,99 +171,59 @@
     </form>
   </div>
 
-  <!-- REPORT -->
+  <!-- Report -->
   <div class="card report" id="report">
-    <div class="reportHeader">
-      <div style="flex:1">
-        <h2 id="title" style="margin:0 0 6px">تحليل حساب إنستغرام</h2>
-        <p id="subtitle" class="note" style="margin:0"></p>
-      </div>
-
-      <div class="scoreBox">
-        <div class="scoreTop">
-          <div>
-            <div class="scoreNum" id="scoreNum">0</div>
-            <div class="scoreLabel" id="scoreLabel">—</div>
-          </div>
-          <div style="text-align:left">
-            <div style="color:var(--muted);font-weight:900;font-size:13px">Engagement</div>
-            <div style="font-weight:1000;font-size:18px" id="erText">0%</div>
-          </div>
+    <div class="scoreBox">
+      <div class="scoreTop">
+        <div>
+          <div id="title" style="font-weight:1000;font-size:18px">تحليل حساب إنستغرام</div>
+          <div id="subtitle" class="note2">—</div>
         </div>
-        <div class="meter" aria-hidden="true"><div id="meterFill"></div></div>
-        <p class="note2" id="benchmark" style="margin-top:10px"></p>
+        <div style="text-align:left">
+          <div class="scoreNum" id="scoreNum">0</div>
+          <div class="scoreLabel" id="scoreLabel">—</div>
+        </div>
       </div>
+      <div class="meter"><div id="meterFill"></div></div>
+      <p class="note2" id="benchmark" style="margin-top:10px"></p>
     </div>
 
     <div class="kpis">
-      <div class="kpi">
-        <strong id="followersText">0</strong>
-        <span>عدد المتابعين (مؤكد)</span>
-      </div>
-      <div class="kpi">
-        <strong id="likeRateText">0%</strong>
-        <span>Like Rate (تقريبي)</span>
-      </div>
-      <div class="kpi">
-        <strong id="commentRateText">0%</strong>
-        <span>Comment Rate (تقريبي)</span>
-      </div>
+      <div class="kpi"><strong id="followersText">0</strong><span>المتابعون</span></div>
+      <div class="kpi"><strong id="likeRateText">0%</strong><span>Like Rate</span></div>
+      <div class="kpi"><strong id="commentRateText">0%</strong><span>Comment Rate</span></div>
     </div>
 
     <div class="cards2">
       <div class="mini">
-        <strong>تشخيص سريع</strong>
+        <strong>تشخيص</strong>
         <p id="diagnosis" class="note2" style="margin-top:8px"></p>
         <ul id="weakPoints" class="list"></ul>
       </div>
-
       <div class="mini">
-        <strong>توصيات عملية (الأسبوع القادم)</strong>
+        <strong>توصيات</strong>
         <ol id="recs" class="list"></ol>
       </div>
     </div>
 
     <div class="mini" style="margin-top:12px">
-      <strong>خطة اختبار 14 يوم (بدون تعقيد)</strong>
+      <strong>خطة اختبار 14 يوم</strong>
       <p class="note2" id="testPlan" style="margin-top:8px"></p>
     </div>
 
-    <div class="cta" style="margin-top:12px" aria-label="روابط داخلية">
-      <div>
-        <strong>كمّل التحليل بأدواتنا المجانية ✅</strong>
-        <span>هذه الروابط تزيد دقة قراراتك وتساعدك تتحسن أسرع.</span>
-      </div>
-      <div class="row" style="margin-top:0">
-        <a class="btn secondary" href="/tools/best-time-to-post-instagram/">أفضل وقت للنشر</a>
-        <a class="btn primary" href="/tools/instagram-engagement-calculator/">حاسبة التفاعل</a>
-      </div>
-    </div>
-
-    <div class="cta" style="margin-top:12px" aria-label="خدمة العملاء">
-      <div>
-        <strong>تريد تقرير احترافي لحسابك؟</strong>
-        <span>نرسل لك تحليل مخصص + خطة محتوى أسبوعين + توصيات قابلة للتطبيق.</span>
-      </div>
-      <a class="btn primary"
-         href="https://wa.me/491234567890?text=مرحبًا%20MarketAPro%2C%20أريد%20تقرير%20تحليل%20احترافي%20لحسابي%20على%20إنستغرام"
-         target="_blank" rel="noopener">واتساب</a>
-    </div>
-
     <div class="mini" style="margin-top:12px">
-      <strong>ملاحظة شفافة</strong>
-      <p class="note2" style="margin-top:8px">
-        هذا التقرير يعتمد على أرقام تؤكدها أنت (بدون تسجيل أو وصول API). هدفه إعطاء تشخيص سريع وتوصيات عملية كبداية قوية.
-      </p>
+      <strong>روابط أدوات أخرى</strong>
+      <ul class="list">
+        <li><a href="/tools/best-time-to-post-instagram/">أفضل وقت للنشر</a></li>
+        <li><a href="/tools/instagram-engagement-calculator/">حاسبة التفاعل</a></li>
+      </ul>
     </div>
   </div>
 
-  <p class="note" style="margin-top:14px">
-    By <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
-  </p>
 </main>
 
 <footer class="footer">
-  <div class="container">© 2025 MarketAPro — By Viva Media Creative</div>
+  <div class="container">© 2025 MarketAPro</div>
 </footer>
 
 <div class="toast" id="toast">تم ✅</div>
@@ -361,7 +231,7 @@
 <script>
   const $ = (id)=>document.getElementById(id);
 
-  function showToast(msg){
+  function toast(msg){
     const t = $('toast');
     t.textContent = msg;
     t.style.display = 'block';
@@ -370,8 +240,7 @@
   }
 
   function sanitizeUsername(v){
-    v = (v||"").trim();
-    v = v.replace(/\s+/g,'');
+    v = (v||"").trim().replace(/\s+/g,'');
     if(!v) return "";
     if(v.startsWith("https://")) v = v.split("/").filter(Boolean).pop() || v;
     if(v.startsWith("@")) v = v.slice(1);
@@ -379,15 +248,7 @@
     return v.toLowerCase();
   }
 
-  function fmt(n){ return Number(n||0).toLocaleString('ar'); }
-
   function clamp(n,min,max){ return Math.max(min, Math.min(max,n)); }
-
-  function scoreColor(score){
-    if(score >= 75) return "linear-gradient(135deg, rgba(34,197,94,.95), rgba(56,189,248,.65))";
-    if(score >= 55) return "linear-gradient(135deg, rgba(250,204,21,.95), rgba(56,189,248,.45))";
-    return "linear-gradient(135deg, rgba(239,68,68,.95), rgba(56,189,248,.35))";
-  }
 
   function labelScore(score){
     if(score >= 80) return "ممتاز";
@@ -396,114 +257,76 @@
     return "ضعيف";
   }
 
+  function scoreColor(score){
+    if(score >= 75) return "linear-gradient(135deg, rgba(34,197,94,.95), rgba(56,189,248,.65))";
+    if(score >= 55) return "linear-gradient(135deg, rgba(250,204,21,.95), rgba(56,189,248,.45))";
+    return "linear-gradient(135deg, rgba(239,68,68,.95), rgba(56,189,248,.35))";
+  }
+
   function benchmarks(type){
-    // قيم تقريبية تساعد المقارنة (ليست وعود)
-    if(type === "model") return {min:2.5, max:4.5, note:"متوسط التفاعل للموديلز غالبًا بين 2.5% و 4.5% للحسابات الصغيرة والمتوسطة."};
-    if(type === "creator") return {min:1.8, max:3.8, note:"متوسط التفاعل لصناع المحتوى غالبًا بين 1.8% و 3.8% حسب المجال والحجم."};
-    return {min:1.2, max:3.0, note:"متوسط التفاعل للحسابات التجارية غالبًا بين 1.2% و 3.0% (يزيد مع محتوى قيم/UGC)."};
+    if(type === "model") return {min:2.5, max:4.5, note:"متوسط التفاعل للموديلز غالبًا بين 2.5% و 4.5%."};
+    if(type === "creator") return {min:1.8, max:3.8, note:"متوسط التفاعل لصناع المحتوى غالبًا بين 1.8% و 3.8%."};
+    return {min:1.2, max:3.0, note:"متوسط التفاعل للحسابات التجارية غالبًا بين 1.2% و 3.0%."};
   }
 
   function buildDiagnosis({type, goal, er, likeRate, commentRate}){
     const weak = [];
     let txt = "";
 
-    // Comment weakness detection
-    if(commentRate < 0.08){
-      weak.push("التعليقات منخفضة: جرّب CTA سؤال مباشر + محتوى قابل للنقاش (مقارنة/رأي/اختيار).");
-    }
-    // Like weakness
-    if(likeRate < 1.0){
-      weak.push("الإعجابات أقل من المتوقع: جرّب Carousel قيمته عالية + Hook قوي في أول سطر.");
-    }
-    // General ER
+    if(commentRate < 0.08) weak.push("التعليقات منخفضة: استخدم CTA سؤال مباشر أو اختيار A/B.");
+    if(likeRate < 1.0) weak.push("الإعجابات منخفضة: جرّب Carousel قيمته عالية + Hook قوي.");
+
     if(er < 1){
-      txt = "معدل التفاعل منخفض حاليًا. غالبًا السبب: محتوى عام + تكرار نشر غير ثابت + ضعف Hook/CTA.";
-      weak.push("ركّز على 2 نوع محتوى فقط لمدة أسبوعين ثم قارن النتائج.");
+      txt = "معدل التفاعل منخفض حاليًا. غالبًا السبب: محتوى عام + ضعف Hook/CTA + عدم ثبات.";
+      weak.push("ثبّت 2 نوع محتوى لمدة أسبوعين ثم قارن.");
     }else if(er < 2.5){
-      txt = "التفاعل متوسط. لديك أساس جيد لكن تحتاج تحسين واضح في (Hook + نوع المحتوى + CTA) لتقفز للمنطقة القوية.";
-      weak.push("اجعل 60% من المحتوى Carousel أو Reels تعليمية/عملية بدل صور عامة.");
+      txt = "التفاعل متوسط. لديك أساس جيد لكن تحتاج تحسين في نوع المحتوى وCTA.";
+      weak.push("اجعل 60% من المحتوى Carousel أو Reels قابلة للحفظ/المشاركة.");
     }else{
-      txt = "التفاعل جيد/قوي. ركّز الآن على تثبيت الأفضل واختبار توقيت النشر وتحسين التعليقات لرفع الوصول.";
-      weak.push("اعمل اختبار 14 يوم لتثبيت أفضل يومين وأفضل نوع محتوى.");
+      txt = "التفاعل جيد/قوي. ركّز على تثبيت الأفضل وتحسين التعليقات لاكتساب وصول أكبر.";
+      weak.push("اختبر توقيتين فقط لمدة 14 يوم وثبّت الأفضل.");
     }
 
-    // Type-specific
-    if(type === "model"){
-      weak.push("للموديلز: زِد (التعاونات) و(صور/ريلز بوزات) + Behind the scenes لرفع الثقة والطلب.");
-    }else if(type === "business"){
-      weak.push("للمتاجر: أضف UGC/مراجعات + قبل/بعد + Story FAQ لتحسين التحويل.");
-    }else{
-      weak.push("لصناع المحتوى: اعتمد سلاسل (Part 1/2/3) وCTA متابعة واضح.");
-    }
+    if(type === "model") weak.push("للموديلز: Pose tutorial + BTS + Before/After لرفع الطلب.");
+    if(type === "business") weak.push("للمتاجر: UGC/Reviews + FAQ Stories + عرض واضح.");
+    if(type === "creator") weak.push("للمؤثرين: سلاسل Part 1/2/3 + CTA متابعة.");
 
-    // Goal-specific
-    if(goal === "sales"){
-      weak.push("للتحويل: إثبات اجتماعي (Reviews) + عرض واضح + CTA (DM/واتساب) في 20% من المنشورات.");
-    }
-    if(goal === "followers"){
-      weak.push("للزيادة: ركّز على Reels قصيرة قابلة للمشاركة + Carousel حفظ.");
-    }
+    if(goal === "sales") weak.push("للبيع/التعاون: إثبات اجتماعي + عرض + CTA DM/واتساب.");
+    if(goal === "followers") weak.push("للمتابعين: Reels قصيرة قابلة للمشاركة + Carousel حفظ.");
 
     return {txt, weak: weak.slice(0,5)};
   }
 
-  function buildRecs({type, goal, er, commentRate}){
+  function buildRecs({type, goal, commentRate}){
     const recs = [];
-
-    // Top 3–5 max
-    recs.push("اختبر 2 توقيت نشر فقط لمدة 14 يوم (مساءً + صباحًا) وسجّل الأفضل حسب Saves/Comments.");
-    recs.push("اجعل كل منشور ينتهي بـ CTA واحد واضح: سؤال/اختيار/طلب رأي (لا تضع 3 CTAs).");
-
-    if(commentRate < 0.08){
-      recs.push("ارفع التعليقات: استخدم ‘اختَر A/B’ أو ‘صح/غلط؟’ بدل CTA عام.");
-    }
-
-    if(type === "model"){
-      recs.push("انشر 3 ريلز أسبوعيًا: (Pose tutorial) + (Behind the scenes) + (Before/After Edit).");
-    }else if(type === "business"){
-      recs.push("للمتجر: 2 Carousel أسبوعيًا (حل مشكلة + دليل شراء) + Story يومية (FAQ/مراجعة).");
-    }else{
-      recs.push("اعمل سلسلة أسبوعية ثابتة (مثال: ‘خطوة اليوم’ كل ثلاثاء) لزيادة العودة والمتابعة.");
-    }
-
-    if(goal === "sales"){
-      recs.push("أضف دليل عرض: (المشكلة → الحل → النتيجة → إثبات → CTA DM/واتساب) مرة أسبوعيًا.");
-    }
-
+    recs.push("اختبر 2 توقيت نشر لمدة 14 يوم وسجّل الأفضل حسب Saves/Comments.");
+    recs.push("CTA واحد واضح لكل منشور (سؤال/اختيار/طلب رأي).");
+    if(commentRate < 0.08) recs.push("ارفع التعليقات: استخدم ‘اختَر A/B’ بدل CTA عام.");
+    if(type === "model") recs.push("انشر 3 ريلز أسبوعيًا: Pose + BTS + Before/After.");
+    if(type === "business") recs.push("2 Carousel أسبوعيًا (حل مشكلة + دليل شراء) + Story FAQ يومية.");
+    if(type === "creator") recs.push("سلسلة أسبوعية ثابتة (يوم محدد) لزيادة العودة والمتابعة.");
+    if(goal === "sales") recs.push("منشور بيع أسبوعيًا: (مشكلة→حل→نتيجة→إثبات→CTA).");
     return recs.slice(0,5);
   }
 
-  function buildTestPlan({type}){
-    return "الأسبوع 1: انشر 4 محتويات (2 Reels + 2 Carousel) بتوقيتين ثابتين. " +
-           "الأسبوع 2: كرر الأفضل من الأسبوع 1 + غيّر CTA (سؤال vs اختيار A/B). " +
-           "في النهاية: ثبّت أفضل (نوع محتوى + توقيت + CTA) وكرر 30 يوم.";
+  function buildPlan(){
+    return "الأسبوع 1: 2 Reels + 2 Carousel بتوقيتين ثابتين. الأسبوع 2: كرر الأفضل + غيّر CTA (سؤال vs A/B). ثم ثبّت أفضل (نوع محتوى + توقيت + CTA) لمدة 30 يوم.";
   }
 
-  function calcReport({followers, likesPct, commentsPct, type, goal, username}){
-    // Convert percents
-    const likeRate = likesPct;
-    const commentRate = commentsPct;
+  function calcReport({followers, likeRate, commentRate, type, goal, username}){
     const er = likeRate + commentRate;
-
-    // Score formula (simple + interpretable)
     const b = benchmarks(type);
-    // Normalize around benchmark window
     const norm = clamp((er - b.min) / (b.max - b.min), 0, 1);
-    let score = Math.round(35 + norm * 60); // 35..95 approx
-    // Reward comment health
+    let score = Math.round(35 + norm * 60);
     if(commentRate >= 0.12) score += 3;
     if(commentRate < 0.05) score -= 6;
     score = clamp(score, 0, 100);
 
     const diag = buildDiagnosis({type, goal, er, likeRate, commentRate});
-    const recs = buildRecs({type, goal, er, commentRate});
-    const plan = buildTestPlan({type});
+    const recs = buildRecs({type, goal, commentRate});
+    const plan = buildPlan();
 
-    return {
-      username, followers, likeRate, commentRate, er, score,
-      benchmarkNote: b.note, benchMin: b.min, benchMax: b.max,
-      diag, recs, plan
-    };
+    return {username, followers, likeRate, commentRate, er, score, b, diag, recs, plan};
   }
 
   function setMeter(score){
@@ -515,53 +338,39 @@
   async function copyText(txt){
     try{
       await navigator.clipboard.writeText(txt);
-      showToast("تم نسخ التقرير ✅");
+      toast("تم النسخ ✅");
     }catch(e){
       alert("تعذر النسخ تلقائيًا. انسخ يدويًا:\n\n" + txt);
     }
   }
 
-  // UI elements
+  // DOM
   const form = $('form');
   const loader = $('loader');
   const confirmBox = $('confirmBox');
   const report = $('report');
 
-  const likesPct = $('likesPct');
-  const commentsPct = $('commentsPct');
-  const likesPctLabel = $('likesPctLabel');
-  const commentsPctLabel = $('commentsPctLabel');
+  $('likesPct').addEventListener('input', ()=> $('likesPctLabel').textContent = $('likesPct').value + "%");
+  $('commentsPct').addEventListener('input', ()=> $('commentsPctLabel').textContent = $('commentsPct').value + "%");
 
-  likesPct.addEventListener('input', ()=> likesPctLabel.textContent = likesPct.value + "%");
-  commentsPct.addEventListener('input', ()=> commentsPctLabel.textContent = commentsPct.value + "%");
-
-  // Fake analysis flow
   form.addEventListener('submit', (e)=>{
     e.preventDefault();
-
     const u = sanitizeUsername($('username').value);
-    if(!u){ showToast("اكتب اسم مستخدم صحيح"); return; }
+    if(!u){ toast("اكتب اسم مستخدم صحيح"); return; }
 
     loader.style.display = "flex";
     confirmBox.style.display = "none";
     report.style.display = "none";
 
-    // set dynamic H1-ish later
     setTimeout(()=>{
       loader.style.display = "none";
       confirmBox.style.display = "block";
-
-      // prefill suggestion (UX)
       $('followers').value = "";
-      likesPct.value = "2.5"; likesPctLabel.textContent = "2.5%";
-      commentsPct.value = "0.15"; commentsPctLabel.textContent = "0.15%";
-
-      // Dynamic page title for UX (not SEO)
-      $('title').textContent = `تحليل حساب إنستغرام (@${u})`;
-      $('subtitle').textContent = "تقرير سريع + مقارنة معيارية + توصيات عملية (بدون تسجيل).";
-      showToast("تم تجهيز التحليل — أكد الأرقام ✅");
+      $('likesPct').value = "2.5"; $('likesPctLabel').textContent = "2.5%";
+      $('commentsPct').value = "0.15"; $('commentsPctLabel').textContent = "0.15%";
+      toast("تم تجهيز التحليل — أكد الأرقام ✅");
       window.scrollTo({top: confirmBox.offsetTop - 90, behavior:"smooth"});
-    }, 850);
+    }, 700);
   });
 
   $('resetBtn').addEventListener('click', ()=>{
@@ -569,77 +378,69 @@
     confirmBox.style.display = "none";
     loader.style.display = "none";
     report.style.display = "none";
-    showToast("تم المسح");
+    toast("تم المسح");
   });
 
   $('buildReportBtn').addEventListener('click', ()=>{
     const u = sanitizeUsername($('username').value);
     const type = $('acctType').value;
     const goal = $('goal').value;
-    const followers = parseInt($('followers').value || "0", 10);
-    if(!u){ showToast("اكتب اسم مستخدم صحيح"); return; }
-    if(!followers || followers < 1){ showToast("أدخل عدد المتابعين"); return; }
+    const followers = parseInt(($('followers').value||"0"),10);
+    if(!u){ toast("اكتب اسم مستخدم صحيح"); return; }
+    if(!followers || followers < 1){ toast("أدخل عدد المتابعين"); return; }
 
-    const likeRate = parseFloat(likesPct.value);
-    const commentRate = parseFloat(commentsPct.value);
+    const likeRate = parseFloat($('likesPct').value);
+    const commentRate = parseFloat($('commentsPct').value);
 
-    const r = calcReport({
-      followers,
-      likesPct: likeRate,
-      commentsPct: commentRate,
-      type,
-      goal,
-      username: u
-    });
+    const r = calcReport({followers, likeRate, commentRate, type, goal, username:u});
 
-    // Fill report
-    $('followersText').textContent = fmt(r.followers);
-    $('likeRateText').textContent = r.likeRate.toFixed(2) + "%";
-    $('commentRateText').textContent = r.commentRate.toFixed(2) + "%";
-    $('erText').textContent = r.er.toFixed(2) + "%";
-
+    $('title').textContent = `تحليل حساب إنستغرام (@${r.username})`;
+    $('subtitle').textContent = `Engagement: ${r.er.toFixed(2)}% — المقارنة: ${r.b.note}`;
     $('scoreNum').textContent = r.score;
     $('scoreLabel').textContent = "التقييم: " + labelScore(r.score);
-    setMeter(r.score);
+    $('benchmark').textContent = `${r.b.note} (حسابك: ${r.er.toFixed(2)}%)`;
 
-    $('benchmark').textContent = `${r.benchmarkNote} (حسابك: ${r.er.toFixed(2)}%)`;
+    $('followersText').textContent = followers.toLocaleString('ar');
+    $('likeRateText').textContent = likeRate.toFixed(2) + "%";
+    $('commentRateText').textContent = commentRate.toFixed(2) + "%";
+
+    setMeter(r.score);
 
     $('diagnosis').textContent = r.diag.txt;
 
-    const weakUl = $('weakPoints'); weakUl.innerHTML = "";
+    const weak = $('weakPoints'); weak.innerHTML = "";
     r.diag.weak.forEach(x=>{
       const li = document.createElement('li');
       li.textContent = x;
-      weakUl.appendChild(li);
+      weak.appendChild(li);
     });
 
-    const recOl = $('recs'); recOl.innerHTML = "";
+    const recs = $('recs'); recs.innerHTML = "";
     r.recs.forEach(x=>{
       const li = document.createElement('li');
       li.textContent = x;
-      recOl.appendChild(li);
+      recs.appendChild(li);
     });
 
     $('testPlan').textContent = r.plan;
 
     report.style.display = "block";
-    showToast("تم إنشاء التقرير ✅");
+    toast("تم إنشاء التقرير ✅");
     window.scrollTo({top: report.offsetTop - 85, behavior:"smooth"});
 
-    // Store last report text for copy
-    window.__lastReportText =
+    window.__reportText =
 `MarketAPro — تحليل حساب إنستغرام (@${r.username})
 
-المتابعون: ${fmt(r.followers)}
-Like Rate: ${r.likeRate.toFixed(2)}%
-Comment Rate: ${r.commentRate.toFixed(2)}%
+المتابعون: ${followers.toLocaleString('ar')}
+Like Rate: ${likeRate.toFixed(2)}%
+Comment Rate: ${commentRate.toFixed(2)}%
 Engagement: ${r.er.toFixed(2)}%
 
 Score: ${r.score}/100 — ${labelScore(r.score)}
-المقارنة: ${r.benchmarkNote}
+المقارنة: ${r.b.note}
 
 تشخيص:
-- ${r.diag.txt}
+${r.diag.txt}
 
 نقاط تحسين:
 - ${r.diag.weak.join("\n- ")}
@@ -649,17 +450,12 @@ Score: ${r.score}/100 — ${labelScore(r.score)}
 
 خطة اختبار 14 يوم:
 ${r.plan}
-
-روابط مفيدة:
-- أفضل وقت للنشر: https://marketapro.com/tools/best-time-to-post-instagram/
-- حاسبة التفاعل: https://marketapro.com/tools/instagram-engagement-calculator/
 `;
   });
 
   $('copyReportBtn').addEventListener('click', ()=>{
-    const txt = window.__lastReportText || "";
-    if(!txt){ showToast("أنشئ التقرير أولًا"); return; }
-    copyText(txt);
+    if(!window.__reportText){ toast("أنشئ التقرير أولًا"); return; }
+    copyText(window.__reportText);
   });
 </script>
 </body>
