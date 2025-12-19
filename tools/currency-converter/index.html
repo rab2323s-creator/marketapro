@@ -1,28 +1,25 @@
-<!doctype html>
+ <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>حاسبة تحويل العملات الفورية — USD إلى أي عملة | MarketAPro</title>
-  <meta name="description" content="حوّل العملات فورًا: اختر USD أو أي عملة، اعرف سعر الصرف وتاريخ التحديث، واحفظ آخر التحويلات. أداة مجانية بالعربية من MarketAPro بدون تسجيل." />
-  <meta name="keywords" content="تحويل العملات, محول العملات, USD to SAR, سعر الدولار, سعر الصرف, حاسبة تحويل العملات, Currency Converter" />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <title>محول العملات الفوري — تحويل USD إلى SAR و EUR و TRY | MarketAPro</title>
+  <meta name="description" content="محول عملات عربي مجاني: تحويل فوري بين العملات مع سعر الصرف وتاريخ التحديث وسجل آخر التحويلات. العملة الافتراضية USD." />
+  <meta name="keywords" content="محول العملات, تحويل العملات, USD SAR, سعر الصرف, currency converter, تحويل دولار ريال, تحويل دولار ليرة" />
   <link rel="canonical" href="https://marketapro.com/tools/currency-converter/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="حاسبة تحويل العملات الفورية — MarketAPro" />
+  <meta property="og:title" content="محول العملات الفوري — MarketAPro" />
   <meta property="og:description" content="تحويل فوري بين العملات + سعر الصرف + تاريخ التحديث — بدون تسجيل." />
   <meta property="og:url" content="https://marketapro.com/tools/currency-converter/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://marketapro.com/assets/og-tools.jpg" />
-  <meta property="og:image:alt" content="حاسبة تحويل العملات الفورية من MarketAPro" />
+
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://marketapro.com/assets/og-tools.jpg" />
 
   <link rel="stylesheet" href="/style.css" />
 
-  <!-- Breadcrumb Schema -->
+  <!-- Breadcrumb -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -30,21 +27,21 @@
     "itemListElement":[
       {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://marketapro.com/"},
       {"@type":"ListItem","position":2,"name":"الأدوات","item":"https://marketapro.com/tools/"},
-      {"@type":"ListItem","position":3,"name":"حاسبة تحويل العملات","item":"https://marketapro.com/tools/currency-converter/"}
+      {"@type":"ListItem","position":3,"name":"محول العملات","item":"https://marketapro.com/tools/currency-converter/"}
     ]
   }
   </script>
 
-  <!-- WebApplication Schema -->
+  <!-- WebApplication -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebApplication",
-    "name":"حاسبة تحويل العملات الفورية",
+    "name":"محول العملات الفوري",
     "url":"https://marketapro.com/tools/currency-converter/",
     "applicationCategory":"FinanceApplication",
     "operatingSystem":"Any",
-    "description":"أداة عربية مجانية لتحويل العملات فورًا: سعر الصرف + تاريخ التحديث + حفظ آخر التحويلات.",
+    "description":"محول عملات عربي مجاني: تحويل فوري بين العملات مع سعر الصرف وتاريخ التحديث وسجل آخر التحويلات.",
     "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
     "publisher":{"@type":"Organization","name":"MarketAPro","url":"https://marketapro.com/"}
   }
@@ -58,82 +55,92 @@
     "mainEntity":[
       {
         "@type":"Question",
-        "name":"هل أسعار الصرف فورية 100%؟",
-        "acceptedAnswer":{"@type":"Answer","text":"الأسعار تتحدث حسب مزود البيانات. نعرض تاريخ/وقت آخر تحديث، ونستخدم مزود احتياطي إذا تعطل المصدر الأساسي."}
+        "name":"هل محول العملات مجاني وبدون تسجيل؟",
+        "acceptedAnswer":{"@type":"Answer","text":"نعم. الأداة مجانية تمامًا ولا تحتاج تسجيل."}
       },
       {
         "@type":"Question",
-        "name":"هل الأداة تحتاج تسجيل دخول؟",
-        "acceptedAnswer":{"@type":"Answer","text":"لا. الأداة تعمل بدون تسجيل. ويمكن حفظ آخر 5 تحويلات على جهازك فقط (LocalStorage)."}
+        "name":"من أين تأتي أسعار الصرف؟",
+        "acceptedAnswer":{"@type":"Answer","text":"يتم جلب أسعار الصرف عبر مزود خارجي (open.er-api.com) ثم يتم تخزينها مؤقتًا لتسريع الأداء."}
       },
       {
         "@type":"Question",
-        "name":"ما العملة الافتراضية؟",
-        "acceptedAnswer":{"@type":"Answer","text":"العملة الافتراضية هي USD ويمكن تغييرها بسهولة لأي عملة."}
+        "name":"كل كم يتم تحديث السعر؟",
+        "acceptedAnswer":{"@type":"Answer","text":"حسب تحديث مزود البيانات. داخل الأداة يتم استخدام كاش لمدة 6 ساعات لتسريع التحويل."}
       }
     ]
   }
   </script>
 
   <style>
-    /* تحسينات محلية خفيفة — متوافقة مع style.css */
+    /* محلي وخفيف — يعتمد على متغيرات style.css */
     .hero-block{
       padding:18px;border-radius:18px;border:1px solid var(--border);
       background:rgba(255,255,255,.02);
     }
     .hero-title{margin:0 0 8px;font-size:28px;line-height:1.4}
-    .hero-desc{margin:0;color:var(--muted);line-height:1.95}
+    .hero-desc{margin:0;color:var(--muted);line-height:1.9}
     .crumbs{margin-top:10px}
+
     .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;margin-top:14px}
     @media (max-width: 900px){.wrap{grid-template-columns:1fr}}
-    .field{margin-top:10px}
-    label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
-    input, select{
-      width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--border);
-      background:rgba(255,255,255,.03);color:var(--text);outline:none;
+
+    .card2{
+      border:1px solid var(--border);
+      border-radius:18px;
+      background:rgba(0,0,0,.18);
+      padding:14px;
     }
     .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    @media (max-width: 520px){.row{grid-template-columns:1fr}}
+    @media(max-width:520px){.row{grid-template-columns:1fr}}
+    label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
+    input, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      outline:none;
+    }
     .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     .btn{cursor:pointer}
     .btn.secondary{background:rgba(255,255,255,.02)}
-    .divider{height:1px;background:var(--border);margin:14px 0}
-    .hint{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.9}
-    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+
+    .quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
     .chip{
-      padding:7px 10px;border-radius:999px;border:1px solid var(--border);
-      background:rgba(255,255,255,.02);color:var(--text);
-      font-size:13px;font-weight:900;cursor:pointer;user-select:none;
-      opacity:.92
+      padding:8px 10px;border-radius:999px;border:1px solid var(--border);
+      background:rgba(255,255,255,.02);font-size:13px;font-weight:900;
+      cursor:pointer; user-select:none; opacity:.9;
     }
     .chip:hover{opacity:1}
-    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
-    @media (max-width:520px){.kpis{grid-template-columns:1fr}}
+
+    .stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    @media(max-width:520px){.stat-grid{grid-template-columns:1fr}}
     .stat{
       padding:14px;border-radius:16px;background:rgba(0,0,0,.18);
-      border:1px solid var(--border);text-align:center
+      border:1px solid var(--border);
     }
-    .stat strong{display:block;font-size:18px;line-height:1.3}
+    .stat strong{display:block;font-size:18px}
     .stat span{color:var(--muted);font-size:13px}
-    .history{margin-top:12px}
-    .history ul{margin:8px 0 0;padding-right:18px;color:var(--muted);line-height:1.95}
-    .history li{margin:6px 0}
+
+    .list{margin:10px 0 0;padding-right:18px;color:var(--muted);line-height:1.9}
+    .divider{height:1px;background:var(--border);margin:14px 0}
+
     .toast{
-      position:fixed;left:16px;bottom:16px;background:rgba(0,0,0,.65);
-      border:1px solid var(--border);border-radius:14px;padding:10px 12px;
-      color:var(--text);display:none;max-width: 360px;z-index: 9999;
+      position:fixed;inset-inline-start:16px;bottom:16px;
+      background:rgba(0,0,0,.65);border:1px solid var(--border);
+      border-radius:14px;padding:10px 12px;color:var(--text);
+      display:none;max-width: 340px;z-index: 9999;
     }
-    details{margin-top:10px}
-    details summary{cursor:pointer;font-weight:900}
-    .cta{
-      margin-top:14px;border:1px solid var(--border);background:rgba(255,255,255,.02);
-      border-radius:18px;padding:14px;display:flex;justify-content:space-between;
-      gap:10px;align-items:center;flex-wrap:wrap;
+    .warn{
+      border:1px solid rgba(250,204,21,.35);
+      background:rgba(250,204,21,.08);
+      color:#ffe9a6;
+      padding:10px 12px;border-radius:14px;font-weight:900;font-size:13px;
+      display:none;margin-top:10px;white-space:pre-wrap
     }
-    .cta strong{display:block;margin-bottom:4px}
-    .cta span{color:var(--muted);font-size:13px}
-    .small-link{font-size:13px;color:inherit;opacity:.9}
-    .small-link:hover{opacity:1}
+    .muted{color:var(--muted)}
   </style>
 </head>
 
@@ -146,10 +153,9 @@
       <div class="brand-badge" aria-hidden="true"></div>
       <div>
         <p class="brand-title">MarketAPro</p>
-        <p class="brand-sub">Currency Converter</p>
+        <p class="brand-sub">محول العملات</p>
       </div>
     </a>
-
     <nav class="nav" aria-label="القائمة الرئيسية">
       <a href="/">الرئيسية</a>
       <a class="active" href="/tools/">الأدوات</a>
@@ -162,135 +168,133 @@
 <main id="content" class="container section">
 
   <section class="hero-block">
-    <h1 class="hero-title">حاسبة تحويل العملات الفورية</h1>
+    <h1 class="hero-title">محول العملات الفوري</h1>
 
     <nav aria-label="Breadcrumb" class="note crumbs">
       <a href="/">الرئيسية</a> ←
       <a href="/tools/">الأدوات</a> ←
-      <span>تحويل العملات</span>
+      <span>محول العملات</span>
     </nav>
 
     <p class="hero-desc">
-      حوّل العملات خلال ثوانٍ — <strong>USD افتراضيًا</strong> — مع عرض سعر الصرف وتاريخ آخر تحديث.
-      الأداة تحفظ آخر التحويلات على جهازك لسهولة الرجوع (بدون تسجيل).
+      تحويل فوري بين العملات مع <strong>سعر الصرف</strong> و<strong>تاريخ التحديث</strong> + حفظ آخر التحويلات.
+      العملة الافتراضية: <strong>USD</strong>.
     </p>
 
-    <div class="chips" aria-label="تحويلات سريعة">
-      <span class="chip" data-quick="USD:EUR">USD → EUR</span>
-      <span class="chip" data-quick="USD:SAR">USD → SAR</span>
-      <span class="chip" data-quick="USD:TRY">USD → TRY</span>
-      <span class="chip" data-quick="USD:EGP">USD → EGP</span>
-      <span class="chip" data-quick="EUR:SAR">EUR → SAR</span>
-      <span class="chip" data-quick="GBP:USD">GBP → USD</span>
+    <div class="quick" aria-label="تحويلات سريعة">
+      <span class="chip" data-pair="USD,SAR">USD → SAR</span>
+      <span class="chip" data-pair="USD,TRY">USD → TRY</span>
+      <span class="chip" data-pair="USD,EGP">USD → EGP</span>
+      <span class="chip" data-pair="USD,EUR">USD → EUR</span>
+      <span class="chip" data-pair="EUR,USD">EUR → USD</span>
     </div>
   </section>
 
   <section class="wrap">
+
     <!-- Inputs -->
-    <div class="card" aria-label="نموذج التحويل">
-      <form id="fxForm" novalidate>
-        <div class="row">
-          <div class="field">
-            <label for="amount">المبلغ</label>
-            <input id="amount" type="number" inputmode="decimal" min="0" step="0.01" value="1" />
-            <p class="hint">يدعم الكسور (مثال: 12.5).</p>
-          </div>
-
-          <div class="field">
-            <label for="precision">الدقة</label>
-            <select id="precision">
-              <option value="2" selected>2 أرقام</option>
-              <option value="3">3 أرقام</option>
-              <option value="4">4 أرقام</option>
-            </select>
-            <p class="hint">لأسعار العملات أحيانًا تحتاج 3–4.</p>
-          </div>
+    <section class="card2" aria-label="مدخلات التحويل">
+      <div class="row">
+        <div>
+          <label for="amount">المبلغ</label>
+          <input id="amount" type="number" inputmode="decimal" min="0" step="0.01" value="1" />
         </div>
 
-        <div class="row">
-          <div class="field">
-            <label for="fromInput">من (اكتب كود العملة)</label>
-            <input id="fromInput" list="currencyList" placeholder="مثال: USD" autocomplete="off" />
-            <p class="hint">اكتب: USD / EUR / SAR… ثم اختر من القائمة.</p>
-          </div>
-
-          <div class="field">
-            <label for="toInput">إلى</label>
-            <input id="toInput" list="currencyList" placeholder="مثال: SAR" autocomplete="off" />
-            <p class="hint">تقدر تكتب أول حرفين لسرعة الوصول.</p>
-          </div>
+        <div>
+          <label for="base">العملة الأساسية (From)</label>
+          <input id="base" list="currencyList" placeholder="اكتب أو اختر (مثال: USD)" value="USD" autocomplete="off">
         </div>
 
-        <datalist id="currencyList"></datalist>
-
-        <div class="actions">
-          <button class="btn primary" type="submit">تحويل الآن</button>
-          <button class="btn secondary" type="button" id="swapBtn">تبديل ↔</button>
-          <button class="btn secondary" type="button" id="copyBtn">نسخ النتيجة</button>
-          <button class="btn secondary" type="button" id="clearBtn">مسح</button>
+        <div>
+          <label for="target">العملة المستهدفة (To)</label>
+          <input id="target" list="currencyList" placeholder="اكتب أو اختر (مثال: SAR)" value="SAR" autocomplete="off">
         </div>
 
-        <p class="hint" id="statusLine" role="status" aria-live="polite"></p>
-
-        <div class="divider"></div>
-
-        <div class="hint">
-          <strong>ملاحظة أداء:</strong> يتم تخزين أسعار الصرف مؤقتًا (Cache) لتقليل الاستعلامات وتسريع التحويل.
+        <div>
+          <label>&nbsp;</label>
+          <button class="btn primary" id="convertBtn" type="button">تحويل الآن</button>
         </div>
+      </div>
 
-        <div class="hint">
-          روابط مفيدة:
-          <a class="small-link" href="/tools/">كل الأدوات</a> ·
-          <a class="small-link" href="/tools/instagram-profile-analyzer/">تحليل إنستغرام</a> ·
-          <a class="small-link" href="/tools/instagram-engagement-calculator/">حاسبة التفاعل</a>
-        </div>
-      </form>
-    </div>
+      <datalist id="currencyList"></datalist>
+
+      <div class="actions">
+        <button class="btn secondary" id="swapBtn" type="button">تبديل العملات</button>
+        <button class="btn secondary" id="copyBtn" type="button">نسخ النتيجة</button>
+        <button class="btn secondary" id="clearHistoryBtn" type="button">مسح السجل</button>
+      </div>
+
+      <div class="warn" id="warnBox"></div>
+
+      <p class="muted" style="margin:10px 0 0;font-size:13px;line-height:1.9">
+        ملاحظة: الأسعار تأتي من مزود خارجي، ويتم تخزينها مؤقتًا (كاش) لتسريع الأداء.
+      </p>
+    </section>
 
     <!-- Output -->
-    <div class="card" aria-label="نتائج التحويل">
-      <h2 style="margin:0 0 8px;font-size:18px">النتائج</h2>
+    <section class="card2" aria-label="نتائج التحويل">
+      <h2 style="margin:0 0 6px;font-size:18px">النتيجة</h2>
 
-      <div class="kpis" aria-label="ملخص">
+      <div class="stat-grid" aria-label="ملخص النتيجة">
         <div class="stat">
-          <strong id="outConverted">—</strong>
-          <span>القيمة المحوّلة</span>
+          <strong id="result">—</strong>
+          <span>المبلغ بعد التحويل</span>
         </div>
         <div class="stat">
-          <strong id="outRate">—</strong>
+          <strong id="rate">—</strong>
           <span>سعر الصرف</span>
         </div>
-        <div class="stat">
-          <strong id="outUpdated">—</strong>
-          <span>آخر تحديث</span>
-        </div>
       </div>
 
       <div class="divider"></div>
 
-      <div class="history" aria-label="آخر التحويلات">
-        <strong>آخر 5 تحويلات</strong>
-        <ul id="historyList"></ul>
-      </div>
+      <p class="muted" id="updated" style="margin:0;font-size:13px">آخر تحديث: —</p>
 
       <div class="divider"></div>
 
-      <details>
-        <summary>أسئلة سريعة</summary>
-        <div class="hint">
-          <p style="margin:10px 0 0"><strong>هل النتائج “فورية”؟</strong> نعرض لك تاريخ التحديث من مزود البيانات.</p>
-          <p style="margin:8px 0 0"><strong>لماذا قد تختلف عن بنكك؟</strong> البنوك تضيف هامش (Spread) ورسوم.</p>
-        </div>
-      </details>
-    </div>
+      <h3 style="margin:0 0 6px;font-size:16px">آخر 5 تحويلات</h3>
+      <ul class="list" id="historyList"></ul>
+
+      <div class="divider"></div>
+
+      <div class="card" style="background:rgba(255,255,255,.02);border:1px solid var(--border);box-shadow:none">
+        <h3 style="margin:0 0 6px;font-size:16px">روابط داخلية مفيدة</h3>
+        <ul class="list" style="margin-top:8px">
+          <li><a href="/tools/">كل الأدوات المجانية</a></li>
+          <li><a href="/tools/instagram-engagement-calculator/">حاسبة معدل التفاعل على إنستغرام</a></li>
+          <li><a href="/tools/instagram-profile-analyzer/">تحليل حساب إنستغرام</a></li>
+        </ul>
+      </div>
+    </section>
+
   </section>
 
-  <section class="cta" aria-label="دعوة لاتخاذ إجراء">
+  <section class="card2" style="margin-top:14px" aria-label="أسئلة شائعة">
+    <h2 style="margin:0 0 10px;font-size:18px">أسئلة شائعة</h2>
+    <details>
+      <summary style="cursor:pointer;font-weight:900">هل الأسعار فورية تمامًا؟</summary>
+      <p class="muted" style="margin:10px 0 0;line-height:1.9">
+        الأسعار تأتي من مزود خارجي. داخل الأداة نستخدم كاش لمدة 6 ساعات لتسريع الأداء وتقليل الطلبات.
+      </p>
+    </details>
+    <details>
+      <summary style="cursor:pointer;font-weight:900">لماذا أحيانًا لا يعمل التحويل؟</summary>
+      <p class="muted" style="margin:10px 0 0;line-height:1.9">
+        غالبًا بسبب منع الاتصال من سياسة الأمان (CSP) أو انقطاع المزود. إذا عندك CSP، اسمح بالاتصال إلى open.er-api.com داخل connect-src.
+      </p>
+    </details>
+  </section>
+
+  <section class="cta" aria-label="خدمة العملاء">
     <div>
       <strong>تريد أدوات أكثر للتجارة والعمل الحر؟</strong>
-      <span>ادخل على صفحة الأدوات واستعملها مباشرة بدون تسجيل.</span>
+      <span>تابع أدوات التحليل + أدوات التحويل — قادمة بشكل أقوى.</span>
     </div>
-    <a class="btn primary" href="/tools/">استكشاف الأدوات</a>
+    <a class="btn primary"
+       href="https://wa.me/491234567890?text=مرحبًا%20MarketAPro%2C%20أريد%20اقتراح%20أدوات%20جديدة"
+       target="_blank" rel="noopener">
+      واتساب
+    </a>
   </section>
 
 </main>
@@ -308,359 +312,236 @@
 (() => {
   "use strict";
 
+  // ===== UI helpers =====
   const $ = (id) => document.getElementById(id);
-
-  const amountEl = $("amount");
-  const fromInput = $("fromInput");
-  const toInput = $("toInput");
-  const precisionEl = $("precision");
-  const form = $("fxForm");
-
-  const outConverted = $("outConverted");
-  const outRate = $("outRate");
-  const outUpdated = $("outUpdated");
-  const statusLine = $("statusLine");
   const toastEl = $("toast");
+  const warnBox = $("warnBox");
 
-  const historyList = $("historyList");
-  const currencyList = $("currencyList");
-
-  const CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6 ساعات
-  const HISTORY_KEY = "mapro_fx_history_v1";
-  const SYMBOLS_KEY = "mapro_fx_symbols_v1";
-  const RATE_CACHE_PREFIX = "mapro_fx_rates_v1:";
-
-  function toast(msg){
+  function showToast(msg){
     toastEl.textContent = msg;
     toastEl.style.display = "block";
-    clearTimeout(window.__t);
-    window.__t = setTimeout(() => { toastEl.style.display = "none"; }, 1800);
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => toastEl.style.display = "none", 1800);
+  }
+  function showWarn(msg){
+    warnBox.style.display = "block";
+    warnBox.textContent = msg;
+  }
+  function clearWarn(){
+    warnBox.style.display = "none";
+    warnBox.textContent = "";
   }
 
-  function setStatus(msg){ statusLine.textContent = msg || ""; }
+  function safeUpper(v){ return String(v||"").trim().toUpperCase(); }
+  function round2(n){ return Math.round((+n||0)*100)/100; }
 
-  function now(){ return Date.now(); }
+  // ===== Cache =====
+  const CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6 hours
+  const cacheKey = (base) => `fx_rates_${base}`;
+  const historyKey = "fx_history_last5";
 
-  function safeUpper(s){ return String(s||"").trim().toUpperCase(); }
-
-  function roundTo(n, d){
-    const p = Math.pow(10, d);
-    return Math.round((+n || 0) * p) / p;
-  }
-
-  function fmtNumber(n, decimals){
-    const x = roundTo(n, decimals);
-    // عرض عربي مع أرقام عربية حسب المتصفح
-    return x.toLocaleString("ar", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
-  }
-
-  function buildDatalist(map){
-    currencyList.innerHTML = "";
-    const codes = Object.keys(map || {}).sort();
-    for (const c of codes){
-      const opt = document.createElement("option");
-      opt.value = c;
-      // بعض المتصفحات تعرض label
-      opt.label = map[c] ? (c + " — " + map[c]) : c;
-      currencyList.appendChild(opt);
-    }
-  }
-
-  function saveJSON(key, obj){
-    try { localStorage.setItem(key, JSON.stringify(obj)); } catch(e){}
-  }
-  function loadJSON(key, fallback){
-    try {
-      const v = localStorage.getItem(key);
-      return v ? JSON.parse(v) : fallback;
-    } catch(e){ return fallback; }
-  }
-
-  function cacheSet(key, value){
-    saveJSON(key, { t: now(), v: value });
-  }
-  function cacheGet(key){
-    const obj = loadJSON(key, null);
-    if(!obj || !obj.t) return null;
-    if(now() - obj.t > CACHE_TTL_MS) return null;
-    return obj.v;
-  }
-
-  // ------- Providers (Fallback) -------
-  // Primary: open.er-api.com (works with base)
-  async function fetchRatesPrimary(base){
+  // ===== API (single provider: open.er-api.com) =====
+  async function fetchRates(base){
     const url = `https://open.er-api.com/v6/latest/${encodeURIComponent(base)}`;
     const res = await fetch(url, { cache: "no-store" });
-    if(!res.ok) throw new Error("Primary provider failed");
+    if(!res.ok) throw new Error("فشل الاتصال بمزود الأسعار.");
     const data = await res.json();
-    if(!data || !data.rates) throw new Error("Primary invalid response");
-    return {
-      base: data.base_code || base,
-      date: data.time_last_update_utc || "",
-      rates: data.rates
-    };
+    // expected: { result:"success", base_code:"USD", rates:{...}, time_last_update_utc:"..." }
+    if(data.result !== "success" || !data.rates) throw new Error("بيانات الأسعار غير صالحة.");
+    return data;
   }
 
-  // Backup: Frankfurter (no key, default base EUR but supports base param) :contentReference[oaicite:1]{index=1}
-  async function fetchRatesBackup(base){
-    const url = `https://api.frankfurter.dev/v1/latest?base=${encodeURIComponent(base)}`;
-    const res = await fetch(url, { cache: "no-store" });
-    if(!res.ok) throw new Error("Backup provider failed");
-    const data = await res.json();
-    if(!data || !data.rates) throw new Error("Backup invalid response");
-    return {
-      base: data.base || base,
-      date: data.date ? ("آخر يوم عمل: " + data.date) : "",
-      rates: data.rates
-    };
+  function readCache(base){
+    try{
+      const raw = localStorage.getItem(cacheKey(base));
+      if(!raw) return null;
+      const obj = JSON.parse(raw);
+      if(!obj || !obj.ts || !obj.data) return null;
+      if(Date.now() - obj.ts > CACHE_TTL_MS) return null;
+      return obj.data;
+    }catch(e){ return null; }
+  }
+  function writeCache(base, data){
+    try{
+      localStorage.setItem(cacheKey(base), JSON.stringify({ ts: Date.now(), data }));
+    }catch(e){}
   }
 
   async function getRates(base){
-    base = safeUpper(base);
-    const cacheKey = RATE_CACHE_PREFIX + base;
-    const cached = cacheGet(cacheKey);
-    if(cached) return { ...cached, _cached: true };
+    const cached = readCache(base);
+    if(cached) return { data: cached, cached: true };
+    const fresh = await fetchRates(base);
+    writeCache(base, fresh);
+    return { data: fresh, cached: false };
+  }
 
-    // try primary then backup
+  // ===== Currency list =====
+  async function ensureCurrencyList(){
+    // load from USD once (fast) to populate currencies
+    const { data } = await getRates("USD");
+    const codes = Object.keys(data.rates || {}).sort();
+    const dl = $("currencyList");
+    dl.innerHTML = codes.map(c => `<option value="${c}"></option>`).join("");
+  }
+
+  // ===== History =====
+  function readHistory(){
     try{
-      const r1 = await fetchRatesPrimary(base);
-      cacheSet(cacheKey, r1);
-      return { ...r1, _cached: false, _provider: "open.er-api.com" };
-    }catch(e1){
-      const r2 = await fetchRatesBackup(base);
-      cacheSet(cacheKey, r2);
-      return { ...r2, _cached: false, _provider: "frankfurter" };
-    }
+      const raw = localStorage.getItem(historyKey);
+      const arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr : [];
+    }catch(e){ return []; }
   }
-
-  // ------- Symbols list -------
-  async function loadSymbols(){
-    const cached = cacheGet(SYMBOLS_KEY);
-    if(cached){
-      buildDatalist(cached);
-      return cached;
-    }
-
-    // Strategy:
-    // 1) Try Frankfurter currencies list (names) :contentReference[oaicite:2]{index=2}
-    // 2) Fallback: derive codes from primary rates
-    try{
-      const res = await fetch("https://api.frankfurter.dev/v1/currencies", { cache: "no-store" });
-      if(!res.ok) throw new Error("Currencies list failed");
-      const data = await res.json();
-      if(!data || typeof data !== "object") throw new Error("Invalid currencies data");
-      cacheSet(SYMBOLS_KEY, data);
-      buildDatalist(data);
-      return data;
-    }catch(err){
-      const r = await fetchRatesPrimary("USD");
-      const codes = Object.keys(r.rates || {}).sort();
-      const map = {};
-      codes.forEach(c => map[c] = c);
-      map["USD"] = "US Dollar";
-      cacheSet(SYMBOLS_KEY, map);
-      buildDatalist(map);
-      return map;
-    }
+  function writeHistory(arr){
+    try{ localStorage.setItem(historyKey, JSON.stringify(arr.slice(0,5))); }catch(e){}
   }
-
-  function validateCode(code, symbolsMap){
-    const c = safeUpper(code);
-    return !!symbolsMap[c];
-  }
-
-  // ------- History -------
-  function addHistory(item){
-    const arr = loadJSON(HISTORY_KEY, []);
-    const next = [item, ...arr].slice(0, 5);
-    saveJSON(HISTORY_KEY, next);
+  function pushHistory(item){
+    const arr = readHistory();
+    const next = [item, ...arr].filter((x, i, self) => {
+      // remove exact duplicates (same string)
+      return self.findIndex(y => y.text === x.text) === i;
+    });
+    writeHistory(next.slice(0,5));
     renderHistory();
   }
-
   function renderHistory(){
-    const arr = loadJSON(HISTORY_KEY, []);
-    historyList.innerHTML = "";
+    const ul = $("historyList");
+    const arr = readHistory();
+    ul.innerHTML = "";
     if(!arr.length){
       const li = document.createElement("li");
       li.textContent = "لا يوجد تحويلات محفوظة بعد.";
-      historyList.appendChild(li);
+      ul.appendChild(li);
       return;
     }
-
-    arr.forEach((x) => {
+    arr.forEach(h => {
       const li = document.createElement("li");
-      li.innerHTML = `
-        <span style="font-weight:900;color:var(--text)">${x.amount} ${x.from} → ${x.to}</span>
-        <span style="opacity:.9"> = ${x.result} ${x.to}</span>
-        <span style="display:block;font-size:12px;opacity:.85;margin-top:2px">(${x.when})</span>
-      `;
-      historyList.appendChild(li);
-
-      li.style.cursor = "pointer";
-      li.title = "اضغط لإعادة نفس التحويل";
-      li.addEventListener("click", () => {
-        amountEl.value = x.amountRaw;
-        fromInput.value = x.from;
-        toInput.value = x.to;
-        convertNow({ silentToast: true });
-        toast("تم تطبيق تحويل محفوظ ✅");
-      });
+      li.textContent = h.text;
+      ul.appendChild(li);
     });
   }
 
-  // ------- Convert -------
-  let symbols = null;
-  let debounceTimer = null;
+  // ===== Convert =====
+  async function convert(){
+    clearWarn();
 
-  async function convertNow(opts = {}){
-    const amount = Number(amountEl.value);
-    const from = safeUpper(fromInput.value);
-    const to = safeUpper(toInput.value);
-    const decimals = parseInt(precisionEl.value || "2", 10);
-
-    if(!symbols){
-      setStatus("جارٍ تحميل العملات…");
-      symbols = await loadSymbols();
-    }
+    const amount = Number($("amount").value);
+    const base = safeUpper($("base").value);
+    const target = safeUpper($("target").value);
 
     if(!amount || amount <= 0){
-      setStatus("أدخل مبلغًا صحيحًا.");
-      outConverted.textContent = "—";
-      outRate.textContent = "—";
-      outUpdated.textContent = "—";
+      showWarn("أدخل مبلغًا صحيحًا أكبر من صفر.");
+      return;
+    }
+    if(!/^[A-Z]{3}$/.test(base) || !/^[A-Z]{3}$/.test(target)){
+      showWarn("اكتب رمز عملة صحيح من 3 أحرف (مثال: USD / SAR / EUR).");
       return;
     }
 
-    if(!validateCode(from, symbols)){
-      setStatus("عملة (من) غير صحيحة — اختر من القائمة (مثال: USD).");
-      return;
-    }
-    if(!validateCode(to, symbols)){
-      setStatus("عملة (إلى) غير صحيحة — اختر من القائمة (مثال: SAR).");
-      return;
-    }
-    if(from === to){
-      const same = fmtNumber(amount, decimals);
-      outConverted.textContent = `${same} ${to}`;
-      outRate.textContent = `1 ${from} = 1 ${to}`;
-      outUpdated.textContent = "—";
-      setStatus("نفس العملة — لا يوجد تحويل.");
-      return;
-    }
+    $("base").value = base;
+    $("target").value = target;
 
-    setStatus("جارٍ التحويل…");
+    $("result").textContent = "جارٍ التحويل…";
+    $("rate").textContent = "—";
+    $("updated").textContent = "آخر تحديث: —";
+
     try{
-      const data = await getRates(from);
-      const rate = data.rates[to];
-
-      if(!rate || !isFinite(rate)){
-        // Try: maybe provider doesn't include same set
-        // Backup by fetching again with backup provider explicitly
-        const backup = await fetchRatesBackup(from);
-        const r2 = backup.rates[to];
-        if(!r2 || !isFinite(r2)) throw new Error("لا يوجد سعر لهذه العملة حاليًا.");
-        // update
-        const converted2 = amount * r2;
-        outConverted.textContent = `${fmtNumber(converted2, decimals)} ${to}`;
-        outRate.textContent = `1 ${from} = ${fmtNumber(r2, Math.min(6, Math.max(2, decimals+2)))} ${to}`;
-        outUpdated.textContent = backup.date || "—";
-        setStatus("تم التحويل (احتياطي).");
-        if(!opts.silentToast) toast("تم التحويل ✅");
-        addHistoryItem(amount, from, to, converted2, decimals, backup.date || "");
+      const { data, cached } = await getRates(base);
+      const r = data.rates?.[target];
+      if(!r){
+        showWarn(`العملة المستهدفة غير متاحة: ${target}. جرّب عملة أخرى.`);
+        $("result").textContent = "—";
         return;
       }
 
-      const converted = amount * rate;
-      outConverted.textContent = `${fmtNumber(converted, decimals)} ${to}`;
-      outRate.textContent = `1 ${from} = ${fmtNumber(rate, Math.min(6, Math.max(2, decimals+2)))} ${to}`;
-      outUpdated.textContent = data.date || (data._cached ? "من الكاش" : "—");
+      const converted = amount * Number(r);
+      $("result").textContent = `${round2(converted).toLocaleString("ar")} ${target}`;
+      $("rate").textContent = `1 ${base} = ${Number(r).toFixed(6)} ${target}`;
+      $("updated").textContent = `آخر تحديث: ${data.time_last_update_utc || "—"}${cached ? " (من الكاش)" : ""}`;
 
-      const providerNote = data._provider ? ` (المصدر: ${data._provider}${data._cached ? " / كاش" : ""})` : "";
-      setStatus("تم التحويل." + providerNote);
+      const line = `${amount} ${base} → ${round2(converted)} ${target}`;
+      pushHistory({ text: line, ts: Date.now() });
 
-      if(!opts.silentToast) toast("تم التحويل ✅");
-
-      addHistoryItem(amount, from, to, converted, decimals, data.date || "");
+      showToast("تم التحويل ✅");
     }catch(err){
-      console.error(err);
-      setStatus("تعذر التحويل الآن. جرّب لاحقًا أو غيّر العملة.");
-      toast("حدث خطأ في التحويل ⚠️");
+      showWarn(
+        "حدث خطأ أثناء جلب الأسعار.\n" +
+        "إذا عندك CSP في الموقع: اسمح بالاتصال إلى open.er-api.com داخل connect-src.\n" +
+        "تفاصيل: " + (err?.message || err)
+      );
+      $("result").textContent = "—";
     }
   }
 
-  function addHistoryItem(amount, from, to, converted, decimals, dateText){
-    const when = new Date().toLocaleString("ar", { dateStyle:"medium", timeStyle:"short" });
-    addHistory({
-      amount: fmtNumber(amount, decimals),
-      amountRaw: amount,
-      from,
-      to,
-      result: fmtNumber(converted, decimals),
-      when: dateText ? (when + " — " + dateText) : when
-    });
-  }
+  // ===== Actions =====
+  $("convertBtn").addEventListener("click", convert);
 
-  function debouncedConvert(){
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => convertNow({ silentToast: true }), 250);
-  }
-
-  // ------- UI actions -------
   $("swapBtn").addEventListener("click", () => {
-    const a = fromInput.value;
-    fromInput.value = toInput.value;
-    toInput.value = a;
-    convertNow({ silentToast: true });
-    toast("تم التبديل ↔");
+    const a = $("base").value;
+    $("base").value = $("target").value;
+    $("target").value = a;
+    convert();
   });
 
   $("copyBtn").addEventListener("click", async () => {
+    const base = safeUpper($("base").value);
+    const target = safeUpper($("target").value);
+    const amount = $("amount").value;
+    const result = $("result").textContent;
+
     const txt =
-`MarketAPro — حاسبة تحويل العملات
-المبلغ: ${amountEl.value}
-من: ${safeUpper(fromInput.value)}
-إلى: ${safeUpper(toInput.value)}
-النتيجة: ${outConverted.textContent}
-سعر الصرف: ${outRate.textContent}
-آخر تحديث: ${outUpdated.textContent}
+`MarketAPro — محول العملات
+المبلغ: ${amount}
+من: ${base}
+إلى: ${target}
+النتيجة: ${result}
 الرابط: https://marketapro.com/tools/currency-converter/`;
 
     try{
       await navigator.clipboard.writeText(txt);
-      toast("تم نسخ النتيجة ✅");
+      showToast("تم النسخ ✅");
     }catch(e){
       alert("تعذر النسخ تلقائيًا. انسخ يدويًا:\n\n" + txt);
     }
   });
 
-  $("clearBtn").addEventListener("click", () => {
-    amountEl.value = "1";
-    fromInput.value = "USD";
-    toInput.value = "SAR";
-    precisionEl.value = "2";
-    outConverted.textContent = "—";
-    outRate.textContent = "—";
-    outUpdated.textContent = "—";
-    setStatus("");
-    toast("تم المسح");
-    convertNow({ silentToast: true });
+  $("clearHistoryBtn").addEventListener("click", () => {
+    localStorage.removeItem(historyKey);
+    renderHistory();
+    showToast("تم مسح السجل");
   });
 
   // Quick pairs
-  document.querySelectorAll("[data-quick]").forEach(chip => {
+  document.querySelectorAll("[data-pair]").forEach(chip => {
     chip.addEventListener("click", () => {
-      const v = chip.getAttribute("data-quick") || "";
-      const [f,t] = v.split(":");
-      if(f && t){
-        fromInput.value = f;
-        toInput.value = t;
-        convertNow({ silentToast: true });
-        toast(`تم اختيار ${f} → ${t}`);
+      const [b,t] = String(chip.getAttribute("data-pair")||"").split(",");
+      if(b && t){
+        $("base").value = b;
+        $("target").value = t;
+        convert();
       }
     });
   });
 
-  // Auto convert on input changes
-  [amountEl, fromInput, toInput, precisionEl].forEach(el => {
-    el.addEventListener("input", debouncedConvert);
-    el.addEvent
+  // Auto convert on changes (خفيف)
+  ["amount","base","target"].forEach(id => {
+    $(id).addEventListener("change", () => convert());
+  });
+
+  // Init
+  (async () => {
+    try{
+      await ensureCurrencyList();
+      renderHistory();
+      convert();
+    }catch(e){
+      // if symbols load fails, still keep UI usable
+      renderHistory();
+      showWarn("تعذر تحميل قائمة العملات تلقائيًا. يمكنك كتابة رمز العملة يدويًا (USD / EUR / SAR ...).");
+    }
+  })();
+})();
+</script>
+</body>
+</html>
+
