@@ -200,14 +200,15 @@
           <input id="amount" type="number" inputmode="decimal" min="0" step="0.01" value="1" />
         </div>
 
+        <!-- ✅ التعديل المطلوب: استبدال input بقائمة select للعملة -->
         <div>
           <label for="base">العملة الأساسية (From)</label>
-          <input id="base" list="currencyList" placeholder="اكتب أو اختر (مثال: USD)" value="USD" autocomplete="off">
+          <select id="base" aria-label="اختر العملة الأساسية"></select>
         </div>
 
         <div>
           <label for="target">العملة المستهدفة (To)</label>
-          <input id="target" list="currencyList" placeholder="اكتب أو اختر (مثال: SAR)" value="SAR" autocomplete="off">
+          <select id="target" aria-label="اختر العملة المستهدفة"></select>
         </div>
 
         <div>
@@ -215,8 +216,6 @@
           <button class="btn primary" id="convertBtn" type="button">تحويل الآن</button>
         </div>
       </div>
-
-      <datalist id="currencyList"></datalist>
 
       <div class="actions">
         <button class="btn secondary" id="swapBtn" type="button">تبديل العملات</button>
@@ -380,8 +379,29 @@
     // load from USD once (fast) to populate currencies
     const { data } = await getRates("USD");
     const codes = Object.keys(data.rates || {}).sort();
-    const dl = $("currencyList");
-    dl.innerHTML = codes.map(c => `<option value="${c}"></option>`).join("");
+
+    // ✅ التعديل المطلوب: تعبئة قائمتين select بدل datalist
+    const baseSel = $("base");
+    const targetSel = $("target");
+
+    baseSel.innerHTML = "";
+    targetSel.innerHTML = "";
+
+    codes.forEach(c => {
+      const o1 = document.createElement("option");
+      o1.value = c;
+      o1.textContent = c;
+      baseSel.appendChild(o1);
+
+      const o2 = document.createElement("option");
+      o2.value = c;
+      o2.textContent = c;
+      targetSel.appendChild(o2);
+    });
+
+    // افتراضيات
+    baseSel.value = codes.includes("USD") ? "USD" : (codes[0] || "USD");
+    targetSel.value = codes.includes("SAR") ? "SAR" : (codes.includes("EUR") ? "EUR" : (codes[0] || "EUR"));
   }
 
   // ===== History =====
@@ -434,12 +454,9 @@
       return;
     }
     if(!/^[A-Z]{3}$/.test(base) || !/^[A-Z]{3}$/.test(target)){
-      showWarn("اكتب رمز عملة صحيح من 3 أحرف (مثال: USD / SAR / EUR).");
+      showWarn("اختر عملة صحيحة من القائمة.");
       return;
     }
-
-    $("base").value = base;
-    $("target").value = target;
 
     $("result").textContent = "جارٍ التحويل…";
     $("rate").textContent = "—";
@@ -535,9 +552,8 @@
       renderHistory();
       convert();
     }catch(e){
-      // if symbols load fails, still keep UI usable
       renderHistory();
-      showWarn("تعذر تحميل قائمة العملات تلقائيًا. يمكنك كتابة رمز العملة يدويًا (USD / EUR / SAR ...).");
+      showWarn("تعذر تحميل قائمة العملات تلقائيًا. جرّب إعادة تحميل الصفحة.");
     }
   })();
 })();
