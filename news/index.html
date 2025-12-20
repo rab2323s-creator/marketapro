@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -88,14 +88,27 @@
       transition:.12s ease;
     }
     .chip:hover{opacity:1}
-    .grid{
+
+    /* أقسام المقالات */
+    .section-block{
       margin-top:14px;
+      padding:14px;
+      border-radius:18px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+    }
+    .section-block h2{margin:0 0 6px;font-size:20px;line-height:1.4}
+    .section-block p{margin:0;color:var(--muted);line-height:1.9}
+
+    .grid{
+      margin-top:12px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:12px;
     }
     @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:520px){.grid{grid-template-columns:1fr}}
+
     .post-card{
       border:1px solid var(--border);
       border-radius:18px;
@@ -120,9 +133,10 @@
       background:rgba(255,255,255,.02);
       font-weight:800;
     }
-    .post-body h2{margin:10px 0 6px;font-size:18px;line-height:1.5}
+    .post-body h3{margin:10px 0 6px;font-size:18px;line-height:1.5}
     .post-body p{margin:0;color:var(--muted);line-height:1.9}
     .post-footer{padding:0 14px 14px;margin-top:auto}
+
     .cta{
       margin-top:14px;
       border:1px solid var(--border);
@@ -193,93 +207,124 @@
     </div>
   </section>
 
-  <!-- GRID -->
-  <section class="grid" aria-label="قائمة المقالات" id="posts">
-
-    <!-- المقال 1 -->
-    <article class="post-card" data-tags="instagram analytics">
-      <img src="/assets/instagram-engagement.jpg" alt="كيف تحسب معدل التفاعل على إنستغرام؟" loading="lazy" />
-      <div class="post-body">
-        <div class="post-meta">
-          <span class="tag">إنستغرام</span>
-          <span class="tag">تحليل</span>
-          <span>مدة القراءة: 5–7 دقائق</span>
-        </div>
-        <h2>
-          <a href="/news/instagram-engagement-rate-calculator/">
-            كيف تحسب معدل التفاعل على إنستغرام؟ (دليل شامل + أداة مجانية)
-          </a>
-        </h2>
-        <p>
-          تعلّم طريقة حساب Engagement Rate خطوة بخطوة، ما هو المعدل الجيد،
-          ولماذا معدل التفاعل أهم من عدد المتابعين — مع أداة مجانية للحساب خلال ثوانٍ.
-        </p>
-      </div>
-      <div class="post-footer">
-        <a class="btn primary" href="/news/instagram-engagement-rate-calculator/">اقرأ الدليل</a>
-        <a class="btn secondary" href="/tools/instagram-engagement-calculator/" style="margin-inline-start:8px">جرّب الأداة</a>
-      </div>
-    </article>
-
-    <!-- المقال 2 -->
-    <article class="post-card" data-tags="instagram seo">
-      <img src="/assets/social-media.jpg" alt="أفضل وقت للنشر على إنستغرام" loading="lazy" />
-      <div class="post-body">
-        <div class="post-meta">
-          <span class="tag">إنستغرام</span>
-          <span class="tag">SEO</span>
-          <span>مدة القراءة: 5–7 دقائق</span>
-        </div>
-
-        <h2>
-          <a href="/news/best-time-to-post-instagram/">
-            أفضل وقت للنشر على إنستغرام: دليل عملي لزيادة التفاعل (2025)
-          </a>
-        </h2>
-
-        <p>
-          دليل عملي يشرح كيف تختار توقيت النشر حسب بلد جمهورك ونوع المحتوى، مع خطة اختبار 14 يوم لتثبيت أفضل وقتين بناءً على النتائج.
-        </p>
-      </div>
-
-      <div class="post-footer">
-        <a class="btn primary" href="/news/best-time-to-post-instagram/">اقرأ الدليل</a>
-        <a class="btn secondary" href="/tools/best-time-to-post-instagram/" style="margin-inline-start:8px">جرّب الأداة</a>
-      </div>
-    </article>
-
-    <!-- المقال 3: تحويل العملات -->
-    <article class="post-card" data-tags="finance tools seo egypt">
-      <img src="/assets/currency-converter.jpg" alt="محول العملات الفوري - تحويل دولار لجنيه مصري" loading="lazy" />
-      <div class="post-body">
-        <div class="post-meta">
-          <span class="tag">تحويل عملات</span>
-          <span class="tag">مصر</span>
-          <span class="tag">SEO</span>
-          <span>مدة القراءة: 6–8 دقائق</span>
-        </div>
-
-        <h2>
-          <a href="/news/currency-converter-usd-egp-sar-eur-try/">
-            تحويل العملات: دولار لجنيه مصري (USD→EGP) + ريال ويورو — دليل + أداة مجانية
-          </a>
-        </h2>
-
-        <p>
-          دليل عملي يستهدف أكثر ما يبحث عنه الناس: تحويل دولار لجنيه مصري، USD to EGP، تحويل ريال سعودي لجنيه،
-          وتحويل يورو/ليرة… مع رابط مباشر لأداة محول العملات الفوري من MarketAPro.
-        </p>
-      </div>
-
-      <div class="post-footer">
-        <a class="btn primary" href="/news/currency-converter-usd-egp-sar-eur-try/">اقرأ الدليل</a>
-        <a class="btn secondary" href="/tools/currency-converter/" style="margin-inline-start:8px">جرّب الأداة</a>
-      </div>
-    </article>
-
+  <!-- CTA سريع (يعزز النقرات للأدوات) -->
+  <section class="cta" aria-label="جرّب الأدوات مباشرة">
+    <div>
+      <strong>تريد نتيجة سريعة؟ جرّب الأدوات الآن</strong>
+      <span>محول العملات + أفضل وقت للنشر + حاسبة التفاعل — بدون تسجيل.</span>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn primary" href="/tools/currency-converter/">جرّب محول العملات</a>
+      <a class="btn secondary" href="/tools/" style="margin-inline-start:8px">كل الأدوات</a>
+    </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- =========================
+       Section 1: Marketing / Instagram
+  ========================== -->
+  <section class="posts-group" id="group-marketing">
+    <div class="section-block">
+      <h2>مقالات التسويق وإنستغرام</h2>
+      <p class="note">أدلة عملية لتحسين التفاعل والوصول + روابط مباشرة لأدوات مجانية تساعدك على التنفيذ فورًا.</p>
+    </div>
+
+    <section class="grid" aria-label="مقالات التسويق وإنستغرام" id="posts-marketing">
+      <!-- المقال 1 -->
+      <article class="post-card" data-tags="instagram analytics">
+        <img src="/assets/instagram-engagement.jpg" alt="كيف تحسب معدل التفاعل على إنستغرام؟" loading="lazy" />
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="tag">إنستغرام</span>
+            <span class="tag">تحليل</span>
+            <span>مدة القراءة: 5–7 دقائق</span>
+          </div>
+          <h3>
+            <a href="/news/instagram-engagement-rate-calculator/">
+              كيف تحسب معدل التفاعل على إنستغرام؟ (دليل شامل + أداة مجانية)
+            </a>
+          </h3>
+          <p>
+            تعلّم طريقة حساب Engagement Rate خطوة بخطوة، ما هو المعدل الجيد،
+            ولماذا معدل التفاعل أهم من عدد المتابعين — مع أداة مجانية للحساب خلال ثوانٍ.
+          </p>
+        </div>
+        <div class="post-footer">
+          <a class="btn primary" href="/news/instagram-engagement-rate-calculator/">اقرأ الدليل</a>
+          <a class="btn secondary" href="/tools/instagram-engagement-calculator/" style="margin-inline-start:8px">جرّب الأداة</a>
+        </div>
+      </article>
+
+      <!-- المقال 2 -->
+      <article class="post-card" data-tags="instagram seo">
+        <img src="/assets/social-media.jpg" alt="أفضل وقت للنشر على إنستغرام" loading="lazy" />
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="tag">إنستغرام</span>
+            <span class="tag">SEO</span>
+            <span>مدة القراءة: 5–7 دقائق</span>
+          </div>
+
+          <h3>
+            <a href="/news/best-time-to-post-instagram/">
+              أفضل وقت للنشر على إنستغرام: دليل عملي لزيادة التفاعل (2025)
+            </a>
+          </h3>
+
+          <p>
+            دليل عملي يشرح كيف تختار توقيت النشر حسب بلد جمهورك ونوع المحتوى، مع خطة اختبار 14 يوم لتثبيت أفضل وقتين بناءً على النتائج.
+          </p>
+        </div>
+
+        <div class="post-footer">
+          <a class="btn primary" href="/news/best-time-to-post-instagram/">اقرأ الدليل</a>
+          <a class="btn secondary" href="/tools/best-time-to-post-instagram/" style="margin-inline-start:8px">جرّب الأداة</a>
+        </div>
+      </article>
+    </section>
+  </section>
+
+  <!-- =========================
+       Section 2: Finance / Currency
+  ========================== -->
+  <section class="posts-group" id="group-finance">
+    <div class="section-block">
+      <h2>مقالات تحويل العملات والاقتصاد</h2>
+      <p class="note">تحويل دولار لجنيه، ريال لدرهم، USD to EGP… أدلة تساعدك على التحويل بسرعة باستخدام الأداة.</p>
+    </div>
+
+    <section class="grid" aria-label="مقالات تحويل العملات" id="posts-finance">
+      <!-- المقال 3: تحويل العملات -->
+      <article class="post-card" data-tags="finance tools seo egypt">
+        <img src="/assets/currency-converter.jpg" alt="محول العملات الفوري - تحويل دولار لجنيه مصري" loading="lazy" />
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="tag">تحويل عملات</span>
+            <span class="tag">مصر</span>
+            <span class="tag">SEO</span>
+            <span>مدة القراءة: 6–8 دقائق</span>
+          </div>
+
+          <h3>
+            <a href="/news/currency-converter-usd-egp-sar-eur-try/">
+              تحويل العملات: دولار لجنيه مصري (USD→EGP) + ريال ويورو — دليل + أداة مجانية
+            </a>
+          </h3>
+
+          <p>
+            دليل عملي يستهدف أكثر ما يبحث عنه الناس: تحويل دولار لجنيه مصري، USD to EGP، تحويل ريال سعودي لجنيه،
+            وتحويل يورو/ليرة… مع رابط مباشر لأداة محول العملات الفوري من MarketAPro.
+          </p>
+        </div>
+
+        <div class="post-footer">
+          <a class="btn primary" href="/news/currency-converter-usd-egp-sar-eur-try/">اقرأ الدليل</a>
+          <a class="btn secondary" href="/tools/currency-converter/" style="margin-inline-start:8px">جرّب الأداة</a>
+        </div>
+      </article>
+    </section>
+  </section>
+
+  <!-- CTA ختامي -->
   <section class="cta" aria-label="دعوة لاتخاذ إجراء">
     <div>
       <strong>هل تريد أدوات أكثر + أدلة مختصرة قابلة للتطبيق؟</strong>
@@ -298,10 +343,11 @@
 </footer>
 
 <script>
-  // بحث + فلترة (مطابقة صحيحة بالوسوم) + دعم لوحة المفاتيح
+  // بحث + فلترة (مطابقة صحيحة بالوسوم) + إخفاء الأقسام الفارغة + دعم لوحة المفاتيح
   const q = document.getElementById('q');
-  const posts = [...document.querySelectorAll('#posts .post-card')];
   const chips = [...document.querySelectorAll('.chip')];
+  const cards = [...document.querySelectorAll('.post-card')];
+  const groups = [...document.querySelectorAll('.posts-group')];
 
   let activeFilter = 'all';
 
@@ -316,7 +362,7 @@
   function apply(){
     const term = (q.value || '').trim().toLowerCase();
 
-    posts.forEach(card=>{
+    cards.forEach(card=>{
       const text = (card.innerText || '').toLowerCase();
       const tags = normalizeTags(card.getAttribute('data-tags'));
 
@@ -324,6 +370,12 @@
       const matchesFilter = (activeFilter === 'all') || tags.includes(activeFilter);
 
       card.style.display = (matchesTerm && matchesFilter) ? '' : 'none';
+    });
+
+    // hide empty groups
+    groups.forEach(g=>{
+      const anyVisible = [...g.querySelectorAll('.post-card')].some(c => c.style.display !== 'none');
+      g.style.display = anyVisible ? '' : 'none';
     });
   }
 
@@ -356,3 +408,4 @@
 </script>
 </body>
 </html>
+
