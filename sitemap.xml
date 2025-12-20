@@ -12,7 +12,7 @@
   <url>
     <loc>https://marketapro.com/tools/</loc>
     <lastmod>2025-12-01</lastmod>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
 
   <!-- أدوات إنستغرام -->
@@ -39,12 +39,25 @@
   <url>
     <loc>https://marketapro.com/news/</loc>
     <lastmod>2025-12-01</lastmod>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
   </url>
 
-  <!-- مقال أفضل وقت للنشر (2026) -->
+  <!-- مقالات إنستغرام -->
   <url>
-    <loc>https://marketapro.com/news/best-time-to-post-instagram-guide/</loc>
+    <loc>https://marketapro.com/news/instagram-engagement-rate-calculator/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://marketapro.com/news/best-time-to-post-instagram/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- مقالات تحويل العملات -->
+  <url>
+    <loc>https://marketapro.com/news/currency-converter-usd-egp-sar-eur-try/</loc>
     <lastmod>2025-12-01</lastmod>
     <priority>0.90</priority>
   </url>
