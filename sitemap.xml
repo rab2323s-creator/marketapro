@@ -4,7 +4,7 @@
   <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://marketapro.com/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- صفحة الأدوات -->
   <url>
     <loc>https://marketapro.com/tools/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -20,28 +20,36 @@
   <!-- أدوات إنستغرام -->
   <url>
     <loc>https://marketapro.com/tools/instagram-engagement-calculator/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://marketapro.com/tools/instagram-profile-analyzer/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://marketapro.com/tools/instagram-content-ideas/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://marketapro.com/tools/best-time-to-post-instagram/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- ✅ أداة فيس بوك -->
+  <url>
+    <loc>https://marketapro.com/tools/best-time-to-post-facebook/</loc>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -49,7 +57,7 @@
   <!-- أداة تحويل العملات -->
   <url>
     <loc>https://marketapro.com/tools/currency-converter/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
@@ -57,7 +65,7 @@
   <!-- صفحة المقالات -->
   <url>
     <loc>https://marketapro.com/news/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -65,50 +73,58 @@
   <!-- مقالات إنستغرام -->
   <url>
     <loc>https://marketapro.com/news/instagram-engagement-rate-calculator/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://marketapro.com/news/best-time-to-post-instagram/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
+  </url>
+
+  <!-- ✅ مقال فيس بوك (Pillar Guide) -->
+  <url>
+    <loc>https://marketapro.com/news/best-time-to-post-facebook-guide/</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
   </url>
 
   <!-- مقالات العملات -->
   <url>
     <loc>https://marketapro.com/news/currency-converter-usd-egp-sar-eur-try/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://marketapro.com/news/usd-to-egp-today/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://marketapro.com/news/usd-to-sar/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://marketapro.com/news/usd-to-aed/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://marketapro.com/news/usd-to-arab-currencies/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -116,14 +132,14 @@
   <!-- مقالات الذهب -->
   <url>
     <loc>https://marketapro.com/news/gold-price-forecast-2026/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://marketapro.com/news/2026-gold-price-outlook/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -131,7 +147,7 @@
   <!-- ملف تحقق جوجل -->
   <url>
     <loc>https://marketapro.com/google2dfefcdad5cc106a.html</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.20</priority>
   </url>
