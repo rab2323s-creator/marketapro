@@ -1,4 +1,4 @@
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- الصفحة الرئيسية -->
@@ -144,6 +144,14 @@
     <priority>0.90</priority>
   </url>
 
+  <!-- ✅ مقال الذهب الجديد: سيناريو 6000$ -->
+  <url>
+    <loc>https://marketapro.com/news/gold-6000-forecast-2026/</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
   <!-- ملف تحقق جوجل -->
   <url>
     <loc>https://marketapro.com/google2dfefcdad5cc106a.html</loc>
@@ -153,4 +161,3 @@
   </url>
 
 </urlset>
-
