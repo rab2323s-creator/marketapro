@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>أسعار الذهب الفورية — جرام/أونصة + عيارات | MarketAPro</title>
+  <meta name="description" content="أداة أسعار الذهب: سعر الجرام والأونصة حسب العيار وبعملات الخليج ومصر ولبنان وسوريا مع تاريخ التحديث وكاش وسجل." />
+  <link rel="canonical" href="https://marketapro.com/tools/gold-price/" />
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    .hero-block{padding:18px;border-radius:18px;border:1px solid var(--border);background:rgba(255,255,255,.02)}
+    .hero-title{margin:0 0 8px;font-size:28px;line-height:1.4}
+    .hero-desc{margin:0;color:var(--muted);line-height:1.9}
+    .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;margin-top:14px}
+    @media (max-width: 900px){.wrap{grid-template-columns:1fr}}
+    .card2{border:1px solid var(--border);border-radius:18px;background:rgba(0,0,0,.18);padding:14px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media(max-width:520px){.row{grid-template-columns:1fr}}
+    label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
+    input, select{width:100%;padding:12px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);outline:none}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{cursor:pointer}
+    .btn.secondary{background:rgba(255,255,255,.02)}
+    .stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    @media(max-width:520px){.stat-grid{grid-template-columns:1fr}}
+    .stat{padding:14px;border-radius:16px;background:rgba(0,0,0,.18);border:1px solid var(--border)}
+    .stat strong{display:block;font-size:18px}
+    .stat span{color:var(--muted);font-size:13px}
+    .divider{height:1px;background:var(--border);margin:14px 0}
+    .list{margin:10px 0 0;padding-right:18px;color:var(--muted);line-height:1.9}
+    .toast{position:fixed;inset-inline-start:16px;bottom:16px;background:rgba(0,0,0,.65);border:1px solid var(--border);
+      border-radius:14px;padding:10px 12px;color:var(--text);display:none;max-width:340px;z-index:9999}
+    .warn{border:1px solid rgba(250,204,21,.35);background:rgba(250,204,21,.08);color:#ffe9a6;
+      padding:10px 12px;border-radius:14px;font-weight:900;font-size:13px;display:none;margin-top:10px;white-space:pre-wrap}
+    .muted{color:var(--muted)}
+    table{width:100%;border-collapse:separate;border-spacing:0 8px}
+    td,th{padding:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);border-radius:12px}
+    th{font-weight:900}
+  </style>
+
+  <!-- WebApplication Schema (اختياري قوي للـ SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"أسعار الذهب الفورية",
+    "url":"https://marketapro.com/tools/gold-price/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"Any",
+    "description":"أداة أسعار الذهب: سعر الجرام والأونصة حسب العيار وبعملات الخليج ومصر ولبنان وسوريا مع تاريخ التحديث وكاش وسجل.",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "publisher":{"@type":"Organization","name":"MarketAPro","url":"https://marketapro.com/"}
+  }
+  </script>
+</head>
+
+<body>
+<a class="skip-link" href="#content">تخطي إلى المحتوى</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="العودة للرئيسية">
+      <div class="brand-badge" aria-hidden="true"></div>
+      <div>
+        <p class="brand-title">MarketAPro</p>
+        <p class="brand-sub">أسعار الذهب</p>
+      </div>
+    </a>
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="/">الرئيسية</a>
+      <a class="active" href="/tools/">الأدوات</a>
+      <a href="/news/">المقالات</a>
+      <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="container section">
+  <section class="hero-block">
+    <h1 class="hero-title">أسعار الذهب الفورية</h1>
+    <p class="hero-desc">
+      اختر العملة والوحدة والعيار — وستحصل على سعر الذهب فورًا (مع كاش + سجل).
+    </p>
+  </section>
+
+  <section class="wrap">
+
+    <section class="card2" aria-label="الإعدادات">
+      <div class="row">
+        <div>
+          <label for="currency">العملة</label>
+          <select id="currency">
+            <option value="SAR">SAR — السعودية</option>
+            <option value="AED">AED — الإمارات</option>
+            <option value="KWD">KWD — الكويت</option>
+            <option value="BHD">BHD — البحرين</option>
+            <option value="QAR">QAR — قطر</option>
+            <option value="OMR">OMR — عمان</option>
+            <option value="EGP">EGP — مصر</option>
+            <option value="LBP">LBP — لبنان</option>
+            <option value="SYP">SYP — سوريا</option>
+            <option value="USD">USD — دولار</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="unit">الوحدة</label>
+          <select id="unit">
+            <option value="gram" selected>غرام</option>
+            <option value="oz">أونصة (Troy)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="karat">العيار</label>
+          <select id="karat">
+            <option value="24" selected>24K</option>
+            <option value="22">22K</option>
+            <option value="21">21K</option>
+            <option value="18">18K</option>
+            <option value="14">14K</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="premium">مصنعية/هامش (اختياري لكل وحدة)</label>
+          <input id="premium" type="number" inputmode="decimal" step="0.01" value="0" />
+        </div>
+
+        <div>
+          <label>&nbsp;</label>
+          <button class="btn primary" id="calcBtn" type="button">تحديث السعر</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn secondary" id="copyBtn" type="button">نسخ</button>
+        <button class="btn secondary" id="clearHistoryBtn" type="button">مسح السجل</button>
+      </div>
+
+      <div class="warn" id="warnBox"></div>
+
+      <p class="muted" style="margin:10px 0 0;font-size:13px;line-height:1.9">
+        ملاحظة: LBP/SYP قد تختلف حسب مصدر سعر الصرف المستخدم لدى مزود البيانات.
+      </p>
+    </section>
+
+    <section class="card2" aria-label="النتائج">
+      <h2 style="margin:0 0 6px;font-size:18px">النتيجة</h2>
+
+      <div class="stat-grid">
+        <div class="stat">
+          <strong id="priceOut">—</strong>
+          <span>سعر العيار المختار</span>
+        </div>
+        <div class="stat">
+          <strong id="spotOut">—</strong>
+          <span>السعر السبوت (24K)</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <p class="muted" id="updated">آخر تحديث: —</p>
+
+      <div class="divider"></div>
+
+      <h3 style="margin:0 0 8px;font-size:16px">كل العيارات (للوحدة المختارة)</h3>
+      <table aria-label="جدول العيارات">
+        <thead>
+          <tr>
+            <th>العيار</th>
+            <th>السعر</th>
+          </tr>
+        </thead>
+        <tbody id="allKarats"></tbody>
+      </table>
+
+      <div class="divider"></div>
+      <h3 style="margin:0 0 6px;font-size:16px">آخر 5 تحديثات</h3>
+      <ul class="list" id="historyList"></ul>
+    </section>
+
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  "use strict";
+  const $ = (id) => document.getElementById(id);
+
+  // ✅ رابط الـ Worker عندك
+  const WORKER_BASE = "https://hidden-snow-2c44.rab2323s.workers.dev";
+
+  const TROY_OZ_TO_G = 31.1034768;
+
+  const toastEl = $("toast");
+  const warnBox = $("warnBox");
+
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.style.display = "block";
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => toastEl.style.display = "none", 1800);
+  }
+  function showWarn(msg){
+    warnBox.style.display = "block";
+    warnBox.textContent = msg;
+  }
+  function clearWarn(){
+    warnBox.style.display = "none";
+    warnBox.textContent = "";
+  }
+
+  const CACHE_TTL_MS = 5 * 60 * 1000; // 5 دقائق (متصفح)
+  const cacheKey = (cur) => `gold_spot_${cur}`;
+  const historyKey = "gold_history_last5";
+
+  function readCache(cur){
+    try{
+      const raw = localStorage.getItem(cacheKey(cur));
+      if(!raw) return null;
+      const obj = JSON.parse(raw);
+      if(!obj?.ts || !obj?.data) return null;
+      if(Date.now() - obj.ts > CACHE_TTL_MS) return null;
+      return obj.data;
+    }catch(e){ return null; }
+  }
+  function writeCache(cur, data){
+    try{ localStorage.setItem(cacheKey(cur), JSON.stringify({ ts: Date.now(), data })); }catch(e){}
+  }
+
+  function readHistory(){
+    try{
+      const raw = localStorage.getItem(historyKey);
+      const arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr : [];
+    }catch(e){ return []; }
+  }
+  function writeHistory(arr){
+    try{ localStorage.setItem(historyKey, JSON.stringify(arr.slice(0,5))); }catch(e){}
+  }
+  function renderHistory(){
+    const ul = $("historyList");
+    const arr = readHistory();
+    ul.innerHTML = "";
+    if(!arr.length){
+      const li = document.createElement("li");
+      li.textContent = "لا يوجد سجل بعد.";
+      ul.appendChild(li);
+      return;
+    }
+    arr.forEach(h => {
+      const li = document.createElement("li");
+      li.textContent = h.text;
+      ul.appendChild(li);
+    });
+  }
+  function pushHistory(text){
+    const arr = readHistory();
+    const next = [{ text, ts: Date.now() }, ...arr]
+      .filter((x, i, self) => self.findIndex(y => y.text === x.text) === i);
+    writeHistory(next);
+    renderHistory();
+  }
+
+  async function fetchSpot(cur){
+    const cached = readCache(cur);
+    if(cached) return { data: cached, cached: true };
+
+    const res = await fetch(`${WORKER_BASE}/api/gold?currency=${encodeURIComponent(cur)}`, { cache: "no-store" });
+    if(!res.ok) throw new Error("فشل الاتصال بمزود أسعار الذهب.");
+    const data = await res.json();
+    if(!data || typeof data.price_oz_24k !== "number") throw new Error("بيانات غير صالحة.");
+    writeCache(cur, data);
+    return { data, cached: false };
+  }
+
+  function round2(n){ return Math.round((+n||0)*100)/100; }
+
+  function formatAR(n){ return Number(n).toLocaleString("ar"); }
+
+  function renderAllKarats(base24, cur, unitLabel, premium){
+    const tbody = $("allKarats");
+    const karats = [24,22,21,18,14];
+    tbody.innerHTML = "";
+    karats.forEach(k => {
+      const price = (base24 * (k/24)) + premium;
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td><strong>${k}K</strong></td><td>${formatAR(round2(price))} ${cur} / ${unitLabel}</td>`;
+      tbody.appendChild(tr);
+    });
+  }
+
+  async function calc(){
+    clearWarn();
+    $("priceOut").textContent = "جارٍ التحديث…";
+    $("spotOut").textContent = "—";
+    $("updated").textContent = "آخر تحديث: —";
+    $("allKarats").innerHTML = "";
+
+    const cur = $("currency").value;
+    const unit = $("unit").value;
+    const karat = Number($("karat").value);
+    const premium = Number($("premium").value || 0);
+
+    try{
+      const { data, cached } = await fetchSpot(cur);
+
+      const priceOz24 = data.price_oz_24k;
+      const priceG24  = priceOz24 / TROY_OZ_TO_G;
+
+      const base24 = (unit === "oz") ? priceOz24 : priceG24;
+      const unitLabel = unit === "oz" ? "أونصة" : "غرام";
+
+      const karatPrice = (base24 * (karat/24)) + premium;
+
+      $("spotOut").textContent = `${formatAR(round2(base24))} ${cur} / ${unitLabel} (24K)`;
+      $("priceOut").textContent = `${formatAR(round2(karatPrice))} ${cur} / ${unitLabel} (${karat}K)`;
+
+      $("updated").textContent = `آخر تحديث: ${data.updated_at || "—"}${cached ? " (من الكاش)" : ""}`;
+
+      renderAllKarats(base24, cur, unitLabel, premium);
+
+      pushHistory(`${cur} • ${unitLabel} • ${karat}K = ${round2(karatPrice)} (Premium ${premium})`);
+      showToast("تم التحديث ✅");
+    }catch(err){
+      showWarn("حدث خطأ أثناء جلب السعر.\nتفاصيل: " + (err?.message || err));
+      $("priceOut").textContent = "—";
+    }
+  }
+
+  $("calcBtn").addEventListener("click", calc);
+  ["currency","unit","karat","premium"].forEach(id => $(id).addEventListener("change", calc));
+
+  $("copyBtn").addEventListener("click", async () => {
+    const txt =
+`MarketAPro — أسعار الذهب
+العملة: ${$("currency").value}
+الوحدة: ${$("unit").value}
+العيار: ${$("karat").value}K
+المصنعية: ${$("premium").value}
+النتيجة: ${$("priceOut").textContent}
+${$("updated").textContent}
+https://marketapro.com/tools/gold-price/`;
+    try{ await navigator.clipboard.writeText(txt); showToast("تم النسخ ✅"); }
+    catch(e){ alert("تعذر النسخ تلقائيًا. انسخ يدويًا:\n\n" + txt); }
+  });
+
+  $("clearHistoryBtn").addEventListener("click", () => {
+    localStorage.removeItem(historyKey);
+    renderHistory();
+    showToast("تم مسح السجل");
+  });
+
+  renderHistory();
+  calc();
+})();
+</script>
+</body>
+</html>
