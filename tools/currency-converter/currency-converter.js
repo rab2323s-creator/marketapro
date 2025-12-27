@@ -1,3 +1,40 @@
+ // Shared helpers (optional). If helpers.js is loaded, we use it for cache + fetch.
+const __hasHelpers = typeof window !== "undefined" && window.MKT && window.MKT.helpers;
+
+async function __fetchJSON(url, timeoutMs = 8000) {
+  if (__hasHelpers) return await window.MKT.helpers.fetchJSON(url, timeoutMs);
+
+  const controller = new AbortController();
+  const t = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const res = await fetch(url, { signal: controller.signal });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return await res.json();
+  } finally {
+    clearTimeout(t);
+  }
+}
+
+function __getCache(key) {
+  if (__hasHelpers) return window.MKT.helpers.getCache(key);
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    if (!data || !data.expiresAt) return null;
+    if (Date.now() > data.expiresAt) return null;
+    return data.value;
+  } catch { return null; }
+}
+
+function __setCache(key, value, ttlMs) {
+  if (__hasHelpers) return window.MKT.helpers.setCache(key, value, ttlMs);
+  try {
+    localStorage.setItem(key, JSON.stringify({ value, expiresAt: Date.now() + ttlMs }));
+  } catch {}
+}
+
 (() => {
   "use strict";
 
@@ -247,3 +284,4 @@
     }
   })();
 })();
+
