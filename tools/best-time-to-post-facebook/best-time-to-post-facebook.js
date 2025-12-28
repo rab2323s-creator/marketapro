@@ -597,7 +597,7 @@ function buildICS(plan, titlePrefix, tzLabel){
 let __lastPlan = [];
 let __planBound = false;
 
-function bindPlanUI(topTimesRanges, tzLabel){
+function bindPlanUI(_topTimesRanges, tzLabel){
   if(__planBound) return;
   __planBound = true;
 
@@ -607,7 +607,17 @@ function bindPlanUI(topTimesRanges, tzLabel){
   document.getElementById("buildPlanBtn")?.addEventListener("click", ()=>{
     const days = Number(document.getElementById("planDays")?.value || 7);
     const startStr = document.getElementById("planStart")?.value || "";
-    __lastPlan = buildPlanFromRanges(topTimesRanges, days, startStr);
+
+    const latest = (window.__latestTopTimesRanges && window.__latestTopTimesRanges.length)
+      ? window.__latestTopTimesRanges
+      : (_topTimesRanges || []);
+
+    if(!latest.length){
+      showToast("احسب النتائج أولًا.");
+      return;
+    }
+
+    __lastPlan = buildPlanFromRanges(latest, days, startStr);
     renderPlan(__lastPlan);
     showToast("تم إنشاء الخطة ✅");
     track("plan_build", { tool: "best_time_facebook", days });
@@ -622,7 +632,10 @@ function bindPlanUI(topTimesRanges, tzLabel){
 
   document.getElementById("downloadIcsBtn")?.addEventListener("click", ()=>{
     if(!__lastPlan.length) return showToast("أنشئ الخطة أولًا.");
-    const ics = buildICS(__lastPlan, "نشر فيس بوك — MarketAPro", tzLabel || "—");
+
+    const tz = (window.__latestTzLabel || tzLabel || "—");
+    const ics = buildICS(__lastPlan, "نشر فيس بوك — MarketAPro", tz);
+
     downloadTextFile("marketapro-facebook-plan.ics", ics);
     showToast("تم تجهيز ملف التقويم ✅");
     track("plan_ics_download", { tool: "best_time_facebook" });
