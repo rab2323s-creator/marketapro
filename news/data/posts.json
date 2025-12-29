@@ -1,50 +1,137 @@
-[
+ [
   {
-    "slug": "2026-gold-price-outlook",
-    "title": "توقعات أسعار الذهب 2026: آفاق السعر + العوامل المؤثرة + حاسبة العيارات",
-    "description": "مرجع شامل لتوقعات الذهب في 2026: تأثير الدولار، الفائدة، التضخم ومشتريات البنوك المركزية على السعر.",
-    "date": "2025-12-15",
-    "category": "gold",
-    "tags": ["gold", "xauusd", "economy"],
-    "badges": ["ذهب", "توقعات 2026", "تحليل اقتصادي"],
-    "image": "/assets/gold-forecast-2026.jpg",
-    "reading": "10–14 دقيقة",
-    "toolUrl": "/tools/gold-price/"
-  },
-  {
-    "slug": "usd-to-egp-today",
-    "title": "تحويل الدولار إلى الجنيه المصري اليوم (USD → EGP) | دليل + أداة مجانية",
-    "description": "كيفية تحويل USD إلى EGP مع أمثلة (10–100–1000 دولار) ونصائح لتجنب أخطاء التحويل.",
-    "date": "2025-11-20",
-    "category": "currency",
-    "tags": ["usd", "egp", "currency"],
-    "badges": ["تحويل عملات", "مصر", "USD→EGP"],
-    "image": "/assets/currency-converter-usd-egp.jpg",
-    "reading": "6–8 دقائق",
-    "toolUrl": "/tools/currency-converter/"
+    "slug": "instagram-engagement-rate-calculator",
+    "title": "كيف تحسب معدل التفاعل على إنستغرام؟ (دليل شامل + أداة مجانية)",
+    "description": "طريقة حساب Engagement Rate خطوة بخطوة، وما هو المعدل الجيد، ولماذا التفاعل أهم من عدد المتابعين.",
+    "date": "2025-12-20",
+    "category": "social",
+    "tags": ["instagram", "analytics"],
+    "badges": ["إنستغرام", "تحليل"],
+    "image": "/assets/instagram-engagement.jpg",
+    "reading": "5–7 دقائق",
+    "toolUrl": "/tools/instagram-engagement-calculator/"
   },
   {
     "slug": "best-time-to-post-instagram",
-    "title": "أفضل وقت للنشر على إنستغرام: دليل عملي لزيادة التفاعل (2025)",
-    "description": "كيف تختار توقيت النشر حسب بلد جمهورك ونوع المحتوى، مع خطة اختبار 14 يوم.",
-    "date": "2025-10-05",
+    "title": "أفضل وقت للنشر على إنستغرام: دليل عملي لزيادة التفاعل",
+    "description": "كيف تختار توقيت النشر حسب بلد جمهورك ونوع المحتوى، مع خطة اختبار 14 يوم لتثبيت أفضل توقيت.",
+    "date": "2025-12-25",
     "category": "social",
-    "tags": ["instagram", "social"],
-    "badges": ["إنستغرام", "سوشال ميديا"],
+    "tags": ["instagram", "seo"],
+    "badges": ["إنستغرام", "SEO"],
     "image": "/assets/og-best-time-instagram.jpg",
     "reading": "5–7 دقائق",
     "toolUrl": "/tools/best-time-to-post-instagram/"
   },
   {
-    "slug": "google-ads-keywords-guide",
-    "title": "Google Ads: كيفية اختيار الكلمات المفتاحية وتقليل تكلفة النقرة",
-    "description": "خطوات عملية لاختيار Keywords، تحسين الجودة، وتقليل CPC بدون تخمين.",
-    "date": "2025-09-01",
-    "category": "google-ads",
-    "tags": ["google-ads", "ppc"],
-    "badges": ["Google Ads", "PPC"],
+    "slug": "best-time-to-post-facebook-guide",
+    "title": "أفضل وقت للنشر على فيس بوك: الدليل الشامل للصفحات والجروبات وReels",
+    "description": "توقيت النشر حسب الدول العربية + الفرق بين Page/Group/Links وReels، مع خطة اختبار 14 يوم.",
+    "date": "2025-12-28",
+    "category": "social",
+    "tags": ["facebook", "meta", "seo"],
+    "badges": ["فيس بوك", "Meta", "SEO"],
     "image": "/assets/og-best-time-facebook.jpg",
     "reading": "7–10 دقائق",
-    "toolUrl": "/tools/"
+    "toolUrl": "/tools/best-time-to-post-facebook/"
+  },
+
+  {
+    "slug": "currency-converter-usd-egp-sar-eur-try",
+    "title": "تحويل العملات: دولار لجنيه مصري + ريال ويورو — دليل + أداة مجانية",
+    "description": "دليل عملي يستهدف أشهر التحويلات: USD→EGP وUSD→SAR وEUR… مع رابط مباشر لأداة محول العملات الفوري.",
+    "date": "2025-12-21",
+    "category": "currency",
+    "tags": ["currency", "usd", "egp", "sar", "eur"],
+    "badges": ["تحويل عملات", "SEO"],
+    "image": "/assets/currency-converter.jpg",
+    "reading": "6–8 دقائق",
+    "toolUrl": "/tools/currency-converter/"
+  },
+  {
+    "slug": "usd-to-egp-today",
+    "title": "تحويل الدولار إلى الجنيه المصري اليوم (USD → EGP) | دليل + أداة مجانية",
+    "description": "سعر الدولار مقابل الجنيه + أمثلة تحويل شائعة (10–100–1000 دولار) مع محول فوري.",
+    "date": "2025-12-28",
+    "category": "currency",
+    "tags": ["usd", "egp", "egypt"],
+    "badges": ["مصر", "USD→EGP"],
+    "image": "/assets/currency-converter-usd-egp.jpg",
+    "reading": "6–8 دقائق",
+    "toolUrl": "/tools/currency-converter/"
+  },
+  {
+    "slug": "usd-to-sar",
+    "title": "تحويل الدولار إلى الريال السعودي (USD→SAR) اليوم — سعر الصرف + محول فوري",
+    "description": "تحويل دولار إلى ريال سعودي مع أمثلة سريعة (100$، 500$، 1000$) وطريقة حساب دقيقة.",
+    "date": "2025-12-22",
+    "category": "currency",
+    "tags": ["usd", "sar", "saudi"],
+    "badges": ["السعودية", "USD→SAR"],
+    "image": "/assets/currency-usd-sar.jpg",
+    "reading": "6–8 دقائق",
+    "toolUrl": "/tools/currency-converter/"
+  },
+  {
+    "slug": "usd-to-aed",
+    "title": "تحويل الدولار إلى الدرهم الإماراتي (USD → AED) | سعر اليوم + محول فوري",
+    "description": "كم يساوي الدولار بالدرهم الإماراتي؟ أمثلة تحويل سريعة ورابط مباشر للمحول.",
+    "date": "2025-12-23",
+    "category": "currency",
+    "tags": ["usd", "aed", "uae"],
+    "badges": ["الإمارات", "USD→AED"],
+    "image": "/assets/currency-usd-aed.jpg",
+    "reading": "6–8 دقائق",
+    "toolUrl": "/tools/currency-converter/"
+  },
+  {
+    "slug": "usd-to-arab-currencies",
+    "title": "كم يساوي الدولار اليوم مقابل العملات العربية؟ السعر والتحويل الفوري",
+    "description": "دليل شامل لسعر الدولار مقابل العملات العربية + تحويل فوري إلى EGP/SAR/AED/KWD/QAR وغيرها.",
+    "date": "2025-12-28",
+    "category": "currency",
+    "tags": ["usd", "arab", "currencies"],
+    "badges": ["سعر الدولار", "العملات العربية"],
+    "image": "/assets/currency-usd-arab.jpg",
+    "reading": "8–10 دقائق",
+    "toolUrl": "/tools/currency-converter/"
+  },
+
+  {
+    "slug": "gold-price-forecast-2026",
+    "title": "توقعات الذهب 2026: لماذا يتحدث البعض عن 5000 دولار للأونصة؟",
+    "description": "قراءة تحليلية لسيناريو 5000$ للأونصة: مشتريات البنوك المركزية، الدولار، والتوترات الجيوسياسية.",
+    "date": "2025-12-21",
+    "category": "gold",
+    "tags": ["gold", "xauusd", "forecast"],
+    "badges": ["ذهب", "سيناريو 5000$"],
+    "image": "/assets/gold-price-forecast-2026.jpg",
+    "reading": "7–10 دقائق",
+    "toolUrl": "/tools/gold-price/"
+  },
+  {
+    "slug": "2026-gold-price-outlook",
+    "title": "توقعات أسعار الذهب 2026: آفاق السعر + العوامل المؤثرة + حاسبة العيارات",
+    "description": "مرجع شامل لتوقعات الذهب في 2026: تأثير الدولار والفائدة والتضخم ومشتريات البنوك المركزية + حاسبة.",
+    "date": "2025-12-21",
+    "category": "gold",
+    "tags": ["gold", "xauusd", "economy"],
+    "badges": ["ذهب", "توقعات 2026"],
+    "image": "/assets/gold-forecast-2026.jpg",
+    "reading": "10–14 دقيقة",
+    "toolUrl": "/tools/gold-price/"
+  },
+  {
+    "slug": "gold-6000-forecast-2026",
+    "title": "هل يمكن أن يصل الذهب إلى 6000 دولار في 2026؟ تحليل اقتصادي عميق",
+    "description": "تحليل متقدم لسيناريو 6000$ للأونصة: العوائد الحقيقية، الدولار، مشتريات البنوك المركزية، ومخاطر عالمية.",
+    "date": "2025-12-27",
+    "category": "gold",
+    "tags": ["gold", "xauusd", "macro"],
+    "badges": ["ذهب", "سيناريو 6000$"],
+    "image": "/assets/gold-6000-forecast-2026.jpg",
+    "reading": "8–12 دقيقة",
+    "toolUrl": "/tools/gold-price/"
   }
 ]
+
