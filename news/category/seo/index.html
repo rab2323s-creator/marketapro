@@ -1,19 +1,52 @@
-<!doctype html>
+ <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>مقالات الذهب والمعادن | MarketAPro</title>
-  <meta name="description" content="أحدث مقالات الذهب والمعادن: توقعات وتحليلات وعوامل مؤثرة على سعر الذهب." />
-  <link rel="canonical" href="https://marketapro.com/news/category/gold/" />
+  <title>مقالات SEO وتحسين محركات البحث | دليل عملي لرفع ترتيب موقعك | MarketAPro</title>
+  <meta name="description" content="مقالات وأدلة SEO عربية تساعدك على تحسين ترتيب موقعك في جوجل: SEO داخلي، SEO تقني، بحث كلمات مفتاحية، تحسين السرعة وتجربة المستخدم — مع أدوات مجانية من MarketAPro." />
+  <link rel="canonical" href="https://marketapro.com/news/category/seo/" />
 
-  <meta property="og:title" content="مقالات الذهب والمعادن | MarketAPro" />
-  <meta property="og:description" content="توقعات وتحليلات الذهب + روابط لأدوات مجانية تساعدك على المتابعة والتحويل." />
-  <meta property="og:url" content="https://marketapro.com/news/category/gold/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="مقالات SEO وتحسين محركات البحث | MarketAPro" />
+  <meta property="og:description" content="أدلة SEO عربية: سيو داخلي وتقني، كلمات مفتاحية، تحسين سرعة الموقع وتجربة المستخدم — مع أدوات مجانية." />
+  <meta property="og:url" content="https://marketapro.com/news/category/seo/" />
   <meta property="og:type" content="website" />
+  <!-- اختياري: صورة -->
+  <!-- <meta property="og:image" content="https://marketapro.com/assets/og-seo.jpg" /> -->
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- <meta name="twitter:image" content="https://marketapro.com/assets/og-seo.jpg" /> -->
 
   <link rel="stylesheet" href="/style.css" />
+
+  <!-- Schema: CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"مقالات SEO وتحسين محركات البحث",
+    "url":"https://marketapro.com/news/category/seo/",
+    "description":"مقالات وأدلة SEO عربية لتحسين ترتيب موقعك في جوجل: سيو داخلي وتقني، كلمات مفتاحية، سرعة وتجربة مستخدم.",
+    "publisher":{"@type":"Organization","name":"MarketAPro","url":"https://marketapro.com/"}
+  }
+  </script>
+
+  <!-- Schema: Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://marketapro.com/"},
+      {"@type":"ListItem","position":2,"name":"المقالات","item":"https://marketapro.com/news/"},
+      {"@type":"ListItem","position":3,"name":"SEO","item":"https://marketapro.com/news/category/seo/"}
+    ]
+  }
+  </script>
+
+  <!-- Schema: ItemList (سيتم توليده من category-page.js عند وجود مقالات) -->
   <script type="application/ld+json" id="itemlist-schema"></script>
 
   <style>
@@ -32,6 +65,7 @@
     .grid{margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:520px){.grid{grid-template-columns:1fr}}
+
     .post-card{
       border:1px solid var(--border);border-radius:18px;background:rgba(0,0,0,.18);
       overflow:hidden;display:flex;flex-direction:column;min-height:260px;
@@ -43,12 +77,61 @@
     .post-body h3{margin:10px 0 6px;font-size:18px;line-height:1.5}
     .post-body p{margin:0;color:var(--muted);line-height:1.9}
     .post-footer{padding:0 14px 14px;margin-top:auto}
+
     .cta{
       margin-top:14px;border:1px solid var(--border);background:rgba(255,255,255,.02);
       border-radius:18px;padding:14px;display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;
     }
     .cta strong{display:block;margin-bottom:4px}
     .cta span{color:var(--muted);font-size:13px}
+
+    .quicklinks{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+
+    .info-block{
+      margin-top:14px;
+      padding:14px;
+      border-radius:18px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      line-height:1.95;
+    }
+    .info-block h2{margin:0 0 8px;font-size:18px}
+    .info-block ul{margin:8px 0 0;padding:0 18px}
+    .info-block li{margin:6px 0;color:var(--muted)}
+
+    .tools-grid{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+    }
+    @media(max-width:700px){.tools-grid{grid-template-columns:1fr}}
+    .tool-card{
+      padding:12px;
+      border:1px solid var(--border);
+      border-radius:16px;
+      background:rgba(0,0,0,.18);
+    }
+    .tool-card strong{display:block;margin-bottom:6px}
+    .tool-card p{margin:0 0 10px;color:var(--muted);line-height:1.8}
+
+    .faq{
+      margin-top:14px;
+      padding:14px;
+      border-radius:18px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+    }
+    .faq h2{margin:0 0 8px;font-size:18px}
+    details{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:10px 12px;
+      margin-top:10px;
+      background:rgba(0,0,0,.18);
+    }
+    summary{cursor:pointer;font-weight:800}
+    details p{margin:8px 0 0;color:var(--muted);line-height:1.9}
   </style>
 </head>
 
@@ -75,32 +158,117 @@
 
 <main class="container section" id="content">
 
+  <nav class="note" aria-label="Breadcrumb" style="margin-bottom:12px">
+    <a href="/">الرئيسية</a> ← <a href="/news/">المقالات</a> ← <span>SEO</span>
+  </nav>
+
   <section class="hero-block">
-    <h1 class="hero-title">مقالات الذهب والمعادن</h1>
+    <h1 class="hero-title">مقالات SEO وتحسين محركات البحث</h1>
+
     <p class="hero-desc">
-      أحدث مقالات وتحليلات الذهب + روابط لأدوات مجانية تساعدك على المتابعة والتحويل.
+      هذا القسم مخصص لـ <strong>SEO</strong> (تحسين محركات البحث): سيو داخلي، سيو تقني، كلمات مفتاحية،
+      تحسين سرعة الموقع وتجربة المستخدم — بهدف زيادة الزيارات المجانية من جوجل بشكل مستمر.
+      ستضاف المقالات تباعًا، ويمكنك الآن تصفح الأدوات والمقالات المرتبطة.
     </p>
 
+    <div class="quicklinks" aria-label="روابط سريعة">
+      <a class="btn secondary" href="/news/">كل الأقسام</a>
+      <a class="btn secondary" href="/news/category/social/">سوشال ميديا</a>
+      <a class="btn secondary" href="/news/category/currency/">العملات</a>
+      <a class="btn secondary" href="/news/category/gold/">الذهب</a>
+    </div>
+
     <div class="toolbar">
-      <div class="search" role="search" aria-label="بحث داخل مقالات القسم">
+      <div class="search" role="search" aria-label="بحث داخل مقالات SEO">
         <span class="note" style="margin:0">بحث:</span>
-        <input id="q" type="search" placeholder="ابحث داخل هذا القسم..." autocomplete="off" />
+        <input id="q" type="search" placeholder="ابحث: سيو داخلي، سيو تقني، كلمات مفتاحية، سرعة الموقع..." autocomplete="off" />
       </div>
     </div>
   </section>
 
-  <section class="cta" aria-label="جرّب الأدوات مباشرة">
+  <!-- تمهيد (SEO-friendly) -->
+  <section class="info-block" aria-label="ماذا ستجد في قسم SEO">
+    <h2>ماذا ستجد هنا قريبًا؟</h2>
+    <p class="note" style="margin:0">
+      عند نشر مقالات SEO، ستكون منظمة كـ “Topic Hub” لمساعدة جوجل على فهم موقعك وتحسين ترتيب صفحاتك.
+    </p>
+    <ul>
+      <li>SEO داخلي: العناوين H1/H2، الميتا، الروابط الداخلية، تحسين المحتوى.</li>
+      <li>SEO تقني: السرعة، Core Web Vitals، الفهرسة، canonical، sitemap.</li>
+      <li>بحث كلمات مفتاحية: أفكار كلمات طويلة (Long Tail) تناسب العالم العربي.</li>
+      <li>تحسين CTR: عناوين قوية، وصف meta جذاب، FAQ وStructured Data.</li>
+    </ul>
+  </section>
+
+  <!-- أدوات مقترحة: بما أنك لا تملك أدوات SEO واضحة الآن، نربط بأدوات تدعم SEO بشكل غير مباشر + رابط كل الأدوات -->
+  <section class="cta" aria-label="أدوات تساعدك على SEO">
     <div>
-      <strong>أدوات مفيدة لهذا القسم</strong>
-      <span>سعر الذهب + محول العملات — بدون تسجيل.</span>
+      <strong>أدوات تساعدك على تحسين المحتوى (مفيد للـ SEO)</strong>
+      <span>إلى أن نضيف أدوات SEO متخصصة، ابدأ بأدوات تزيد جودة المحتوى والأداء.</span>
     </div>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <a class="btn primary" href="/tools/gold-price/">سعر الذهب</a>
-      <a class="btn secondary" href="/tools/currency-converter/">محول العملات</a>
+      <a class="btn primary" href="/tools/">استكشاف كل الأدوات</a>
+      <a class="btn secondary" href="/news/">تصفح المقالات</a>
     </div>
   </section>
 
-  <section class="grid" id="postsGrid" aria-label="قائمة المقالات"></section>
+  <section class="tools-grid" aria-label="اقتراح أدوات مرتبطة بالمحتوى">
+    <div class="tool-card">
+      <strong>أفضل وقت للنشر (إنستغرام)</strong>
+      <p>يساعدك على اختبار توقيت النشر وتحسين النتائج—وهذا يدعم أداء المحتوى والزيارات من السوشال (مكمل للـSEO).</p>
+      <a class="btn primary" href="/tools/best-time-to-post-instagram/">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <strong>أفضل وقت للنشر (فيسبوك)</strong>
+      <p>رفع التفاعل والوصول يساعد على انتشار المحتوى بشكل أوسع، ما يزيد فرص الحصول على زيارات وروابط.</p>
+      <a class="btn primary" href="/tools/best-time-to-post-facebook/">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <strong>حاسبة التفاعل (Engagement Rate)</strong>
+      <p>قياس أداء المحتوى يساعدك على تحسين الرسائل والعناوين—مفيد حتى عند كتابة مقالات قوية.</p>
+      <a class="btn primary" href="/tools/instagram-engagement-calculator/">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <strong>تحليل حساب إنستغرام</strong>
+      <p>تحسين البايو والروابط والهوية يساعد على رفع CTR إلى مقالاتك وروابط موقعك.</p>
+      <a class="btn primary" href="/tools/instagram-profile-analyzer/">فتح الأداة</a>
+    </div>
+  </section>
+
+  <!-- المقالات (ستظهر تلقائيًا عندما تضيف category=seo في posts.json) -->
+  <section class="grid" id="postsGrid" aria-label="مقالات SEO وتحسين محركات البحث"></section>
+
+  <!-- FAQ قصيرة (SEO) -->
+  <section class="faq" aria-label="أسئلة شائعة عن SEO">
+    <h2>أسئلة شائعة</h2>
+
+    <details>
+      <summary>ما هو SEO ولماذا مهم للمواقع العربية؟</summary>
+      <p>
+        SEO هو تحسين موقعك للظهور في نتائج جوجل عند البحث. في العالم العربي المنافسة أقل في كلمات طويلة (Long Tail)،
+        لذلك التنظيم الجيد للمحتوى + صفحات أقسام قوية يساعدك على تصدر نتائج كثيرة مجانًا.
+      </p>
+    </details>
+
+    <details>
+      <summary>كم يحتاج SEO وقتًا حتى تظهر النتائج؟</summary>
+      <p>
+        يعتمد على المنافسة وجودة المحتوى والروابط الداخلية. غالبًا ترى إشارات خلال أسابيع،
+        لكن النتائج الأقوى تحتاج نشر مستمر وتحسينات تقنية ومحتوى داعم.
+      </p>
+    </details>
+
+    <details>
+      <summary>هل صفحة القسم تفيد حتى لو لا يوجد مقالات الآن؟</summary>
+      <p>
+        نعم، بشرط أن يكون فيها محتوى تمهيدي واضح وروابط داخلية. وعند إضافة المقالات لاحقًا ستتحول تلقائيًا إلى “مركز موضوع”
+        يساعد على ترتيب كل المقالات التابعة له.
+      </p>
+    </details>
+  </section>
 
   <div class="cta" style="justify-content:center">
     <a class="btn secondary" href="/news/">← الرجوع إلى كل الأقسام</a>
@@ -117,3 +285,4 @@
 <script src="/news/js/category-page.js" defer></script>
 </body>
 </html>
+
