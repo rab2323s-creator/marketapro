@@ -24,31 +24,8 @@
   <link rel="stylesheet" href="/style.css" />
 
   <!-- WebSite Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"MarketAPro",
-    "url":"https://marketapro.com/",
-    "description":"منصة أدوات تسويق رقمية مجانية بالعربية لمساعدة صناع المحتوى والمسوقين على تحليل الأداء وزيادة التفاعل.",
-    "publisher":{"@type":"Organization","name":"MarketAPro","url":"https://marketapro.com/"}
-  }
-  </script>
-
-  <!-- Organization Schema (اختياري لكنه مفيد) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"MarketAPro",
-    "url":"https://marketapro.com/",
-    "sameAs":[
-      "https://vivamediacreative.com/ar/"
-    ]
-  }
-  </script>
-
-  <style>
+<!-- Organization Schema (اختياري لكنه مفيد) -->
+<style>
     /* تحسينات فخمة خفيفة بدون كسر style.css */
     .hero .card h1{margin:0 0 10px;font-size:30px;line-height:1.4}
     .hero .card p{line-height:1.9}
@@ -69,6 +46,57 @@
     .home-cta strong{display:block;margin-bottom:4px}
     .home-cta span{color:var(--muted);font-size:13px}
   </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://marketapro.com/#organization",
+      "name": "MarketAPro",
+      "url": "https://marketapro.com/",
+      "description": "أدوات تسويق رقمية مجانية ومقالات عملية لتحسين الأداء وزيادة التفاعل."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://marketapro.com/#website",
+      "url": "https://marketapro.com/",
+      "name": "MarketAPro",
+      "publisher": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://marketapro.com/",
+      "url": "https://marketapro.com/",
+      "name": "MarketAPro — أدوات تسويق رقمية مجانية بالعربية",
+      "description": "MarketAPro منصة أدوات تسويق رقمية مجانية بالعربية لمساعدة صناع المحتوى والمسوقين على تحليل الأداء وزيادة التفاعل واتخاذ قرارات مبنية على بيانات — بدون تسجيل.",
+      "isPartOf": {
+        "@id": "https://marketapro.com/#website"
+      },
+      "about": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://marketapro.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://marketapro.com/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
