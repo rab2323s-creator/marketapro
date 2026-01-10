@@ -1,4 +1,4 @@
-  <!doctype html>
+ <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -23,53 +23,8 @@
   <link rel="stylesheet" href="/style.css" />
 
   <!-- Breadcrumb Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://marketapro.com/"},
-      {"@type":"ListItem","position":2,"name":"الأدوات","item":"https://marketapro.com/tools/"},
-      {"@type":"ListItem","position":3,"name":"مولّد أفكار محتوى إنستغرام","item":"https://marketapro.com/tools/instagram-content-ideas/"}
-    ]
-  }
-  </script>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"كيف أحصل على أفكار محتوى إنستغرام بسرعة؟",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"اختر نوع حسابك ومجالك وهدفك، ثم اضغط (ولّد الأفكار). ستحصل على أفكار بوست وريلز وستوري + Hook و CTA جاهزة للنسخ والتطبيق."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"هل هذه الأداة مجانية؟",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"نعم، الأداة مجانية بالكامل وبدون تسجيل، وتعمل مباشرة داخل المتصفح."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"ما أفضل نوع محتوى لزيادة التفاعل؟",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"غالبًا الريلز والكاروسيل (Carousel) يحققان تفاعلًا أعلى إذا كان لديك Hook قوي وقيمة واضحة، مع CTA مناسب وتوقيت نشر جيد."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <style>
+<!-- FAQ Schema -->
+<style>
     /* تحسينات بسيطة داخل الصفحة فقط */
     .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
     @media(max-width:860px){.grid2{grid-template-columns:1fr}}
@@ -99,6 +54,128 @@
     .split3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
     @media(max-width:980px){.split3{grid-template-columns:1fr}}
   </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://marketapro.com/#organization",
+      "name": "MarketAPro",
+      "url": "https://marketapro.com/",
+      "description": "أدوات تسويق رقمية مجانية ومقالات عملية لتحسين الأداء وزيادة التفاعل."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://marketapro.com/#website",
+      "url": "https://marketapro.com/",
+      "name": "MarketAPro",
+      "publisher": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://marketapro.com/tools/instagram-content-ideas/",
+      "url": "https://marketapro.com/tools/instagram-content-ideas/",
+      "name": "مولّد أفكار محتوى إنستغرام — أفكار بوستات وريلز وستوري جاهزة | MarketAPro",
+      "description": "مولّد أفكار محتوى إنستغرام بالعربية: احصل على أفكار بوستات وريلز وستوري جاهزة + Hook و CTA حسب نوع حسابك ومجالك وهدفك. أداة مجانية بدون تسجيل من MarketAPro.",
+      "isPartOf": {
+        "@id": "https://marketapro.com/#website"
+      },
+      "about": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://marketapro.com/tools/instagram-content-ideas/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://marketapro.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "الأدوات",
+          "item": "https://marketapro.com/tools/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "instagram content ideas",
+          "item": "https://marketapro.com/tools/instagram-content-ideas/"
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://marketapro.com/tools/instagram-content-ideas/#app",
+      "name": "مولّد أفكار محتوى إنستغرام — أفكار بوستات وريلز وستوري جاهزة | MarketAPro",
+      "url": "https://marketapro.com/tools/instagram-content-ideas/",
+      "applicationCategory": "MarketingApplication",
+      "operatingSystem": "All",
+      "inLanguage": "ar",
+      "isPartOf": {
+        "@id": "https://marketapro.com/#website"
+      },
+      "publisher": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "image": "https://marketapro.com/assets/og-instagram-content-ideas.jpg"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://marketapro.com/tools/instagram-content-ideas/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل الأداة مجانية؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، مجانية بالكامل."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل تحتاج تسجيل؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا، لا تحتاج أي تسجيل."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كيف أحصل على أفضل نتيجة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "اتبع التعليمات داخل الصفحة وأدخل البيانات بدقة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل النتائج دقيقة 100%؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "النتائج تقديرية وتعتمد على البيانات المدخلة أو المصدر المستخدم."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
