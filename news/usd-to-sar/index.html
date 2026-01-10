@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -25,50 +25,129 @@
   <link rel="stylesheet" href="/style.css" />
 
   <!-- Article Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"تحويل الدولار إلى الريال السعودي (USD → SAR)",
-    "image":"https://marketapro.com/assets/currency-usd-sar.jpg",
-    "author":{"@type":"Organization","name":"MarketAPro"},
-    "publisher":{
-      "@type":"Organization",
-      "name":"MarketAPro",
-      "logo":{"@type":"ImageObject","url":"https://marketapro.com/assets/logo.jpeg"}
+<!-- FAQ Schema -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://marketapro.com/#organization",
+      "name": "MarketAPro",
+      "url": "https://marketapro.com/",
+      "description": "أدوات تسويق رقمية مجانية ومقالات عملية لتحسين الأداء وزيادة التفاعل."
     },
-    "datePublished":"2026-01-01",
-    "dateModified":"2026-01-01",
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://marketapro.com/news/usd-to-sar/"},
-    "description":"دليل شامل لتحويل الدولار إلى الريال السعودي مع سعر الصرف اليوم وأداة تحويل فورية."
-  }
-  </script>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"كم يساوي الدولار بالريال السعودي اليوم؟",
-        "acceptedAnswer":{"@type":"Answer","text":"سعر الدولار مقابل الريال السعودي ثابت تقريبًا عند 3.75 ريال لكل دولار، وقد يختلف قليلًا حسب البنك أو مزود الخدمة."}
+    {
+      "@type": "WebSite",
+      "@id": "https://marketapro.com/#website",
+      "url": "https://marketapro.com/",
+      "name": "MarketAPro",
+      "publisher": {
+        "@id": "https://marketapro.com/#organization"
       },
-      {
-        "@type":"Question",
-        "name":"كيف أحوّل الدولار إلى الريال بسهولة؟",
-        "acceptedAnswer":{"@type":"Answer","text":"يمكنك استخدام أداة تحويل العملات من MarketAPro لإدخال المبلغ واختيار USD إلى SAR وستحصل على النتيجة فورًا."}
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://marketapro.com/news/usd-to-sar/",
+      "url": "https://marketapro.com/news/usd-to-sar/",
+      "name": "تحويل الدولار إلى الريال السعودي (USD → SAR) | سعر اليوم + أداة فورية",
+      "description": "تحويل الدولار إلى الريال السعودي اليوم (USD→SAR). تعرّف على سعر الصرف الحالي، أمثلة تحويل 100 و500 و1000 دولار، وطريقة التحويل الدقيقة باستخدام أداة MarketAPro المجانية.",
+      "isPartOf": {
+        "@id": "https://marketapro.com/#website"
       },
-      {
-        "@type":"Question",
-        "name":"هل سعر الدولار مقابل الريال ثابت؟",
-        "acceptedAnswer":{"@type":"Answer","text":"نعم، الريال السعودي مربوط بالدولار الأمريكي بسعر شبه ثابت، لكن قد توجد فروقات بسيطة بين الجهات."}
-      }
-    ]
-  }
-  </script>
-
+      "about": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://marketapro.com/news/usd-to-sar/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://marketapro.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "المقالات",
+          "item": "https://marketapro.com/news/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "usd to sar",
+          "item": "https://marketapro.com/news/usd-to-sar/"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://marketapro.com/news/usd-to-sar/#article",
+      "headline": "تحويل الدولار إلى الريال السعودي (USD → SAR) | سعر اليوم + أداة فورية",
+      "description": "تحويل الدولار إلى الريال السعودي اليوم (USD→SAR). تعرّف على سعر الصرف الحالي، أمثلة تحويل 100 و500 و1000 دولار، وطريقة التحويل الدقيقة باستخدام أداة MarketAPro المجانية.",
+      "url": "https://marketapro.com/news/usd-to-sar/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://marketapro.com/news/usd-to-sar/"
+      },
+      "isPartOf": {
+        "@id": "https://marketapro.com/#website"
+      },
+      "publisher": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "inLanguage": "ar",
+      "image": "https://marketapro.com/assets/currency-usd-sar.jpg",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-01-01"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://marketapro.com/news/usd-to-sar/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "لماذا يختلف سعر الدولار من مصدر لآخر؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "اختلاف توقيت التحديث، نوع السوق (رسمي/موازي)، والعمولات."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكن الاعتماد على السعر في التحويلات البنكية؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "للمرجعية فقط. البنك يطبق سعره الخاص مع رسوم."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "متى يتحرك السعر بقوة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "عند بيانات التضخم/الفائدة/الوظائف الأمريكية أو أخبار محلية مؤثرة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كيف أحصل على أفضل سعر تحويل؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "قارن بين القنوات الرسمية وخدمات التحويل وخذ الرسوم في الحسبان."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
