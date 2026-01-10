@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
@@ -16,30 +16,9 @@
   <link rel="stylesheet" href="/style.css" />
 
   <!-- CollectionPage + Breadcrumb (اختياري) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"المقالات",
-    "url":"https://marketapro.com/news/",
-    "publisher":{"@type":"Organization","name":"MarketAPro","url":"https://marketapro.com/"}
-  }
-  </script>
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://marketapro.com/"},
-      {"@type":"ListItem","position":2,"name":"المقالات","item":"https://marketapro.com/news/"}
-    ]
-  }
-  </script>
 
-  <script type="application/ld+json" id="itemlist-schema"></script>
-
-  <style>
+<style>
     .hero-block{
       padding:18px;
       border-radius:18px;
@@ -151,6 +130,70 @@
 
     .sub-actions{display:flex;gap:10px;flex-wrap:wrap}
   </style>
+
+<script type="application/ld+json" id="itemlist-schema"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://marketapro.com/#organization",
+      "name": "MarketAPro",
+      "url": "https://marketapro.com/",
+      "description": "أدوات تسويق رقمية مجانية ومقالات عملية لتحسين الأداء وزيادة التفاعل."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://marketapro.com/#website",
+      "url": "https://marketapro.com/",
+      "name": "MarketAPro",
+      "publisher": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://marketapro.com/news/",
+      "url": "https://marketapro.com/news/",
+      "name": "المقالات | MarketAPro",
+      "description": "مكتبة مقالات MarketAPro: سيو، إعلانات ممولة، جوجل أدز، تسويق، سوشال ميديا، تصميم مواقع… بالإضافة إلى الذهب والعملات والعملات الرقمية.",
+      "isPartOf": {
+        "@id": "https://marketapro.com/#website"
+      },
+      "about": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://marketapro.com/news/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://marketapro.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "المقالات",
+          "item": "https://marketapro.com/news/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "news",
+          "item": "https://marketapro.com/news/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
