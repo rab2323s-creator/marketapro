@@ -22,34 +22,9 @@
   <link rel="stylesheet" href="/style.css" />
 
   <!-- Schema: CollectionPage -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"مقالات السوشال ميديا والتسويق عبر إنستغرام وفيسبوك",
-    "url":"https://marketapro.com/news/category/social/",
-    "description":"مقالات وأدلة عملية عن السوشال ميديا (إنستغرام وفيسبوك): أفضل وقت للنشر، معدل التفاعل، وتحليل الحسابات مع أدوات مجانية.",
-    "publisher":{"@type":"Organization","name":"MarketAPro","url":"https://marketapro.com/"}
-  }
-  </script>
-
-  <!-- Schema: Breadcrumb -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://marketapro.com/"},
-      {"@type":"ListItem","position":2,"name":"المقالات","item":"https://marketapro.com/news/"},
-      {"@type":"ListItem","position":3,"name":"سوشال ميديا","item":"https://marketapro.com/news/category/social/"}
-    ]
-  }
-  </script>
-
-  <!-- Schema: ItemList (سيتم توليده من category-page.js) -->
-  <script type="application/ld+json" id="itemlist-schema"></script>
-
-  <style>
+<!-- Schema: Breadcrumb -->
+<!-- Schema: ItemList (سيتم توليده من category-page.js) -->
+<style>
     .hero-block{
       padding:18px;border-radius:18px;border:1px solid var(--border);
       background:rgba(255,255,255,.02);
@@ -99,6 +74,70 @@
     .tool-card strong{display:block;margin-bottom:6px}
     .tool-card p{margin:0 0 10px;color:var(--muted);line-height:1.8}
   </style>
+
+<script type="application/ld+json" id="itemlist-schema"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://marketapro.com/#organization",
+      "name": "MarketAPro",
+      "url": "https://marketapro.com/",
+      "description": "أدوات تسويق رقمية مجانية ومقالات عملية لتحسين الأداء وزيادة التفاعل."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://marketapro.com/#website",
+      "url": "https://marketapro.com/",
+      "name": "MarketAPro",
+      "publisher": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://marketapro.com/news/category/social/",
+      "url": "https://marketapro.com/news/category/social/",
+      "name": "مقالات السوشال ميديا والتسويق عبر إنستغرام وفيسبوك | MarketAPro",
+      "description": "مقالات وأدلة عربية عن التسويق عبر السوشال ميديا: أفضل وقت للنشر على إنستغرام وفيسبوك، حساب معدل التفاعل (Engagement Rate)، وتحليل الحسابات — مع أدوات مجانية تساعدك على التطبيق فورًا.",
+      "isPartOf": {
+        "@id": "https://marketapro.com/#website"
+      },
+      "about": {
+        "@id": "https://marketapro.com/#organization"
+      },
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://marketapro.com/news/category/social/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://marketapro.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "المقالات",
+          "item": "https://marketapro.com/news/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "social",
+          "item": "https://marketapro.com/news/category/social/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body data-category="social">
