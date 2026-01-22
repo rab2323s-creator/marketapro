@@ -1,96 +1,144 @@
-<!doctype html>
+ <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>تواصل معنا | MarketAPro</title>
-  <meta name="description" content="للاقتراحات أو الشراكات أو الإبلاغ عن مشكلة: تواصل مع فريق MarketAPro." />
-  <link rel="canonical" href="https://marketapro.com/contact/" />
+  <meta name="description" content="تواصل مع فريق MarketAPro للاقتراحات أو الشراكات أو الدعم الفني." />
 
-  <meta property="og:title" content="تواصل معنا | MarketAPro" />
-  <meta property="og:description" content="للاقتراحات أو الشراكات أو الإبلاغ عن مشكلة: تواصل مع فريق MarketAPro." />
-  <meta property="og:url" content="https://marketapro.com/contact/" />
-  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.png" />
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="تواصل معنا | MarketAPro" />
-  <meta name="twitter:description" content="للاقتراحات أو الشراكات أو الإبلاغ عن مشكلة: تواصل مع فريق MarketAPro." />
+  <style>
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:#f6f7f9;
+      color:#111;
+      line-height:1.8;
+    }
+    .container{
+      max-width:900px;
+      margin:auto;
+      padding:20px;
+    }
+    .card{
+      background:#fff;
+      border-radius:16px;
+      padding:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,.05);
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:28px;
+    }
+    .note{
+      font-size:14px;
+      color:#666;
+    }
 
-  <link rel="icon" href="/assets/favicon.png" />
-  <link rel="stylesheet" href="/assets/styles.css" />
+    /* form */
+    .contact-form{
+      display:grid;
+      gap:14px;
+      margin-top:20px;
+    }
+    .field{
+      display:grid;
+      gap:6px;
+    }
+    label{
+      font-weight:600;
+      font-size:14px;
+    }
+    input,select,textarea{
+      padding:12px;
+      border-radius:12px;
+      border:1px solid #ddd;
+      font:inherit;
+    }
+    textarea{resize:vertical}
+
+    button{
+      padding:14px;
+      border-radius:14px;
+      border:0;
+      background:#111;
+      color:#fff;
+      font-size:16px;
+      cursor:pointer;
+    }
+    button:hover{opacity:.9}
+
+    footer{
+      text-align:center;
+      font-size:14px;
+      color:#666;
+      margin-top:20px;
+    }
+  </style>
 </head>
+
 <body>
-<a class="skip-link" href="#content">تخطي إلى المحتوى</a>
-<header class="header">
-  <div class="container header-inner">
 
-    <a class="brand" href="/" aria-label="MarketAPro">
-      <span class="logo-mark" aria-hidden="true"></span>
+<main class="container">
+  <section class="card">
+    <h1>تواصل معنا</h1>
+    <p class="note">
+      يسعدنا سماع اقتراحاتك، طلبات الشراكة، أو الإبلاغ عن أي مشكلة.
+    </p>
 
-      <div class="brand-text">
-        <span class="logo-text">MarketAPro</span>
-        <span class="brand-sub">أدوات تسويق مجانية بالعربية</span>
+    <!-- FORM SUBMIT -->
+    <form
+      action="https://formsubmit.co/infomarketapro@gmail.com"
+      method="POST"
+      class="contact-form"
+    >
+
+      <!-- Anti-spam -->
+      <input type="text" name="_honey" style="display:none">
+
+      <!-- Settings -->
+      <input type="hidden" name="_subject" value="رسالة جديدة من صفحة تواصل MarketAPro">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+
+      <!-- غيّر الرابط لو عندك صفحة شكر -->
+      <input type="hidden" name="_next" value="https://marketapro.com/contact/">
+
+      <div class="field">
+        <label for="name">الاسم</label>
+        <input id="name" name="name" type="text" required placeholder="اسمك الكامل">
       </div>
-    </a>
 
-    <nav class="nav" aria-label="القائمة الرئيسية">
-      <a class="active" href="/">الرئيسية</a>
-      <a href="/tools/">الأدوات</a>
-      <a href="/recover-facebook-account/">استرجاع حساب فيسبوك</a>
-      <a href="/news/">المقالات</a>
-      <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
-    </nav>
-
-  </div>
-</header>
-<main id="content" class="container">
-  <section class="hero">
-    <div class="card">
-      <h1 style="margin:0 0 8px;font-size:28px;line-height:1.4">تواصل معنا</h1>
-
-      <nav aria-label="Breadcrumb" class="note" style="margin-top:10px">
-        <a href="/">الرئيسية</a> ←
-        <span>تواصل معنا</span>
-      </nav>
-
-      <div style="margin-top:12px;line-height:1.9">
-        <p>يسعدنا سماع اقتراحاتك لتحسين الموقع أو إضافة أدوات جديدة.</p>
-<ul>
-  <li>للشراكات والإعلانات: <a href="mailto:contact@marketapro.com">contact@marketapro.com</a></li>
-  <li>للدعم الفني والإبلاغ عن مشكلة: <a href="mailto:support@marketapro.com">support@marketapro.com</a></li>
-</ul>
-<p class="note">ملاحظة: لو عندك رابط صفحة بها مشكلة، ارسله مع لقطة شاشة ووصف مختصر.</p>
+      <div class="field">
+        <label for="email">البريد الإلكتروني</label>
+        <input id="email" name="email" type="email" required placeholder="example@email.com">
       </div>
-    </div>
+
+      <div class="field">
+        <label for="type">نوع الرسالة</label>
+        <select id="type" name="type" required>
+          <option value="اقتراح">اقتراح</option>
+          <option value="شراكة أو إعلان">شراكة أو إعلان</option>
+          <option value="مشكلة تقنية">مشكلة تقنية</option>
+          <option value="أخرى">أخرى</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">الرسالة</label>
+        <textarea id="message" name="message" rows="6" required placeholder="اكتب رسالتك هنا..."></textarea>
+      </div>
+
+      <button type="submit">إرسال الرسالة</button>
+    </form>
+
   </section>
+
+  <footer>
+    © 2025 MarketAPro — Free Marketing Tools
+  </footer>
 </main>
-<footer class="footer">
-  <div class="container">
 
-    <div>© 2025 MarketAPro — Free Marketing Tools</div>
-
-    <div style="margin-top:6px">
-      By <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
-    </div>
-
-    <!-- أدلة وأدوات مهمة -->
-<div style="margin-top:12px">
-  <strong>أدلة وأدوات مهمة</strong>
-  <ul style="list-style:none;padding:0;margin:6px 0">
-    <li>
-    <a href="/news/best-time-to-post-instagram/">أفضل وقت للنشر على إنستغرام (دليل 2026)</a>
-
-    </li>
-    <li>
-      <a href="/tools/currency-converter/">
-        محول العملات الفوري (USD ⇄ EGP / SAR / EUR)
-      </a>
-    </li>
-  </ul>
-</div>
-
-  </div>
-</footer>
-<script src="/assets/main.js"></script>
 </body>
 </html>
