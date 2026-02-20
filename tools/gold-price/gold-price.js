@@ -1,4 +1,4 @@
-(() => {
+ (() => {
   "use strict";
   const $ = (id) => document.getElementById(id);
 
@@ -11,23 +11,47 @@
   const warnBox = $("warnBox");
 
   function showToast(msg){
+    if(!toastEl) return;
     toastEl.textContent = msg;
     toastEl.style.display = "block";
     clearTimeout(window.__toastTimer);
     window.__toastTimer = setTimeout(() => toastEl.style.display = "none", 1800);
   }
   function showWarn(msg){
+    if(!warnBox) return;
     warnBox.style.display = "block";
     warnBox.textContent = msg;
   }
   function clearWarn(){
+    if(!warnBox) return;
     warnBox.style.display = "none";
     warnBox.textContent = "";
   }
 
+  // ====== Detect country pages by path ======
+  // Example paths:
+  // /tools/gold-price-saudi/
+  // /tools/gold-price-egypt/
+  // /tools/gold-price-uae/
+  // /tools/gold-price-kuwait/
+  const PATH = (location.pathname || "").toLowerCase();
+
+  function getDefaultCurrencyFromPath(){
+    if(PATH.includes("/tools/gold-price-saudi")) return "SAR";
+    if(PATH.includes("/tools/gold-price-egypt")) return "EGP";
+    if(PATH.includes("/tools/gold-price-uae")) return "AED";
+    if(PATH.includes("/tools/gold-price-kuwait")) return "KWD";
+    return null; // main page or other pages
+  }
+
+  const DEFAULT_CUR = getDefaultCurrencyFromPath();
+
+  // ====== Cache & History ======
   const CACHE_TTL_MS = 5 * 60 * 1000; // 5 دقائق (متصفح)
   const cacheKey = (cur) => `gold_spot_${cur}`;
-  const historyKey = "gold_history_last5";
+
+  // ✅ avoid mixing history between pages (saudi vs egypt vs main tool)
+  const historyKey = `gold_history_last5_${PATH.replaceAll("/","_") || "root"}`;
 
   function readCache(cur){
     try{
@@ -55,6 +79,7 @@
   }
   function renderHistory(){
     const ul = $("historyList");
+    if(!ul) return;
     const arr = readHistory();
     ul.innerHTML = "";
     if(!arr.length){
@@ -77,11 +102,15 @@
     renderHistory();
   }
 
+  // ====== Network ======
   async function fetchSpot(cur){
     const cached = readCache(cur);
     if(cached) return { data: cached, cached: true };
 
-    const res = await fetch(`${WORKER_BASE}/api/gold?currency=${encodeURIComponent(cur)}`, { cache: "no-store" });
+    const res = await fetch(
+      `${WORKER_BASE}/api/gold?currency=${encodeURIComponent(cur)}`,
+      { cache: "no-store" }
+    );
     if(!res.ok) throw new Error("فشل الاتصال بمزود أسعار الذهب.");
     const data = await res.json();
     if(!data || typeof data.price_oz_24k !== "number") throw new Error("بيانات غير صالحة.");
@@ -91,10 +120,13 @@
 
   function round2(n){ return Math.round((+n||0)*100)/100; }
 
-  function formatAR(n){ return Number(n).toLocaleString("ar"); }
+  function formatAR(n){
+    return Number(n).toLocaleString("ar", { maximumFractionDigits: 2 });
+  }
 
   function renderAllKarats(base24, cur, unitLabel, premium){
     const tbody = $("allKarats");
+    if(!tbody) return;
     const karats = [24,22,21,18,14];
     tbody.innerHTML = "";
     karats.forEach(k => {
@@ -105,17 +137,33 @@
     });
   }
 
+  // ====== Currency lock for country pages ======
+  function applyDefaultCurrency(){
+    const sel = $("currency");
+    if(!sel) return;
+    if(DEFAULT_CUR){
+      sel.value = DEFAULT_CUR;
+      // اختياري: اقفل تغيير العملة في صفحات الدول لزيادة التطابق مع SEO
+      sel.disabled = true;
+      sel.setAttribute("aria-disabled", "true");
+      sel.title = "هذه الصفحة مخصصة لعملة الدولة";
+    }
+  }
+
   async function calc(){
     clearWarn();
-    $("priceOut").textContent = "جارٍ التحديث…";
-    $("spotOut").textContent = "—";
-    $("updated").textContent = "آخر تحديث: —";
-    $("allKarats").innerHTML = "";
+    if($("priceOut")) $("priceOut").textContent = "جارٍ التحديث…";
+    if($("spotOut")) $("spotOut").textContent = "—";
+    if($("updated")) $("updated").textContent = "آخر تحديث: —";
+    if($("allKarats")) $("allKarats").innerHTML = "";
 
-    const cur = $("currency").value;
-    const unit = $("unit").value;
-    const karat = Number($("karat").value);
-    const premium = Number($("premium").value || 0);
+    // تأكد أن العملة الافتراضية مطبقة قبل القراءة
+    applyDefaultCurrency();
+
+    const cur = $("currency") ? $("currency").value : "USD";
+    const unit = $("unit") ? $("unit").value : "gram";
+    const karat = $("karat") ? Number($("karat").value) : 24;
+    const premium = $("premium") ? Number($("premium").value || 0) : 0;
 
     try{
       const { data, cached } = await fetchSpot(cur);
@@ -128,10 +176,10 @@
 
       const karatPrice = (base24 * (karat/24)) + premium;
 
-      $("spotOut").textContent = `${formatAR(round2(base24))} ${cur} / ${unitLabel} (24K)`;
-      $("priceOut").textContent = `${formatAR(round2(karatPrice))} ${cur} / ${unitLabel} (${karat}K)`;
+      if($("spotOut")) $("spotOut").textContent = `${formatAR(round2(base24))} ${cur} / ${unitLabel} (24K)`;
+      if($("priceOut")) $("priceOut").textContent = `${formatAR(round2(karatPrice))} ${cur} / ${unitLabel} (${karat}K)`;
 
-      $("updated").textContent = `آخر تحديث: ${data.updated_at || "—"}${cached ? " (من الكاش)" : ""}`;
+      if($("updated")) $("updated").textContent = `آخر تحديث: ${data.updated_at || "—"}${cached ? " (من الكاش)" : ""}`;
 
       renderAllKarats(base24, cur, unitLabel, premium);
 
@@ -139,33 +187,47 @@
       showToast("تم التحديث ✅");
     }catch(err){
       showWarn("حدث خطأ أثناء جلب السعر.\nتفاصيل: " + (err?.message || err));
-      $("priceOut").textContent = "—";
+      if($("priceOut")) $("priceOut").textContent = "—";
     }
   }
 
-  $("calcBtn").addEventListener("click", calc);
-  ["currency","unit","karat","premium"].forEach(id => $(id).addEventListener("change", calc));
+  // ====== Events ======
+  if($("calcBtn")) $("calcBtn").addEventListener("click", calc);
 
-  $("copyBtn").addEventListener("click", async () => {
+  // في صفحات الدول: العملة مقفلة، فلا نحتاج change عليها
+  ["unit","karat","premium"].forEach(id => {
+    const el = $(id);
+    if(el) el.addEventListener("change", calc);
+  });
+
+  // فقط في الصفحة العامة نخلي تغيير العملة يشتغل
+  if(!DEFAULT_CUR && $("currency")){
+    $("currency").addEventListener("change", calc);
+  }
+
+  if($("copyBtn")) $("copyBtn").addEventListener("click", async () => {
+    const pageUrl = location.href;
     const txt =
 `MarketAPro — أسعار الذهب
-العملة: ${$("currency").value}
-الوحدة: ${$("unit").value}
-العيار: ${$("karat").value}K
-المصنعية: ${$("premium").value}
-النتيجة: ${$("priceOut").textContent}
-${$("updated").textContent}
-https://marketapro.com/tools/gold-price/`;
+العملة: ${$("currency") ? $("currency").value : ""}
+الوحدة: ${$("unit") ? $("unit").value : ""}
+العيار: ${$("karat") ? $("karat").value : ""}K
+المصنعية: ${$("premium") ? $("premium").value : ""}
+النتيجة: ${$("priceOut") ? $("priceOut").textContent : ""}
+${$("updated") ? $("updated").textContent : ""}
+${pageUrl}`;
     try{ await navigator.clipboard.writeText(txt); showToast("تم النسخ ✅"); }
     catch(e){ alert("تعذر النسخ تلقائيًا. انسخ يدويًا:\n\n" + txt); }
   });
 
-  $("clearHistoryBtn").addEventListener("click", () => {
+  if($("clearHistoryBtn")) $("clearHistoryBtn").addEventListener("click", () => {
     localStorage.removeItem(historyKey);
     renderHistory();
     showToast("تم مسح السجل");
   });
 
+  // ====== Init ======
+  applyDefaultCurrency();
   renderHistory();
   calc();
 })();
