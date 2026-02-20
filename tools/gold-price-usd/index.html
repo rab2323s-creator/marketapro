@@ -1,0 +1,378 @@
+<!-- File: /tools/gold-price-usd/index.html -->
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- High-CTR SEO title (primary keyword first) -->
+  <title>Gold Price Today (USD) — Live Price per Gram & Ounce + Calculator</title>
+
+  <!-- Strong meta description (CTR + intent coverage) -->
+  <meta name="description" content="Live gold price today in USD: spot price, price per gram and troy ounce. 24K/22K/21K/18K/14K table + premium (making charge) calculator. Updated automatically." />
+
+  <link rel="canonical" href="https://marketapro.com/tools/gold-price-usd/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en-us" href="https://marketapro.com/tools/gold-price-usd/" />
+  <link rel="alternate" hreflang="en" href="https://marketapro.com/tools/gold-price-usd/" />
+  <link rel="alternate" hreflang="x-default" href="https://marketapro.com/tools/gold-price-usd/" />
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gold Price Today (USD) — Live per Gram & Ounce + Calculator" />
+  <meta property="og:description" content="Track live gold price in USD: spot price, per gram & troy ounce, all karats table + premium calculator. Auto-updated." />
+  <meta property="og:url" content="https://marketapro.com/tools/gold-price-usd/" />
+  <meta property="og:image" content="https://marketapro.com/assets/gold-6000-forecast-2026.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="MarketAPro" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gold Price Today (USD) — Live per Gram & Ounce + Calculator" />
+  <meta name="twitter:description" content="Live gold price in USD with a calculator: per gram, per troy ounce, all karats table + optional premium." />
+  <meta name="twitter:image" content="https://marketapro.com/assets/gold-6000-forecast-2026.jpg" />
+
+  <!-- Minimal page-local styles (keeps your design system but ensures layout works) -->
+  <style>
+    .hero-block{padding:18px;border-radius:18px;border:1px solid var(--border);background:rgba(255,255,255,.02)}
+    .hero-title{margin:0 0 8px;font-size:28px;line-height:1.25}
+    .hero-desc{margin:0;color:var(--muted);line-height:1.9}
+    .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;margin-top:14px}
+    @media (max-width: 900px){.wrap{grid-template-columns:1fr}}
+    .card2{border:1px solid var(--border);border-radius:18px;background:rgba(0,0,0,.18);padding:14px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media(max-width:520px){.row{grid-template-columns:1fr}}
+    label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
+    input, select{width:100%;padding:12px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);outline:none}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{cursor:pointer}
+    .btn.secondary{background:rgba(255,255,255,.02)}
+    .stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    @media(max-width:520px){.stat-grid{grid-template-columns:1fr}}
+    .stat{padding:14px;border-radius:16px;background:rgba(0,0,0,.18);border:1px solid var(--border)}
+    .stat strong{display:block;font-size:18px}
+    .stat span{color:var(--muted);font-size:13px}
+    .divider{height:1px;background:var(--border);margin:14px 0}
+    .list{margin:10px 0 0;padding-left:18px;color:var(--muted);line-height:1.9}
+    .toast{position:fixed;left:16px;bottom:16px;background:rgba(0,0,0,.65);border:1px solid var(--border);
+      border-radius:14px;padding:10px 12px;color:var(--text);display:none;max-width:360px;z-index:9999}
+    .warn{border:1px solid rgba(250,204,21,.35);background:rgba(250,204,21,.08);color:#ffe9a6;
+      padding:10px 12px;border-radius:14px;font-weight:900;font-size:13px;display:none;margin-top:10px;white-space:pre-wrap}
+    .muted{color:var(--muted)}
+    table{width:100%;border-collapse:separate;border-spacing:0 8px}
+    td,th{padding:10px;border:1px solid var(--border);background:rgba(255,255,255,.02);border-radius:12px}
+    th{font-weight:900}
+    .faq{margin-top:14px}
+    details{border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02);padding:10px 12px;margin:10px 0}
+    summary{cursor:pointer;font-weight:900}
+    details p{margin:8px 0 0;color:var(--muted);line-height:1.9}
+    code{direction:ltr;unicode-bidi:bidi-override}
+  </style>
+
+  <!-- Structured Data (USD page) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://marketapro.com/#organization",
+        "name":"MarketAPro",
+        "url":"https://marketapro.com/",
+        "description":"Free practical tools and guides to help improve performance and growth."
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://marketapro.com/#website",
+        "url":"https://marketapro.com/",
+        "name":"MarketAPro",
+        "publisher":{"@id":"https://marketapro.com/#organization"},
+        "inLanguage":"en"
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://marketapro.com/tools/gold-price-usd/",
+        "url":"https://marketapro.com/tools/gold-price-usd/",
+        "name":"Gold Price Today (USD) — Live per Gram & Ounce + Calculator",
+        "description":"Live gold price today in USD: spot price, price per gram and troy ounce, all karats table, and premium calculator.",
+        "isPartOf":{"@id":"https://marketapro.com/#website"},
+        "about":{"@id":"https://marketapro.com/#organization"},
+        "inLanguage":"en",
+        "primaryImageOfPage":{
+          "@type":"ImageObject",
+          "url":"https://marketapro.com/assets/gold-6000-forecast-2026.jpg"
+        }
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://marketapro.com/tools/gold-price-usd/#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://marketapro.com/"},
+          {"@type":"ListItem","position":2,"name":"Tools","item":"https://marketapro.com/tools/"},
+          {"@type":"ListItem","position":3,"name":"Gold Price Today (USD)","item":"https://marketapro.com/tools/gold-price-usd/"}
+        ]
+      },
+      {
+        "@type":"WebApplication",
+        "@id":"https://marketapro.com/tools/gold-price-usd/#app",
+        "name":"Gold Price Calculator (USD)",
+        "url":"https://marketapro.com/tools/gold-price-usd/",
+        "applicationCategory":"FinanceApplication",
+        "operatingSystem":"All",
+        "inLanguage":"en",
+        "isPartOf":{"@id":"https://marketapro.com/#website"},
+        "publisher":{"@id":"https://marketapro.com/#organization"},
+        "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+        "featureList":[
+          "Live gold price in USD",
+          "Price per gram and per troy ounce",
+          "All karats: 24K, 22K, 21K, 18K, 14K",
+          "Optional premium / making charge calculator",
+          "Recent updates history + fast cache"
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://marketapro.com/tools/gold-price-usd/#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"What is the gold spot price?",
+            "acceptedAnswer":{"@type":"Answer","text":"The spot price is the current market price of gold for immediate delivery. This page uses the spot price as the baseline, then estimates karat prices proportionally."}
+          },
+          {
+            "@type":"Question",
+            "name":"How do you calculate 21K, 18K and other karats from 24K?",
+            "acceptedAnswer":{"@type":"Answer","text":"Karat prices are estimated using: 24K price × (karat ÷ 24). Example: 21K ≈ 24K × (21/24)."}
+          },
+          {
+            "@type":"Question",
+            "name":"How many grams are in a troy ounce?",
+            "acceptedAnswer":{"@type":"Answer","text":"One troy ounce equals approximately 31.1034768 grams."}
+          },
+          {
+            "@type":"Question",
+            "name":"Does the price include premium or making charges?",
+            "acceptedAnswer":{"@type":"Answer","text":"No. Displayed prices are estimates and do not include retailer premiums, making charges, taxes, or fees. You can add an optional premium per unit in the calculator."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Back to home">
+      <div class="brand-badge" aria-hidden="true"></div>
+      <div>
+        <p class="brand-title">MarketAPro</p>
+        <p class="brand-sub">Gold Price (USD)</p>
+      </div>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a class="active" href="/tools/">Tools</a>
+      <a href="/news/">Articles</a>
+      <a href="https://vivamediacreative.com/ar/" rel="noopener">Viva Media Creative</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="container section">
+  <section class="hero-block">
+    <h1 class="hero-title">Gold Price Today (USD)</h1>
+    <p class="hero-desc">
+      Live gold price in USD — calculate price per gram or per troy ounce for 24K/22K/21K/18K/14K with an optional premium.
+    </p>
+  </section>
+
+  <section class="wrap">
+
+    <section class="card2" aria-label="Calculator settings">
+      <div class="row">
+        <div>
+          <label for="currency">Currency</label>
+          <select id="currency" disabled aria-disabled="true" title="This page is locked to USD">
+            <option value="USD" selected>USD — United States Dollar</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="unit">Unit</label>
+          <select id="unit">
+            <option value="gram" selected>Gram</option>
+            <option value="oz">Troy Ounce</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="karat">Karat</label>
+          <select id="karat">
+            <option value="24" selected>24K</option>
+            <option value="22">22K</option>
+            <option value="21">21K</option>
+            <option value="18">18K</option>
+            <option value="14">14K</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="premium">Premium / Making charge (optional, per unit)</label>
+          <input id="premium" type="number" inputmode="decimal" step="0.01" value="0" />
+        </div>
+
+        <div>
+          <label>&nbsp;</label>
+          <button class="btn primary" id="calcBtn" type="button">Refresh price</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn secondary" id="copyBtn" type="button">Copy</button>
+        <button class="btn secondary" id="clearHistoryBtn" type="button">Clear history</button>
+      </div>
+
+      <div class="warn" id="warnBox"></div>
+
+      <p class="muted" style="margin:10px 0 0;font-size:13px;line-height:1.9">
+        Note: Prices are estimates and may differ by retailer, location, taxes, fees, and spreads. Premium is optional and entered manually.
+      </p>
+    </section>
+
+    <section class="card2" aria-label="Results">
+      <h2 style="margin:0 0 6px;font-size:18px">Result</h2>
+
+      <div class="stat-grid">
+        <div class="stat">
+          <strong id="priceOut">—</strong>
+          <span>Selected karat price</span>
+        </div>
+        <div class="stat">
+          <strong id="spotOut">—</strong>
+          <span>Spot (24K)</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <p class="muted" id="updated">Last update: —</p>
+
+      <div class="divider"></div>
+
+      <h3 style="margin:0 0 8px;font-size:16px">All karats (per selected unit)</h3>
+      <table aria-label="All karats table">
+        <thead>
+          <tr>
+            <th>Karat</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="allKarats"></tbody>
+      </table>
+
+      <div class="divider"></div>
+      <h3 style="margin:0 0 6px;font-size:16px">Last 5 updates</h3>
+      <ul class="list" id="historyList"></ul>
+    </section>
+
+  </section>
+
+  <!-- SEO content block (rich, keyword-complete, not spammy) -->
+  <section class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:20px">Live gold price per gram & per troy ounce (USD)</h2>
+    <p style="margin:0;line-height:1.9;color:var(--muted)">
+      This tool tracks the <strong>gold price today in USD</strong> using the global spot market as a baseline.
+      You can instantly estimate <strong>gold price per gram</strong> or <strong>gold price per troy ounce</strong>,
+      and convert the 24K spot into popular karats like <strong>22K</strong>, <strong>21K</strong>, and <strong>18K</strong>.
+      To approximate a retail checkout price, add an optional <strong>premium / making charge</strong> per unit.
+    </p>
+  </section>
+
+  <!-- Methodology / Trust (YMYL-friendly) -->
+  <section class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:20px">Methodology & calculation</h2>
+    <ul style="margin:0;padding:0 18px;line-height:1.9;color:var(--muted)">
+      <li>We start from the <strong>24K spot price</strong> per troy ounce, then convert to per gram using <code>1 oz troy = 31.1034768 g</code>.</li>
+      <li>Karat estimates use: <code>24K price × (karat ÷ 24)</code> (example: <code>21K ≈ 24K × 21/24</code>).</li>
+      <li>Displayed values are estimates; retailer spreads, premiums, taxes, and fees may apply.</li>
+    </ul>
+    <p class="muted" style="margin:10px 0 0;line-height:1.9">
+      Learn more: <a href="/about/">About</a> — <a href="/terms/">Terms</a>.
+    </p>
+  </section>
+
+  <!-- Internal links (authority flow) -->
+  <section class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:20px">Gold price tools by country</h2>
+    <ul style="margin:0;padding:0 18px;line-height:1.9">
+      <li><a href="/tools/gold-price/">Multi-currency gold price tool</a></li>
+      <li><a href="/tools/gold-price-uae/">Gold price in UAE (AED)</a></li>
+      <li><a href="/tools/gold-price-saudi/">Gold price in Saudi Arabia (SAR)</a></li>
+      <li><a href="/tools/gold-price-egypt/">Gold price in Egypt (EGP)</a></li>
+      <li><a href="/tools/gold-price-kuwait/">Gold price in Kuwait (KWD)</a></li>
+    </ul>
+  </section>
+
+  <!-- FAQ block (matches schema) -->
+  <section class="card faq" id="faq" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:20px">Gold price FAQ (USD)</h2>
+
+    <details>
+      <summary>What is the gold spot price?</summary>
+      <p>The spot price is the current market price for immediate delivery. This tool uses spot as a baseline and estimates karat prices proportionally.</p>
+    </details>
+
+    <details>
+      <summary>How do you calculate 21K and 18K from 24K?</summary>
+      <p>We use an estimate: <code>24K × (karat ÷ 24)</code>. Example: 21K ≈ 24K × (21/24).</p>
+    </details>
+
+    <details>
+      <summary>How many grams are in a troy ounce?</summary>
+      <p>1 troy ounce ≈ 31.1034768 grams.</p>
+    </details>
+
+    <details>
+      <summary>Does this include premium, tax, or making charges?</summary>
+      <p>No. Add an optional premium per unit to approximate retail prices. Taxes and fees vary by location and seller.</p>
+    </details>
+  </section>
+
+  <!-- Related articles (edit as needed) -->
+  <section class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:20px">Related reading</h2>
+    <ul style="margin:0;padding:0 18px;line-height:1.9">
+      <li><a href="/news/gold-price-forecast-2026/">Gold price forecast 2026 (drivers & scenarios)</a></li>
+      <li><a href="/news/gold-6000-forecast-2026/">Could gold reach 6000? 2026 scenarios</a></li>
+      <li><a href="/news/2026-gold-price-outlook/">Gold outlook 2026</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!--
+  SEO Critical:
+  This block is updated by GitHub Actions so the price exists in HTML before JS runs.
+-->
+<!-- INITIAL_GOLD_USD_START -->
+<script type="application/json" id="initialGoldUSD">
+{"currency":"USD","price_oz_24k":0,"updated_at":"—"}
+</script>
+<!-- INITIAL_GOLD_USD_END -->
+
+<script src="/assets/js/helpers.js" defer></script>
+<script src="/tools/gold-price-usd/gold-price-usd.js" defer></script>
+</body>
+</html>
