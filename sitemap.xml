@@ -181,7 +181,30 @@
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
-
+  <url>
+    <loc>https://marketapro.com/tools/gold-price-egypt/</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+</url>
+<url>
+    <loc>https://marketapro.com/tools/gold-price-saudi/</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+</url>
+<url>
+    <loc>https://marketapro.com/tools/gold-price-uae/</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+</url>
+<url>
+    <loc>https://marketapro.com/tools/gold-price-usd/</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+</url>
   <url>
     <loc>https://marketapro.com/news/venezuela-shock-usd-gold-volatility-2026/</loc>
     <lastmod>2026-01-04</lastmod>
