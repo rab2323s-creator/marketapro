@@ -1,0 +1,68 @@
+# File: /.github/workflows/update-gold-usd.yml
+name: Update Gold USD (prerender)
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"  # every 10 minutes
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch gold USD from Worker
+        run: |
+          curl -sS "https://hidden-snow-2c44.rab2323s.workers.dev/api/gold?currency=USD" \
+            -H "Accept: application/json" \
+            -o /tmp/gold-usd.json
+
+      - name: Inject initialGoldUSD into USD HTML
+        run: |
+          python3 - <<'PY'
+          import json, re, pathlib
+
+          html_path = pathlib.Path("tools/gold-price-usd/index.html")
+
+          raw = pathlib.Path("/tmp/gold-usd.json").read_text(encoding="utf-8")
+          data = json.loads(raw)
+
+          if not isinstance(data.get("price_oz_24k"), (int, float)):
+              raise SystemExit("Invalid worker JSON: price_oz_24k missing or not a number")
+
+          payload = {
+              "currency": "USD",
+              "price_oz_24k": float(data["price_oz_24k"]),
+              "updated_at": data.get("updated_at") or ""
+          }
+
+          new_block = (
+              "<!-- INITIAL_GOLD_USD_START -->\n"
+              '<script type="application/json" id="initialGoldUSD">\n'
+              + json.dumps(payload, ensure_ascii=False)
+              + "\n</script>\n"
+              "<!-- INITIAL_GOLD_USD_END -->"
+          )
+
+          html = html_path.read_text(encoding="utf-8")
+          pattern = r"<!-- INITIAL_GOLD_USD_START -->.*?<!-- INITIAL_GOLD_USD_END -->"
+
+          if not re.search(pattern, html, flags=re.S):
+              raise SystemExit("Markers not found. Add INITIAL_GOLD_USD_START/END in HTML first.")
+
+          html2 = re.sub(pattern, new_block, html, flags=re.S)
+          html_path.write_text(html2, encoding="utf-8")
+          print("Injected initial gold block into:", html_path)
+          PY
+
+      - name: Commit & push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add tools/gold-price-usd/index.html
+          git commit -m "Update USD gold initial price" || exit 0
+          git push
