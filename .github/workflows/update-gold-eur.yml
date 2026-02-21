@@ -1,0 +1,96 @@
+# .github/workflows/update-gold-eur.yml
+name: Update Gold EUR (prerender)
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-gold-eur
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch EUR gold price
+        run: |
+          set -e
+          curl -sS "https://hidden-snow-2c44.rab2323s.workers.dev/api/gold?currency=EUR" \
+            -H "Accept: application/json" \
+            -o /tmp/gold-eur.json
+          python3 - <<'PY'
+          import json, pathlib, sys
+          p = pathlib.Path("/tmp/gold-eur.json")
+          try:
+            data = json.loads(p.read_text(encoding="utf-8"))
+          except Exception as e:
+            print("Invalid JSON:", e); sys.exit(1)
+          if "price_oz_24k" not in data:
+            print("Missing price_oz_24k"); sys.exit(1)
+          try:
+            price = float(data["price_oz_24k"])
+          except Exception:
+            print("price_oz_24k not numeric"); sys.exit(1)
+          if price <= 0:
+            print("price_oz_24k invalid"); sys.exit(1)
+          PY
+
+      - name: Inject into HTML (only if price changed)
+        run: |
+          python3 - <<'PY'
+          import json, re, pathlib, sys
+
+          html_path = pathlib.Path("tools/goldpreis-euro/index.html")
+          html = html_path.read_text(encoding="utf-8")
+
+          data = json.loads(pathlib.Path("/tmp/gold-eur.json").read_text(encoding="utf-8"))
+          new_price = float(data["price_oz_24k"])
+          new_updated = data.get("updated_at","")
+
+          # Extract old payload if present
+          old_price = None
+          m = re.search(r'<script type="application/json" id="initialGoldEUR">\s*(\{.*?\})\s*</script>', html, flags=re.S)
+          if m:
+            try:
+              old = json.loads(m.group(1))
+              old_price = float(old.get("price_oz_24k", 0))
+            except Exception:
+              old_price = None
+
+          # Skip if unchanged to reduce git noise
+          if old_price is not None and abs(new_price - old_price) < 0.0001:
+            print("No material price change; skipping.")
+            sys.exit(0)
+
+          payload = {"currency":"EUR","price_oz_24k":new_price,"updated_at":new_updated}
+          new_block = (
+            "<!-- INITIAL_GOLD_EUR_START -->\n"
+            "<script type=\"application/json\" id=\"initialGoldEUR\">\n"
+            + json.dumps(payload, ensure_ascii=False)
+            + "\n</script>\n"
+            "<!-- INITIAL_GOLD_EUR_END -->"
+          )
+
+          html2 = re.sub(r"<!-- INITIAL_GOLD_EUR_START -->.*?<!-- INITIAL_GOLD_EUR_END -->", new_block, html, flags=re.S)
+          if html2 == html:
+            print("Markers not found or no changes applied."); sys.exit(1)
+
+          html_path.write_text(html2, encoding="utf-8")
+          print("Updated prerender payload.")
+          PY
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add tools/goldpreis-euro/index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Update EUR gold price"
+          git push
