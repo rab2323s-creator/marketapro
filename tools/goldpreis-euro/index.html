@@ -1,69 +1,122 @@
+ <!-- tools/goldpreis-euro/index.html -->
 <!doctype html>
 <html lang="de" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- Starker SEO-Titel mit Haupt-Keyword vorne -->
-  <title>Goldpreis heute in Euro (EUR) – Aktueller Preis pro Gramm & Feinunze | Live Spot + Rechner</title>
-
-  <!-- CTR-optimierte Description -->
-  <meta name="description" content="Goldpreis heute in Euro (EUR): aktueller Spotpreis, Preis pro Gramm und Feinunze. 24K/22K/21K/18K Tabelle + Aufgeld-Rechner. Automatisch aktualisiert." />
+  <!-- SEO/CTR -->
+  <title>Goldpreis heute (EUR) – Live pro Gramm & Feinunze + 24K/22K/21K/18K Rechner</title>
+  <meta name="description" content="Goldpreis heute in Euro: Live Spotpreis pro Gramm & Feinunze. 24K/22K/21K/18K/14K Tabelle + Aufgeld-Rechner. Automatisch aktualisiert." />
 
   <link rel="canonical" href="https://marketapro.com/tools/goldpreis-euro/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
+  <!-- Geo/Language -->
+  <meta name="language" content="de" />
+  <meta name="content-language" content="de-DE" />
+
   <!-- hreflang -->
-  <link rel="alternate" hreflang="de-de" href="https://marketapro.com/tools/goldpreis-euro/" />
+  <link rel="alternate" hreflang="de-DE" href="https://marketapro.com/tools/goldpreis-euro/" />
   <link rel="alternate" hreflang="de" href="https://marketapro.com/tools/goldpreis-euro/" />
   <link rel="alternate" hreflang="x-default" href="https://marketapro.com/tools/goldpreis-euro/" />
 
   <link rel="stylesheet" href="/style.css" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Goldpreis heute in Euro – Live Preis pro Gramm & Unze + Rechner" />
-  <meta property="og:description" content="Aktueller Goldpreis in EUR: Spotpreis, Preis pro Gramm & Feinunze, Karat-Tabelle + Aufgeld-Rechner." />
+  <meta property="og:title" content="Goldpreis heute (EUR) – Live pro Gramm & Feinunze + Rechner" />
+  <meta property="og:description" content="Aktueller Goldpreis in Euro: Spotpreis, Preis pro Gramm & Feinunze, Karat-Tabelle + Aufgeld-Rechner (Auto-Update)." />
   <meta property="og:url" content="https://marketapro.com/tools/goldpreis-euro/" />
   <meta property="og:image" content="https://marketapro.com/assets/gold-6000-forecast-2026.jpg" />
   <meta property="og:locale" content="de_DE" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Strukturierte Daten -->
+  <!-- Structured data (safe/static) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
       {
+        "@type":"Organization",
+        "@id":"https://marketapro.com/#org",
+        "name":"MarketaPro",
+        "url":"https://marketapro.com/"
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://marketapro.com/#website",
+        "url":"https://marketapro.com/",
+        "name":"MarketaPro",
+        "publisher":{"@id":"https://marketapro.com/#org"},
+        "inLanguage":"de"
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://marketapro.com/tools/goldpreis-euro/#breadcrumbs",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Tools","item":"https://marketapro.com/tools/"},
+          {"@type":"ListItem","position":2,"name":"Goldpreis Euro","item":"https://marketapro.com/tools/goldpreis-euro/"}
+        ]
+      },
+      {
         "@type":"WebPage",
-        "name":"Goldpreis heute in Euro (EUR)",
+        "@id":"https://marketapro.com/tools/goldpreis-euro/#webpage",
         "url":"https://marketapro.com/tools/goldpreis-euro/",
+        "name":"Goldpreis heute in Euro (EUR) – Live pro Gramm & Feinunze",
+        "description":"Live Goldpreis in Euro mit Gramm- und Unzenpreis sowie Karat-Rechner und Aufgeld.",
+        "isPartOf":{"@id":"https://marketapro.com/#website"},
+        "about":[{"@type":"Thing","name":"Goldpreis"},{"@type":"Thing","name":"Spotpreis"}],
         "inLanguage":"de",
-        "description":"Live Goldpreis in Euro mit Gramm- und Unzenpreis sowie Karat-Rechner."
+        "breadcrumb":{"@id":"https://marketapro.com/tools/goldpreis-euro/#breadcrumbs"}
+      },
+      {
+        "@type":"FinancialService",
+        "@id":"https://marketapro.com/tools/goldpreis-euro/#service",
+        "name":"Goldpreis Rechner Euro",
+        "url":"https://marketapro.com/tools/goldpreis-euro/",
+        "provider":{"@id":"https://marketapro.com/#org"},
+        "areaServed":{"@type":"Country","name":"Germany"},
+        "inLanguage":"de"
       },
       {
         "@type":"WebApplication",
+        "@id":"https://marketapro.com/tools/goldpreis-euro/#app",
         "name":"Goldpreis Rechner (EUR)",
+        "url":"https://marketapro.com/tools/goldpreis-euro/",
         "applicationCategory":"FinanceApplication",
         "operatingSystem":"All",
+        "inLanguage":"de",
         "offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}
       },
       {
         "@type":"FAQPage",
+        "@id":"https://marketapro.com/tools/goldpreis-euro/#faq",
         "mainEntity":[
           {
             "@type":"Question",
             "name":"Was ist der Gold Spotpreis?",
-            "acceptedAnswer":{"@type":"Answer","text":"Der Spotpreis ist der aktuelle Marktpreis für sofortige Lieferung von Gold. Er dient als Basis für die Berechnung anderer Karatpreise."}
+            "acceptedAnswer":{"@type":"Answer","text":"Der Spotpreis ist der aktuelle Marktpreis für sofortige Lieferung von Gold. Er dient als Basis für Gramm- und Karat-Berechnungen."}
           },
           {
             "@type":"Question",
             "name":"Wie berechnet man 21K oder 18K aus 24K?",
-            "acceptedAnswer":{"@type":"Answer","text":"Formel: 24K Preis × (Karat ÷ 24). Beispiel: 21K ≈ 24K × (21/24)."}
+            "acceptedAnswer":{"@type":"Answer","text":"Formel: 24K Preis × (Karat ÷ 24). Beispiel: 21K = 24K × (21/24)."}
           },
           {
             "@type":"Question",
             "name":"Wie viel Gramm hat eine Feinunze?",
-            "acceptedAnswer":{"@type":"Answer","text":"Eine Feinunze entspricht ca. 31,1034768 Gramm."}
+            "acceptedAnswer":{"@type":"Answer","text":"Eine Feinunze (troy ounce) entspricht 31,1034768 Gramm."}
+          },
+          {
+            "@type":"Question",
+            "name":"Was bedeutet Aufgeld beim Goldkauf?",
+            "acceptedAnswer":{"@type":"Answer","text":"Aufgeld ist der Aufpreis über dem Spotpreis (z. B. durch Prägung, Handelsspanne, Steuern oder Nachfrage)."}
+          },
+          {
+            "@type":"Question",
+            "name":"Warum steigt oder fällt der Goldpreis?",
+            "acceptedAnswer":{"@type":"Answer","text":"Der Goldpreis reagiert häufig auf Inflationserwartungen, Zinsen, US-Dollar-Stärke und geopolitische Risiken."}
           }
         ]
       }
@@ -73,104 +126,123 @@
 </head>
 
 <body>
-
 <main class="container section">
 
-<h1>Goldpreis heute in Euro – Live Spotpreis pro Gramm & Feinunze</h1>
-<p>Live Goldpreis pro Gramm und Feinunze in Euro – inkl. Karat-Rechner (24K/22K/21K/18K/14K).</p>
+  <header class="card" style="margin-bottom:16px">
+    <h1>Goldpreis heute in Euro (EUR)</h1>
+    <p style="margin-top:6px">
+      Live Spotpreis pro <strong>Gramm</strong> und <strong>Feinunze</strong> – inkl. Karat-Rechner (24K/22K/21K/18K/14K) und Aufgeld.
+    </p>
 
-<section class="card2">
+    <p style="margin-top:10px">
+      <strong id="priceOut">—</strong><br>
+      <small id="updated">Letzte Aktualisierung: —</small><br>
+      <small id="sourceNote">Hinweis: Spotpreis ist indikativ. Händlerpreise (Aufgeld/Steuern) können abweichen.</small>
+    </p>
+  </header>
 
-<label>Einheit</label>
-<select id="unit">
-  <option value="gram" selected>Gramm</option>
-  <option value="oz">Feinunze</option>
-</select>
+  <section class="card2" aria-labelledby="calcTitle">
+    <h2 id="calcTitle">Goldpreis Rechner</h2>
 
-<label>Karat</label>
-<select id="karat">
-  <option value="24" selected>24K</option>
-  <option value="22">22K</option>
-  <option value="21">21K</option>
-  <option value="18">18K</option>
-  <option value="14">14K</option>
-</select>
+    <label for="unit">Einheit</label>
+    <select id="unit">
+      <option value="gram" selected>Gramm</option>
+      <option value="oz">Feinunze</option>
+    </select>
 
-<label>Aufgeld (optional)</label>
-<input id="premium" type="number" step="0.01" value="0" />
+    <label for="karat">Karat</label>
+    <select id="karat">
+      <option value="24" selected>24K (Feingold)</option>
+      <option value="22">22K</option>
+      <option value="21">21K</option>
+      <option value="18">18K</option>
+      <option value="14">14K</option>
+    </select>
 
-<button id="calcBtn">Preis aktualisieren</button>
+    <label for="premium">Aufgeld</label>
+    <div style="display:flex; gap:10px; align-items:end; flex-wrap:wrap">
+      <div style="flex:1; min-width:220px">
+        <select id="premiumType" aria-label="Aufgeld-Typ">
+          <option value="percent" selected>Prozent (%)</option>
+          <option value="abs">Euro pro Einheit (€/Gramm oder €/Unze)</option>
+        </select>
+      </div>
+      <div style="flex:1; min-width:180px">
+        <input id="premium" type="number" step="0.01" value="0" inputmode="decimal" />
+      </div>
+    </div>
+    <small id="premiumHint" style="display:block; margin-top:6px">
+      Tipp: % ist üblich für Barren/Münzen. Bei Schmuck oft €/g.
+    </small>
 
-<hr>
+    <button id="calcBtn" type="button">Preis aktualisieren</button>
 
-<h2 id="priceOut">—</h2>
-<p id="updated">Letzte Aktualisierung: —</p>
+    <hr>
 
-<table>
-<thead>
-<tr><th>Karat</th><th>Preis</th></tr>
-</thead>
-<tbody id="allKarats"></tbody>
-</table>
+    <h2 style="margin-top:10px">Preistabelle nach Karat</h2>
+    <table>
+      <thead>
+        <tr><th>Karat</th><th>Preis</th></tr>
+      </thead>
+      <tbody id="allKarats"></tbody>
+    </table>
 
-</section>
+    <noscript><p>Für Live-Berechnung bitte JavaScript aktivieren.</p></noscript>
+  </section>
 
-<!-- SEO-Textblock -->
-<section class="card" style="margin-top:20px">
-<h2>Aktueller Goldpreis pro Gramm & Feinunze in Euro</h2>
-<p>
-Hier finden Sie den aktuellen Goldpreis heute in Euro (EUR) basierend auf dem internationalen Spotmarkt.
-Der Rechner zeigt den Preis pro Gramm sowie pro Feinunze und ermöglicht die Umrechnung auf 24K, 22K, 21K, 18K und 14K.
-</p>
-</section>
+  <section class="card" style="margin-top:20px">
+    <h2>Aktueller Goldpreis pro Gramm & Feinunze</h2>
+    <p>
+      Der Rechner basiert auf dem internationalen Spotmarkt und rechnet den Preis für verschiedene Karatstufen (24K bis 14K) um.
+      Wählen Sie Einheit, Karat und optional Aufgeld – der Endpreis wird sofort berechnet.
+    </p>
+    <p>
+      Weitere Tools: <a href="/tools/">Tools</a> •
+      Analyse: <a href="/news/goldpreis-prognose-2026/">Goldpreis Prognose</a>
+    </p>
+  </section>
 
-<!-- INITIAL_GOLD_EUR_START -->
-<script type="application/json" id="initialGoldEUR">
-{"currency":"EUR","price_oz_24k":0,"updated_at":"—"}
-</script>
-<!-- INITIAL_GOLD_EUR_END -->
+  <!-- PRERENDER (updated by GitHub Actions) -->
+  <!-- INITIAL_GOLD_EUR_START -->
+  <script type="application/json" id="initialGoldEUR">
+  {"currency":"EUR","price_oz_24k":0,"updated_at":"—"}
+  </script>
+  <!-- INITIAL_GOLD_EUR_END -->
 
-<script src="goldpreis-euro.js" defer></script>
-<section class="card" style="margin-top:20px">
-<h2>Goldpreis aktuell – Entwicklung & Einflussfaktoren</h2>
-<p>
-Der Goldpreis heute in Euro wird maßgeblich vom internationalen Spotmarkt (XAU/USD), dem US-Dollar-Kurs,
-Inflationserwartungen sowie geopolitischen Risiken beeinflusst. Steigende Inflation, wirtschaftliche Unsicherheit
-oder Zinssenkungen führen häufig zu einem höheren Goldpreis. 
-Viele Anleger nutzen Gold als Absicherung gegen Krisen und Währungsabwertung.
-</p>
-<p>
-Der hier angezeigte Goldpreis pro Gramm und pro Feinunze basiert auf dem aktuellen Spotpreis und wird automatisch aktualisiert.
-</p>
-</section>
-<section class="card" style="margin-top:20px">
-<h2>Goldpreis Prognose – Wie entwickelt sich der Goldpreis?</h2>
-<p>
-Analysten beobachten insbesondere Inflation, Zinsentscheidungen der EZB und Fed sowie die globale Nachfrage
-nach physischem Gold. Eine schwächere Wirtschaft oder fallende Realzinsen können den Goldpreis in Euro weiter stützen.
-Langfristig gilt Gold als stabiler Wertspeicher.
-</p>
-<p>
-Weitere Analysen finden Sie in unserem <a href="/news/goldpreis-prognose-2026/">Goldpreis Prognose Artikel</a>.
-</p>
-</section>
+  <script src="goldpreis-euro.js" defer></script>
 
-  <details>
-<summary>Warum steigt der Goldpreis?</summary>
-<p>Der Goldpreis steigt häufig bei Inflation, wirtschaftlicher Unsicherheit oder geopolitischen Spannungen.</p>
-</details>
+  <section class="card" style="margin-top:20px">
+    <h2>Goldpreis aktuell: Einflussfaktoren</h2>
+    <p>
+      Der Goldpreis in Euro hängt u. a. von USD/EUR, Realzinsen, Inflationserwartungen und geopolitischen Risiken ab.
+      Steigende Zinsen können Gold belasten, während Unsicherheit die Nachfrage stützt.
+    </p>
+  </section>
 
-<details>
-<summary>Warum fällt der Goldpreis?</summary>
-<p>Ein starker US-Dollar oder steigende Zinsen können den Goldpreis belasten.</p>
-</details>
+  <section class="card" style="margin-top:20px">
+    <h2>FAQ</h2>
+    <details>
+      <summary>Was ist der Gold Spotpreis?</summary>
+      <p>Der Spotpreis ist der aktuelle Marktpreis für sofortige Lieferung von Gold und dient als Basis für die Berechnung.</p>
+    </details>
+    <details>
+      <summary>Wie berechnet man 21K oder 18K aus 24K?</summary>
+      <p>Formel: 24K Preis × (Karat ÷ 24). Beispiel: 21K = 24K × (21/24).</p>
+    </details>
+    <details>
+      <summary>Wie viel Gramm hat eine Feinunze?</summary>
+      <p>Eine Feinunze (troy ounce) entspricht 31,1034768 Gramm.</p>
+    </details>
+    <details>
+      <summary>Was bedeutet Aufgeld?</summary>
+      <p>Aufgeld ist der Aufpreis über dem Spotpreis (z. B. Prägung, Marge, Steuern oder Nachfrage).</p>
+    </details>
+    <details>
+      <summary>Ist jetzt ein guter Zeitpunkt Gold zu kaufen?</summary>
+      <p>Das hängt von Ihrer Strategie ab. Gold wird oft langfristig als Absicherung genutzt; kurzfristige Schwankungen sind möglich.</p>
+    </details>
+  </section>
 
-<details>
-<summary>Ist jetzt ein guter Zeitpunkt Gold zu kaufen?</summary>
-<p>Das hängt von Ihrer Anlagestrategie ab. Gold dient oft als langfristige Absicherung.</p>
-</details>
-  
-  
 </main>
 </body>
 </html>
