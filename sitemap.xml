@@ -187,6 +187,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
 </url>
+  <url>
+  <loc>https://marketapro.com/tools/goldpreis-euro/</loc>
+  <lastmod>2026-02-21</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.95</priority>
+</url>
 <url>
     <loc>https://marketapro.com/tools/gold-price-saudi/</loc>
     <lastmod>2026-02-21</lastmod>
