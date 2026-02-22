@@ -149,15 +149,17 @@
       `${WORKER_BASE}/api/gold?currency=${encodeURIComponent(cur)}`,
       { cache: "no-store" }
     );
-    if (!res.ok) {
-      // حاول قراءة رسالة الخطأ لتوضيحها
-      let details = "";
-      try {
-        const j = await res.json();
-        details = j?.status ? ` (status ${j.status})` : "";
-      } catch {}
-      throw new Error(`فشل الاتصال بمزود أسعار الذهب.${details}`);
-    }
+   if (!res.ok) {
+  const details = await res.text().catch(() => "");
+  return new Response(JSON.stringify({
+    error: "GoldAPI error",
+    status: res.status,
+    details
+  }), {
+    status: 502,
+    headers: { ...corsHeaders(), "Content-Type": "application/json" }
+  });
+}
     const data = await res.json();
     if (!data || typeof data.price_oz_24k !== "number") throw new Error("بيانات غير صالحة.");
     writeCache(cur, data);
