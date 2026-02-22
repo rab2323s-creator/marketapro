@@ -173,10 +173,11 @@
       const result = renderFromData(data, { cur, unit, karat, premium, note: cached ? "(من الكاش)" : "" });
       pushHistory(`${cur} • ${result.unitLabel} • ${karat}K = ${round2(result.karatPrice)} (Premium ${premium})`);
       showToast("تم التحديث ✅");
-    }catch(err){
-      showWarn("حدث خطأ أثناء جلب السعر.\nتفاصيل: " + (err?.message || err));
-      if($("priceOut")) $("priceOut").textContent = "—";
-    }
+  catch(err){
+  showWarn("حدث خطأ أثناء جلب السعر.\nتفاصيل: " + (err?.message || err));
+  // لا تمسح النتيجة: اترك السعر المبدئي/آخر كاش ظاهرًا
+  // (لو لا يوجد أي سعر سابق، سيبقى 'جارٍ التحديث…' أو آخر قيمة)
+}
   }
 
   // Events
