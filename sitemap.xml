@@ -122,7 +122,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
-
+<url>
+  <loc>https://marketapro.com/news/gulf-influencer-marketing-platform/</loc>
+  <lastmod>2026-02-28</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.95</priority>
+</url>
   <url>
     <loc>https://marketapro.com/news/usd-to-aed/</loc>
     <lastmod>2025-12-26</lastmod>
