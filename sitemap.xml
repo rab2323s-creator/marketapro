@@ -116,7 +116,29 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   </image:image>
 
 </url>
+<url>
+  <loc>https://marketapro.com/news/influencer-marketing-platforms-arab-world/</loc>
+  <lastmod>2026-03-14</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.90</priority>
 
+  <image:image>
+    <image:loc>https://marketapro.com/assets/influencer-marketing-platforms-arab-world-2026.jpg</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/assets/arab-influencer-platform-comparison-table-2026.jpg</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/assets/how-to-choose-influencer-marketing-platform-arab-world.jpg</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/assets/influencer-campaign-workflow-platforms-arab-region.jpg</image:loc>
+  </image:image>
+
+</url>
   <!-- مقالات العملات -->
   <url>
     <loc>https://marketapro.com/news/currency-converter-usd-egp-sar-eur-try/</loc>
