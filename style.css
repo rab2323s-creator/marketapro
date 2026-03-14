@@ -400,6 +400,14 @@ details{
   padding:12px;
 }
 summary{cursor:pointer;font-weight:950;color:var(--text)}
+a {
+  color: #1a73e8;      /* لون الرابط */
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #0b57d0;      /* يتغير اللون عند المرور بالفأرة */
+}
 
 /* =========================
    Footer
