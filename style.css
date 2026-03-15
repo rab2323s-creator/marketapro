@@ -513,6 +513,45 @@ article table tbody tr:last-child td{
 
 }
 /* =========================
+   Quick Answers Box
+========================= */
+
+.quick-answers{
+  margin:16px 0;
+  padding:18px;
+
+  border-radius:16px;
+
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.035),
+    rgba(255,255,255,.02)
+  );
+
+  border:1px solid var(--border);
+
+  box-shadow:var(--shadow);
+}
+
+.quick-answers h2{
+  margin-bottom:8px;
+  color:var(--text);
+}
+
+.quick-answers ul{
+  margin:0;
+  padding-inline-start:18px;
+}
+
+.quick-answers li{
+  margin:8px 0;
+  color:var(--muted);
+}
+
+.quick-answers strong{
+  color:var(--text);
+}
+/* =========================
    Footer
 ========================= */
 .footer{
