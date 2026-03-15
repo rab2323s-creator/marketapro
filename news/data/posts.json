@@ -11,17 +11,35 @@
     "reading": "5–7 دقائق",
     "toolUrl": "/tools/instagram-engagement-calculator/"
   },
-  {
-    "slug": "best-time-to-post-instagram",
-    "title": "أفضل وقت للنشر على إنستغرام: دليل عملي لزيادة التفاعل",
-    "description": "كيف تختار توقيت النشر حسب بلد جمهورك ونوع المحتوى، مع خطة اختبار 14 يوم لتثبيت أفضل توقيت.",
-    "date": "2025-12-25",
-    "category": "social",
-    "tags": ["instagram", "seo"],
-    "badges": ["إنستغرام", "SEO"],
-    "image": "/assets/og-best-time-instagram.jpg",
-    "reading": "5–7 دقائق",
-    "toolUrl": "/tools/best-time-to-post-instagram/"
+ {
+  "slug": "best-time-to-post-instagram",
+  "title": "أفضل وقت للنشر على إنستغرام 2026: متى تنشر الصور والستوري والريلز لزيادة التفاعل؟",
+  "description": "دليل عملي شامل لمعرفة أفضل وقت للنشر على إنستغرام في 2026، مع أفضل أيام النشر، أفضل وقت للريلز، جدول حسب الدول العربية، وخطة اختبار 14 يوم لتحديد التوقيت المثالي حسب جمهورك.",
+  "date": "2025-12-20",
+  "updated": "2026-03-15",
+  "category": "social",
+  "tags": [
+    "instagram",
+    "best-time-to-post",
+    "instagram-reels",
+    "instagram-insights",
+    "social-media",
+    "engagement",
+    "seo"
+  ],
+  "badges": [
+    "إنستغرام",
+    "سوشيال ميديا",
+    "SEO"
+  ],
+  "image": "/images/social-media/instagram/best-time-to-post-instagram-woman-analytics.jpg",
+  "imageAlt": "امرأة تستخدم هاتفها لتحليل أفضل وقت للنشر على إنستغرام باستخدام تطبيق تحليلات يوضح ساعات الذروة والتفاعل",
+  "reading": "6–8 دقائق",
+  "author": "علياء محمود المهيدب",
+  "authorTitle": "استشارية تسويق رقمي",
+  "featured": true,
+  "toolUrl": "/tools/best-time-to-post-instagram/",
+  "excerpt": "تعرف على أفضل أوقات النشر على إنستغرام للصور والريلز والستوري، وكيف تختار الوقت المثالي حسب بلد جمهورك ونوع المحتوى لتحقيق أعلى تفاعل ووصول."
   },
   {
   "slug": "gulf-influencer-marketing-platform",
