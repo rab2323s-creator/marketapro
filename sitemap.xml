@@ -80,12 +80,40 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   </url>
 
   <url>
-    <loc>https://marketapro.com/news/best-time-to-post-instagram/</loc>
-    <lastmod>2025-12-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
+  <loc>https://marketapro.com/news/best-time-to-post-instagram/</loc>
+  <lastmod>2026-03-15</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.90</priority>
 
+  <image:image>
+    <image:loc>https://marketapro.com/images/social-media/instagram/best-time-to-post-instagram-woman-analytics.jpg</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/images/social-media/instagram-best-engagement-times-heatmap-week.jpg</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/images/social-media/instagram/best-time-to-post-instagram-hours-engagement-chart.jpg</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/images/social-media/instagram/algorithm/instagram-algorithm-early-engagement-flow.jpg</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/images/social-media/instagram/best-time-to-post-instagram-reels-hours.jpg</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/images/social-media/instagram/content-types/best-time-post-instagram-by-content-type.jpg</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/images/social-media/instagram/insights/instagram-insights-audience-activity-best-post-time.jpg</image:loc>
+  </image:image>
+
+</url>
   <!-- مقال فيس بوك (Pillar Guide) -->
   <url>
     <loc>https://marketapro.com/news/best-time-to-post-facebook/</loc>
