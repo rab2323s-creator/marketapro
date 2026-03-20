@@ -115,6 +115,25 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
 </url>
  <url>
+  <loc>https://marketapro.com/news/لماذا-لا-تربح-من-السوشال-ميديا/</loc>
+  <lastmod>2026-03-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.95</priority>
+
+  <image:image>
+    <image:loc>https://marketapro.com/assets/articles/followers-without-revenue/followers-without-revenue-hero.webp</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/assets/articles/followers-without-revenue/attention-vs-intent.webp</image:loc>
+  </image:image>
+
+  <image:image>
+    <image:loc>https://marketapro.com/assets/articles/followers-without-revenue/trust-gap-creator-commerce.webp</image:loc>
+  </image:image>
+
+</url>
+ <url>
   <loc>https://marketapro.com/news/instagram-celebrity-earnings/</loc>
   <lastmod>2026-03-16</lastmod>
   <changefreq>yearly</changefreq>
