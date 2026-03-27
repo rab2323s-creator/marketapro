@@ -285,22 +285,30 @@
       }, 1100);
     });
 
-    $('resetBtn').addEventListener('click', ()=>{
-      $('username').value="";
-      $('followers').value="";
-      $('likesList').value="";
-      $('commentsList').value="";
-      $('goal').value="engagement";
-      $('confirmBox').style.display="none";
-      $('report').style.display="none";
-      setLoading(false);
-      clearError(); clearWarn();
-      setStep(1);
-      toast("تم المسح");
-      renderDynamicUsername("");
-      window.__reportText = "";
-      window.scrollTo({top:0, behavior:"smooth"});
-    });
+   $('resetBtn').addEventListener('click', ()=>{
+  $('username').value="";
+  $('followers').value="";
+  $('likesList').value="";
+  $('commentsList').value="";
+  $('goal').value="engagement";
+  $('confirmBox').style.display="none";
+  $('report').style.display="none";
+  setLoading(false);
+  clearError(); clearWarn();
+  setStep(1);
+  toast("تم المسح");
+  renderDynamicUsername("");
+  window.__reportText = "";
+
+  if ($('aiResult')) $('aiResult').textContent = "";
+  if ($('aiLoader')) $('aiLoader').style.display = "none";
+  if ($('aiAnalyzeBtn')) {
+    $('aiAnalyzeBtn').disabled = false;
+    $('aiAnalyzeBtn').textContent = "✨ تحليل ذكي AI";
+  }
+
+  window.scrollTo({top:0, behavior:"smooth"});
+});
 
     $('buildReportBtn').addEventListener('click', ()=>{
       clearError(); clearWarn();
@@ -407,3 +415,59 @@ ${pack.plan}
 
     renderDynamicUsername("");
   });
+const aiBtn = $('aiAnalyzeBtn');
+const aiResult = $('aiResult');
+const aiLoader = $('aiLoader');
+
+if (aiBtn) {
+  aiBtn.addEventListener('click', async () => {
+    try {
+      clearError();
+
+      if (!$('report') || $('report').style.display === 'none') {
+        showError("أنشئ التقرير أولًا ثم اضغط على التحليل الذكي.");
+        return;
+      }
+
+      aiResult.textContent = "";
+      aiLoader.style.display = "flex";
+      aiBtn.disabled = true;
+      aiBtn.textContent = "جارٍ التحليل...";
+
+      const payload = {
+        followers: $('kFollowers')?.textContent?.trim() || "",
+        likes: $('kAvgLikes')?.textContent?.trim() || "",
+        comments: $('kAvgComments')?.textContent?.trim() || "",
+        er: $('kER')?.textContent?.trim() || "",
+        type: $('acctType')?.value || ""
+      };
+
+      const res = await fetch("https://workers-playground-dry-wind-c018.rab2323s.workers.dev/api/ai", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(
+          typeof data?.details === "string"
+            ? data.details
+            : data?.error || "فشل الاتصال بالتحليل الذكي"
+        );
+      }
+
+      aiResult.textContent = data?.text || "لم يتم استلام نتيجة.";
+      toast("تم إنشاء التحليل الذكي ✅");
+    } catch (err) {
+      aiResult.textContent = "حدث خطأ في التحليل الذكي: " + err.message;
+    } finally {
+      aiLoader.style.display = "none";
+      aiBtn.disabled = false;
+      aiBtn.textContent = "✨ تحليل ذكي AI";
+    }
+  });
+}
