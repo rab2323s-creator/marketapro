@@ -1,0 +1,508 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Learn Marketing | تعلّم التسويق الرقمي والذكاء الاصطناعي — MarketAPro</title>
+
+  <meta name="description" content="قسم Learn من MarketAPro: أدلة احترافية لتعلّم التسويق الرقمي، إنستغرام، تحليل الحسابات، الذكاء الاصطناعي، التفاعل، النمو، واستراتيجية المحتوى خطوة بخطوة." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://marketapro.com/learn/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Learn Marketing | تعلّم التسويق الرقمي والذكاء الاصطناعي — MarketAPro" />
+  <meta property="og:description" content="مركز تعليمي شامل في التسويق الرقمي: إنستغرام، السوشيال ميديا، الذكاء الاصطناعي، تحليل الحسابات، وزيادة التفاعل والنمو." />
+  <meta property="og:url" content="https://marketapro.com/learn/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://marketapro.com/assets/learn-marketing-marketapro.jpg" />
+  <meta property="og:image:alt" content="قسم Learn من MarketAPro لتعلّم التسويق الرقمي وتحليل حسابات إنستغرام والذكاء الاصطناعي" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Learn Marketing | تعلّم التسويق الرقمي والذكاء الاصطناعي — MarketAPro" />
+  <meta name="twitter:description" content="أدلة قوية لتعلّم التسويق الرقمي، تحليل حسابات إنستغرام، واستراتيجيات النمو والتفاعل." />
+  <meta name="twitter:image" content="https://marketapro.com/assets/learn-marketing-marketapro.jpg" />
+  <meta name="twitter:image:alt" content="قسم Learn من MarketAPro لتعلّم التسويق الرقمي وتحليل حسابات إنستغرام والذكاء الاصطناعي" />
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    .learn-hero{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    @media(max-width:980px){.learn-hero{grid-template-columns:1fr}}
+
+    .hero-panel{
+      padding:18px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.12);
+      background:
+        radial-gradient(circle at top right, rgba(56,189,248,.18), transparent 38%),
+        linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    }
+
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(56,189,248,.28);
+      background:rgba(56,189,248,.08);
+      color:#bfefff;font-weight:900;font-size:12px
+    }
+
+    .hero-title{
+      margin:12px 0 10px;
+      font-size:34px;line-height:1.35
+    }
+
+    .hero-desc{
+      color:rgba(255,255,255,.78);
+      line-height:2;
+      font-size:15px;
+      margin:0
+    }
+
+    .hero-actions{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:16px
+    }
+
+    .hero-points{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px
+    }
+    @media(max-width:680px){.hero-points{grid-template-columns:1fr}}
+
+    .point{
+      padding:12px;border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.02)
+    }
+    .point strong{display:block;font-size:15px}
+    .point span{display:block;color:rgba(255,255,255,.72);font-size:13px;line-height:1.8;margin-top:4px}
+
+    .learn-aside{
+      display:flex;flex-direction:column;gap:12px
+    }
+
+    .feature-card{
+      padding:16px;border-radius:22px;
+      border:1px solid rgba(56,189,248,.22);
+      background:
+        linear-gradient(180deg, rgba(56,189,248,.11), rgba(56,189,248,.05)),
+        rgba(255,255,255,.02);
+    }
+
+    .feature-card h2{
+      margin:10px 0 8px;font-size:22px;line-height:1.5
+    }
+
+    .feature-card p{
+      margin:0;color:rgba(255,255,255,.78);line-height:1.9;font-size:14px
+    }
+
+    .mini-stats{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px
+    }
+
+    .mini-stat{
+      padding:12px;border-radius:16px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.03)
+    }
+    .mini-stat strong{display:block;font-size:18px}
+    .mini-stat span{display:block;color:rgba(255,255,255,.72);font-size:12px;margin-top:4px}
+
+    .cards-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:14px
+    }
+    @media(max-width:980px){.cards-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:680px){.cards-grid{grid-template-columns:1fr}}
+
+    .learn-card{
+      padding:16px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.02);
+      display:flex;flex-direction:column;gap:10px
+    }
+
+    .learn-card.featured{
+      grid-column:span 3;
+      border:1px solid rgba(56,189,248,.24);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,.16), transparent 35%),
+        linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+    }
+    @media(max-width:980px){.learn-card.featured{grid-column:span 2}}
+    @media(max-width:680px){.learn-card.featured{grid-column:span 1}}
+
+    .card-top{
+      display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap
+    }
+
+    .tag{
+      display:inline-block;
+      padding:6px 10px;border-radius:999px;
+      background:rgba(6,182,212,.14);
+      border:1px solid rgba(6,182,212,.26);
+      color:#bff6ff;font-weight:900;font-size:12px
+    }
+
+    .learn-card h3{
+      margin:0;font-size:22px;line-height:1.5
+    }
+
+    .learn-card p{
+      margin:0;color:rgba(255,255,255,.76);line-height:1.95;font-size:14px
+    }
+
+    .card-links{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:auto
+    }
+
+    .topics{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px
+    }
+    @media(max-width:980px){.topics{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:680px){.topics{grid-template-columns:1fr}}
+
+    .topic-box{
+      padding:16px;border-radius:18px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.02)
+    }
+    .topic-box h3{margin:0 0 8px;font-size:18px}
+    .topic-box ul{margin:0;padding-right:18px;line-height:1.95;color:rgba(255,255,255,.78)}
+
+    .cta-wide{
+      margin-top:14px;
+      display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;
+      padding:16px;border-radius:20px;border:1px solid rgba(56,189,248,.24);
+      background:linear-gradient(180deg, rgba(56,189,248,.10), rgba(6,182,212,.04));
+    }
+    .cta-wide strong{display:block;font-size:18px}
+    .cta-wide span{display:block;color:rgba(255,255,255,.75);font-size:14px;line-height:1.8;margin-top:6px}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://marketapro.com/#organization",
+        "name":"MarketAPro",
+        "url":"https://marketapro.com/",
+        "description":"أدوات تسويق رقمية مجانية ومقالات عملية لتحسين الأداء وزيادة التفاعل."
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://marketapro.com/#website",
+        "url":"https://marketapro.com/",
+        "name":"MarketAPro",
+        "publisher":{"@id":"https://marketapro.com/#organization"},
+        "inLanguage":"ar"
+      },
+      {
+        "@type":"CollectionPage",
+        "@id":"https://marketapro.com/learn/#webpage",
+        "url":"https://marketapro.com/learn/",
+        "name":"Learn Marketing | تعلّم التسويق الرقمي والذكاء الاصطناعي — MarketAPro",
+        "description":"مركز تعليمي شامل لتعلّم التسويق الرقمي، إنستغرام، تحليل الحسابات، التفاعل، والذكاء الاصطناعي.",
+        "isPartOf":{"@id":"https://marketapro.com/#website"},
+        "about":{"@id":"https://marketapro.com/#organization"},
+        "inLanguage":"ar"
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://marketapro.com/learn/#breadcrumb",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"الرئيسية",
+            "item":"https://marketapro.com/"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Learn",
+            "item":"https://marketapro.com/learn/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="العودة للرئيسية">
+      <div class="brand-badge" aria-hidden="true"></div>
+      <div>
+        <p class="brand-title">MarketAPro</p>
+        <p class="brand-sub">Learn Marketing</p>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="/">الرئيسية</a>
+      <a href="/tools/">الأدوات</a>
+      <a href="/learn/" class="active">Learn</a>
+      <a href="/news/">المقالات</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container section">
+
+  <section class="card">
+    <div class="learn-hero">
+      <div class="hero-panel">
+        <span class="eyebrow">Learn • MarketingAPro Guides</span>
+        <h1 class="hero-title">تعلّم التسويق الرقمي والذكاء الاصطناعي خطوة بخطوة</h1>
+        <p class="hero-desc">
+          هذا القسم مخصص للأدلة التعليمية العميقة في التسويق الرقمي، إنستغرام، تحليل الحسابات،
+          بناء استراتيجية المحتوى، تحسين التفاعل، وزيادة النمو والمبيعات.
+          ستجد هنا صفحات تعليمية طويلة المدى تساعدك على الفهم، لا مجرد القراءة السريعة.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="/learn/instagram-profile-analyzer-ai/" title="تحليل حساب إنستغرام بالذكاء الاصطناعي">ابدأ بأهم دليل</a>
+          <a class="btn secondary" href="/tools/" title="أدوات MarketAPro">استكشف الأدوات</a>
+        </div>
+
+        <div class="hero-points">
+          <div class="point">
+            <strong>أدلة عملية</strong>
+            <span>شرح واضح يربط بين الأرقام والخطوات التنفيذية.</span>
+          </div>
+          <div class="point">
+            <strong>محتوى Evergreen</strong>
+            <span>صفحات مصممة لتخدم البحث طويل المدى وتدعم ظهور الأدوات.</span>
+          </div>
+          <div class="point">
+            <strong>تركيز على إنستغرام</strong>
+            <span>تحليل الحسابات، التفاعل، التوقيت، والمحتوى.</span>
+          </div>
+          <div class="point">
+            <strong>دمج الذكاء الاصطناعي</strong>
+            <span>تطبيقات AI في التحليل، التشخيص، وبناء الخطط التسويقية.</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="learn-aside">
+        <div class="feature-card">
+          <span class="tag">Featured Guide</span>
+          <h2>تحليل حساب إنستغرام بالذكاء الاصطناعي</h2>
+          <p>
+            أقوى دليل في القسم لشرح كيف تفحص التفاعل، البايو، نوع المحتوى،
+            وفرص النمو والمبيعات باستخدام التحليل الذكي.
+          </p>
+
+          <div class="mini-stats">
+            <div class="mini-stat">
+              <strong>AI</strong>
+              <span>تحليل ذكي وتشخيص عملي</span>
+            </div>
+            <div class="mini-stat">
+              <strong>Instagram</strong>
+              <span>فحص بايو + تفاعل + محتوى</span>
+            </div>
+          </div>
+
+          <div class="card-links" style="margin-top:12px">
+            <a class="btn primary" href="/learn/instagram-profile-analyzer-ai/" title="تحليل حساب إنستغرام بالذكاء الاصطناعي">اقرأ الدليل</a>
+            <a class="btn secondary" href="/tools/instagram-profile-analyzer/" title="أداة تحليل حساب إنستغرام">جرّب الأداة</a>
+          </div>
+        </div>
+
+        <div class="mini">
+          <label style="display:block;color:rgba(255,255,255,.84);font-weight:1000;margin-bottom:6px">لماذا قسم Learn؟</label>
+          <p class="note2" style="margin:0">
+            لأن بعض المواضيع ليست أخبارًا، بل تحتاج إلى صفحات مرجعية تعليمية
+            تدعم الترتيب الطويل المدى وتخدم نية الباحث بشكل أوضح.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:24px">أهم الأدلة التعليمية</h2>
+    <p class="note" style="margin-top:0">
+      هذه البطاقات تمثل البداية الأقوى داخل القسم، ويمكنك التوسع لاحقًا بإضافة أدلة جديدة بنفس البنية.
+    </p>
+
+    <div class="cards-grid">
+
+      <!-- البطاقة الأولى -->
+      <article class="learn-card featured">
+        <div class="card-top">
+          <span class="tag">Top Guide</span>
+        </div>
+        <h3>تحليل حساب إنستغرام بالذكاء الاصطناعي 2026</h3>
+        <p>
+          دليل شامل يشرح كيف تفحص البايو، معدل التفاعل، نوع المحتوى، جودة الحساب،
+          وفرص النمو والتعاون والمبيعات. هذه البطاقة هي الأولى لأنها تمثل أقوى صفحة
+          تعليمية داعمة لأداة تحليل حساب إنستغرام.
+        </p>
+        <div class="card-links">
+          <a class="btn primary" href="/learn/instagram-profile-analyzer-ai/" title="تحليل حساب إنستغرام بالذكاء الاصطناعي">اقرأ الدليل</a>
+          <a class="btn secondary" href="/tools/instagram-profile-analyzer/" title="أداة تحليل حساب إنستغرام">جرّب الأداة</a>
+        </div>
+      </article>
+
+      <article class="learn-card">
+        <span class="tag">Instagram</span>
+        <h3>أفضل وقت للنشر على إنستغرام</h3>
+        <p>
+          تعلّم كيف تختار أفضل أيام وساعات النشر حسب نشاط الجمهور ونوع المحتوى
+          لزيادة الوصول والتفاعل.
+        </p>
+        <div class="card-links">
+          <a class="btn primary" href="/news/best-time-to-post-instagram/" title="أفضل وقت للنشر على إنستغرام">اقرأ الدليل</a>
+          <a class="btn secondary" href="/tools/best-time-to-post-instagram/" title="أداة أفضل وقت للنشر">جرّب الأداة</a>
+        </div>
+      </article>
+
+      <article class="learn-card">
+        <span class="tag">Engagement</span>
+        <h3>معدل التفاعل على إنستغرام</h3>
+        <p>
+          فهم معنى Engagement Rate، طريقة الحساب، ومتى يكون الرقم جيدًا فعلًا
+          حسب نوع الحساب.
+        </p>
+        <div class="card-links">
+          <a class="btn primary" href="/tools/instagram-engagement-calculator/" title="حاسبة معدل التفاعل">ابدأ الآن</a>
+        </div>
+      </article>
+
+      <article class="learn-card">
+        <span class="tag">Content</span>
+        <h3>استراتيجية المحتوى على إنستغرام</h3>
+        <p>
+          كيف تختار أنواع المحتوى، تبني هوية أوضح، وتحوّل المنشورات المتفرقة إلى خطة متماسكة.
+        </p>
+        <div class="card-links">
+          <a class="btn primary" href="/tools/instagram-content-ideas/" title="أفكار محتوى لإنستغرام">استكشف</a>
+        </div>
+      </article>
+
+      <article class="learn-card">
+        <span class="tag">Growth</span>
+        <h3>كيف تنمّي حسابك على إنستغرام؟</h3>
+        <p>
+          دليل لفهم النمو العضوي وتحويل الحساب من مجرد منشورات إلى مشروع له اتجاه واضح.
+        </p>
+        <div class="card-links">
+          <a class="btn primary" href="/tools/instagram-profile-analyzer/" title="تحليل حساب إنستغرام">اكتشف أكثر</a>
+        </div>
+      </article>
+
+      <article class="learn-card">
+        <span class="tag">AI Marketing</span>
+        <h3>الذكاء الاصطناعي في التسويق</h3>
+        <p>
+          استخدامات عملية للذكاء الاصطناعي في تحليل الأداء، كتابة المحتوى، وتسريع اتخاذ القرار.
+        </p>
+        <div class="card-links">
+          <a class="btn primary" href="/learn/instagram-profile-analyzer-ai/" title="التحليل الذكي AI">اقرأ الآن</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:24px">محاور التعلّم داخل القسم</h2>
+    <div class="topics">
+      <div class="topic-box">
+        <h3>Instagram Marketing</h3>
+        <ul>
+          <li>تحليل الحسابات</li>
+          <li>البايو والهوية</li>
+          <li>معدل التفاعل</li>
+          <li>التوقيت والمحتوى</li>
+        </ul>
+      </div>
+
+      <div class="topic-box">
+        <h3>Social Media</h3>
+        <ul>
+          <li>التفاعل الحقيقي</li>
+          <li>استراتيجية المحتوى</li>
+          <li>بناء البراند</li>
+          <li>تحويل المتابعين إلى عملاء</li>
+        </ul>
+      </div>
+
+      <div class="topic-box">
+        <h3>AI in Marketing</h3>
+        <ul>
+          <li>تحليل ذكي</li>
+          <li>تشخيص المشكلات</li>
+          <li>اقتراحات قابلة للتنفيذ</li>
+          <li>خطط نمو أسرع</li>
+        </ul>
+      </div>
+
+      <div class="topic-box">
+        <h3>Performance</h3>
+        <ul>
+          <li>فهم الأرقام</li>
+          <li>تحسين التحويل</li>
+          <li>مراجعة الأداء</li>
+          <li>القرارات التسويقية</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta-wide">
+      <div>
+        <strong>ابدأ بأقوى صفحة داخل Learn</strong>
+        <span>إذا كنت تريد صفحة واحدة تقود هذا القسم، فابدأ بدليل تحليل حساب إنستغرام بالذكاء الاصطناعي لأنه يخدم البحث والأداة معًا.</span>
+      </div>
+      <a class="btn primary" href="/learn/instagram-profile-analyzer-ai/" title="تحليل حساب إنستغرام بالذكاء الاصطناعي">افتح الدليل</a>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:22px">روابط مفيدة</h2>
+    <ul style="margin:0;padding:0 18px;line-height:1.95">
+      <li><a href="/tools/instagram-profile-analyzer/" title="أداة تحليل حساب إنستغرام">أداة تحليل حساب إنستغرام</a></li>
+      <li><a href="/tools/instagram-engagement-calculator/" title="حاسبة معدل التفاعل على إنستغرام">حاسبة معدل التفاعل على إنستغرام</a></li>
+      <li><a href="/tools/best-time-to-post-instagram/" title="أداة أفضل وقت للنشر على إنستغرام">أداة أفضل وقت للنشر على إنستغرام</a></li>
+      <li><a href="/news/best-time-to-post-instagram/" title="أفضل وقت للنشر على إنستغرام">مقال أفضل وقت للنشر على إنستغرام</a></li>
+      <li><a href="/news/best-time-to-post-facebook/" title="أفضل وقت للنشر على فيسبوك">مقال أفضل وقت للنشر على فيسبوك</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © 2026 MarketAPro
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:18px">روابط سريعة</h2>
+    <div class="pill-row" style="margin-top:6px">
+      <a class="pill" href="/tools/instagram-profile-analyzer/">تحليل حساب إنستغرام</a>
+      <a class="pill" href="/tools/instagram-engagement-calculator/">حاسبة معدل التفاعل</a>
+      <a class="pill" href="/tools/best-time-to-post-instagram/">أفضل وقت للنشر</a>
+      <a class="pill" href="/learn/">Learn</a>
+      <a class="pill" href="/news/">المقالات</a>
+      <a class="pill" href="/about/">من نحن</a>
+      <a class="pill" href="/contact/">تواصل معنا</a>
+      <a class="pill" href="/privacy-policy/">الخصوصية</a>
+      <a class="pill" href="/terms/">الشروط</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
