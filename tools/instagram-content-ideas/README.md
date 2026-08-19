@@ -1,115 +1,62 @@
-# MarketAPro — Instagram AI Content Ideas
+# MarketAPro — Instagram Content SEO Pro v3
 
-نسخة كاملة مستقلة وجاهزة لـ GitHub Pages + Cloudflare Workers.
+هذه النسخة مصممة لتتوافق بصريًا وبنيويًا مع أدوات MarketAPro الحالية، وتستفيد من العناصر الموجودة في صفحة تحليل حساب إنستغرام الناجحة: H1/H2 واضحان، Breadcrumbs، خطوات، نموذج مباشر، محتوى SEO ثابت، FAQ وروابط داخلية.
+
+## عنوان SEO المعتمد
+
+```html
+<title>مولد محتوى انستقرام بالذكاء الاصطناعي مجانًا — MarketAPro</title>
+```
+
+## H1 المعتمد
+
+```html
+<h1>مولد محتوى انستقرام بالذكاء الاصطناعي مجانًا</h1>
+```
+
+## H2 الداعم
+
+```html
+<h2>أنشئ أفكار بوستات وريلز وستوري + Hook وكابشن وCTA وخطة محتوى 7 أيام</h2>
+```
 
 ## الملفات
 
-- `index.html` — الصفحة، SEO، Schema، FAQ والواجهة.
-- `instagram-content-ideas.css` — التصميم الكامل.
-- `instagram-content-ideas.js` — الواجهة، الاتصال بالـAI، rendering الآمن، fallback، النسخ والتنزيل.
-- `worker.js` — Cloudflare Worker للاتصال بـ OpenAI API.
+- `index.html`
+- `instagram-content-ideas.js`
+- `worker.js` (نسخة Cloudflare Worker v2.1 الحالية)
 
-## 1) GitHub Pages
+الصفحة تعتمد على ملف موقعك الحالي:
 
-ضع هذه الملفات الثلاثة في مجلد الصفحة:
+```html
+<link rel="stylesheet" href="/style.css">
+```
+
+لذلك لن تكسر هوية MarketAPro.
+
+## النشر على GitHub
+
+ضع:
 
 ```text
-/tools/instagram-content-ideas/
-  index.html
-  instagram-content-ideas.css
-  instagram-content-ideas.js
+/tools/instagram-content-ideas/index.html
+/tools/instagram-content-ideas/instagram-content-ideas.js
 ```
 
-إذا كان موقعك يستخدم نظام مسارات مختلفًا، عدّل الروابط داخل `index.html`.
+## Cloudflare
 
-## 2) Cloudflare Worker
+إذا كان Worker v2.1 عندك يعمل، لا تحتاج تغييره. وضعت `worker.js` داخل الحزمة فقط كنسخة مرجعية كاملة.
 
-افتح Worker:
+## بعد النشر
 
-`marketapro-content-ai`
+1. تأكد أن canonical هو URL الحقيقي.
+2. أنشئ صورة:
+   `/assets/og-instagram-content-ideas.jpg`
+3. أضف URL إلى sitemap.
+4. اطلب إعادة الفهرسة من Google Search Console.
+5. اربط الأداة من صفحة `/tools/` ومن أداة تحليل الحساب ومن مقالات السوشيال.
+6. لا تغيّر Title/H1 باستمرار؛ اترك Google يعيد الزحف ويجمع بيانات.
 
-ثم `Edit code` واستبدل الكود بالكامل بمحتوى `worker.js` ثم Deploy.
+## ملاحظة
 
-## 3) OpenAI Secret
-
-داخل Cloudflare:
-
-`Worker > Settings > Variables and Secrets > Add`
-
-أضف Secret:
-
-```text
-Name: OPENAI_API_KEY
-Value: sk-...
-```
-
-لا تضع المفتاح في GitHub أو `instagram-content-ideas.js`.
-
-## 4) متغيرات Cloudflare الاختيارية
-
-### OPENAI_MODEL
-
-يمكنك إضافة Text variable:
-
-```text
-OPENAI_MODEL = gpt-5-mini
-```
-
-إذا لم تضفه، الكود يستخدم `gpt-5-mini` افتراضيًا.
-
-### ALLOWED_ORIGINS
-
-للتجربة، الكود يعمل حتى بدون هذا المتغير.
-
-للإنتاج، أضف Text variable:
-
-```text
-ALLOWED_ORIGINS = https://marketapro.com,https://www.marketapro.com
-```
-
-إذا كنت تختبر مباشرة من github.io، أضف أصل GitHub Pages أيضًا مفصولًا بفاصلة.
-
-## 5) رابط الـWorker في JavaScript
-
-داخل `instagram-content-ideas.js` يوجد:
-
-```js
-const AI_ENDPOINT = "https://marketapro-content-ai.rab2323s.workers.dev";
-```
-
-إذا تغيّر رابط Worker، غيّر هذا السطر فقط.
-
-## 6) نقاط أمان مهمة
-
-- الـAPI key يبقى Secret داخل Cloudflare.
-- مخرجات AI لا تُحقن باستخدام `innerHTML`.
-- المدخلات مقيدة بالطول في الواجهة والـWorker.
-- Worker لا يعرض تفاصيل خطأ OpenAI الحساسة للمستخدم.
-- يوجد Fallback محلي إذا فشل AI.
-- يفضل لاحقًا إضافة Cloudflare Rate Limiting وTurnstile إذا زاد الاستخدام العام.
-
-## 7) SEO قبل النشر
-
-تحقق من:
-
-- الـcanonical:
-  `https://marketapro.com/tools/instagram-content-ideas/`
-- صورة Open Graph:
-  `https://marketapro.com/assets/og-instagram-content-ideas.jpg`
-- إضافة الصفحة إلى sitemap.xml.
-- ربط الصفحة داخليًا من `/tools/` ومقالات السوشيال.
-- إرسال الـURL إلى Google Search Console بعد النشر.
-
-## 8) الاختبار
-
-جرّب بيانات حقيقية في الصفحة. إذا ظهر Badge:
-
-`AI`
-
-فالـWorker يعمل.
-
-إذا ظهر:
-
-`FALLBACK`
-
-فالواجهة شغالة لكن الاتصال بالـAI فشل، ويمكن مراجعة Cloudflare Observability logs.
+Meta keywords غير مضافة عمدًا؛ Google لا يستخدمها لترتيب نتائج البحث. التركيز هنا على Title/H1، المحتوى المفيد، الروابط الداخلية، Schema وتجربة الأداة.

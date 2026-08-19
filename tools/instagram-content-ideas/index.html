@@ -1,122 +1,287 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1020">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>مولّد أفكار محتوى إنستغرام بالذكاء الاصطناعي | MarketAPro</title>
-  <meta name="description" content="مولّد أفكار محتوى إنستغرام بالذكاء الاصطناعي: أفكار بوستات وريلز وستوري مخصصة حسب نشاطك وجمهورك وهدفك، مع Hook وسكريبت وCaption وCTA وخطة 7 أيام.">
-  <link rel="canonical" href="https://marketapro.com/tools/instagram-content-ideas/">
+  <title>مولد محتوى انستقرام بالذكاء الاصطناعي مجانًا — MarketAPro</title>
+  <meta name="description" content="مولد محتوى انستقرام بالذكاء الاصطناعي مجانًا: أنشئ أفكار بوستات وريلز وستوري مخصصة حسب نشاطك وجمهورك، مع Hook وكابشن وCTA وخطة محتوى 7 أيام." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://marketapro.com/tools/instagram-content-ideas/" />
 
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ar_AR">
-  <meta property="og:site_name" content="MarketAPro">
-  <meta property="og:title" content="مولّد أفكار محتوى إنستغرام بالذكاء الاصطناعي | MarketAPro">
-  <meta property="og:description" content="ولّد أفكار بوستات وريلز وستوري مخصصة مع Hook وسكريبت وCaption وCTA وخطة محتوى 7 أيام.">
-  <meta property="og:url" content="https://marketapro.com/tools/instagram-content-ideas/">
-  <meta property="og:image" content="https://marketapro.com/assets/og-instagram-content-ideas.jpg">
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:site_name" content="MarketAPro" />
+  <meta property="og:title" content="مولد محتوى انستقرام بالذكاء الاصطناعي مجانًا — MarketAPro" />
+  <meta property="og:description" content="أنشئ أفكار بوستات وريلز وستوري مخصصة بالذكاء الاصطناعي مع Hook وكابشن وCTA وخطة محتوى أسبوعية." />
+  <meta property="og:url" content="https://marketapro.com/tools/instagram-content-ideas/" />
+  <meta property="og:image" content="https://marketapro.com/assets/og-instagram-content-ideas.jpg" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="مولّد أفكار محتوى إنستغرام بالذكاء الاصطناعي">
-  <meta name="twitter:description" content="أفكار محتوى مخصصة لإنستغرام حسب نشاطك وجمهورك وهدفك.">
-  <meta name="twitter:image" content="https://marketapro.com/assets/og-instagram-content-ideas.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="مولد محتوى انستقرام بالذكاء الاصطناعي مجانًا" />
+  <meta name="twitter:description" content="أفكار بوستات وريلز وستوري مخصصة حسب نشاطك وجمهورك وهدفك." />
+  <meta name="twitter:image" content="https://marketapro.com/assets/og-instagram-content-ideas.jpg" />
 
-  <link rel="stylesheet" href="./instagram-content-ideas.css">
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    /* ===== Local styles: مصممة لتكمل style.css بدون تغيير هوية الموقع ===== */
+    .page-wrap{margin-top:16px}
+    .tool-head{display:flex;flex-direction:column;gap:10px}
+    .subtle{color:rgba(255,255,255,.75)}
+    .breadcrumbs{margin-top:6px;font-size:13px;color:rgba(255,255,255,.7)}
+    .breadcrumbs a{color:rgba(255,255,255,.88);text-decoration:underline;text-decoration-color:rgba(255,255,255,.25)}
+    .breadcrumbs a:hover{text-decoration-color:rgba(56,189,248,.55)}
+
+    .ai-kicker{
+      display:inline-flex;align-items:center;gap:7px;width:max-content;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(56,189,248,.22);
+      background:rgba(56,189,248,.08);
+      color:#bff6ff;font-weight:1000;font-size:11px;letter-spacing:.4px
+    }
+    .ai-dot{width:7px;height:7px;border-radius:99px;background:#38bdf8;box-shadow:0 0 15px rgba(56,189,248,.9)}
+
+    .tool-intro{margin:8px 0 0;color:rgba(255,255,255,.74);font-size:14px;line-height:1.95;max-width:920px}
+    .tool-intro strong{color:#fff}
+
+    .steps{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .step{
+      padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.02);color:rgba(255,255,255,.68);
+      font-weight:900;font-size:12px
+    }
+    .step.on{color:#00131a;border:0;background:linear-gradient(135deg,#06b6d4,#38bdf8)}
+
+    .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+    @media(max-width:900px){.grid2{grid-template-columns:1fr}}
+    .wide{grid-column:1/-1}
+    @media(max-width:900px){.wide{grid-column:auto}}
+
+    .mini{
+      padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.02)
+    }
+    .mini label{display:block;color:rgba(255,255,255,.86);font-weight:900;margin-bottom:6px;font-size:13px}
+    .mini label small{font-weight:700;color:rgba(255,255,255,.53)}
+    .mini input,.mini select,.mini textarea{
+      width:100%;padding:12px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.025);color:#e8f0ff;outline:none
+    }
+    .mini textarea{resize:vertical;min-height:92px}
+    .mini input:focus,.mini select:focus,.mini textarea:focus{
+      border-color:rgba(56,189,248,.65);box-shadow:0 0 0 3px rgba(56,189,248,.08)
+    }
+    .note2{color:rgba(255,255,255,.68);font-size:13px;margin:8px 0 0;line-height:1.9}
+
+    .quick-examples{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+    .example-chip{
+      border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.025);
+      color:rgba(255,255,255,.78);padding:7px 10px;border-radius:999px;
+      font-size:11px;font-weight:900;cursor:pointer
+    }
+    .example-chip:hover{border-color:rgba(56,189,248,.35);color:#dff9ff}
+
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 14px;border-radius:14px;font-weight:900;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);color:#fff;cursor:pointer;
+      transition:transform .12s ease,filter .12s ease,border-color .12s ease
+    }
+    .btn.primary{border:0;background:linear-gradient(135deg,#06b6d4,#38bdf8);color:#00131a}
+    .btn.secondary{background:transparent}
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.03)}
+    .btn:disabled{opacity:.55;cursor:not-allowed;transform:none}
+    .badge{
+      display:inline-block;padding:6px 10px;border-radius:999px;
+      background:rgba(6,182,212,.11);border:1px solid rgba(6,182,212,.22);
+      color:#bff6ff;font-weight:900;font-size:11px
+    }
+
+    .loader{
+      display:none;align-items:center;gap:11px;margin-top:12px;
+      padding:13px;border-radius:16px;border:1px solid rgba(56,189,248,.20);
+      background:linear-gradient(180deg,rgba(56,189,248,.07),rgba(6,182,212,.03))
+    }
+    .dot{width:8px;height:8px;border-radius:99px;background:rgba(56,189,248,.95);animation:b .9s infinite alternate}
+    .dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}
+    @keyframes b{from{opacity:.3;transform:translateY(0)}to{opacity:1;transform:translateY(-4px)}}
+
+    .debug{
+      display:none;margin-top:12px;border:1px solid rgba(239,68,68,.42);
+      background:rgba(239,68,68,.07);padding:12px;border-radius:14px;
+      color:#ffd5d5;font-weight:800;font-size:13px;white-space:pre-wrap
+    }
+
+    .result-wrap{display:none;margin-top:14px}
+    .result-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start}
+    .result-title{margin:0 0 4px}
+    .mode-badge{
+      display:inline-flex;padding:5px 8px;border-radius:999px;font-weight:1000;font-size:10px;
+      border:1px solid rgba(34,197,94,.25);background:rgba(34,197,94,.08);color:#b7f7ca
+    }
+    .mode-badge.fallback{border-color:rgba(250,204,21,.3);background:rgba(250,204,21,.08);color:#ffe9a6}
+
+    .summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+    @media(max-width:980px){.summary-grid{grid-template-columns:1fr}}
+    .summary-card{
+      position:relative;padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.11);
+      background:rgba(255,255,255,.02)
+    }
+    .summary-card>strong{display:block;font-size:12px;color:#bff6ff}
+    .summary-card p{margin:8px 0 26px;color:rgba(255,255,255,.78);line-height:1.85}
+    .copy-mini{
+      position:absolute;inset-inline-end:12px;bottom:10px;border:0;background:transparent;
+      color:rgba(255,255,255,.6);font-size:11px;font-weight:900;cursor:pointer
+    }
+
+    .plan-strip{
+      display:grid;grid-template-columns:repeat(7,minmax(140px,1fr));gap:8px;
+      overflow-x:auto;margin-top:12px;padding-bottom:3px
+    }
+    .day-card{
+      min-width:140px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.018)
+    }
+    .day-card strong{display:block;color:#bff6ff;font-size:11px}
+    .day-card b{display:block;margin:4px 0;font-size:13px}
+    .day-card p{margin:0;color:rgba(255,255,255,.64);font-size:11px;line-height:1.65}
+
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.09)}
+    .tab{
+      border:1px solid rgba(255,255,255,.10);background:transparent;color:rgba(255,255,255,.7);
+      padding:9px 12px;border-radius:12px;font-weight:900;cursor:pointer
+    }
+    .tab.on{background:rgba(56,189,248,.10);border-color:rgba(56,189,248,.27);color:#dff9ff}
+    .tab span{font-size:10px;margin-inline-start:4px;color:#93ecff}
+    .tab-panel{margin-top:12px}
+
+    .ideas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    @media(max-width:900px){.ideas-grid{grid-template-columns:1fr}}
+    .idea-card{
+      overflow:hidden;border-radius:17px;border:1px solid rgba(255,255,255,.11);
+      background:rgba(255,255,255,.02)
+    }
+    .idea-main{padding:14px}
+    .idea-meta{display:flex;gap:7px;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .idea-type,.idea-angle{padding:4px 7px;border-radius:999px;font-weight:900;font-size:10px}
+    .idea-type{background:rgba(6,182,212,.11);color:#bff6ff}
+    .idea-angle{background:rgba(255,255,255,.04);color:rgba(255,255,255,.65)}
+    .idea-card h3{margin:0 0 9px;font-size:17px;line-height:1.55}
+    .idea-hook{
+      margin:0;padding:10px 11px;border-radius:11px;border-inline-start:3px solid #38bdf8;
+      background:rgba(56,189,248,.055);color:rgba(255,255,255,.84);font-size:13px;line-height:1.85
+    }
+    .idea-actions{display:flex;gap:8px;flex-wrap:wrap;padding:11px 14px;border-top:1px solid rgba(255,255,255,.08)}
+    .idea-actions button{
+      border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);color:rgba(255,255,255,.72);
+      border-radius:10px;padding:7px 9px;font-size:11px;font-weight:900;cursor:pointer
+    }
+    .idea-details{padding:0 14px 14px;border-top:1px solid rgba(255,255,255,.08)}
+    .detail{padding-top:12px}
+    .detail strong{display:block;color:#bff6ff;font-size:11px;margin-bottom:4px}
+    .detail p{margin:0;color:rgba(255,255,255,.75);font-size:13px;line-height:1.9;white-space:pre-wrap}
+
+    .seo-block h2,.seo-block h3{letter-spacing:.1px}
+    .seo-split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+    @media(max-width:980px){.seo-split{grid-template-columns:1fr}}
+    .seo-list{margin:8px 0 0;padding-right:18px;color:rgba(255,255,255,.74);line-height:1.95}
+    .static-examples{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+    @media(max-width:980px){.static-examples{grid-template-columns:1fr}}
+    .static-example{padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.018)}
+    .static-example span{color:#bff6ff;font-weight:1000;font-size:11px}
+    .static-example h3{margin:5px 0 7px;font-size:16px}
+    .static-example p{margin:0;color:rgba(255,255,255,.68);font-size:13px;line-height:1.85}
+    .faq{margin-top:9px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.018);border-radius:14px;padding:10px 12px}
+    .faq summary{cursor:pointer;font-weight:900;color:rgba(255,255,255,.9)}
+    .faq p{margin:8px 0 0}
+    .trust-box{
+      margin-top:12px;padding:13px 14px;border:1px solid rgba(56,189,248,.18);
+      border-radius:16px;background:rgba(56,189,248,.045)
+    }
+
+    .toast{
+      position:fixed;inset-inline-start:16px;bottom:16px;
+      background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.12);
+      padding:10px 12px;border-radius:14px;color:#fff;display:none;z-index:9999
+    }
+  </style>
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
+    "@context":"https://schema.org",
+    "@graph":[
       {
-        "@type": "Organization",
-        "@id": "https://marketapro.com/#organization",
-        "name": "MarketAPro",
-        "url": "https://marketapro.com/"
+        "@type":"Organization",
+        "@id":"https://marketapro.com/#organization",
+        "name":"MarketAPro",
+        "url":"https://marketapro.com/",
+        "description":"أدوات تسويق رقمية مجانية ومقالات عملية لتحسين الأداء وزيادة التفاعل."
       },
       {
-        "@type": "WebSite",
-        "@id": "https://marketapro.com/#website",
-        "url": "https://marketapro.com/",
-        "name": "MarketAPro",
-        "publisher": { "@id": "https://marketapro.com/#organization" },
-        "inLanguage": "ar"
+        "@type":"WebSite",
+        "@id":"https://marketapro.com/#website",
+        "url":"https://marketapro.com/",
+        "name":"MarketAPro",
+        "publisher":{"@id":"https://marketapro.com/#organization"},
+        "inLanguage":"ar"
       },
       {
-        "@type": "WebPage",
-        "@id": "https://marketapro.com/tools/instagram-content-ideas/#webpage",
-        "url": "https://marketapro.com/tools/instagram-content-ideas/",
-        "name": "مولّد أفكار محتوى إنستغرام بالذكاء الاصطناعي",
-        "description": "أداة مجانية لتوليد أفكار بوستات وريلز وستوري مخصصة مع Hook وسكريبت وCaption وCTA وخطة محتوى 7 أيام.",
-        "isPartOf": { "@id": "https://marketapro.com/#website" },
-        "about": { "@id": "https://marketapro.com/#app" },
-        "inLanguage": "ar"
+        "@type":"WebPage",
+        "@id":"https://marketapro.com/tools/instagram-content-ideas/#webpage",
+        "url":"https://marketapro.com/tools/instagram-content-ideas/",
+        "name":"مولد محتوى انستقرام بالذكاء الاصطناعي مجانًا — MarketAPro",
+        "description":"مولد محتوى انستقرام بالذكاء الاصطناعي مجانًا لإنشاء أفكار بوستات وريلز وستوري مخصصة مع Hook وكابشن وCTA وخطة محتوى.",
+        "isPartOf":{"@id":"https://marketapro.com/#website"},
+        "about":{"@id":"https://marketapro.com/tools/instagram-content-ideas/#app"},
+        "inLanguage":"ar"
       },
       {
-        "@type": "WebApplication",
-        "@id": "https://marketapro.com/#app",
-        "name": "مولّد أفكار محتوى إنستغرام بالذكاء الاصطناعي",
-        "url": "https://marketapro.com/tools/instagram-content-ideas/",
-        "applicationCategory": "MarketingApplication",
-        "operatingSystem": "All",
-        "browserRequirements": "Requires JavaScript",
-        "inLanguage": "ar",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "publisher": { "@id": "https://marketapro.com/#organization" }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "الرئيسية",
-            "item": "https://marketapro.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "الأدوات",
-            "item": "https://marketapro.com/tools/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "مولّد أفكار محتوى إنستغرام",
-            "item": "https://marketapro.com/tools/instagram-content-ideas/"
-          }
+        "@type":"BreadcrumbList",
+        "@id":"https://marketapro.com/tools/instagram-content-ideas/#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://marketapro.com/"},
+          {"@type":"ListItem","position":2,"name":"الأدوات","item":"https://marketapro.com/tools/"},
+          {"@type":"ListItem","position":3,"name":"مولد محتوى انستقرام","item":"https://marketapro.com/tools/instagram-content-ideas/"}
         ]
       },
       {
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@type":"SoftwareApplication",
+        "@id":"https://marketapro.com/tools/instagram-content-ideas/#app",
+        "name":"مولد محتوى انستقرام بالذكاء الاصطناعي",
+        "url":"https://marketapro.com/tools/instagram-content-ideas/",
+        "applicationCategory":"BusinessApplication",
+        "operatingSystem":"All",
+        "inLanguage":"ar",
+        "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+        "publisher":{"@id":"https://marketapro.com/#organization"},
+        "image":"https://marketapro.com/assets/og-instagram-content-ideas.jpg"
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://marketapro.com/tools/instagram-content-ideas/#faq",
+        "mainEntity":[
           {
-            "@type": "Question",
-            "name": "كيف يعمل مولّد أفكار محتوى إنستغرام؟",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "أدخل نشاطك وجمهورك وهدفك ونبرة المحتوى، ثم تولّد الأداة أفكار بوستات وريلز وستوري مخصصة مع Hook وسكريبت وCaption وCTA."
-            }
+            "@type":"Question",
+            "name":"هل مولد محتوى انستقرام مجاني؟",
+            "acceptedAnswer":{"@type":"Answer","text":"نعم، يمكنك استخدام الأداة لتوليد أفكار محتوى مخصصة بدون تسجيل."}
           },
           {
-            "@type": "Question",
-            "name": "هل الأداة مناسبة للمتاجر وصناع المحتوى؟",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "نعم. يمكن تخصيص النتائج للحسابات التجارية والمتاجر وصناع المحتوى والحسابات الشخصية والموديلز والفاشن."
-            }
+            "@type":"Question",
+            "name":"ماذا يمكن أن يولد الذكاء الاصطناعي لإنستغرام؟",
+            "acceptedAnswer":{"@type":"Answer","text":"يمكن للأداة اقتراح أفكار بوستات وريلز وستوري، Hooks، زوايا محتوى، خطة أسبوعية، ثم تطوير الفكرة المختارة إلى سكريبت وكابشن وCTA."}
           },
           {
-            "@type": "Question",
-            "name": "هل يجب نشر النص كما هو؟",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "الأفضل استخدام النتائج كنقطة انطلاق ثم مراجعتها وتعديل التفاصيل لتطابق علامتك التجارية وعرضك الحقيقي."
-            }
+            "@type":"Question",
+            "name":"كيف أحصل على أفضل أفكار محتوى؟",
+            "acceptedAnswer":{"@type":"Answer","text":"اكتب وصفًا دقيقًا للنشاط والجمهور وما تقدمه والهدف من المحتوى، ثم راجع النتائج وعدّل التفاصيل لتطابق نشاطك الحقيقي."}
+          },
+          {
+            "@type":"Question",
+            "name":"هل المحتوى جاهز للنشر مباشرة؟",
+            "acceptedAnswer":{"@type":"Answer","text":"النتائج مسودة ذكية تساعدك على التخطيط والكتابة. راجع دائمًا الحقائق والأسعار والعروض وأي تفاصيل خاصة بنشاطك قبل النشر."}
           }
         ]
       }
@@ -126,338 +291,360 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#tool">تخطي إلى الأداة</a>
-
-  <header class="site-header">
-    <div class="shell header-row">
-      <a class="brand" href="/" aria-label="MarketAPro - الرئيسية">
-        <span class="brand-mark" aria-hidden="true">M</span>
-        <span>
-          <strong>MarketAPro</strong>
-          <small>أدوات تسويق ذكية</small>
-        </span>
-      </a>
-
-      <nav class="top-nav" aria-label="القائمة الرئيسية">
-        <a href="/">الرئيسية</a>
-        <a href="/tools/" aria-current="page">الأدوات</a>
-        <a href="/news/">المقالات</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">AI CONTENT STRATEGIST</span>
-          <h1>حوّل نشاطك إلى أفكار محتوى إنستغرام قابلة للتنفيذ</h1>
-          <p>
-            صف نشاطك وجمهورك وهدفك، وستحصل على أفكار بوستات وريلز وستوري مخصصة،
-            مع Hook وسكريبت وCaption وCTA وخطة نشر لمدة 7 أيام.
-          </p>
-
-          <div class="trust-row" aria-label="مميزات الأداة">
-            <span>بدون تسجيل</span>
-            <span>نتائج مخصصة</span>
-            <span>Fallback تلقائي</span>
-            <span>جاهزة للموبايل</span>
-          </div>
-        </div>
-
-        <div class="hero-panel" aria-hidden="true">
-          <div class="mini-card">
-            <span>01</span>
-            <strong>اشرح نشاطك</strong>
-            <small>مجال + جمهور + عرض</small>
-          </div>
-          <div class="mini-card">
-            <span>02</span>
-            <strong>حدد هدفك</strong>
-            <small>تفاعل + نمو + مبيعات</small>
-          </div>
-          <div class="mini-card">
-            <span>03</span>
-            <strong>استلم الخطة</strong>
-            <small>Posts + Reels + Stories</small>
-          </div>
-        </div>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="العودة للرئيسية">
+      <div class="brand-badge" aria-hidden="true"></div>
+      <div>
+        <p class="brand-title">MarketAPro</p>
+        <p class="brand-sub">Instagram Tools</p>
       </div>
-    </section>
+    </a>
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="/">الرئيسية</a>
+      <a class="active" href="/tools/">الأدوات</a>
+      <a href="/news/">المقالات</a>
+    </nav>
+  </div>
+</header>
 
-    <section id="tool" class="tool-section">
-      <div class="shell">
-        <div class="tool-card">
-          <div class="section-heading">
-            <div>
-              <span class="section-kicker">مولّد ذكي</span>
-              <h2>أخبرنا عن حسابك</h2>
-            </div>
-            <p>كلما كانت التفاصيل أوضح، أصبحت الأفكار أكثر تخصيصًا.</p>
-          </div>
+<main class="container section page-wrap">
 
-          <form id="ideaForm" novalidate>
-            <div class="form-grid">
-              <div class="field">
-                <label for="accountType">نوع الحساب</label>
-                <select id="accountType" name="accountType">
-                  <option value="business">تجاري / شركة / متجر</option>
-                  <option value="creator">صانع محتوى / مؤثر</option>
-                  <option value="personal">شخصي / لايف ستايل</option>
-                  <option value="model">موديلز / فاشن / تصوير</option>
-                </select>
-              </div>
+  <section class="card" id="tool">
+    <div class="tool-head">
+      <span class="ai-kicker"><span class="ai-dot"></span> AI INSTAGRAM CONTENT</span>
 
-              <div class="field">
-                <label for="brand">اسم الحساب أو البراند <span>اختياري</span></label>
-                <input id="brand" name="brand" type="text" maxlength="80" autocomplete="organization" placeholder="مثال: MarketAPro">
-              </div>
+      <div>
+        <h1 style="margin:0 0 6px;font-size:30px;line-height:1.35">
+          مولد محتوى انستقرام بالذكاء الاصطناعي مجانًا
+        </h1>
 
-              <div class="field field-wide">
-                <label for="niche">ما هو مجالك أو نشاطك؟</label>
-                <input id="niche" name="niche" type="text" maxlength="140" required placeholder="مثال: مطعم سوري في برلين، متجر عطور، تسويق رقمي...">
-                <small class="field-help">لا تحصر نفسك بقائمة؛ اكتب وصفًا دقيقًا للمجال.</small>
-              </div>
+        <h2 style="margin:9px 0 0;font-size:16px;color:rgba(255,255,255,.86)">
+          أنشئ أفكار بوستات وريلز وستوري + Hook وكابشن وCTA وخطة محتوى 7 أيام
+        </h2>
 
-              <div class="field field-wide">
-                <label for="audience">من هو جمهورك المستهدف؟</label>
-                <textarea id="audience" name="audience" maxlength="420" rows="3" required placeholder="مثال: عرب وألمان في برلين بين 20 و40 سنة يهتمون بالطعام الشرقي"></textarea>
-              </div>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">الرئيسية</a> ←
+          <a href="/tools/">الأدوات</a> ←
+          <span>مولد محتوى انستقرام</span>
+        </nav>
 
-              <div class="field field-wide">
-                <label for="offer">ماذا تبيع أو تقدم؟</label>
-                <textarea id="offer" name="offer" maxlength="420" rows="3" required placeholder="مثال: وجبات سورية، توصيل داخل برلين، عروض غداء أسبوعية"></textarea>
-              </div>
-
-              <div class="field">
-                <label for="goal">الهدف الرئيسي</label>
-                <select id="goal" name="goal">
-                  <option value="engagement">زيادة التفاعل</option>
-                  <option value="followers">زيادة المتابعين والوصول</option>
-                  <option value="sales">زيادة المبيعات / الحجوزات</option>
-                  <option value="trust">بناء الثقة والخبرة</option>
-                  <option value="leads">رسائل واستفسارات</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="tone">نبرة المحتوى</label>
-                <select id="tone" name="tone">
-                  <option value="friendly">ودّي وبسيط</option>
-                  <option value="professional">احترافي وواثق</option>
-                  <option value="bold">جريء وترندي</option>
-                  <option value="educational">تعليمي ومباشر</option>
-                  <option value="emotional">عاطفي وملهم</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="language">اللغة / اللهجة</label>
-                <select id="language" name="language">
-                  <option value="العربية الفصحى المبسطة">العربية الفصحى المبسطة</option>
-                  <option value="اللهجة الشامية">اللهجة الشامية</option>
-                  <option value="اللهجة الخليجية">اللهجة الخليجية</option>
-                  <option value="اللهجة المصرية">اللهجة المصرية</option>
-                  <option value="English">English</option>
-                  <option value="Deutsch">Deutsch</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="creativity">درجة الإبداع</label>
-                <select id="creativity" name="creativity">
-                  <option value="balanced">متوازن</option>
-                  <option value="safe">عملي ومحافظ</option>
-                  <option value="creative">إبداعي</option>
-                  <option value="experimental">جريء وتجريبي</option>
-                </select>
-              </div>
-
-              <div class="field field-wide">
-                <label for="notes">تفاصيل إضافية <span>اختياري</span></label>
-                <textarea id="notes" name="notes" maxlength="500" rows="3" placeholder="مثال: لا أريد الظهور أمام الكاميرا، أريد أفكار سهلة التصوير، لدي عرض نهاية الأسبوع..."></textarea>
-              </div>
-            </div>
-
-            <div id="formError" class="form-error" role="alert" hidden></div>
-
-            <div class="form-actions">
-              <button id="generateBtn" class="btn btn-primary" type="submit">
-                <span class="btn-icon" aria-hidden="true">✦</span>
-                <span>ولّد خطة المحتوى</span>
-              </button>
-              <button id="exampleBtn" class="btn btn-secondary" type="button">املأ مثالًا</button>
-              <button id="resetBtn" class="btn btn-ghost" type="reset">مسح</button>
-            </div>
-
-            <p class="privacy-note">
-              لا تضع بيانات شخصية حساسة. يتم إرسال مدخلات النموذج إلى خدمة الذكاء الاصطناعي لتوليد النتائج.
-            </p>
-          </form>
-        </div>
-
-        <section id="loadingPanel" class="loading-panel" aria-live="polite" hidden>
-          <div class="spinner" aria-hidden="true"></div>
-          <div>
-            <strong id="loadingTitle">جاري تحليل نشاطك...</strong>
-            <p id="loadingText">نحوّل معلومات حسابك إلى زوايا محتوى مختلفة وقابلة للتطبيق.</p>
-          </div>
-        </section>
-
-        <section id="results" class="results" hidden aria-live="polite">
-          <div class="results-head">
-            <div>
-              <span id="resultMode" class="mode-badge">AI</span>
-              <h2>خطة المحتوى المقترحة</h2>
-              <p id="resultSummary"></p>
-            </div>
-
-            <div class="results-actions">
-              <button id="regenerateBtn" class="btn btn-secondary" type="button">أفكار جديدة</button>
-              <button id="copyAllBtn" class="btn btn-secondary" type="button">نسخ الكل</button>
-              <button id="downloadBtn" class="btn btn-ghost" type="button">تنزيل TXT</button>
-            </div>
-          </div>
-
-          <div class="overview-grid">
-            <article class="overview-card">
-              <span>Hook عام</span>
-              <p id="globalHook"></p>
-              <button class="copy-mini" type="button" data-copy-target="globalHook">نسخ</button>
-            </article>
-
-            <article class="overview-card">
-              <span>CTA عام</span>
-              <p id="globalCTA"></p>
-              <button class="copy-mini" type="button" data-copy-target="globalCTA">نسخ</button>
-            </article>
-
-            <article class="overview-card">
-              <span>استراتيجية المحتوى</span>
-              <p id="strategyNote"></p>
-            </article>
-          </div>
-
-          <div class="strategy-card">
-            <div class="subheading">
-              <span>7 DAYS</span>
-              <h3>خطة محتوى لمدة 7 أيام</h3>
-            </div>
-            <div id="strategyList" class="strategy-list"></div>
-          </div>
-
-          <div class="content-card">
-            <div class="tabs" role="tablist" aria-label="أنواع المحتوى">
-              <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-posts" id="tab-posts" data-tab="posts" type="button">
-                بوستات <span id="postsCount">0</span>
-              </button>
-              <button class="tab" role="tab" aria-selected="false" aria-controls="panel-reels" id="tab-reels" data-tab="reels" type="button">
-                ريلز <span id="reelsCount">0</span>
-              </button>
-              <button class="tab" role="tab" aria-selected="false" aria-controls="panel-stories" id="tab-stories" data-tab="stories" type="button">
-                ستوري <span id="storiesCount">0</span>
-              </button>
-            </div>
-
-            <div id="panel-posts" class="tab-panel" role="tabpanel" aria-labelledby="tab-posts">
-              <div id="postsGrid" class="ideas-grid"></div>
-            </div>
-
-            <div id="panel-reels" class="tab-panel" role="tabpanel" aria-labelledby="tab-reels" hidden>
-              <div id="reelsGrid" class="ideas-grid"></div>
-            </div>
-
-            <div id="panel-stories" class="tab-panel" role="tabpanel" aria-labelledby="tab-stories" hidden>
-              <div id="storiesGrid" class="ideas-grid"></div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <section class="seo-section">
-      <div class="shell prose">
-        <div class="section-heading">
-          <div>
-            <span class="section-kicker">دليل عملي</span>
-            <h2>كيف تحصل على أفكار محتوى إنستغرام أفضل؟</h2>
-          </div>
-        </div>
-
-        <p>
-          الفكرة القوية لا تبدأ من ترند عشوائي، بل من معرفة نشاطك وجمهورك والنتيجة التي تريد تحقيقها.
-          لهذا يطلب المولّد وصف المجال والجمهور والعرض قبل اقتراح المحتوى.
+        <p class="tool-intro">
+          اكتب <strong>نشاطك وجمهورك وما تقدمه</strong>، وسيقترح الذكاء الاصطناعي زوايا محتوى مخصصة لحسابك بدل الأفكار العامة.
+          يمكنك بعدها تطوير أي فكرة إلى <strong>سكريبت + Caption + CTA</strong> فقط عند الحاجة.
         </p>
+      </div>
 
-        <div class="seo-grid">
-          <article>
-            <h3>أفكار ريلز قابلة للتنفيذ</h3>
-            <p>استخدم Hook سريع، مشكلة واضحة، مثال بصري، ثم CTA واحد. لا تحاول وضع أكثر من رسالة رئيسية في ريل قصير.</p>
-          </article>
-          <article>
-            <h3>أفكار بوستات للحفظ والمشاركة</h3>
-            <p>القوائم، الخطوات، المقارنات، الأخطاء الشائعة والقوالب العملية تناسب الكاروسيل عندما تكون مرتبطة مباشرة باهتمام جمهورك.</p>
-          </article>
-          <article>
-            <h3>أفكار ستوري للتفاعل</h3>
-            <p>استخدم التصويت والأسئلة والاختيارات والكواليس للحصول على إشارات مباشرة من الجمهور تساعدك على صناعة المحتوى التالي.</p>
-          </article>
-        </div>
+      <div class="steps" aria-label="خطوات الأداة">
+        <span class="step on" id="step1">1) صف نشاطك</span>
+        <span class="step" id="step2">2) توليد الأفكار</span>
+        <span class="step" id="step3">3) طوّر الفكرة</span>
+      </div>
+    </div>
 
-        <h2>كيف تستخدم النتائج؟</h2>
-        <ol>
-          <li>اختر فكرة تناسب هدفك الحالي، وليس الفكرة الأكثر إثارة فقط.</li>
-          <li>راجع أي أرقام أو ادعاءات أو تفاصيل قبل النشر.</li>
-          <li>عدّل النص ليتطابق مع صوت علامتك التجارية وعرضك الحقيقي.</li>
-          <li>اختبر أنواع محتوى مختلفة وقارن الحفظ والمشاركة والتعليقات والرسائل.</li>
-        </ol>
+    <form id="ideaForm" class="grid2" novalidate>
+      <div class="mini">
+        <label for="accountType">نوع الحساب</label>
+        <select id="accountType">
+          <option value="business">متجر / بزنس / شركة</option>
+          <option value="creator">صانع محتوى / مؤثر</option>
+          <option value="personal">حساب شخصي / لايف ستايل</option>
+          <option value="model">موديل / فاشن / تصوير</option>
+        </select>
+        <p class="note2">يؤثر على الزوايا وطريقة تقديم الأفكار.</p>
+      </div>
 
-        <div class="faq">
-          <h2>أسئلة شائعة</h2>
+      <div class="mini">
+        <label for="brand">اسم الحساب أو البراند <small>(اختياري)</small></label>
+        <input id="brand" type="text" maxlength="80" placeholder="مثال: MarketAPro" autocomplete="organization" />
+        <p class="note2">استخدم اسمًا حقيقيًا إذا أردت تخصيص النص.</p>
+      </div>
 
-          <details>
-            <summary>هل الأفكار مولّدة بالذكاء الاصطناعي؟</summary>
-            <p>عند توفر خدمة الذكاء الاصطناعي، نعم. وإذا تعذر الاتصال، تستخدم الأداة مولّدًا احتياطيًا محليًا حتى لا تتوقف الصفحة.</p>
-          </details>
-
-          <details>
-            <summary>هل يمكن استخدام الأداة لأي مجال؟</summary>
-            <p>نعم، لأن حقل المجال مفتوح. يمكنك كتابة مطعم، عيادة، متجر، عقارات، تعليم، تسويق، فاشن أو أي نشاط آخر.</p>
-          </details>
-
-          <details>
-            <summary>هل النتائج جاهزة للنشر دون مراجعة؟</summary>
-            <p>اعتبرها مسودة استراتيجية قوية. راجع دائمًا الحقائق والأسعار والعروض والمعلومات التي تخص نشاطك قبل النشر.</p>
-          </details>
-        </div>
-
-        <div class="internal-links">
-          <a href="/tools/instagram-engagement-calculator/">حاسبة معدل التفاعل</a>
-          <a href="/tools/best-time-to-post-instagram/">أفضل وقت للنشر</a>
-          <a href="/tools/instagram-profile-analyzer/">تحليل حساب إنستغرام</a>
-          <a href="/news/category/social/">مقالات السوشيال ميديا</a>
+      <div class="mini wide">
+        <label for="niche">ما هو مجالك أو نشاطك؟</label>
+        <input id="niche" type="text" maxlength="140" required placeholder="مثال: مطعم شاورما في الرياض / متجر عطور / عقارات دبي" />
+        <div class="quick-examples" aria-label="أمثلة سريعة">
+          <button class="example-chip" type="button" data-example="restaurant">مطعم</button>
+          <button class="example-chip" type="button" data-example="ecommerce">متجر</button>
+          <button class="example-chip" type="button" data-example="realestate">عقارات</button>
+          <button class="example-chip" type="button" data-example="creator">صانع محتوى</button>
         </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="shell footer-row">
-      <span>© 2026 MarketAPro — By Viva Media Creative</span>
-      <nav aria-label="روابط قانونية">
-        <a href="/privacy-policy/">الخصوصية</a>
-        <a href="/terms/">الشروط</a>
-        <a href="/contact/">تواصل معنا</a>
-      </nav>
+      <div class="mini wide">
+        <label for="audience">من هو جمهورك المستهدف؟</label>
+        <textarea id="audience" maxlength="420" required placeholder="مثال: شباب وعائلات في الرياض يحبون الشاورما والوجبات السريعة"></textarea>
+      </div>
+
+      <div class="mini wide">
+        <label for="offer">ماذا تقدم أو تبيع؟</label>
+        <textarea id="offer" maxlength="420" required placeholder="مثال: شاورما دجاج ولحم، وجبات عائلية، توصيل داخل الرياض"></textarea>
+      </div>
+
+      <div class="mini">
+        <label for="goal">هدف المحتوى</label>
+        <select id="goal">
+          <option value="engagement">زيادة التفاعل</option>
+          <option value="followers">زيادة المتابعين والوصول</option>
+          <option value="sales">زيادة المبيعات / الحجوزات</option>
+          <option value="trust">بناء الثقة والخبرة</option>
+          <option value="leads">رسائل واستفسارات</option>
+        </select>
+      </div>
+
+      <div class="mini">
+        <label for="tone">أسلوب الكتابة</label>
+        <select id="tone">
+          <option value="friendly">ودّي وبسيط</option>
+          <option value="professional">احترافي وواثق</option>
+          <option value="bold">جريء وترندي</option>
+          <option value="educational">تعليمي ومباشر</option>
+          <option value="emotional">عاطفي وملهم</option>
+        </select>
+      </div>
+
+      <div class="mini">
+        <label for="language">اللغة أو اللهجة</label>
+        <select id="language">
+          <option value="العربية الفصحى المبسطة">العربية الفصحى المبسطة</option>
+          <option value="اللهجة السعودية">اللهجة السعودية</option>
+          <option value="اللهجة الخليجية">اللهجة الخليجية</option>
+          <option value="اللهجة الشامية">اللهجة الشامية</option>
+          <option value="اللهجة المصرية">اللهجة المصرية</option>
+          <option value="English">English</option>
+          <option value="Deutsch">Deutsch</option>
+        </select>
+      </div>
+
+      <div class="mini">
+        <label for="creativity">درجة الإبداع</label>
+        <select id="creativity">
+          <option value="balanced">متوازن</option>
+          <option value="safe">عملي ومحافظ</option>
+          <option value="creative">إبداعي</option>
+          <option value="experimental">جريء وتجريبي</option>
+        </select>
+      </div>
+
+      <div class="mini wide">
+        <label for="notes">تفاصيل إضافية <small>(اختياري)</small></label>
+        <textarea id="notes" maxlength="500" placeholder="مثال: لا أريد الظهور أمام الكاميرا، أريد محتوى سهل التصوير، لدي عرض حقيقي هذا الأسبوع..."></textarea>
+
+        <div class="row">
+          <button id="generateBtn" class="btn primary" type="submit">✨ ولّد أفكار المحتوى بالذكاء الاصطناعي</button>
+          <button id="fillExampleBtn" class="btn secondary" type="button">املأ مثالًا</button>
+          <button id="resetBtn" class="btn secondary" type="reset">مسح</button>
+          <span class="badge">مجاني</span>
+          <span class="badge">بدون تسجيل</span>
+          <span class="badge">AI + خطة 7 أيام</span>
+        </div>
+
+        <div class="loader" id="loader" aria-live="polite" aria-busy="false">
+          <div style="display:flex;gap:6px" aria-hidden="true">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div>
+            <strong id="loaderTitle">جارٍ تحليل نشاطك…</strong>
+            <div class="note2" id="loaderText" style="margin:0">نختار زوايا محتوى مختلفة بدل تكرار نفس الفكرة.</div>
+          </div>
+        </div>
+
+        <div class="debug" id="debugBox" role="alert"></div>
+      </div>
+    </form>
+  </section>
+
+  <!-- محتوى ثابت قابل للفهرسة: يأتي مباشرة بعد الأداة مثل الصفحة الناجحة الحالية -->
+  <section class="card seo-block" id="seo" style="margin-top:12px">
+    <h2 style="margin:0 0 9px">ما هو مولد محتوى انستقرام بالذكاء الاصطناعي؟</h2>
+    <p class="note2" style="margin-top:0">
+      أداة MarketAPro تساعدك على <strong>توليد محتوى انستقرام بالذكاء الاصطناعي</strong> انطلاقًا من نشاطك الحقيقي،
+      جمهورك المستهدف والهدف من النشر. بدل الحصول على قائمة عامة، تقترح الأداة أفكارًا مختلفة للبوستات والريلز والستوري،
+      ثم تسمح لك بتطوير الفكرة التي اخترتها إلى سكريبت وكابشن وCTA.
+    </p>
+
+    <div class="seo-split">
+      <div class="mini">
+        <h3 style="margin:0 0 8px;font-size:18px">ماذا تولد الأداة؟</h3>
+        <ul class="seo-list">
+          <li><strong>أفكار بوستات وكاروسيل:</strong> تعليم، مقارنة، أسئلة، كواليس وبيع ناعم.</li>
+          <li><strong>أفكار Reels:</strong> Hook + زاوية فيديو قابلة للتصوير.</li>
+          <li><strong>أفكار Story:</strong> تصويت، سؤال، كواليس وتفاعل.</li>
+          <li><strong>خطة 7 أيام:</strong> توزيع عملي لأنواع المحتوى حسب هدف الحساب.</li>
+          <li><strong>تطوير الفكرة:</strong> سكريبت + Caption + CTA عند الطلب.</li>
+        </ul>
+      </div>
+
+      <div class="mini">
+        <h3 style="margin:0 0 8px;font-size:18px">كيف تحصل على نتيجة أقوى؟</h3>
+        <ol class="seo-list">
+          <li>اكتب النشاط بشكل محدد، مثل “مطعم شاورما في الرياض” بدل “مطعم”.</li>
+          <li>حدد من تريد الوصول إليه، وليس العمر فقط.</li>
+          <li>اكتب منتجاتك أو خدماتك الحقيقية حتى لا تكون الأفكار عامة.</li>
+          <li>اختر هدفًا واحدًا لكل جولة: تفاعل، نمو، مبيعات أو ثقة.</li>
+          <li>راجع أي سعر أو رقم أو عرض قبل نشر المحتوى.</li>
+        </ol>
+      </div>
     </div>
-  </footer>
 
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div class="mini" style="margin-top:12px">
+      <h2 style="margin:0 0 8px;font-size:19px">أمثلة على أفكار محتوى انستقرام</h2>
+      <p class="note2" style="margin-top:0">هذه أمثلة ثابتة لتوضيح نوع النتائج قبل استخدام الأداة.</p>
 
-  <noscript>
-    <div class="noscript">تحتاج هذه الأداة إلى JavaScript لتوليد النتائج.</div>
-  </noscript>
+      <div class="static-examples">
+        <article class="static-example">
+          <span>مطعم</span>
+          <h3>ريلز: من السيخ إلى الساندويتش خلال 15 ثانية</h3>
+          <p>لقطات قصيرة للتحضير والتقطيع والإضافة النهائية، مع سؤال في النهاية: دجاج أم لحم؟</p>
+        </article>
 
-  <script src="./instagram-content-ideas.js" defer></script>
+        <article class="static-example">
+          <span>متجر إلكتروني</span>
+          <h3>كاروسيل: أي منتج يناسب احتياجك؟</h3>
+          <p>قارن بين خيارين حقيقيين بطريقة تساعد العميل على الاختيار بدل الاكتفاء بعرض المواصفات.</p>
+        </article>
+
+        <article class="static-example">
+          <span>عقارات</span>
+          <h3>ستوري: اختر الشقة A أو B</h3>
+          <p>اعرض ميزتين مختلفتين في كل عقار واستخدم التصويت لمعرفة ما يهتم به الجمهور.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="trust-box">
+      <strong>ملاحظة عن الذكاء الاصطناعي:</strong>
+      <p class="note2" style="margin:5px 0 0">
+        الأداة تستخدم الذكاء الاصطناعي لتسريع التخطيط والكتابة. النتائج ليست بديلًا عن معرفة نشاطك؛ راجع الحقائق والعروض والأسعار
+        وأي ادعاء قبل النشر، وعدّل الأسلوب ليطابق هوية حسابك.
+      </p>
+    </div>
+
+    <div class="mini" style="margin-top:12px">
+      <h2 style="margin:0 0 8px;font-size:19px">أسئلة شائعة</h2>
+
+      <details class="faq">
+        <summary>هل مولد محتوى انستقرام مجاني؟</summary>
+        <p class="note2">نعم، يمكنك تجربة الأداة وتوليد أفكار محتوى بدون تسجيل.</p>
+      </details>
+
+      <details class="faq">
+        <summary>هل يولد بوستات وريلز وستوري؟</summary>
+        <p class="note2">نعم. تحصل على أفكار مصنفة للبوستات والريلز والستوري، بالإضافة إلى خطة نشر أسبوعية.</p>
+      </details>
+
+      <details class="faq">
+        <summary>هل يمكن كتابة كابشن وسكريبت ريلز؟</summary>
+        <p class="note2">بعد توليد الأفكار، افتح الفكرة التي تريدها واضغط تطوير الفكرة للحصول على السكريبت والكابشن والـCTA.</p>
+      </details>
+
+      <details class="faq">
+        <summary>هل الأداة مناسبة للمطاعم والمتاجر والعقارات وصناع المحتوى؟</summary>
+        <p class="note2">نعم، لأن المجال والجمهور والعرض حقول مفتوحة، لذلك يمكن تخصيص النتائج لأي نشاط تقريبًا.</p>
+      </details>
+
+      <details class="faq">
+        <summary>هل المحتوى جاهز للنشر مباشرة؟</summary>
+        <p class="note2">استخدمه كمسودة ذكية، ثم راجع المعلومات الخاصة بنشاطك وأضف تفاصيل وصورًا وتجارب حقيقية.</p>
+      </details>
+    </div>
+
+    <div class="mini" style="margin-top:12px">
+      <h3 style="margin:0 0 8px;font-size:18px">أدوات وأدلة مرتبطة بإنستغرام</h3>
+      <ul class="seo-list" style="margin-top:0">
+        <li><a href="/tools/instagram-profile-analyzer/">تحليل حساب إنستغرام</a></li>
+        <li><a href="/tools/instagram-engagement-calculator/">حاسبة معدل التفاعل على إنستغرام</a></li>
+        <li><a href="/tools/best-time-to-post-instagram/">أفضل وقت للنشر على إنستغرام</a></li>
+        <li><a href="/news/category/social/">مقالات السوشيال ميديا</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- النتائج -->
+  <section class="card result-wrap" id="results" aria-live="polite">
+    <div class="result-head">
+      <div>
+        <span class="mode-badge" id="modeBadge">AI</span>
+        <h2 class="result-title">أفكار المحتوى المقترحة</h2>
+        <p class="note2" id="resultSummary" style="margin:0">—</p>
+      </div>
+      <div class="row" style="margin-top:0">
+        <button id="regenerateBtn" class="btn secondary" type="button">أفكار جديدة</button>
+        <button id="copyAllBtn" class="btn secondary" type="button">نسخ الكل</button>
+      </div>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <strong>Hook عام</strong>
+        <p id="globalHook">—</p>
+        <button class="copy-mini" type="button" data-copy-target="globalHook">نسخ</button>
+      </div>
+      <div class="summary-card">
+        <strong>CTA عام</strong>
+        <p id="globalCTA">—</p>
+        <button class="copy-mini" type="button" data-copy-target="globalCTA">نسخ</button>
+      </div>
+      <div class="summary-card">
+        <strong>استراتيجية الأسبوع</strong>
+        <p id="strategyNote">—</p>
+      </div>
+    </div>
+
+    <div class="mini" style="margin-top:12px">
+      <h3 style="margin:0 0 7px;font-size:18px">خطة محتوى 7 أيام</h3>
+      <div class="plan-strip" id="strategyList"></div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="أنواع المحتوى">
+      <button class="tab on" type="button" data-tab="posts">بوستات <span id="postsCount">0</span></button>
+      <button class="tab" type="button" data-tab="reels">ريلز <span id="reelsCount">0</span></button>
+      <button class="tab" type="button" data-tab="stories">ستوري <span id="storiesCount">0</span></button>
+    </div>
+
+    <div id="panel-posts" class="tab-panel"><div id="postsGrid" class="ideas-grid"></div></div>
+    <div id="panel-reels" class="tab-panel" hidden><div id="reelsGrid" class="ideas-grid"></div></div>
+    <div id="panel-stories" class="tab-panel" hidden><div id="storiesGrid" class="ideas-grid"></div></div>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:20px">مقالات ذات صلة</h2>
+    <ul style="margin:0;padding:0 18px;line-height:1.9">
+      <li><a href="/news/category/social/">مقالات السوشيال ميديا</a></li>
+      <li><a href="/news/best-time-to-post-instagram/">أفضل وقت للنشر على إنستغرام</a></li>
+    </ul>
+
+    <h2 style="margin:14px 0 8px;font-size:20px">أدوات أخرى قد تهمك</h2>
+    <ul style="margin:0;padding:0 18px;line-height:1.9">
+      <li><a href="/tools/instagram-profile-analyzer/">تحليل حساب إنستغرام</a></li>
+      <li><a href="/tools/instagram-engagement-calculator/">حاسبة معدل التفاعل</a></li>
+      <li><a href="/tools/best-time-to-post-instagram/">أفضل وقت للنشر</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">© 2026 MarketAPro — By Viva Media Creative</div>
+
+  <div class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:18px">روابط سريعة</h2>
+    <div class="pill-row" style="margin-top:6px">
+      <a class="pill" href="/tools/instagram-profile-analyzer/">تحليل حساب إنستغرام</a>
+      <a class="pill" href="/tools/instagram-engagement-calculator/">حاسبة معدل التفاعل</a>
+      <a class="pill" href="/tools/best-time-to-post-instagram/">أفضل وقت للنشر</a>
+      <a class="pill" href="/news/category/seo/">مقالات السيو</a>
+      <a class="pill" href="/news/category/social/">مقالات السوشيال</a>
+      <a class="pill" href="/about/">من نحن</a>
+      <a class="pill" href="/contact/">تواصل معنا</a>
+      <a class="pill" href="/privacy-policy/">الخصوصية</a>
+      <a class="pill" href="/terms/">الشروط</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">تم ✅</div>
+<script src="/assets/js/helpers.js" defer></script>
+<script src="./instagram-content-ideas.js" defer></script>
 </body>
 </html>
