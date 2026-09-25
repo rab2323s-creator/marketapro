@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>حاسبة معدل التفاعل تيك توك | حسب المشاهدات والمتابعين — MarketAPro</title>
+  <meta name="description" content="حاسبة معدل التفاعل تيك توك مجانًا: احسب Engagement Rate حسب المشاهدات والمتابعين، حلّل عدة فيديوهات، الوسيط، الوصول ونسب الإعجاب والتعليق والمشاركة." />
+  <meta name="keywords" content="حاسبة معدل التفاعل تيك توك, حاسبة معدل التفاعل على تيك توك, حساب معدل التفاعل تيك توك, معدل التفاعل تيك توك, نسبة التفاعل تيك توك, كيف احسب معدل التفاعل في تيك توك, TikTok engagement rate calculator" />
+  <link rel="canonical" href="https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+
+  <meta property="og:title" content="حاسبة معدل التفاعل تيك توك | MarketAPro" />
+  <meta property="og:description" content="احسب معدل التفاعل حسب المشاهدات والمتابعين، وحلّل فيديو واحد أو مجموعة فيديوهات مع Median ونسب التفاعل وتقرير جاهز للنسخ." />
+  <meta property="og:url" content="https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:image" content="https://marketapro.com/assets/og-home.jpg" />
+  <meta property="og:image:alt" content="حاسبة معدل التفاعل على تيك توك من MarketAPro" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="حاسبة معدل التفاعل تيك توك | MarketAPro" />
+  <meta name="twitter:description" content="حساب TikTok Engagement Rate حسب المشاهدات والمتابعين مع تحليل عدة فيديوهات." />
+  <meta name="twitter:image" content="https://marketapro.com/assets/og-home.jpg" />
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    .tk-shell{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:16px;align-items:start}
+    .tk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .tk-grid-5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+    .tk-field{margin-top:12px}
+    .tk-field label,.tk-label{display:block;font-size:13px;font-weight:800;color:var(--muted);margin-bottom:6px}
+    .tk-field input,.tk-field textarea,.tk-field select{
+      width:100%;box-sizing:border-box;padding:12px 13px;border-radius:14px;border:1px solid var(--border);
+      background:rgba(255,255,255,.035);color:var(--text);outline:none;font:inherit
+    }
+    .tk-field input:focus,.tk-field textarea:focus,.tk-field select:focus{border-color:rgba(124,155,255,.75);box-shadow:0 0 0 3px rgba(124,155,255,.12)}
+    .tk-field textarea{min-height:190px;resize:vertical;direction:ltr;text-align:left;line-height:1.7}
+    .tk-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+    .tk-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .tk-tab{cursor:pointer;border:1px solid var(--border);background:rgba(255,255,255,.025);color:var(--text);border-radius:999px;padding:9px 13px;font:inherit;font-weight:800}
+    .tk-tab[aria-selected="true"]{background:rgba(255,255,255,.10)}
+    .tk-panel[hidden]{display:none}
+    .tk-hint{font-size:13px;color:var(--muted);line-height:1.8;margin-top:7px}
+    .tk-privacy{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);border-radius:999px;padding:7px 10px;font-size:12px;color:var(--muted);margin-top:10px}
+    .tk-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+    .tk-stat{padding:15px;border:1px solid var(--border);border-radius:16px;background:rgba(0,0,0,.16)}
+    .tk-stat strong{display:block;font-size:25px;line-height:1.25}
+    .tk-stat span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+    .tk-stat.primary{grid-column:span 1;background:rgba(255,255,255,.055)}
+    .tk-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+    .tk-mini .tk-stat strong{font-size:18px}
+    .tk-breakdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+    .tk-callout{border:1px solid var(--border);border-radius:16px;padding:13px;margin-top:12px;background:rgba(255,255,255,.025);line-height:1.9}
+    .tk-table-wrap{overflow-x:auto;margin-top:12px}
+    .tk-table{width:100%;border-collapse:collapse;min-width:720px}
+    .tk-table th,.tk-table td{padding:10px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap}
+    .tk-table th{font-size:12px;color:var(--muted)}
+    .tk-table td{font-size:13px}
+    .tk-chip{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:5px 9px;font-size:12px;color:var(--muted);margin:2px}
+    .tk-formula{direction:ltr;text-align:left;border:1px solid var(--border);border-radius:14px;padding:12px;background:rgba(0,0,0,.18);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;overflow:auto}
+    .tk-source{font-size:13px;color:var(--muted);line-height:1.8}
+    .tk-error{color:#ffb4b4;min-height:20px}
+    .tk-ok{color:var(--text)}
+    .tk-divider{height:1px;background:var(--border);margin:15px 0}
+    .tk-kicker{font-size:13px;color:var(--muted);margin:0 0 8px}
+    @media(max-width:940px){.tk-shell{grid-template-columns:1fr}.tk-grid-5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:620px){.tk-grid,.tk-stats,.tk-mini,.tk-breakdown{grid-template-columns:1fr}.tk-grid-5{grid-template-columns:1fr}.tk-stat.primary{grid-column:auto}}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://marketapro.com/#organization",
+        "name":"MarketAPro",
+        "url":"https://marketapro.com/",
+        "description":"أدوات تسويق رقمية مجانية ومقالات عملية لتحليل الأداء وتحسين النمو."
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://marketapro.com/#website",
+        "url":"https://marketapro.com/",
+        "name":"MarketAPro",
+        "publisher":{"@id":"https://marketapro.com/#organization"},
+        "inLanguage":"ar"
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://marketapro.com/"},
+          {"@type":"ListItem","position":2,"name":"الأدوات","item":"https://marketapro.com/tools/"},
+          {"@type":"ListItem","position":3,"name":"حاسبة معدل التفاعل تيك توك","item":"https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/"}
+        ]
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/#webpage",
+        "url":"https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/",
+        "name":"حاسبة معدل التفاعل تيك توك | حسب المشاهدات والمتابعين",
+        "description":"أداة عربية مجانية لحساب معدل التفاعل على TikTok حسب المشاهدات والمتابعين مع تحليل فيديو واحد أو مجموعة فيديوهات والوسيط ونسب التفاعل.",
+        "isPartOf":{"@id":"https://marketapro.com/#website"},
+        "breadcrumb":{"@id":"https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/#breadcrumb"},
+        "mainEntity":{"@id":"https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/#app"},
+        "inLanguage":"ar",
+        "datePublished":"2026-09-25",
+        "dateModified":"2026-09-25"
+      },
+      {
+        "@type":"WebApplication",
+        "@id":"https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/#app",
+        "name":"حاسبة معدل التفاعل على تيك توك",
+        "alternateName":"TikTok Engagement Rate Calculator",
+        "url":"https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/",
+        "applicationCategory":"BusinessApplication",
+        "applicationSubCategory":"Social Media Analytics",
+        "operatingSystem":"Any",
+        "browserRequirements":"متصفح حديث يدعم JavaScript",
+        "inLanguage":"ar",
+        "isAccessibleForFree":true,
+        "publisher":{"@id":"https://marketapro.com/#organization"},
+        "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+        "featureList":[
+          "حساب معدل التفاعل حسب المشاهدات",
+          "حساب معدل التفاعل حسب المتابعين",
+          "تحليل فيديو واحد أو عدة فيديوهات",
+          "حساب Median لمعدل التفاعل",
+          "كشف أثر الفيديو الشاذ أو الفيروسي",
+          "حساب نسب الإعجاب والتعليق والمشاركة والحفظ",
+          "تصدير CSV ونسخ التقرير",
+          "معالجة محلية داخل المتصفح"
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://marketapro.com/tools/حاسبة-معدل-التفاعل-تيك-توك/#faq-schema",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"كيف أحسب معدل التفاعل في تيك توك؟",
+            "acceptedAnswer":{"@type":"Answer","text":"للحساب حسب المشاهدات اجمع الإعجابات والتعليقات والمشاركات ثم اقسمها على المشاهدات واضرب في 100. وللحساب حسب المتابعين استخدم متوسط تفاعل الفيديو ثم اقسمه على عدد المتابعين واضرب في 100."}
+          },
+          {
+            "@type":"Question",
+            "name":"هل معدل التفاعل حسب المشاهدات أم المتابعين أدق على تيك توك؟",
+            "acceptedAnswer":{"@type":"Answer","text":"كل معادلة تجيب سؤالًا مختلفًا. المعدل حسب المشاهدات يقيس استجابة من شاهد الفيديو فعليًا، بينما المعدل حسب المتابعين يفيد في مقارنة متوسط تفاعل الفيديو بحجم قاعدة المتابعين. لا تخلط بين المقامين عند المقارنة."}
+          },
+          {
+            "@type":"Question",
+            "name":"هل أدخل الحفظ ضمن معدل التفاعل على تيك توك؟",
+            "acceptedAnswer":{"@type":"Answer","text":"تعرض الأداة المعدل القياسي باستخدام الإعجابات والتعليقات والمشاركات، وتعرض معدلًا موسعًا منفصلًا إذا أدخلت الحفظ، حتى تبقى المقارنات واضحة ولا تختلط المعادلات."}
+          },
+          {
+            "@type":"Question",
+            "name":"كم فيديو أستخدم لحساب معدل تفاعل الحساب؟",
+            "acceptedAnswer":{"@type":"Answer","text":"استخدم عينة متقاربة من آخر 5 إلى 10 فيديوهات على الأقل عندما يكون هدفك قياس أداء الحساب، وتجنب الاعتماد على فيديو فيروسي واحد. تعرض الأداة الوسيط وتنبيهًا إذا كان هناك فيديو شاذ يؤثر في المتوسط."}
+          },
+          {
+            "@type":"Question",
+            "name":"هل ترسل الحاسبة بياناتي إلى سيرفر؟",
+            "acceptedAnswer":{"@type":"Answer","text":"لا. الحساب يتم محليًا داخل المتصفح ولا تتطلب الأداة اسم مستخدم أو تسجيل دخول."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#content">تخطي إلى المحتوى</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="العودة للرئيسية">
+      <div class="brand-badge" aria-hidden="true"></div>
+      <div>
+        <p class="brand-title">MarketAPro</p>
+        <p class="brand-sub">أدوات تحليل السوشال ميديا</p>
+      </div>
+    </a>
+    <nav class="nav" aria-label="القائمة الرئيسية">
+      <a href="/">الرئيسية</a>
+      <a class="active" href="/tools/">الأدوات</a>
+      <a href="/news/">المقالات</a>
+      <a href="/learn/">تعلم التسويق</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="container section">
+  <section class="card">
+    <p class="tk-kicker">أداة مجانية • بدون تسجيل • الحساب داخل متصفحك</p>
+    <h1 style="margin:0 0 10px">حاسبة معدل التفاعل تيك توك — TikTok Engagement Rate Calculator</h1>
+    <nav aria-label="Breadcrumb" class="note" style="margin:8px 0 12px">
+      <a href="/">الرئيسية</a> ← <a href="/tools/">الأدوات</a> ← <span>حاسبة معدل التفاعل تيك توك</span>
+    </nav>
+    <p style="max-width:950px">
+      احسب <strong>معدل التفاعل على تيك توك</strong> بطريقتين واضحتين: حسب المشاهدات وحسب المتابعين.
+      يمكنك تحليل فيديو واحد أو لصق بيانات عدة فيديوهات دفعة واحدة للحصول على المتوسط والوسيط ونسب الإعجاب والتعليق والمشاركة والحفظ،
+      مع تنبيه إذا كان فيديو واحد فيروسيًا يغيّر صورة الحساب.
+    </p>
+    <div class="tk-privacy">خصوصية: لا نطلب اسم المستخدم ولا نرسل الأرقام إلى أي خادم.</div>
+  </section>
+
+  <section class="tk-shell" style="margin-top:16px">
+    <div class="card">
+      <h2 style="margin-top:0">احسب معدل التفاعل الآن</h2>
+
+      <div class="tk-field">
+        <label for="followers">عدد المتابعين <span class="note">(اختياري، مطلوب فقط لحساب ER حسب المتابعين)</span></label>
+        <input id="followers" inputmode="decimal" autocomplete="off" placeholder="مثال: 25000 أو 25K أو ٢٥ ألف" />
+      </div>
+
+      <div class="tk-tabs" role="tablist" aria-label="طريقة إدخال البيانات">
+        <button type="button" class="tk-tab" id="tab-single" role="tab" aria-controls="panel-single" aria-selected="true">فيديو واحد</button>
+        <button type="button" class="tk-tab" id="tab-batch" role="tab" aria-controls="panel-batch" aria-selected="false">عدة فيديوهات</button>
+      </div>
+
+      <div id="panel-single" class="tk-panel" role="tabpanel" aria-labelledby="tab-single">
+        <div class="tk-grid-5">
+          <div class="tk-field"><label for="views">المشاهدات *</label><input id="views" inputmode="decimal" placeholder="50000" /></div>
+          <div class="tk-field"><label for="likes">الإعجابات</label><input id="likes" inputmode="decimal" placeholder="3200" /></div>
+          <div class="tk-field"><label for="comments">التعليقات</label><input id="comments" inputmode="decimal" placeholder="140" /></div>
+          <div class="tk-field"><label for="shares">المشاركات</label><input id="shares" inputmode="decimal" placeholder="260" /></div>
+          <div class="tk-field"><label for="saves">الحفظ <span class="note">(اختياري)</span></label><input id="saves" inputmode="decimal" placeholder="180" /></div>
+        </div>
+        <p class="tk-hint">يدعم الأرقام العربية والإنجليزية واختصارات K / M وكذلك «ألف» و«مليون».</p>
+      </div>
+
+      <div id="panel-batch" class="tk-panel" role="tabpanel" aria-labelledby="tab-batch" hidden>
+        <div class="tk-field">
+          <label for="batchData">كل سطر = فيديو واحد: المشاهدات | الإعجابات | التعليقات | المشاركات | الحفظ</label>
+          <textarea id="batchData" spellcheck="false" placeholder="50000 | 3200 | 140 | 260 | 180&#10;42000 | 2500 | 95 | 180 | 120&#10;88000 | 6100 | 210 | 540 | 330"></textarea>
+        </div>
+        <p class="tk-hint">
+          الحفظ اختياري. يمكنك لصق أعمدة مفصولة بـ | أو Tab أو ;. للحصول على قراءة أفضل للحساب استخدم 5–10 فيديوهات أو أكثر من الفترة نفسها.
+        </p>
+      </div>
+
+      <div class="tk-actions">
+        <button class="btn primary" id="calculateBtn" type="button">احسب معدل التفاعل</button>
+        <button class="btn secondary" id="exampleBtn" type="button">جرّب مثالًا</button>
+        <button class="btn secondary" id="clearBtn" type="button">مسح</button>
+      </div>
+      <p id="formMessage" class="tk-hint tk-error" role="status" aria-live="polite"></p>
+    </div>
+
+    <aside class="card" id="resultsCard" aria-live="polite">
+      <h2 style="margin-top:0">النتيجة</h2>
+      <p class="tk-hint" id="emptyState">أدخل بيانات الفيديو ثم اضغط «احسب معدل التفاعل».</p>
+
+      <div id="resultContent" hidden>
+        <div class="tk-stats">
+          <div class="tk-stat primary">
+            <strong id="erViews">—</strong>
+            <span>معدل التفاعل حسب المشاهدات</span>
+          </div>
+          <div class="tk-stat primary">
+            <strong id="erFollowers">—</strong>
+            <span>معدل التفاعل حسب المتابعين</span>
+          </div>
+        </div>
+
+        <div class="tk-mini">
+          <div class="tk-stat"><strong id="medianER">—</strong><span>وسيط ER للفيديوهات</span></div>
+          <div class="tk-stat"><strong id="avgViews">—</strong><span>متوسط المشاهدات</span></div>
+          <div class="tk-stat"><strong id="reachRatio">—</strong><span>متوسط المشاهدات ÷ المتابعين</span></div>
+        </div>
+
+        <div class="tk-breakdown">
+          <div class="tk-stat"><strong id="likeRate">—</strong><span>إعجاب / مشاهدة</span></div>
+          <div class="tk-stat"><strong id="commentRate">—</strong><span>تعليق / مشاهدة</span></div>
+          <div class="tk-stat"><strong id="shareRate">—</strong><span>مشاركة / مشاهدة</span></div>
+          <div class="tk-stat"><strong id="saveRate">—</strong><span>حفظ / مشاهدة</span></div>
+        </div>
+
+        <div id="diagnosis" class="tk-callout"></div>
+        <div id="outlierBox" class="tk-callout" hidden></div>
+
+        <div class="tk-divider"></div>
+        <div class="tk-actions">
+          <button class="btn secondary" id="copyBtn" type="button">نسخ التقرير</button>
+          <button class="btn secondary" id="csvBtn" type="button">تنزيل CSV</button>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="card" id="detailsSection" style="margin-top:16px" hidden>
+    <h2 style="margin-top:0">تفاصيل كل فيديو</h2>
+    <p class="tk-hint">يساعد الجدول على اكتشاف فيديو واحد يرفع المتوسط أو يخفضه، بدل الاعتماد على نسبة واحدة للحساب كله.</p>
+    <div class="tk-table-wrap">
+      <table class="tk-table">
+        <thead>
+          <tr>
+            <th>#</th><th>المشاهدات</th><th>الإعجابات</th><th>التعليقات</th><th>المشاركات</th><th>الحفظ</th><th>ER بالمشاهدات</th>
+          </tr>
+        </thead>
+        <tbody id="videoRows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:16px">
+    <h2>كيف تحسب معدل التفاعل في تيك توك؟</h2>
+    <p>
+      لا توجد معادلة واحدة تجيب كل الأسئلة. على TikTok، الحساب حسب <strong>المشاهدات</strong> يوضح كم تفاعلًا نتج عن المشاهدات الفعلية،
+      بينما الحساب حسب <strong>المتابعين</strong> يوضح متوسط تفاعل الفيديو مقارنة بحجم الحساب.
+      لذلك تعرض MarketAPro الطريقتين ولا تخلطهما في رقم واحد.
+    </p>
+
+    <h3>1) معدل التفاعل حسب المشاهدات</h3>
+    <div class="tk-formula">(Likes + Comments + Shares) ÷ Views × 100</div>
+    <p>هذه المعادلة مفيدة لتقييم استجابة المشاهدين للفيديو أو مجموعة الفيديوهات نفسها.</p>
+
+    <h3>2) معدل التفاعل حسب المتابعين</h3>
+    <div class="tk-formula">(Average Likes + Average Comments + Average Shares) ÷ Followers × 100</div>
+    <p>
+      هذه الطريقة مفيدة عند مقارنة متوسط أداء المحتوى بحجم قاعدة المتابعين، لكنها قد ترتفع جدًا عندما يصل الفيديو عبر For You إلى أشخاص لا يتابعون الحساب.
+    </p>
+
+    <h3>3) ماذا عن الحفظ؟</h3>
+    <p>
+      الحفظ مفيد لصاحب الحساب، لكنه ليس متاحًا بنفس الشكل في كل مقارنة عامة. لذلك لا نضيفه سرًا إلى المعدل القياسي:
+      إذا أدخلت الحفظ، تعرض الأداة أثره كمقياس إضافي منفصل حتى تعرف بالضبط ما الذي تم حسابه.
+    </p>
+  </section>
+
+  <section class="card" style="margin-top:16px">
+    <h2>لماذا هذه الحاسبة أدق من الاعتماد على متوسط بسيط؟</h2>
+    <div class="tk-grid">
+      <div>
+        <h3>الوسيط Median</h3>
+        <p>إذا كان فيديو واحد قد انتشر بشكل استثنائي، قد يرفع المتوسط كله. الوسيط يوضح أداء الفيديو «الأقرب للطبيعي» داخل العينة.</p>
+      </div>
+      <div>
+        <h3>تنبيه الفيديو الشاذ</h3>
+        <p>عند وجود فيديو مشاهداته أعلى بكثير من وسيط العينة، تعرض الأداة معدلًا إضافيًا بعد استبعاده مؤقتًا للمقارنة، من دون حذف بياناتك.</p>
+      </div>
+      <div>
+        <h3>تفكيك التفاعل</h3>
+        <p>بدل رقم ER فقط، ترى كم يأتي من الإعجابات والتعليقات والمشاركات والحفظ، وما نسبة كل منها إلى المشاهدات.</p>
+      </div>
+      <div>
+        <h3>الخصوصية</h3>
+        <p>لا تحتاج إلى إعطاء اسم مستخدم أو كلمة مرور أو صلاحية TikTok. الحساب يتم كاملًا داخل المتصفح.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:16px">
+    <h2>ما معدل التفاعل الجيد على تيك توك؟</h2>
+    <p>
+      الرقم وحده لا يكفي للحكم. النتائج تختلف باختلاف حجم الحساب والمجال ونوع الفيديو وطريقة الحساب نفسها.
+      الأهم أن تقارن <strong>المعادلة نفسها</strong> على عينة متشابهة من فيديوهاتك عبر الوقت، أو مع حسابات من الحجم والمجال نفسيهما.
+    </p>
+    <p>
+      لا تقارن معدلًا محسوبًا على المشاهدات بمعدل محسوب على المتابعين؛ المقام مختلف، وبالتالي النسب ليست قابلة للمقارنة مباشرة.
+    </p>
+  </section>
+
+  <section class="card" id="faq" style="margin-top:16px">
+    <h2>أسئلة شائعة عن حاسبة معدل التفاعل تيك توك</h2>
+
+    <h3>كيف أحسب معدل التفاعل في تيك توك؟</h3>
+    <p>اجمع الإعجابات والتعليقات والمشاركات، ثم اقسمها على المشاهدات واضرب في 100. إذا أردت القياس حسب المتابعين، استخدم متوسط تفاعل الفيديو ثم اقسمه على عدد المتابعين.</p>
+
+    <h3>هل معدل التفاعل حسب المشاهدات أم المتابعين أدق؟</h3>
+    <p>حسب المشاهدات أدق لسؤال «كيف تفاعل من شاهد الفيديو؟»، بينما حسب المتابعين يفيد لسؤال «كيف يقارن متوسط أداء الفيديو بحجم الحساب؟». استخدم الاثنين لكن لا تخلط بينهما.</p>
+
+    <h3>كم فيديو أستخدم لحساب معدل تفاعل حساب تيك توك؟</h3>
+    <p>عينة من 5–10 فيديوهات أو أكثر أفضل من فيديو واحد عند تقييم الحساب. استخدم فيديوهات من فترة متقاربة، وراجع الوسيط حتى لا يسيطر فيديو Viral واحد على النتيجة.</p>
+
+    <h3>هل أضيف الحفظ إلى المعادلة؟</h3>
+    <p>يمكنك إدخال الحفظ في الأداة، لكننا نبقي المعدل القياسي منفصلًا عن المعدل الموسع الذي يشمل الحفظ حتى تظل المقارنة شفافة.</p>
+
+    <h3>هل الأداة تدعم K وM والأرقام العربية؟</h3>
+    <p>نعم. يمكنك إدخال 25K أو 1.2M أو ٢٥ ألف أو أرقام عادية، كما يمكنك لصق عدة فيديوهات على شكل صفوف.</p>
+
+    <h3>هل تحتفظ MarketAPro بالأرقام التي أدخلها؟</h3>
+    <p>لا. لا تحتاج إلى تسجيل دخول، والحساب يتم محليًا داخل جهازك من خلال JavaScript.</p>
+  </section>
+
+  <section class="card" style="margin-top:16px">
+    <h2>مصدر البيانات وطريقة القراءة</h2>
+    <p class="tk-source">
+      TikTok يوفّر للمبدعين داخل TikTok Studio تحليلات للمحتوى والمشاهدين والمتابعين. استخدم الأرقام من الفترة نفسها كلما أمكن،
+      ثم استخدم هذه الحاسبة لتوحيد المعادلة والمقارنة. للمزيد:
+      <a href="https://support.tiktok.com/en/using-tiktok/creating-videos/tiktok-studio" target="_blank" rel="noopener noreferrer">TikTok Support — TikTok Studio</a>.
+    </p>
+  </section>
+
+  <section class="card" style="margin-top:16px">
+    <h2>روابط مفيدة داخل MarketAPro</h2>
+    <ul style="line-height:1.9">
+      <li><a href="/learn/أفضل-وقت-للنشر-على-تيك-توك/">أفضل وقت للنشر على تيك توك في السعودية ومصر والخليج</a></li>
+      <li><a href="/tools/instagram-engagement-calculator/">حاسبة معدل التفاعل على إنستغرام</a></li>
+      <li><a href="/tools/">كل أدوات MarketAPro المجانية</a></li>
+    </ul>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite" style="position:fixed;left:16px;bottom:16px;display:none;z-index:9999;padding:11px 14px;border:1px solid var(--border);border-radius:14px;background:rgba(0,0,0,.86);color:var(--text);max-width:340px"></div>
+
+<footer class="footer">
+  <div class="container">© 2026 MarketAPro</div>
+  <div class="card" style="margin-top:14px">
+    <h2 style="margin:0 0 8px;font-size:18px">روابط سريعة</h2>
+    <div class="pill-row" style="margin-top:6px">
+      <a class="pill" href="/tools/">الأدوات</a>
+      <a class="pill" href="/learn/أفضل-وقت-للنشر-على-تيك-توك/">دليل تيك توك</a>
+      <a class="pill" href="/tools/instagram-engagement-calculator/">تفاعل إنستغرام</a>
+      <a class="pill" href="/about/">من نحن</a>
+      <a class="pill" href="/contact/">تواصل معنا</a>
+      <a class="pill" href="/privacy-policy/">الخصوصية</a>
+      <a class="pill" href="/terms/">الشروط</a>
+    </div>
+  </div>
+</footer>
+
+<script defer src="/tools/حاسبة-معدل-التفاعل-تيك-توك/tiktok-engagement-calculator.js"></script>
+</body>
+</html>
