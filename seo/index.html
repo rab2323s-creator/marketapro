@@ -105,6 +105,32 @@
       </div>
     </section>
     <div class="topic-ribbon" aria-label="مجالات تحسين محركات البحث"><div class="seo-ticker-track"><div class="seo-ticker-set"><span>تحسين محركات البحث SEO</span><b>✦</b><span>تصدّر نتائج جوجل</span><b>✦</b><span>سيو المتاجر الإلكترونية</span><b>✦</b><span>تحسين ترتيب المواقع</span><b>✦</b><span>تحليل الكلمات المفتاحية</span><b>✦</b></div><div class="seo-ticker-set" aria-hidden="true"><span>تحسين محركات البحث SEO</span><b>✦</b><span>تصدّر نتائج جوجل</span><b>✦</b><span>سيو المتاجر الإلكترونية</span><b>✦</b><span>تحسين ترتيب المواقع</span><b>✦</b><span>تحليل الكلمات المفتاحية</span><b>✦</b></div></div></div>
+    <!-- Client logo placeholders: replace the .client-logo-placeholder span inside each of the 7 cards
+         with <img class="client-logo" src="/seo/assets/clients/client-01.webp" alt="اسم العميل" loading="lazy">.
+         Only edit this first set: the animated duplicate is generated automatically below. -->
+    <section class="viva-clients" aria-labelledby="clients-heading">
+      <div class="wrap viva-clients-heading">
+        <div>
+          <span class="clients-kicker">VIVA MEDIA CREATIVE / CLIENTS</span>
+          <h2 id="clients-heading">من عملاء <span>Viva Media Creative</span></h2>
+          <p>شراكات نفتخر بها، وأعمال تتحدث عن خبرتنا.</p>
+        </div>
+        <a class="clients-work-link" href="https://vivamediacreative.com/work/" target="_blank" rel="noopener noreferrer">شاهد أعمالنا <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="clients-marquee" aria-label="شعارات بعض عملاء Viva Media Creative">
+        <div class="clients-marquee-track">
+          <div class="clients-marquee-set">
+          <div class="client-card" aria-label="موضع شعار العميل 1"><span class="client-logo-placeholder" aria-hidden="true">01</span></div>
+          <div class="client-card" aria-label="موضع شعار العميل 2"><span class="client-logo-placeholder" aria-hidden="true">02</span></div>
+          <div class="client-card" aria-label="موضع شعار العميل 3"><span class="client-logo-placeholder" aria-hidden="true">03</span></div>
+          <div class="client-card" aria-label="موضع شعار العميل 4"><span class="client-logo-placeholder" aria-hidden="true">04</span></div>
+          <div class="client-card" aria-label="موضع شعار العميل 5"><span class="client-logo-placeholder" aria-hidden="true">05</span></div>
+          <div class="client-card" aria-label="موضع شعار العميل 6"><span class="client-logo-placeholder" aria-hidden="true">06</span></div>
+          <div class="client-card" aria-label="موضع شعار العميل 7"><span class="client-logo-placeholder" aria-hidden="true">07</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="wrap section-block pathways" id="start">
       <div class="section-heading"><div><span class="section-kicker">START HERE / من أين تبدأ؟</span><h2>اختر المشكلة. <span>واتبع المسار الصحيح.</span></h2></div><p>لا تبدأ بكتابة عشرات المقالات. حدّد أولًا أين تخسر الظهور، ثم عالج السبب.</p></div>
       <div class="path-grid">
@@ -152,5 +178,17 @@
     <div class="wrap sources">للمزيد من الأساسيات: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">دليل Google الرسمي لتحسين محركات البحث ↗</a></div>
   </main>
   <footer class="seo-footer"><div class="wrap footer-inner"><a class="footer-brand" href="/">MarketAPro <span>SEO INTELLIGENCE</span></a><nav aria-label="روابط التذييل"><a href="/seo/">مركز SEO</a><a href="/tools/">الأدوات</a><a href="/news/">المقالات</a><a href="/about/">من نحن</a><a href="https://vivamediacreative.com/services/seo-growth/">خدمات Viva</a></nav><p>© 2026 MarketAPro · مشروع مرتبط بـ <a href="https://vivamediacreative.com/">Viva Media Creative</a></p></div></footer>
+  <script>
+    // Duplicate logo cards only for a continuous loop. Edit the seven original cards above.
+    (function () {
+      const track = document.querySelector('.clients-marquee-track');
+      const original = track && track.querySelector('.clients-marquee-set');
+      if (!original) return;
+      const duplicate = original.cloneNode(true);
+      duplicate.setAttribute('aria-hidden', 'true');
+      track.appendChild(duplicate);
+      track.classList.add('is-running');
+    })();
+  </script>
 </body>
 </html>

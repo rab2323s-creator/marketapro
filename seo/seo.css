@@ -117,3 +117,23 @@ h1,h2,h3,p{margin:0}
 @keyframes seo-ticker-scroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
 .topic-ribbon:hover .seo-ticker-track{animation-play-state:paused}
 @media(max-width:650px){.topic-ribbon .seo-ticker-set{padding:15px 22px;font-size:11px;gap:20px}}
+
+/* Viva Media Creative client logo reel — seven user-editable cards, one JS-generated duplicate. */
+.viva-clients{padding:65px 0 70px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#0b101b 0%,#0a0d17 100%);overflow:hidden}
+.viva-clients-heading{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:31px}
+.clients-kicker{display:block;color:var(--gold);font:700 10px/1.7 Arial,sans-serif;letter-spacing:.16em;margin-bottom:12px;direction:ltr;text-align:right}
+.viva-clients h2{font-size:clamp(22px,2.15vw,30px);font-weight:700;line-height:1.55;margin:0;color:var(--text)}
+.viva-clients h2 span{color:var(--gold)}
+.viva-clients-heading p{color:var(--muted);font-size:12px;line-height:1.8;margin:6px 0 0}
+.clients-work-link{display:inline-flex;align-items:center;gap:13px;white-space:nowrap;padding:11px 18px;border:1px solid rgba(240,214,159,.4);border-radius:999px;color:var(--gold);font-size:12px;font-weight:700;transition:background .2s,border-color .2s}
+.clients-work-link:hover{background:rgba(240,214,159,.09);border-color:var(--gold)}
+.clients-marquee{overflow:hidden;max-width:100%;-webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent)}
+.clients-marquee-track{display:flex;direction:ltr;width:max-content;align-items:stretch}
+.clients-marquee-track.is-running{animation:viva-clients-slide 36s linear infinite;will-change:transform}
+.clients-marquee-set{display:flex;direction:rtl;box-sizing:border-box;flex:0 0 auto;min-width:100vw;width:max-content;align-items:stretch;justify-content:space-around;gap:16px;padding:7px 16px}
+.client-card{width:clamp(136px,12vw,175px);height:98px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;border:1px solid rgba(168,149,255,.2);border-radius:16px;background:radial-gradient(ellipse at 50% 0%,rgba(168,149,255,.13),transparent 80%),rgba(18,24,39,.9);box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.client-logo-placeholder{display:grid;place-items:center;width:51px;height:51px;border:1px solid rgba(240,214,159,.23);border-radius:13px;color:rgba(240,214,159,.62);font:600 19px/1 Arial,sans-serif;letter-spacing:.04em;background:rgba(240,214,159,.03)}
+.client-card .client-logo{max-width:calc(100% - 30px);max-height:65px;width:auto;height:auto;object-fit:contain;display:block}
+@keyframes viva-clients-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.clients-marquee:hover .clients-marquee-track{animation-play-state:paused}
+@media(max-width:650px){.viva-clients{padding:46px 0 51px}.viva-clients-heading{align-items:start;gap:15px;flex-direction:column;margin-bottom:23px}.viva-clients h2{font-size:23px}.clients-kicker{font-size:9px}.clients-work-link{font-size:11px;padding:9px 15px}.clients-marquee-set{gap:12px;padding:5px 12px}.client-card{width:138px;height:82px;border-radius:13px}.client-card .client-logo{max-height:54px}}
