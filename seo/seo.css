@@ -152,3 +152,8 @@ h1,h2,h3,p{margin:0}
 .client-card .client-logo-vip{width:53px;height:53px;max-width:53px;max-height:53px;object-fit:contain}
 .client-card .client-name-vip{font-size:10px;letter-spacing:-.015em;text-align:center;max-width:100%}
 @media(max-width:650px){.client-card .client-logo-vip{width:43px;height:43px;max-width:43px;max-height:43px}.client-card .client-name-vip{font-size:9px}}
+
+/* SAAB BOUW SERVICES client logo and caption. */
+.client-card .client-logo-saab{width:49px;height:52px;max-width:49px;max-height:52px;object-fit:contain;border-radius:10px}
+.client-card .client-name-saab{font-size:10px;text-align:center;max-width:100%}
+@media(max-width:650px){.client-card .client-logo-saab{width:39px;height:42px;max-width:39px;max-height:42px}.client-card .client-name-saab{font-size:9px}}
