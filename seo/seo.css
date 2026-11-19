@@ -137,3 +137,10 @@ h1,h2,h3,p{margin:0}
 @keyframes viva-clients-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .clients-marquee:hover .clients-marquee-track{animation-play-state:paused}
 @media(max-width:650px){.viva-clients{padding:46px 0 51px}.viva-clients-heading{align-items:start;gap:15px;flex-direction:column;margin-bottom:23px}.viva-clients h2{font-size:23px}.clients-kicker{font-size:9px}.clients-work-link{font-size:11px;padding:9px 15px}.clients-marquee-set{gap:12px;padding:5px 12px}.client-card{width:138px;height:82px;border-radius:13px}.client-card .client-logo{max-height:54px}}
+
+/* Branded client cards: keep website name legible below the logo. */
+.client-card.client-card-named{flex-direction:column;gap:6px;padding:9px 10px}
+.client-card .client-logo-sxf{width:51px;height:51px;max-height:51px;max-width:51px;object-fit:cover;border-radius:10px}
+.client-card .client-name{font:700 12px/1.3 Arial,sans-serif;letter-spacing:.015em;color:var(--text);white-space:nowrap}
+.client-card-named .client-logo-placeholder{width:40px;height:40px;font-size:15px}
+@media(max-width:650px){.client-card .client-logo-sxf{width:39px;height:39px;max-height:39px}.client-card .client-name{font-size:11px}.client-card.client-card-named{gap:4px}.client-card-named .client-logo-placeholder{width:35px;height:35px}}
