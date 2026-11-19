@@ -108,3 +108,12 @@ h1,h2,h3,p{margin:0}
 .hero h1 .hero-title-service{color:var(--text);font-size:clamp(27px,2.6vw,38px);line-height:1.45}
 .hero h1 .hero-title-promise{color:var(--violet);font-size:clamp(23px,2.1vw,31px);line-height:1.55;margin-top:6px}
 @media(max-width:650px){.hero h1 .hero-title-service{font-size:clamp(25px,6.6vw,31px)}.hero h1 .hero-title-promise{font-size:clamp(22px,5.8vw,27px)}}
+
+/* Seamless right-to-left Arabic keyword ticker. Each set is at least one viewport wide. */
+.topic-ribbon{overflow:hidden}
+.topic-ribbon .seo-ticker-track{display:flex;direction:rtl;width:max-content;animation:seo-ticker-scroll 32s linear infinite;will-change:transform}
+.topic-ribbon .seo-ticker-set{display:flex;align-items:center;justify-content:space-around;flex:0 0 auto;box-sizing:border-box;min-width:100vw;width:max-content;gap:clamp(18px,2.4vw,35px);padding:19px clamp(20px,2.5vw,44px);white-space:nowrap;direction:rtl;color:#a2afbf;font:700 12px/1.6 Arial,sans-serif}
+.topic-ribbon .seo-ticker-set b{color:#a58bdd;font-size:12px}
+@keyframes seo-ticker-scroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
+.topic-ribbon:hover .seo-ticker-track{animation-play-state:paused}
+@media(max-width:650px){.topic-ribbon .seo-ticker-set{padding:15px 22px;font-size:11px;gap:20px}}
