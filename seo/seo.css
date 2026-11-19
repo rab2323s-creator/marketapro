@@ -147,3 +147,8 @@ h1,h2,h3,p{margin:0}
 
 .client-card .client-logo-lieferando{width:58px;height:49px;max-width:58px;max-height:49px;object-fit:contain;border-radius:8px}
 @media(max-width:650px){.client-card .client-logo-lieferando{width:46px;height:39px;max-width:46px;max-height:39px}}
+
+/* Influencer Platform VIP client branding (logo above website name). */
+.client-card .client-logo-vip{width:53px;height:53px;max-width:53px;max-height:53px;object-fit:contain}
+.client-card .client-name-vip{font-size:10px;letter-spacing:-.015em;text-align:center;max-width:100%}
+@media(max-width:650px){.client-card .client-logo-vip{width:43px;height:43px;max-width:43px;max-height:43px}.client-card .client-name-vip{font-size:9px}}
