@@ -564,3 +564,17 @@ article table tbody tr:last-child td{
 }
 .footer a{color:var(--text)}
 
+
+/* Contextual internal links to the SEO services hub, shared by home, learning and listing pages. */
+.seo-internal-promo{display:flex;align-items:center;justify-content:space-between;gap:25px;position:relative;isolation:isolate;overflow:hidden;margin:20px 0 22px;padding:27px 30px;border:1px solid rgba(226,196,137,.32);border-radius:22px;background:radial-gradient(ellipse at 92% 20%,rgba(161,125,241,.13),transparent 53%),linear-gradient(120deg,#142131,#0d1524);box-shadow:0 14px 32px rgba(0,0,0,.12);direction:rtl}
+.seo-internal-promo::before{content:"";position:absolute;inset-block:15px;inset-inline-start:0;width:3px;background:linear-gradient(to bottom,transparent,#dfba74,transparent)}
+.seo-internal-promo__content{min-width:0;flex:1}
+.seo-internal-promo__tag{display:inline-block;color:#edce96;font:700 10px/1.6 Arial,sans-serif;letter-spacing:.04em;margin-bottom:9px}
+.seo-internal-promo h2{font-size:clamp(20px,2.2vw,28px);line-height:1.55;font-weight:800;color:#f5f6fa;margin:0 0 8px}
+.seo-internal-promo p{font-size:13px;line-height:1.9;max-width:710px;color:#c0cbda;margin:0}
+.seo-internal-promo__cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;flex-shrink:0;background:#eecf95;color:#201912!important;padding:13px 19px;min-height:46px;border-radius:999px;font-size:12px;font-weight:800;text-decoration:none!important;transition:background .2s,transform .2s}
+.seo-internal-promo__cta:hover{background:#ffe5b5;transform:translateY(-2px)}
+.seo-internal-promo--compact{padding:22px 25px;margin:16px 0}
+.seo-internal-promo--compact h2{font-size:clamp(19px,2vw,24px)}
+@media(max-width:740px){.seo-internal-promo{flex-direction:column;align-items:stretch;padding:22px 19px;gap:18px;border-radius:19px}.seo-internal-promo__cta{width:100%;justify-content:space-between}.seo-internal-promo p{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.seo-internal-promo__cta{transition:none}.seo-internal-promo__cta:hover{transform:none}}
