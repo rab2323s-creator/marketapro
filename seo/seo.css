@@ -157,3 +157,69 @@ h1,h2,h3,p{margin:0}
 .client-card .client-logo-saab{width:49px;height:52px;max-width:49px;max-height:52px;object-fit:contain;border-radius:10px}
 .client-card .client-name-saab{font-size:10px;text-align:center;max-width:100%}
 @media(max-width:650px){.client-card .client-logo-saab{width:39px;height:42px;max-width:39px;max-height:42px}.client-card .client-name-saab{font-size:9px}}
+
+/* Service-led SEO landing. Fully scoped to avoid overriding editorial/legacy cards. */
+.seo-services{padding-top:clamp(70px,7vw,112px)}
+.seo-services-intro,.seo-packages-header{max-width:890px;margin-bottom:34px}
+.seo-services-kicker{display:inline-block;font:700 10px/1.6 Arial,sans-serif;letter-spacing:.15em;color:var(--gold);margin-bottom:15px}
+.seo-services-intro h2,.seo-packages-header h2{font-size:clamp(29px,3.25vw,47px);font-weight:700;line-height:1.46;letter-spacing:-.045em;max-width:850px}
+.seo-services-intro h2 span,.seo-packages-header h2 span{color:var(--violet)}
+.seo-services-intro>p,.seo-packages-header>p{max-width:765px;font-size:14px;line-height:2.1;color:var(--muted);margin-top:14px}
+.seo-services-intro>p strong{color:var(--text);font-weight:600}
+.seo-services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.seo-service-card{position:relative;isolation:isolate;display:flex;flex-direction:column;overflow:hidden;min-width:0;min-height:315px;padding:29px 26px 26px;border:1px solid rgba(189,181,235,.16);border-radius:23px;background:radial-gradient(ellipse 90% 70% at 100% 0%,rgba(113,80,184,.12),transparent),linear-gradient(160deg,#111727,#0c111d);box-shadow:0 18px 42px rgba(0,0,0,.07);transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
+.seo-service-card::after{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,transparent,rgba(240,214,159,.6),rgba(168,149,255,.7),transparent);opacity:.45;transition:opacity .2s}
+.seo-service-card:hover{transform:translateY(-4px);border-color:rgba(168,149,255,.46);box-shadow:0 22px 55px rgba(0,0,0,.18)}
+.seo-service-card:hover::after{opacity:1}
+.seo-service-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:31px}
+.seo-service-number{color:var(--gold);font:500 15px/1 Arial,sans-serif}
+.seo-service-kind{font:700 9px/1.4 Arial,sans-serif;letter-spacing:.1em;color:#7e8da5;text-align:left}
+.seo-service-copy{display:flex;flex-direction:column;flex:1;min-width:0}
+.seo-service-card h3{font-size:clamp(18px,1.7vw,23px);font-weight:700;line-height:1.52;color:var(--text)}
+.seo-service-card p{margin-top:11px;font-size:12.5px;line-height:1.95;color:#acb7c9}
+.seo-service-card ul{list-style:none;padding:16px 0 0;margin:auto 0 0;display:grid;gap:9px}
+.seo-service-card li{position:relative;padding-inline-start:15px;font-size:11px;line-height:1.75;color:#c4ccda}
+.seo-service-card li::before{content:"";position:absolute;inset-inline-start:0;top:.8em;width:5px;height:5px;border-radius:50%;background:var(--teal)}
+.seo-service-card-wide{grid-column:1/-1;min-height:0;display:grid;grid-template-columns:175px minmax(0,1fr);gap:20px;align-items:center;background:radial-gradient(ellipse at 7% 50%,rgba(240,214,159,.13),transparent 40%),linear-gradient(135deg,#121823,#0b111d)}
+.seo-service-card-wide .seo-service-meta{flex-direction:column;align-items:flex-start;margin:0;gap:12px}
+.seo-service-card-wide .seo-service-number{font-size:38px;color:var(--gold)}
+.seo-service-card-wide .seo-service-copy{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center;column-gap:26px}
+.seo-service-card-wide .seo-service-copy h3{grid-column:1}
+.seo-service-card-wide .seo-service-copy p{grid-column:1}
+.seo-service-card-wide .seo-service-copy ul{grid-column:2;grid-row:1/span 2;align-self:center;padding:0}
+.seo-services-tail{display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid rgba(164,233,221,.15);border-radius:18px;padding:21px 27px;margin-top:18px;background:rgba(17,25,35,.55)}
+.seo-services-tail strong{font-size:17px;color:var(--text)}
+.seo-services-tail p{font-size:12px;line-height:1.8;color:var(--muted);margin-top:5px}
+.seo-services-tail .btn{flex-shrink:0;border-color:rgba(164,233,221,.33)}
+.seo-packages{padding-top:clamp(82px,8vw,126px)}
+.seo-packages-header{max-width:930px}
+.seo-plans-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+.seo-plan{position:relative;display:flex;flex-direction:column;min-width:0;padding:36px 35px 33px;border-radius:26px;border:1px solid rgba(168,149,255,.2);background:linear-gradient(145deg,#111726,#0b101b);box-shadow:0 20px 50px rgba(0,0,0,.12)}
+.seo-plan-advanced{border-color:rgba(240,214,159,.52);background:radial-gradient(ellipse 75% 46% at 93% 0%,rgba(179,129,53,.17),transparent),linear-gradient(145deg,#181a28,#0c111b)}
+.seo-plan-top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:24px}
+.seo-plan-label{font-size:11px;color:var(--teal);font-weight:700}
+.seo-plan-advanced .seo-plan-label{color:var(--gold)}
+.seo-plan-mark{font-size:10px;line-height:1.5;white-space:nowrap;padding:6px 11px;background:rgba(240,214,159,.11);border:1px solid rgba(240,214,159,.28);border-radius:999px;color:var(--gold)}
+.seo-plan h3{font-size:clamp(26px,2.5vw,35px);font-weight:700;line-height:1.45}
+.seo-plan-description{font-size:13px;line-height:2;color:var(--muted);margin-top:13px;max-width:480px}
+.seo-plan-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(178,187,214,.21),transparent);margin:24px 0}
+.seo-plan-features-title{font-size:13px;font-weight:700;color:var(--text)}
+.seo-plan-features{list-style:none;padding:0;margin:18px 0 27px;display:grid;gap:16px}
+.seo-plan-features li{position:relative;padding-inline-start:26px;color:#c6cede;font-size:12px;line-height:1.9}
+.seo-plan-features li::before{content:"✓";position:absolute;inset-inline-start:0;top:1px;display:grid;place-items:center;font:700 10px/1 Arial,sans-serif;color:#b2f6e6;width:18px;height:18px;border-radius:50%;background:rgba(164,233,221,.10);border:1px solid rgba(164,233,221,.27)}
+.seo-plan-advanced .seo-plan-features li::before{color:var(--gold);background:rgba(240,214,159,.08);border-color:rgba(240,214,159,.27)}
+.seo-plan-cta{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:auto;min-height:52px;padding:13px 21px;background:rgba(164,233,221,.10);border:1px solid rgba(164,233,221,.35);border-radius:999px;color:#d1fff5;font-size:13px;font-weight:700;transition:background .2s,transform .2s}
+.seo-plan-cta:hover{transform:translateY(-2px);background:rgba(164,233,221,.2)}
+.seo-plan-advanced .seo-plan-cta{background:var(--gold);border-color:var(--gold);color:#201b13}
+.seo-plan-advanced .seo-plan-cta:hover{background:#ffe7b8}
+.seo-plans-note{margin:18px auto 0;max-width:950px;color:#8e9db2;font-size:11px;line-height:1.9;text-align:center}
+.seo-plans-note strong{font-weight:700;color:#d0dae7}
+.seo-page .method-block{padding-top:105px}
+.seo-page .faq{padding-top:102px}
+.seo-page .featured#guides{margin-top:94px;padding-top:80px;padding-bottom:80px;border-top:1px solid var(--line)}
+.seo-page .featured .guide-stack{grid-template-rows:repeat(2,1fr)}
+.seo-page .featured .guide-stack .small-guide{min-height:160px}
+@media(max-width:1100px){.seo-services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.seo-service-card-wide{grid-column:1/-1}.seo-service-card-wide .seo-service-copy{display:flex}.seo-service-card-wide .seo-service-copy ul{padding:15px 0 0}.seo-services-intro h2,.seo-packages-header h2{font-size:clamp(29px,3.8vw,44px)}}
+@media(max-width:760px){.seo-plans-grid{grid-template-columns:1fr}.seo-services-tail{align-items:flex-start;flex-direction:column}.seo-service-card-wide{grid-template-columns:1fr}.seo-service-card-wide .seo-service-meta{flex-direction:row;justify-content:space-between}.seo-service-card-wide .seo-service-number{font-size:16px}.seo-service-card-wide .seo-service-copy ul{padding:16px 0 0}}
+@media(max-width:650px){.seo-services{padding-top:64px}.seo-services-grid{grid-template-columns:1fr;gap:12px}.seo-services-intro,.seo-packages-header{margin-bottom:24px}.seo-services-intro h2,.seo-packages-header h2{font-size:clamp(28px,7vw,35px);line-height:1.52}.seo-services-intro>p,.seo-packages-header>p{font-size:12.5px;line-height:2}.seo-service-card{min-height:0;padding:23px 21px 24px;border-radius:19px}.seo-service-meta{margin-bottom:21px}.seo-service-card h3{font-size:19px}.seo-service-card p{font-size:12px;line-height:1.92}.seo-service-card ul{margin-top:7px}.seo-service-card-wide{grid-column:1}.seo-services-tail{padding:20px}.seo-services-tail .btn{width:100%}.seo-packages{padding-top:81px}.seo-plan{padding:28px 24px;border-radius:21px}.seo-plan h3{font-size:29px}.seo-plan-description{font-size:12px}.seo-plan-features{gap:13px}.seo-plan-features li{font-size:12px}.seo-plans-note{text-align:right;font-size:10.5px}.seo-page .method-block{padding-top:85px}.seo-page .faq{padding-top:80px}.seo-page .featured#guides{margin-top:75px;padding-top:65px;padding-bottom:55px}}
+@media(prefers-reduced-motion:reduce){.seo-service-card,.seo-plan-cta{transition:none}.seo-service-card:hover,.seo-plan-cta:hover{transform:none}}
