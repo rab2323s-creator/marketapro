@@ -43,6 +43,13 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <priority>0.85</priority>
   </url>
 
+  <url>
+    <loc>https://marketapro.com/seo/%D8%B4%D8%B1%D9%83%D8%A9-%D8%B3%D9%8A%D9%88-%D9%81%D9%8A-%D9%85%D8%B5%D8%B1/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- صفحة الأدوات -->
   <url>
     <loc>https://marketapro.com/tools/</loc>
